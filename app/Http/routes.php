@@ -25,6 +25,10 @@ Route::get('/', function () {
     return view('test');
 });
 
+Route::get('/admin', function () {
+    return view('admin');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
