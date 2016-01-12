@@ -3,10 +3,10 @@
 <head>
     <meta charset="utf-8" />
     <title>Titre</title>
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset("css/bootstrap.css") }}">
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset("css/style.css") }}">
-    <script type="text/javascript" src="{{ URL::asset("js/jquery.js") }}"></script>
-    <script type="text/javascript" src="{{ URL::asset("js/bootstrap.min.js") }}"></script>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </head>
 
 <body>
