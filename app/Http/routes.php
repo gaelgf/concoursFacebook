@@ -17,6 +17,9 @@ Route::get('/', function () {
 Route::get('/vote', function () {
     return view('vote');
 });
+Route::get('/admin', function () {
+    return view('admin');
+});
 
 /*
 |--------------------------------------------------------------------------
