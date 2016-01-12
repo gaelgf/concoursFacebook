@@ -21,7 +21,7 @@ Route::get('/album', function () {
     return view('choix_photo_facebook');
 });
 
-Route::get('/', function () {
+Route::get('/test', function () {
     return view('test');
 });
 
