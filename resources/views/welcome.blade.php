@@ -1,45 +1,42 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Laravel</title>
+<head>
+    <meta charset="utf-8" />
+    <title>Titre</title>
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset("css/bootstrap.css") }}">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset("css/style.css") }}">
+    <script type="text/javascript" src="{{ URL::asset("js/jquery.js") }}"></script>
+    <script type="text/javascript" src="{{ URL::asset("js/bootstrap.min.js") }}"></script>
+</head>
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
-        <style>
-            html, body {
-                height: 100%;
-            }
-
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-
-            .title {
-                font-size: 96px;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="container">
-            <div class="content">
-                <div class="title">Laravel 5</div>
-            </div>
+<body>
+<header>
+    <img src="img/campagnes/1/logo.png" alt="">
+    - Concours photos
+</header>
+<div class="accueil">
+    <div class="title container">
+        <div class="col-xs-5" style="text-align:right">
+            Montres nous ton <br/>meilleur souvenir Coca-Cola !
         </div>
-    </body>
+        <div class="col-xs-2 icone">
+            <img src="img/campagnes/1/icone.png" alt="">
+        </div>
+        <div class="col-xs-5" style="text-align:left">
+            PARTICIPER?<br/> Rien de plus simple
+        </div>
+    </div>
+    <div class="actions_bottom container">
+        <div class="col-xs-1"></div>
+        <a class="col-xs-4 boutons choisir_photo" href="selection_photo.html">
+            Choisir une photo
+        </a>
+        <div class="col-xs-2"></div>
+        <a class="col-xs-4 boutons telecharger_photo" href="">
+            Télécharger votre photo
+        </a>
+        <div class="col-xs-1"></div>
+    </div>
+</div>
+</body>
 </html>
