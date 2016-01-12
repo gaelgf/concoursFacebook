@@ -12,16 +12,16 @@
     <title>SB Admin 2 - Bootstrap Admin Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset("css/bootstrap.css") }}">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
     <!-- MetisMenu CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset("css/smetisMenu.min.css") }}">
+    <link rel="stylesheet" type="text/css" href="css/smetisMenu.min.css">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset("css/sb-admin-2.css") }}">
+    <link rel="stylesheet" type="text/css" href="css/sb-admin-2.css">
 
     <!-- Custom Fonts -->
-    <link rel="stylesheet" type="text/css" href="{{ URL::asset("css/font-awesome.min.css") }}">
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -66,16 +66,16 @@
     </div>
 
     <!-- jQuery -->
-    <script type="text/javascript" src="{{ URL::asset("js/jquery.js") }}"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script type="text/javascript" src="{{ URL::asset("js/bootstrap.min.js") }}"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script type="text/javascript" src="{{ URL::asset("js/metisMenu.min.js") }}"></script>
+    <script type="text/javascript" src="js/metisMenu.min.js"></script>
 
     <!-- Custom Theme JavaScript -->
-    <script type="text/javascript" src="{{ URL::asset("js/sb-admin-2.js") }}"></script>
+    <script type="text/javascript" src="js/sb-admin-2.js"></script>
 
 </body>
 
