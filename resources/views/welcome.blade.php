@@ -11,6 +11,7 @@
 
 <body>
 <header>
+    <!-- test -->
     <img src="img/campagnes/1/logo.png" alt="">
     - Concours photos
 </header>
