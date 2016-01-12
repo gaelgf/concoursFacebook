@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="{{ URL::asset("css/bootstrap.css") }}">
 
     <!-- MetisMenu CSS -->
-    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ URL::asset("css/smetisMenu.min.css") }}">
 
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="{{ URL::asset("css/sb-admin-2.css") }}">
@@ -72,7 +72,7 @@
     <script type="text/javascript" src="{{ URL::asset("js/bootstrap.min.js") }}"></script>
 
     <!-- Metis Menu Plugin JavaScript -->
-    <script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+    <script type="text/javascript" src="{{ URL::asset("js/metisMenu.min.js") }}"></script>
 
     <!-- Custom Theme JavaScript -->
     <script type="text/javascript" src="{{ URL::asset("js/sb-admin-2.js") }}"></script>
