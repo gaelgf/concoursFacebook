@@ -21,6 +21,10 @@ Route::get('/album', function () {
     return view('choix_photo_facebook');
 });
 
+Route::get('/', function () {
+    return view('test');
+});
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
