@@ -17,6 +17,9 @@ Route::get('/', function () {
 Route::get('/vote', function () {
     return view('vote');
 });
+Route::get('/album', function () {
+    return view('choix_photo_facebook');
+});
 
 /*
 |--------------------------------------------------------------------------
