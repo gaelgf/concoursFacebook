@@ -34,5 +34,10 @@ return [
         'key'    => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],
+	'facebook' => [
+    'client_id' => '427302194137128',
+    'client_secret' => 'f970cabdce8cb4ddbe7fc8adc7c41d06',
+    'redirect' => 'https://apps.facebook.com/picturechallenge/test',
+	],
 
 ];
