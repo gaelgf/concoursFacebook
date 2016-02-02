@@ -27,50 +27,54 @@
 </div>
 <div id="contenu">
 
+    <div class="row">
+        <div class="col-lg-12">
+            <form action="toto.php" method="post" id="formcreate">
 
-    <form action="toto.php" method="post" id="formcreate">
+                <fieldset>
+                    <legend> Création de concours </legend>
 
-        <fieldset>
-            <legend> Création de concours </legend>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label for="nom">Entrez le nom du concours :</label>
+                            <input type="text" name="nom" value="nom" id="nom" />
+                        </div>
+                    </div>
 
-            <div class="row">
-                <div class="col-lg-12">
-                    <label for="nom">Entrez le nom du concours :</label>
-                    <input type="text" name="nom" value="nom" id="nom" />
-                </div>
-            </div>
-            <label for="couleur">Choisissez une couleur de thème : </label>
-            <input type="radio" name="theme" value="rouge" id="rouge" checked="checked" /> Rouge
-            <input type="radio" name="theme" value="bleu" id="bleu" checked="checked" /> Bleu
-            <input type="radio" name="theme" value="vert" id="vert" checked="checked" /> Vert
-
-
-            <label for="logo">Choisissez un logo à afficher : </label>
-            <input type="file" name="logo" />
-
-            <label for="date_debut">Date de début</label>
-            <input type="date" name="datedebut">
-
-            <label for="date_fin">Date de fin</label>
-            <input type="date" name="datefin">
-
-            <label for="icone">Choisissez un icone : </label>
-            <input type="file" name="icone" />
-
-            <label for="text_accueil">Insérer un text d'acceuil</label>
-            <input type="text" name="text_accueil">
-
-            <label for="text_felicitation">Insérer un text de fécilitation</label>
-            <input type="text" name="text_felicitation">
-
-        </fieldset>
+                    <label for="couleur">Choisissez une couleur de thème : </label>
+                    <input type="radio" name="theme" value="rouge" id="rouge" checked="checked" /> Rouge
+                    <input type="radio" name="theme" value="bleu" id="bleu" checked="checked" /> Bleu
+                    <input type="radio" name="theme" value="vert" id="vert" checked="checked" /> Vert
 
 
-        <p>
-            <input type="submit" value="Envoyer" />
-        </p>
+                    <label for="logo">Choisissez un logo à afficher : </label>
+                    <input type="file" name="logo" />
 
-    </form>
+                    <label for="date_debut">Date de début</label>
+                    <input type="date" name="datedebut">
+
+                    <label for="date_fin">Date de fin</label>
+                    <input type="date" name="datefin">
+
+                    <label for="icone">Choisissez un icone : </label>
+                    <input type="file" name="icone" />
+
+                    <label for="text_accueil">Insérer un text d'acceuil</label>
+                    <input type="text" name="text_accueil">
+
+                    <label for="text_felicitation">Insérer un text de fécilitation</label>
+                    <input type="text" name="text_felicitation">
+
+                </fieldset>
+
+
+                <p>
+                    <input type="submit" value="Envoyer" />
+                </p>
+
+            </form>
+        </div>
+    </div>
 
 
 </div>
