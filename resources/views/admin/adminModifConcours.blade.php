@@ -34,7 +34,7 @@
                 <fieldset>
                     <legend> Modification de concours </legend>
 
-                    <div class="row" align="center">
+                    <div class="row">
                         <div class="col-lg-12">
                             <label for="nom">Choisissez le concours à modifier:</label>
                             <SELECT name="nom" size="1">
@@ -51,7 +51,7 @@
 
 
                 <p>
-                    <input type="submit" value="Envoyer" />
+                    <input type="submit" value="Afficher" />
                 </p>
 
             </form>
