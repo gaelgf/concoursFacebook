@@ -34,6 +34,25 @@ $loginUrl = $helper->getLoginUrl('https://fierce-refuge-2356.herokuapp.com/valid
 </header>
 <div class="select_picture">
     <div class="container_select">
+        <div class="container_pictures">
+            <ul class="album album_1">
+                <li>
+                    <img src="img/photo_exemple.jpg"></li>
+                </li>
+                <li>
+                    <img src="img/photo_exemple.jpg"></li>
+                </li>
+                <li>
+                    <img src="img/photo_exemple.jpg"></li>
+                </li>
+                <li>
+                    <img src="img/photo_exemple.jpg"></li>
+                </li>
+                <li>
+                    <img src="img/photo_exemple.jpg"></li>
+                </li>
+            </ul>
+        </div>
         <?php
 
         if( !isset($_SESSION['facebook_access_token'])){
