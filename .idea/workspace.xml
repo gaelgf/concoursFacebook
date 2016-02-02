@@ -53,8 +53,8 @@
       <file leaf-file-name="choix_telechargement_photo.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/choix_telechargement_photo.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6681128">
-              <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
+            <state vertical-scroll-proportion="1.2906724">
+              <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -416,12 +416,6 @@
       <option name="number" value="Default" />
       <updated>1452618172454</updated>
     </task>
-    <task id="LOCAL-00005" summary="test aspx">
-      <created>1452620669251</created>
-      <option name="number" value="00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1452620669251</updated>
-    </task>
     <task id="LOCAL-00006" summary="test aspx">
       <created>1452621004596</created>
       <option name="number" value="00006" />
@@ -710,7 +704,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454429807194</updated>
     </task>
-    <option name="localTasksCounter" value="54" />
+    <task id="LOCAL-00054" summary="(8) Ajout d'une page de test de connexion a FB : redirection">
+      <created>1454429841144</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1454429841144</updated>
+    </task>
+    <option name="localTasksCounter" value="55" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1078,8 +1078,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/choix_telechargement_photo.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6681128">
-          <caret line="65" column="29" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
+        <state vertical-scroll-proportion="1.2906724">
+          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
           <folding />
         </state>
       </provider>
