@@ -33,10 +33,12 @@
         <fieldset>
             <legend> Création de concours </legend>
 
-            <label for="nom">Entrez le nom du concours :</label>
-            <input type="text" name="nom" value="nom" id="nom" />
-
-
+            <div class="row">
+                <div class="col-lg-12">
+                    <label for="nom">Entrez le nom du concours :</label>
+                    <input type="text" name="nom" value="nom" id="nom" />
+                </div>
+            </div>
             <label for="couleur">Choisissez une couleur de thème : </label>
             <input type="radio" name="theme" value="rouge" id="rouge" checked="checked" /> Rouge
             <input type="radio" name="theme" value="bleu" id="bleu" checked="checked" /> Bleu
