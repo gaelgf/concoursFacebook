@@ -81,14 +81,14 @@
                      <div class="row">
                         <div class="col-lg-12">
                             <label for="text_accueil">Insérer un text d'acceuil</label>
-                            <input type="text" name="text_accueil"/>
+                            <textarea name="text_accueil" id="text_accueil"></textarea>
                         </div>
                      </div>
 
                      <div class="row">
                          <div class="col-lg-12">
                             <label for="text_felicitation">Insérer un text de fécilitation</label>
-                            <textarea name="text_felicitation" id="text_felicitation">
+                            <textarea name="text_felicitation" id="text_felicitation"></textarea>
                          </div>
                      </div>
 
