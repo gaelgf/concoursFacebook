@@ -41,29 +41,56 @@
                         </div>
                     </div>
 
-                    <label for="couleur">Choisissez une couleur de thème : </label>
-                    <input type="radio" name="theme" value="rouge" id="rouge" checked="checked" /> Rouge
-                    <input type="radio" name="theme" value="bleu" id="bleu" checked="checked" /> Bleu
-                    <input type="radio" name="theme" value="vert" id="vert" checked="checked" /> Vert
+                    <div class="row">
+                        <div class="col-lg-12">
+                        <label for="couleur">Choisissez une couleur de thème : </label>
+                        <input type="radio" name="theme" value="rouge" id="rouge" checked="checked" /> Rouge
+                        <input type="radio" name="theme" value="bleu" id="bleu" checked="checked" /> Bleu
+                        <input type="radio" name="theme" value="vert" id="vert" checked="checked" /> Vert
+                        </div>
+                    </div>
 
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label for="logo">Choisissez un logo à afficher : </label>
+                            <input type="file" name="logo" />
+                        </div>
+                    </div>
 
-                    <label for="logo">Choisissez un logo à afficher : </label>
-                    <input type="file" name="logo" />
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <label for="date_debut">Date de début</label>
+                            <input type="date" name="datedebut">
+                        </div>
+                    </div>
 
-                    <label for="date_debut">Date de début</label>
-                    <input type="date" name="datedebut">
+                     <div class="row">
+                         <div class="col-lg-12">
+                            <label for="date_fin">Date de fin</label>
+                            <input type="date" name="datefin">
+                         </div>
+                     </div>
 
-                    <label for="date_fin">Date de fin</label>
-                    <input type="date" name="datefin">
+                     <div class="row">
+                         <div class="col-lg-12">
+                            <label for="icone">Choisissez un icone : </label>
+                            <input type="file" name="icone" />
+                         </div>
+                     </div>
 
-                    <label for="icone">Choisissez un icone : </label>
-                    <input type="file" name="icone" />
+                     <div class="row">
+                        <div class="col-lg-12">
+                            <label for="text_accueil">Insérer un text d'acceuil</label>
+                            <input type="text" name="text_accueil">
+                        </div>
+                     </div>
 
-                    <label for="text_accueil">Insérer un text d'acceuil</label>
-                    <input type="text" name="text_accueil">
-
-                    <label for="text_felicitation">Insérer un text de fécilitation</label>
-                    <input type="text" name="text_felicitation">
+                     <div class="row">
+                         <div class="col-lg-12">
+                            <label for="text_felicitation">Insérer un text de fécilitation</label>
+                            <input type="text" name="text_felicitation">
+                         </div>
+                     </div>
 
                 </fieldset>
 
