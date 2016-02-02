@@ -48,19 +48,19 @@ Route::get('/vote', function () {
 
 
 //Route admin
-Route::get('/admin/admin', function () {
+Route::get('/admin', function () {
     return view('admin/admin');
 });
 
-Route::get('/admin/adminCreerConcours', function () {
+Route::get('/adminCreerConcours', function () {
     return view('admin/adminCreerConcours');
 });
 
-Route::get('/admin/adminModifConcours', function () {
+Route::get('/adminModifConcours', function () {
     return view('admin/adminModifConcours');
 });
 
-Route::get('/admin/adminVisuConcours', function () {
+Route::get('/adminVisuConcours', function () {
     return view('admin/adminVisuConcours');
 });
 
