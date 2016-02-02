@@ -1,5 +1,7 @@
 <?php
 
+error_reporting(-1);
+
 session_start();
 
 require_once "fb_sdk/src/Facebook/autoload.php";
@@ -11,8 +13,6 @@ $fb = new Facebook\Facebook([
 ]);
 
 $helper = $fb->getRedirectLoginHelper();
-$permissions = ['public_profile', 'email','user_photos','publish_actions']; // optional
-$loginUrl = $helper->getLoginUrl('https://fierce-refuge-2356.herokuapp.com/validation_connexion', $permissions);
 
 ?>
 <!DOCTYPE html>
@@ -28,11 +28,44 @@ $loginUrl = $helper->getLoginUrl('https://fierce-refuge-2356.herokuapp.com/valid
 </head>
 
 <body>
-<header>
-    <img src="img/campagnes/1/logo.png" alt="">
-    - Concours photos
-</header>
-    Téléchargement photo
+    <header>
+        <img src="img/campagnes/1/logo.png" alt="">
+        - Concours photos
+    </header>
+    <form enctype='multipart/form-data' method="post" action="upload.php">
+        <div class="select_picture">
+            <div class="container_select">
+                <select class="album_list">
+                    <?php
+                    $response = $fb->get('/me?fields=albums{can_upload,name,id}', $_SESSION['facebook_access_token']);
 
+                    $graphNode = $response->getGraphNode();
+                    $albums = $graphNode->getField("albums");
+                    $i=0;
+
+                    $liste ="";
+
+                    foreach ($albums as $album) {
+                        $photos = "";
+
+
+                        $i++;
+                        $title = $album->getField("name");
+                        $id_album = $album->getField("id");
+                        $can_publish = $album->getField("can_upload");
+
+                        if( $can_publish ){
+                            $liste .='<option value="'.$id_album.'">'.$title.'</option>';
+                        }
+                    }
+                    ?>
+                    <?php echo $liste; ?>
+                </select>
+                <img src="img/icones/arrow_select.png" class="arrow" alt="">
+            </div>
+        </div>
+        <input type="file" name="image">
+        <input type="submit"/>
+    </form>
 </body>
 </html>
