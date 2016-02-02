@@ -37,7 +37,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <label for="nom">Entrez le nom du concours :</label>
-                            <input type="text" name="nom" value="nom" id="nom" />
+                            <input type="text" name="nom" placeholder="Ex : Concours été 2015" id="nom" />
                         </div>
                     </div>
 
@@ -81,14 +81,14 @@
                      <div class="row">
                         <div class="col-lg-12">
                             <label for="text_accueil">Insérer un text d'acceuil</label>
-                            <input type="text" name="text_accueil">
+                            <input type="text" name="text_accueil"/>
                         </div>
                      </div>
 
                      <div class="row">
                          <div class="col-lg-12">
                             <label for="text_felicitation">Insérer un text de fécilitation</label>
-                            <input type="text" name="text_felicitation">
+                            <input type="text" name="text_felicitation"/>
                          </div>
                      </div>
 
@@ -96,7 +96,7 @@
 
 
                 <p>
-                    <input type="submit" value="Envoyer" />
+                    <input type="submit" value="Créer" />
                 </p>
 
             </form>
