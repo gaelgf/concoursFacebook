@@ -16,17 +16,8 @@ class CreateVotesTable extends Migration
         {
             $table->increments('id');
             $table->integer('id_photo')->unsigned();
-            $table->foreign('id_photo')
-                  ->references('id')
-                  ->on('photos')
-                  ->onDelete('restrict')
-                  ->onUpdate('restrict');
             $table->integer('id_critere')->unsigned();
             $table->foreign('id_critere')
-                  ->references('id')
-                  ->on('criteres')
-                  ->onDelete('restrict')
-                  ->onUpdate('restrict');
             $table->date('date');
             $table->integer('valeur');
         });
