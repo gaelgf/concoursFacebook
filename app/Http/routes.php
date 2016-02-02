@@ -38,18 +38,30 @@ Route::get('/choix_photo_facebook', function () {
 
 
 
-
 Route::get('/vote', function () {
     return view('vote');
 });
 
 
 
-
-
+//Route admin
 Route::get('/admin', function () {
     return view('admin');
 });
+
+Route::get('/adminCreerConcours', function () {
+    return view('adminCreerConcours');
+});
+
+Route::get('/adminModifConcours', function () {
+    return view('adminModifConcours');
+});
+
+Route::get('/adminVisuConcours', function () {
+    return view('adminVisuConcours');
+});
+
+
 
 
 /*
