@@ -81,6 +81,10 @@
                      <div class="row">
                         <div class="col-lg-12">
                             <label for="text_accueil">Insérer un text d'acceuil</label>
+                         </div>
+                     </div>
+                        <div class="row">
+                           <div class="col-lg-12">
                             <textarea name="text_accueil" id="text_accueil"></textarea>
                         </div>
                      </div>
