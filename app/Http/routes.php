@@ -34,6 +34,9 @@ Route::get('/admin', function () {
 Route::get('/connexion', function () {
     return view('connexion');
 });
+Route::get('/validation_connexion', function () {
+    return view('validation_connexion');
+});
 /*
 |--------------------------------------------------------------------------
 | Application Routes
