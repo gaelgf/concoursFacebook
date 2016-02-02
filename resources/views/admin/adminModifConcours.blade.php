@@ -27,31 +27,36 @@
 </div>
 <div id="contenu">
 
+    <div class="row" align="center">
+        <div class="col-lg-12">
+            <form action="toto.php" method="post" id="formcreate">
 
-    <form action="toto.php" method="post" id="formcreate">
-    <form action="toto.php" method="post" id="formcreate">
+                <fieldset>
+                    <legend> Modification de concours </legend>
 
-        <fieldset>
-            <legend> Modification de concours </legend>
+                    <div class="row" align="center">
+                        <div class="col-lg-12">
+                            <label for="nom">Choisissez le concours à modifier:</label>
+                            <SELECT name="nom" size="1">
+                                <OPTION>Concours 1
+                                <OPTION>Concours 2
+                                <OPTION>Concours 3
+                                <OPTION>Concours de bob
+                                <OPTION>Concours 5
+                            </SELECT>
+                        </div>
+                    </div>
 
-            <label for="nom">Choisissez le concours à modifier:</label>
-            <SELECT name="nom" size="1">
-                <OPTION>Concours 1
-                <OPTION>Concours 2
-                <OPTION>Concours 3
-                <OPTION>Concours de bob
-                <OPTION>Concours 5
-            </SELECT>
-
-        </fieldset>
+                </fieldset>
 
 
-        <p>
-            <input type="submit" value="Envoyer" />
-        </p>
+                <p>
+                    <input type="submit" value="Envoyer" />
+                </p>
 
-    </form>
-
+            </form>
+        </div>
+    </div>
 
 
         <h3>Affichage du concours </h3>
