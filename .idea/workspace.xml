@@ -50,8 +50,8 @@
       <file leaf-file-name="connexion.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/connexion.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+            <state vertical-scroll-proportion="0.9192399">
+              <caret line="101" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="101" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -392,7 +392,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454421839182</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="(2) Ajout d'une page de test de connexion a FB">
+      <created>1454421915184</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1454421915184</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -719,8 +725,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/connexion.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.9192399">
+          <caret line="101" column="6" selection-start-line="0" selection-start-column="0" selection-end-line="101" selection-end-column="6" />
           <folding />
         </state>
       </provider>
