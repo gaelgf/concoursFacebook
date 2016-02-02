@@ -11,7 +11,7 @@ fieldset {
  padding:0 20px 20px 20px;
  margin-bottom:10px;
  border:1px solid #DF3F3F;
- line-height: 2em;
+ /*line-height: 2em;*/
 }
 legend {
  color:#DF3F3F;
