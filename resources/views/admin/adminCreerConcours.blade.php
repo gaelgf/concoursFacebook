@@ -29,7 +29,7 @@
 
     <div class="row" align="center">
         <div class="col-lg-12">
-            <form action="toto.php" method="post" id="formcreate">
+            <form action="#" method="post" id="formcreate">
 
                 <fieldset>
                     <legend> Création de concours </legend>
@@ -104,7 +104,7 @@
 
 
                 <p>
-                    <input type="submit" value="Créer" />
+                    <input type="submit" value="Créer" name="creer"/>
                 </p>
 
             </form>
@@ -113,6 +113,30 @@
 
 
 </div>
+
+
+<?php
+    if(isset($_POST['creer'])){
+        $nom_campagne=$_POST['nom'];
+        $couleur=$_POST['couleur'];
+        $logo_entreprise=$_POST['logo'];
+        $date_debut=$_POST['datedebut'];
+        $date_fin=$_POST['datefin'];
+        $url_icone=$_POST['icone'];
+        $text_accueil=$_POST['text_accueil'];
+        $text_felicitation=$_POST['text_felicitation'];
+
+        echo 'nom : '. $nom_campagne.'<br/>';
+        echo 'couleur : '. $couleur.'<br/>';
+        echo 'logo : '. $logo_entreprise.'<br/>';
+        echo 'datedebut : '. $date_debut.'<br/>';
+        echo 'datefin : '. $date_fin.'<br/>';
+        echo 'icone : '. $url_icone.'<br/>';
+        echo 'text_accueil : '. $text_accueil.'<br/>';
+        echo 'text_felicitation : '. $text_felicitation.'<br/>';
+
+    }
+?>
 
 
 </body>
