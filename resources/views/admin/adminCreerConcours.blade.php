@@ -6,14 +6,14 @@
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="{{ URL::asset('css/menuback.css') }}" rel="stylesheet" type="text/css" >
-    <link href="{{ URL::asset('css/formcontact.css') }}" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" href="css/menuback.css">
+    <link rel="stylesheet" href="css/formcontact.css">
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 
     <title>SB Admin 2 - Bootstrap Admin Theme</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="{{ URL::asset('css/bootstrap.css') }}" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
 
