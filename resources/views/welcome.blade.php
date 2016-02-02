@@ -57,7 +57,7 @@ $loginUrl = $helper->getLoginUrl('https://fierce-refuge-2356.herokuapp.com/valid
         <?php
 
         if( !isset($_SESSION['facebook_access_token'])){
-            echo '<a  class="boutons" href="' . $loginUrl . '">Log in with Facebook!</a>';
+            echo '<a  class="boutons bouton_connexion" href="' . $loginUrl . '">Log in with Facebook!</a>';
         }
         else{
             echo "Vous etes connecte<br/>";
