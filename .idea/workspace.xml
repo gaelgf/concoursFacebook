@@ -2,172 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12df67f9-58f3-4dfa-8b85-adb1ae29e437" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/.gitignore" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/.scrutinizer.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/.travis.yml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/CHANGELOG.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/CONTRIBUTING.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/LICENSE" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/README.md" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/composer.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/AccessToken.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/Facebook.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/FacebookApp.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/FacebookBatchRequest.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/FacebookBatchResponse.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/FacebookCanvasHelper.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/FacebookClient.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/FacebookFile.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/FacebookJavaScriptHelper.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/FacebookPageTabHelper.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/FacebookRedirectLoginHelper.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/FacebookRequest.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/FacebookResponse.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/FacebookResponseException.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/FacebookSDKException.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/FacebookVideo.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/GraphEdge.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/GraphNode.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/PersistentDataInterface.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/PseudoRandomStringGeneratorInterface.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/SignedRequest.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/UrlDetectionInterface.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/example_access_token_from_canvas.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/example_access_token_from_javascript.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/example_access_token_from_page_tab.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/example_batch_request.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/example_batch_upload.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/example_facebook_login.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/example_pagination_basic.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/example_post_links.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/example_retrieve_user_profile.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/example_upload_photo.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/example_upload_video.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/sdk_downloads.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/sdk_getting_started.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/sdk_landing_page.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/docs/sdk_reference.fbmd" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/phpunit.xml.dist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Authentication/AccessToken.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Authentication/AccessTokenMetadata.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Authentication/OAuth2Client.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Exceptions/FacebookAuthenticationException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Exceptions/FacebookAuthorizationException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Exceptions/FacebookClientException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Exceptions/FacebookOtherException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Exceptions/FacebookResponseException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Exceptions/FacebookSDKException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Exceptions/FacebookServerException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Exceptions/FacebookThrottleException.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Facebook.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/FacebookApp.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/FacebookBatchRequest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/FacebookBatchResponse.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/FacebookClient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/FacebookRequest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/FacebookResponse.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/FileUpload/FacebookFile.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/FileUpload/FacebookVideo.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/FileUpload/Mimetypes.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/GraphNodes/Collection.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/GraphNodes/GraphAchievement.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/GraphNodes/GraphAlbum.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/GraphNodes/GraphApplication.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/GraphNodes/GraphCoverPhoto.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/GraphNodes/GraphEdge.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/GraphNodes/GraphEvent.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/GraphNodes/GraphGroup.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/GraphNodes/GraphList.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/GraphNodes/GraphLocation.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/GraphNodes/GraphNode.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/GraphNodes/GraphNodeFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/GraphNodes/GraphObject.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/GraphNodes/GraphObjectFactory.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/GraphNodes/GraphPage.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/GraphNodes/GraphPicture.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/GraphNodes/GraphSessionInfo.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/GraphNodes/GraphUser.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Helpers/FacebookCanvasHelper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Helpers/FacebookJavaScriptHelper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Helpers/FacebookPageTabHelper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Helpers/FacebookRedirectLoginHelper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Helpers/FacebookSignedRequestFromInputHelper.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Http/GraphRawResponse.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Http/RequestBodyInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Http/RequestBodyMultipart.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Http/RequestBodyUrlEncoded.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/HttpClients/FacebookCurl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/HttpClients/FacebookCurlHttpClient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/HttpClients/FacebookGuzzleHttpClient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/HttpClients/FacebookHttpClientInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/HttpClients/FacebookStream.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/HttpClients/FacebookStreamHttpClient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/HttpClients/certs/DigiCertHighAssuranceEVRootCA.pem" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/PersistentData/FacebookMemoryPersistentDataHandler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/PersistentData/FacebookSessionPersistentDataHandler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/PersistentData/PersistentDataInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/PseudoRandomString/McryptPseudoRandomStringGenerator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/PseudoRandomString/OpenSslPseudoRandomStringGenerator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/PseudoRandomString/PseudoRandomStringGeneratorInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/PseudoRandomString/PseudoRandomStringGeneratorTrait.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/PseudoRandomString/UrandomPseudoRandomStringGenerator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/SignedRequest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Url/FacebookUrlDetectionHandler.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Url/FacebookUrlManipulator.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/Url/UrlDetectionInterface.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/src/Facebook/autoload.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/Authentication/AccessTokenMetadata.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/Authentication/AccessTokenTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/Authentication/FooFacebookClientForOAuth2Test.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/Authentication/OAuth2ClientTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/Exceptions/FacebookResponseExceptionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/FacebookAppTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/FacebookBatchRequestTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/FacebookBatchResponseTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/FacebookClientTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/FacebookRequestTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/FacebookResponseTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/FacebookTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/FacebookTestCredentials.php.dist" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/FileUpload/FacebookFileTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/FileUpload/MimetypesTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/GraphNodes/AbstractGraphNode.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/GraphNodes/CollectionTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/GraphNodes/GraphAchievementTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/GraphNodes/GraphAlbumTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/GraphNodes/GraphEdgeTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/GraphNodes/GraphEventTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/GraphNodes/GraphGroupTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/GraphNodes/GraphNodeFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/GraphNodes/GraphNodeTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/GraphNodes/GraphObjectFactoryTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/GraphNodes/GraphPageTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/GraphNodes/GraphSessionInfoTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/GraphNodes/GraphUserTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/Helpers/FacebookCanvasHelperTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/Helpers/FacebookJavaScriptHelperTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/Helpers/FacebookPageTabHelperTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/Helpers/FacebookRedirectLoginHelperTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/Helpers/FacebookSignedRequestFromInputHelperTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/Http/GraphRawResponseTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/Http/RequestBodyMultipartTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/Http/RequestUrlEncodedTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/HttpClients/AbstractTestHttpClient.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/HttpClients/FacebookCurlHttpClientTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/HttpClients/FacebookGuzzleHttpClientTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/HttpClients/FacebookStreamHttpClientTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/PersistentData/FacebookMemoryPersistentDataHandlerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/PersistentData/FacebookSessionPersistentDataHandlerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/PseudoRandomString/McryptPseudoRandomStringGeneratorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/PseudoRandomString/OpenSslPseudoRandomStringGeneratorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/PseudoRandomString/PseudoRandomStringGeneratorTraitTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/PseudoRandomString/UrandomPseudoRandomStringGeneratorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/SignedRequestTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/Url/FacebookUrlDetectionHandlerTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/Url/FacebookUrlManipulatorTest.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/bootstrap.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/fb_sdk/tests/foo.txt" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/validation_connexion.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/connexion.blade.php" afterPath="$PROJECT_DIR$/resources/views/connexion.blade.php" />
     </list>
@@ -193,25 +27,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="validation_connexion.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="validation_connexion.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/validation_connexion.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24228029">
+            <state vertical-scroll-proportion="-3.9230769">
               <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="connexion.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.6923075">
+              <caret line="34" column="26" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="connexion.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/connexion.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.9615384">
-              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="48" />
-              <folding>
-                <marker date="1454421798105" expanded="true" signature="2070:2266" placeholder="..." />
-                <marker date="1454421798105" expanded="true" signature="2152:2230" placeholder="..." />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -234,8 +75,8 @@
         <option value="$PROJECT_DIR$/resources/views/admin.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/test.blade.aspx" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
-        <option value="$PROJECT_DIR$/resources/views/connexion.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/validation_connexion.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/connexion.blade.php" />
       </list>
     </option>
   </component>
@@ -545,7 +386,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454421288785</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="(2) Ajout d'une page de test de connexion a FB">
+      <created>1454421839182</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1454421839182</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -596,7 +443,8 @@
     <MESSAGE value="admin" />
     <MESSAGE value="admin menu lateral" />
     <MESSAGE value="Ajout d'une page de test de connexion a FB" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout d'une page de test de connexion a FB" />
+    <MESSAGE value="(2) Ajout d'une page de test de connexion a FB" />
+    <option name="LAST_COMMIT_MESSAGE" value="(2) Ajout d'une page de test de connexion a FB" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -673,14 +521,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.153846">
-          <caret line="34" column="25" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -861,21 +701,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/connexion.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/validation_connexion.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.9615384">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="48" />
-          <folding>
-            <marker date="1454421798105" expanded="true" signature="2070:2266" placeholder="..." />
-            <marker date="1454421798105" expanded="true" signature="2152:2230" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="-3.9230769">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/validation_connexion.blade.php">
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24228029">
-          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+        <state vertical-scroll-proportion="-7.6923075">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/connexion.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
           <folding />
         </state>
       </provider>
