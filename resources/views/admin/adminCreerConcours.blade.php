@@ -27,87 +27,89 @@
 </div>
 <div id="contenu">
 
-    <div class="row" align="center">
+    <div class="row" align="center" id="formcreate">
         <div class="col-lg-12">
-            <form action="#" method="post" id="formcreate">
+
+
+            {!! Form::open(
+                array(
+                    /*'route' => 'admin/adminCreerConcours', */
+                    'class' => 'form',
+                    'novalidate' => 'novalidate',
+                    'files' => true)) !!}
 
                 <fieldset>
                     <legend> Création de concours </legend>
 
+
                     <div class="row">
                         <div class="col-lg-12">
-                            <label for="nom">Entrez le nom du concours :</label>
-                            <input type="text" name="nom" placeholder="Ex : Concours été 2015" id="nom" />
+                            {!! Form::label('nom_entreprise', 'Entrez le nom du concours : ') !!}
+                            {!! Form::text('nom_entreprise') !!}
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
+                            {!! Form::label('couleur', 'Choisissez une couleur de thème : ') !!}
+                            {{ Form::select('couleur', [
+                                   'rouge' => 'Rouge',
+                                   'bleu' => 'Bleu',
+                                   'vert' => 'Vert']
+                                ) }}
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-12">
-                        <label for="couleur">Choisissez une couleur de thème : </label>
-                        <input type="radio" name="theme" value="rouge" id="rouge" checked="checked" /> Rouge
-                        <input type="radio" name="theme" value="bleu" id="bleu" checked="checked" /> Bleu
-                        <input type="radio" name="theme" value="vert" id="vert" checked="checked" /> Vert
+                            {!! Form::label('Choisissez un logo à afficher') !!}
+                            {!! Form::file('logo', null) !!}
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-lg-12">
-                            <label for="logo">Choisissez un logo à afficher : </label>
-                            <input type="file" name="logo" />
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <label for="date_debut">Date de début</label>
-                            <input type="date" name="datedebut">
+                            {!! Form::label('Date de début du concours') !!}
+                            {!! Form::date('date_debut', \Carbon\Carbon::now()) !!}
                         </div>
                     </div>
 
                      <div class="row">
                          <div class="col-lg-12">
-                            <label for="date_fin">Date de fin</label>
-                            <input type="date" name="datefin">
+                             {!! Form::label('Date de fin du concours') !!}
+                             {!! Form::date('date_fin', \Carbon\Carbon::now()) !!}
                          </div>
                      </div>
 
                      <div class="row">
                          <div class="col-lg-12">
-                            <label for="icone">Choisissez un icone : </label>
-                            <input type="file" name="icone" />
+                             {!! Form::label('Choisissez une icone') !!}
+                             {!! Form::file('icone', null) !!}
                          </div>
                      </div>
 
-                     <div class="row">
-                        <div class="col-lg-12">
-                            <label for="text_accueil">Insérer un text d'acceuil</label>
-                         </div>
-                     </div>
                         <div class="row">
                            <div class="col-lg-12">
-                            <textarea name="text_accueil" id="text_accueil"></textarea>
+                               {!! Form::label('Insérez un texte de présentation') !!}
+                               {!! Form::textarea('text_accueil') !!}
                         </div>
-                     </div>
-
-                     <div class="row">
-                         <div class="col-lg-12">
-                            <label for="text_felicitation">Insérer un text de fécilitation</label>
-                         </div>
                      </div>
                      <div class="row">
                         <div class="col-lg-12">
-                            <textarea name="text_felicitation" id="text_felicitation"></textarea>
+                            {!! Form::label('Insérez un texte de félicitation') !!}
+                            {!! Form::textarea('text_felicitation') !!}
                          </div>
                      </div>
 
                 </fieldset>
 
 
-                <p>
-                    <input type="submit" value="Créer" name="creer"/>
-                </p>
+                <div>
+                    {!! Form::submit('creer') !!}
+                </div>
 
-            </form>
+            {!! Form::close() !!}
         </div>
     </div>
 
