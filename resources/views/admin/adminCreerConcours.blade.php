@@ -88,7 +88,7 @@
                      <div class="row">
                          <div class="col-lg-12">
                             <label for="text_felicitation">Insérer un text de fécilitation</label>
-                            <input type="text" name="text_felicitation"/>
+                            <textarea name="text_felicitation" id="text_felicitation">
                          </div>
                      </div>
 
