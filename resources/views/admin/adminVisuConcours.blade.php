@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="css/menuback.css">
     <link rel="stylesheet" href="css/formcontact.css">
-    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="js/jquery.min.js" type="text/javascript"></script>
 
     <title>SB Admin 2 - Bootstrap Admin Theme</title>
 
