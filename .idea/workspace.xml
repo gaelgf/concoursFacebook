@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="12df67f9-58f3-4dfa-8b85-adb1ae29e437" name="Default" comment="modif de visualisation admin">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/campagne/create.blade.php" />
+    <list default="true" id="12df67f9-58f3-4dfa-8b85-adb1ae29e437" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/campagne/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/campagne/create.blade.php" />
     </list>
     <list id="5ec41d52-f175-40c6-9b2e-634018c119ab" name="New changelist" comment="" />
     <list id="c1c44a68-f611-4f49-9230-27efece74ef6" name="Rejected commit: Default" comment="changement page admin -&gt; login" />
@@ -41,8 +40,8 @@
       <file leaf-file-name="create.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/campagne/create.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8888889">
-              <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+            <state vertical-scroll-proportion="0.13178295">
+              <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -141,6 +140,7 @@
         <option value="$PROJECT_DIR$/resources/views/admin/adminVisuConcours.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/adminCreerConcours.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/campagne/create.blade.php" />
       </list>
     </option>
   </component>
@@ -1181,12 +1181,6 @@
       <option name="number" value="Default" />
       <updated>1452618172454</updated>
     </task>
-    <task id="LOCAL-00036" summary="(8) Ajout d'une page de test de connexion a FB : redirection">
-      <created>1454425488194</created>
-      <option name="number" value="00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1454425488194</updated>
-    </task>
     <task id="LOCAL-00037" summary="(8) Ajout d'une page de test de connexion a FB : redirection">
       <created>1454425843301</created>
       <option name="number" value="00037" />
@@ -1475,7 +1469,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454451565581</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="modif de visualisation admin">
+      <created>1454451600887</created>
+      <option name="number" value="00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1454451600887</updated>
+    </task>
+    <option name="localTasksCounter" value="86" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1556,9 +1556,9 @@
     <MESSAGE value="ajout dossier admin" />
     <MESSAGE value="admin / formulaire" />
     <MESSAGE value="test récupération de données" />
-    <MESSAGE value="modif de visualisation admin" />
     <MESSAGE value="ajout dependence form" />
-    <option name="LAST_COMMIT_MESSAGE" value="ajout dependence form" />
+    <MESSAGE value="modif de visualisation admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="modif de visualisation admin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1861,8 +1861,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/campagne/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8888889">
-          <caret line="49" column="7" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.13178295">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
           <folding />
         </state>
       </provider>
