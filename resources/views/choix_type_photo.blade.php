@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,11 +7,11 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/selection_album.js"></script>
 </head>
 
 <body>
 <header>
-    <!-- test -->
     <img src="img/campagnes/1/logo.png" alt="">
     - Concours photos
 </header>
@@ -30,7 +29,7 @@
     </div>
     <div class="actions_bottom container">
         <div class="col-xs-1"></div>
-        <a class="col-xs-4 boutons choisir_photo" href="selection_photo.html">
+        <a class="col-xs-4 boutons choisir_photo" href="https://fierce-refuge-2356.herokuapp.com/choix_telechargement_photo">
             Choisir une photo
         </a>
         <div class="col-xs-2"></div>

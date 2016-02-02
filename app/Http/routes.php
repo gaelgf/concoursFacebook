@@ -14,34 +14,42 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/vote', function () {
-    return view('vote');
-});
-Route::get('/choix_photo_facebook', function () {
-    return view('choix_photo_facebook');
-});
-
-Route::get('/test', function () {
-    return view('test');
-});
 
 Route::get('/login', function () {
     return view('login');
 });
-Route::get('/admin', function () {
-    return view('admin');
-});
+
+
 Route::get('/connexion', function () {
     return view('connexion');
 });
 Route::get('/validation_connexion', function () {
     return view('validation_connexion');
 });
-Route::get('/type_photo', function () {
-    return view('type_photo');
+
+
+Route::get('/choix_type_photo', function () {
+    return view('choix_type_photo');
+});
+Route::get('/choix_photo_facebook', function () {
+    return view('choix_photo_facebook');
 });
 
 
+
+
+
+Route::get('/vote', function () {
+    return view('vote');
+});
+
+
+
+
+
+Route::get('/admin', function () {
+    return view('admin');
+});
 
 
 /*

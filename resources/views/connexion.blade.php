@@ -1,3 +1,6 @@
+
+
+
 <?php
 
 session_start();
@@ -52,8 +55,7 @@ $loginUrl = $helper->getLoginUrl('https://fierce-refuge-2356.herokuapp.com/valid
         echo '<a href="' . $loginUrl . '">Log in with Facebook!</a>';
     }
     else{
-        header();
-        echo "Vous etes connecte<br/>";
+        header("Location: https://fierce-refuge-2356.herokuapp.com/choix_type_photo");
     }
 
     ?>
