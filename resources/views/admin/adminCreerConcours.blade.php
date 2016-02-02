@@ -46,6 +46,21 @@
             <p>Choisissez un logo à afficher : </p>
             <input type="file" name="logo" />
 
+            <p>Date de début</p>
+            <input type="date" name="datedebut">
+
+            <p>Date de fin</p>
+            <input type="date" name="datefin">
+
+            <p>Choisissez un icone : </p>
+            <input type="file" name="icone" />
+
+            <p>Insérer un text d'acceuil</p>
+            <input type="text" name="text_accueil">
+
+            <p>Insérer un text de fécilitation</p>
+            <input type="text" name="text_felicitation">
+
         </fieldset>
 
 
