@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="12df67f9-58f3-4dfa-8b85-adb1ae29e437" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/adminCreerConcours.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/adminCreerConcours.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/campagne/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/campagne/create.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/adminModifConcours.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/adminModifConcours.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/adminVisuConcours.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/adminVisuConcours.blade.php" />
     </list>
     <list id="5ec41d52-f175-40c6-9b2e-634018c119ab" name="New changelist" comment="" />
     <list id="c1c44a68-f611-4f49-9230-27efece74ef6" name="Rejected commit: Default" comment="changement page admin -&gt; login" />
@@ -78,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminCreerConcours.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="adminCreerConcours.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/adminCreerConcours.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.80632913">
-              <caret line="56" column="54" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
+            <state vertical-scroll-proportion="-9.807693">
+              <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="49" />
               <folding>
                 <marker date="1454453731627" expanded="true" signature="1006:1233" placeholder="..." />
                 <marker date="1454453731627" expanded="true" signature="1018:1231" placeholder="..." />
@@ -97,19 +97,31 @@
       <file leaf-file-name="adminModifConcours.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/adminModifConcours.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231">
-              <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
-              <folding />
+            <state vertical-scroll-proportion="-18.615385">
+              <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="52" />
+              <folding>
+                <marker date="1454454171263" expanded="true" signature="1020:1247" placeholder="..." />
+                <marker date="1454454171263" expanded="true" signature="1032:1245" placeholder="..." />
+                <marker date="1454454171263" expanded="true" signature="1055:1244" placeholder="..." />
+                <marker date="1454454171263" expanded="true" signature="1581:1826" placeholder="..." />
+                <marker date="1454454171263" expanded="true" signature="1600:1792" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminVisuConcours.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="adminVisuConcours.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/adminVisuConcours.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-14.384615">
-              <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
-              <folding />
+            <state vertical-scroll-proportion="0.08607595">
+              <caret line="31" column="54" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
+              <folding>
+                <marker date="1454454222679" expanded="true" signature="1057:1284" placeholder="..." />
+                <marker date="1454454222679" expanded="true" signature="1069:1282" placeholder="..." />
+                <marker date="1454454222679" expanded="true" signature="1092:1281" placeholder="..." />
+                <marker date="1454454222679" expanded="true" signature="1652:1921" placeholder="..." />
+                <marker date="1454454222679" expanded="true" signature="1679:1883" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -143,11 +155,11 @@
         <option value="$PROJECT_DIR$/public/css/menuback.css" />
         <option value="$PROJECT_DIR$/resources/views/admin/admin.blade.php" />
         <option value="$PROJECT_DIR$/public/css/formcontact.css" />
-        <option value="$PROJECT_DIR$/resources/views/admin/adminModifConcours.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/adminVisuConcours.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/campagne/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/adminCreerConcours.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/adminModifConcours.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/adminVisuConcours.blade.php" />
       </list>
     </option>
   </component>
@@ -1190,12 +1202,6 @@
       <option name="number" value="Default" />
       <updated>1452618172454</updated>
     </task>
-    <task id="LOCAL-00038" summary="(8) Ajout d'une page de test de connexion a FB : redirection">
-      <created>1454426338863</created>
-      <option name="number" value="00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1454426338863</updated>
-    </task>
     <task id="LOCAL-00039" summary="(8) Ajout d'une page de test de connexion a FB : redirection">
       <created>1454426426072</created>
       <option name="number" value="00039" />
@@ -1484,7 +1490,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454451718556</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="modif page create">
+      <created>1454453783852</created>
+      <option name="number" value="00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1454453783852</updated>
+    </task>
+    <option name="localTasksCounter" value="88" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1813,14 +1825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/adminVisuConcours.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-14.384615">
-          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/admin.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.423077">
@@ -1833,14 +1837,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-28.115385">
           <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/adminModifConcours.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231">
-          <caret line="36" column="36" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -1871,14 +1867,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/adminCreerConcours.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.80632913">
-          <caret line="56" column="54" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
+        <state vertical-scroll-proportion="-9.807693">
+          <caret line="108" column="20" selection-start-line="108" selection-start-column="20" selection-end-line="108" selection-end-column="49" />
           <folding>
             <marker date="1454453731627" expanded="true" signature="1006:1233" placeholder="..." />
             <marker date="1454453731627" expanded="true" signature="1018:1231" placeholder="..." />
             <marker date="1454453731627" expanded="true" signature="1041:1230" placeholder="..." />
             <marker date="1454453731627" expanded="true" signature="1863:2069" placeholder="..." />
             <marker date="1454453731627" expanded="true" signature="1875:2035" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/adminModifConcours.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.615385">
+          <caret line="60" column="20" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="52" />
+          <folding>
+            <marker date="1454454171263" expanded="true" signature="1020:1247" placeholder="..." />
+            <marker date="1454454171263" expanded="true" signature="1032:1245" placeholder="..." />
+            <marker date="1454454171263" expanded="true" signature="1055:1244" placeholder="..." />
+            <marker date="1454454171263" expanded="true" signature="1581:1826" placeholder="..." />
+            <marker date="1454454171263" expanded="true" signature="1600:1792" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/adminVisuConcours.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08607595">
+          <caret line="31" column="54" selection-start-line="31" selection-start-column="54" selection-end-line="31" selection-end-column="54" />
+          <folding>
+            <marker date="1454454222679" expanded="true" signature="1057:1284" placeholder="..." />
+            <marker date="1454454222679" expanded="true" signature="1069:1282" placeholder="..." />
+            <marker date="1454454222679" expanded="true" signature="1092:1281" placeholder="..." />
+            <marker date="1454454222679" expanded="true" signature="1652:1921" placeholder="..." />
+            <marker date="1454454222679" expanded="true" signature="1679:1883" placeholder="..." />
           </folding>
         </state>
       </provider>
