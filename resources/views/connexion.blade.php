@@ -2,17 +2,17 @@
 
 session_start();
 
-require_once "sdk_fb/src/Facebook/autoload.php";
+require_once "fb_sdk/src/Facebook/autoload.php";
 
 $fb = new Facebook\Facebook([
-        'app_id' => '916120625137591',
-        'app_secret' => '07e327936f04164ae38405974b923578',
+        'app_id' => '1545660598783922',
+        'app_secret' => 'ca702576b5815fbccba65343c8003198',
         'default_graph_version' => 'v2.5',
 ]);
 
 $helper = $fb->getRedirectLoginHelper();
-$permissions = ['email', 'user_likes','publish_actions','user_photos']; // optional
-$loginUrl = $helper->getLoginUrl('http://localhost/facebook_formulaire_photo/validation/', $permissions);
+$permissions = ['public_profile', 'email','user_photos','publish_actions']; // optional
+$loginUrl = $helper->getLoginUrl('https://fierce-refuge-2356.herokuapp.com/validation_connexion', $permissions);
 
 ?>
         <!DOCTYPE html>
