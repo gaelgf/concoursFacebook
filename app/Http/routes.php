@@ -64,11 +64,12 @@ Route::get('/adminVisuConcours', function () {
     return view('admin/adminVisuConcours');
 });
 
-Route::get('/create', function () {
+/*Route::get('/create', function () {
     return view('campagne/create');
-});
+}); */
 
-
+/*Route::get('/', 'FriendsController@getAddFriend');
+Route::post('/', 'FriendsController@postAddFriend'); */
 
 /*
 |--------------------------------------------------------------------------
