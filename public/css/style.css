@@ -228,7 +228,6 @@ body{
 			.select_picture .container_pictures ul{
 				width: 90%;
 				margin:auto;
-				display: none;
 			}
 				.select_picture .container_pictures ul li{
 					width: 20%;

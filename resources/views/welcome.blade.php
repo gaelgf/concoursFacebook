@@ -35,7 +35,7 @@ $loginUrl = $helper->getLoginUrl('https://fierce-refuge-2356.herokuapp.com/valid
 <div class="select_picture">
     <div class="container_select">
         <div class="container_pictures">
-            <ul class="album album_1">
+            <ul class="album">
                 <li>
                     <img src="img/photo_exemple.jpg"></li>
                 </li>
