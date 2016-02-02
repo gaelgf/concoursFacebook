@@ -37,28 +37,28 @@
             <input type="text" name="nom" value="nom" id="nom" />
 
 
-            <p>Choisissez une couleur de thème : </p>
+            <label for="couleur">>Choisissez une couleur de thème : </label>
             <input type="radio" name="theme" value="rouge" id="rouge" checked="checked" /> Rouge
             <input type="radio" name="theme" value="bleu" id="bleu" checked="checked" /> Bleu
             <input type="radio" name="theme" value="vert" id="vert" checked="checked" /> Vert
 
 
-            <p>Choisissez un logo à afficher : </p>
+            <label for="logo">>Choisissez un logo à afficher : </label>
             <input type="file" name="logo" />
 
-            <p>Date de début</p>
+            <label for="date_debut">>Date de début</label>
             <input type="date" name="datedebut">
 
-            <p>Date de fin</p>
+            <label for="date_fin">>Date de fin</label>
             <input type="date" name="datefin">
 
-            <p>Choisissez un icone : </p>
+            <label for="icone">>Choisissez un icone : </label>
             <input type="file" name="icone" />
 
-            <p>Insérer un text d'acceuil</p>
+            <label for="text_accueil">>Insérer un text d'acceuil</label>
             <input type="text" name="text_accueil">
 
-            <p>Insérer un text de fécilitation</p>
+            <label for="text_felicitation">>Insérer un text de fécilitation</label>
             <input type="text" name="text_felicitation">
 
         </fieldset>
