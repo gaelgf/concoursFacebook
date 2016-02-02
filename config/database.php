@@ -3,7 +3,7 @@
 if(getenv("DATABASE_URL")) {
     $url = parse_url(getenv("DATABASE_URL"));
 } else {
-    $url = parse_url("postgres://postgres:3Sa0f0tq@localhost:5432/dcsd5vvlobm9dj");
+    $url = parse_url("postgres://postgres:3Sa0f0tq@localhost:5432/postgres");
 }
 
 $host = $url["host"];
