@@ -1,7 +1,7 @@
 <?php
 
 
-
+/*
 session_start();
 
 require_once "fb_sdk/src/Facebook/autoload.php";
@@ -53,5 +53,6 @@ else{
         document.location.href="https://fierce-refuge-2356.herokuapp.com/";
     </script>
 HTML;
+*/
 }
 
