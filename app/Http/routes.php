@@ -31,6 +31,9 @@ Route::get('/login', function () {
 Route::get('/admin', function () {
     return view('admin');
 });
+Route::get('/connexion', function () {
+    return view('connexion');
+});
 /*
 |--------------------------------------------------------------------------
 | Application Routes
