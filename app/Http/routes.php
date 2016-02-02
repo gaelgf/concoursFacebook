@@ -17,7 +17,7 @@ Route::get('/', function () {
 Route::get('/vote', function () {
     return view('vote');
 });
-Route::get('/album', function () {
+Route::get('/choix_photo_facebook', function () {
     return view('choix_photo_facebook');
 });
 
@@ -37,6 +37,13 @@ Route::get('/connexion', function () {
 Route::get('/validation_connexion', function () {
     return view('validation_connexion');
 });
+Route::get('/type_photo', function () {
+    return view('type_photo');
+});
+
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Application Routes
