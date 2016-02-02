@@ -54,6 +54,15 @@ body{
 	/****************************************************************************************/
 	/*										ACCUEIL											*/
 	/****************************************************************************************/
+	.bouton_connexion{
+		padding:10px;
+		padding-left:30px;
+		padding-right:30px;
+		font-size:180%;
+	}
+	/****************************************************************************************/
+	/*										CHOIX PHOTO										*/
+	/****************************************************************************************/
 	.accueil{
 		width: 100%;
 	}
@@ -224,11 +233,11 @@ body{
 			}
 		.select_picture .container_pictures{
 			margin-top:30px;
+			overflow: hidden;
 		}
 			.select_picture .container_pictures ul{
 				width: 90%;
 				margin:auto;
-				display: none;
 			}
 				.select_picture .container_pictures ul li{
 					width: 20%;

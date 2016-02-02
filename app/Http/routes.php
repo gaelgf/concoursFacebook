@@ -34,7 +34,9 @@ Route::get('/choix_type_photo', function () {
 Route::get('/choix_photo_facebook', function () {
     return view('choix_photo_facebook');
 });
-
+Route::get('/choix_telechargement_photo', function () {
+    return view('choix_telechargement_photo');
+});
 
 
 
@@ -45,13 +47,31 @@ Route::get('/vote', function () {
 
 
 
-
-
+//Route admin
 Route::get('/admin', function () {
-    return view('admin');
+    return view('admin/admin');
+});
+
+Route::get('/adminCreerConcours', function () {
+    return view('admin/adminCreerConcours');
+});
+
+Route::get('/adminModifConcours', function () {
+    return view('admin/adminModifConcours');
+});
+
+Route::get('/adminVisuConcours', function () {
+    return view('admin/adminVisuConcours');
 });
 
 Route::resource('campagne', 'CampagneController');
+
+/*Route::get('/create', function () {
+    return view('campagne/create');
+}); */
+
+/*Route::get('/', 'FriendsController@getAddFriend');
+Route::post('/', 'FriendsController@postAddFriend'); */
 /*
 |--------------------------------------------------------------------------
 | Application Routes
