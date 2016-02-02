@@ -34,6 +34,9 @@ Route::get('/choix_type_photo', function () {
 Route::get('/choix_photo_facebook', function () {
     return view('choix_photo_facebook');
 });
+Route::get('/choix_telechargement_photo', function () {
+    return view('choix_telechargement_photo');
+});
 
 
 

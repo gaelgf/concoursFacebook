@@ -29,11 +29,11 @@
     </div>
     <div class="actions_bottom container">
         <div class="col-xs-1"></div>
-        <a class="col-xs-4 boutons choisir_photo" href="https://fierce-refuge-2356.herokuapp.com/choix_telechargement_photo">
+        <a class="col-xs-4 boutons choisir_photo" href="https://fierce-refuge-2356.herokuapp.com/choix_photo_facebook">
             Choisir une photo
         </a>
         <div class="col-xs-2"></div>
-        <a class="col-xs-4 boutons telecharger_photo" href="https://fierce-refuge-2356.herokuapp.com/choix_photo_facebook">
+        <a class="col-xs-4 boutons telecharger_photo" href="https://fierce-refuge-2356.herokuapp.com/choix_telechargement_photo">
             Télécharger votre photo
         </a>
         <div class="col-xs-1"></div>
