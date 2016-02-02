@@ -50,8 +50,8 @@
       <file leaf-file-name="choix_photo_facebook.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="2.0190024">
-              <caret line="50" column="51" selection-start-line="34" selection-start-column="35" selection-end-line="58" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.08076009">
+              <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -493,7 +493,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454425182842</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="(8) Ajout d'une page de test de connexion a FB : redirection">
+      <created>1454425488194</created>
+      <option name="number" value="00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1454425488194</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -841,8 +847,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.0190024">
-          <caret line="50" column="51" selection-start-line="34" selection-start-column="35" selection-end-line="58" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.08076009">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
           <folding />
         </state>
       </provider>

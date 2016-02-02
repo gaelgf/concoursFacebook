@@ -1,5 +1,7 @@
 <?php
 
+        error_reporting(-1);
+
 session_start();
 
 require_once "fb_sdk/src/Facebook/autoload.php";
@@ -33,7 +35,7 @@ $helper = $fb->getRedirectLoginHelper();
 <div class="select_picture">
     <div class="container_select">
         <select class="album_list">
-            <?php
+        <?php
             $response = $fb->get('/me?fields=albums{can_upload,name,id}', $_SESSION['facebook_access_token']);
 
             $graphNode = $response->getGraphNode();
