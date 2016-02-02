@@ -49,11 +49,11 @@ Route::get('/vote', function () {
 
 //Route admin
 Route::get('/admin', function () {
-    return view('admin');
+    return view('admin/admin');
 });
 
 Route::get('/adminCreerConcours', function () {
-    return view('adminCreerConcours');
+    return view('admin/adminCreerConcours');
 });
 
 Route::get('/adminModifConcours', function () {
