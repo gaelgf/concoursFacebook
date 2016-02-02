@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="12df67f9-58f3-4dfa-8b85-adb1ae29e437" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php" afterPath="$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/choix_telechargement_photo.blade.php" afterPath="$PROJECT_DIR$/resources/views/choix_telechargement_photo.blade.php" />
     </list>
     <list id="5ec41d52-f175-40c6-9b2e-634018c119ab" name="New changelist" comment="" />
@@ -54,8 +53,8 @@
       <file leaf-file-name="choix_telechargement_photo.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/choix_telechargement_photo.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36876357">
-              <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -417,12 +416,6 @@
       <option name="number" value="Default" />
       <updated>1452618172454</updated>
     </task>
-    <task id="LOCAL-00002" summary="Ajout codejs fb">
-      <created>1452619334737</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1452619334737</updated>
-    </task>
     <task id="LOCAL-00003" summary="Ajout codejs fb">
       <created>1452619444946</created>
       <option name="number" value="00003" />
@@ -711,7 +704,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454429383468</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="(8) Ajout d'une page de test de connexion a FB : redirection">
+      <created>1454429661049</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1454429661049</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1079,8 +1078,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/choix_telechargement_photo.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36876357">
-          <caret line="10" column="3" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
