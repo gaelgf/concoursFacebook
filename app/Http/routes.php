@@ -64,6 +64,9 @@ Route::get('/adminVisuConcours', function () {
     return view('admin/adminVisuConcours');
 });
 
+Route::get('/create', function () {
+    return view('campagne/create');
+});
 
 
 
