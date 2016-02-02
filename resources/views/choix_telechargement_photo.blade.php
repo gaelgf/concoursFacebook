@@ -63,7 +63,7 @@ $helper = $fb->getRedirectLoginHelper();
             </div>
         </div>
         <input type="file" name="image">
-        <input type="submit"/>
+        <input class="boutons" type="submit"/>
     </form>
 </body>
 </html>
