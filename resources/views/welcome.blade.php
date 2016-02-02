@@ -53,41 +53,6 @@ $loginUrl = $helper->getLoginUrl('https://fierce-refuge-2356.herokuapp.com/valid
     }
     else{
         echo "Vous etes connecte<br/>";
-
-        $response = $fb->get('/me?fields=albums{can_upload,name,id}', $_SESSION['facebook_access_token']);
-
-        $graphNode = $response->getGraphNode();
-        $albums = $graphNode->getField("albums");
-        $i=0;
-
-        $liste ="";
-
-        foreach ($albums as $album) {
-            $photos = "";
-
-
-            $i++;
-            $title = $album->getField("name");
-            $id_album = $album->getField("id");
-            $can_publish = $album->getField("can_upload");
-
-            if( $can_publish ){
-                $liste .='<option value="'.$id_album.'">'.$title.'</option>';
-            }
-        }
-
-        echo <<<HTML
-		<form enctype='multipart/form-data' method="post" action="upload.php">
-			<input type="file" name="image">
-			<br/>
-			<br/>
-			<select name="id_album">
-				<option selected>Selectionner un album</option>
-				{$liste}
-			</select>
-			<input type="submit"/>
-		</form>
-HTML;
     }
 
     ?>

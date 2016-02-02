@@ -40,6 +40,6 @@ if (isset($accessToken)) {
     // Now you can redirect to another page and use the
     // access token from $_SESSION['facebook_access_token']
 
-    header("Location: https://fierce-refuge-2356.herokuapp.com/type_photo");
+    header("Location: https://fierce-refuge-2356.herokuapp.com/choix_type_photo");
 }
 
