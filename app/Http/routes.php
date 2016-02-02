@@ -45,19 +45,19 @@ Route::get('/vote', function () {
 
 
 //Route admin
-Route::get('/admin', function () {
+Route::get('/admin/admin', function () {
     return view('admin');
 });
 
-Route::get('/adminCreerConcours', function () {
+Route::get('/admin/adminCreerConcours', function () {
     return view('adminCreerConcours');
 });
 
-Route::get('/adminModifConcours', function () {
+Route::get('/admin/adminModifConcours', function () {
     return view('adminModifConcours');
 });
 
-Route::get('/adminVisuConcours', function () {
+Route::get('/admin/adminVisuConcours', function () {
     return view('adminVisuConcours');
 });
 
