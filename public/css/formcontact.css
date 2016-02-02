@@ -20,7 +20,6 @@ legend {
 label {
  margin-top:10px;
  display:block;
- float: left;
  }
 label.inline {
  display:inline;

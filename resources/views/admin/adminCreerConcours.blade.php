@@ -27,9 +27,9 @@
 </div>
 <div id="contenu">
 
-    <div class="row">
+    <div class="row" align="center">
         <div class="col-lg-12">
-            <form action="toto.php" method="post" id="formcreate" align="center">
+            <form action="toto.php" method="post" id="formcreate">
 
                 <fieldset>
                     <legend> Création de concours </legend>
