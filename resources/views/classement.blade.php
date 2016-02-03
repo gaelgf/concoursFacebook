@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <title>Concours facebook - classement</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript" src="js/jquery.js"></script>
-    <script type="text/javascript" src="js/bootstrap.min.js"></script>
-</head>
+@extends('templates.facebook_connect')
 
-<body>
-<header>
-    <img src="img/campagnes/1/logo.png" alt="">
-    - Concours photos
-</header>
+@section('content')
 <div class="classement container">
     <div class="col-xs-7">
         <div class="container_podium container">
@@ -66,5 +53,4 @@
         </a>
     </div>
 </div>
-</body>
-</html>
+@endsection
