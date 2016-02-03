@@ -67,7 +67,9 @@ Route::get('/choix_telechargement_photo', function () {
 Route::get('/vote', function () {
     return view('vote');
 });
-
+Route::post('/vote', function () {
+    return view('vote');
+});
 
 
 //route test canvas
