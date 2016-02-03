@@ -44,8 +44,8 @@
 
                     <div class="row">
                         <div class="col-lg-12">
-                            {!! Form::label('nom_entreprise', 'Entrez le nom du concours : ') !!}
-                            {!! Form::text('nom_entreprise') !!}
+                            {!! Form::label('nom_campagne', 'Entrez le nom du concours : ') !!}
+                            {!! Form::text('nom_campagne') !!}
                         </div>
                     </div>
 
@@ -64,7 +64,7 @@
                     <div class="row">
                         <div class="col-lg-12">
                             {!! Form::label('Choisissez un logo à afficher') !!}
-                            {!! Form::file('logo', null) !!}
+                            {!! Form::file('logo_entreprise', null) !!}
                         </div>
                     </div>
 
