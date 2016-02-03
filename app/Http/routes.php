@@ -58,15 +58,15 @@ Route::post('/admin', function () {
     return view('admin/admin');
 });
 
-Route::get('/adminCreerConcours', function () {
+Route::post('/adminCreerConcours', function () {
     return view('admin/adminCreerConcours');
 });
 
-Route::get('/adminModifConcours', function () {
+Route::post('/adminModifConcours', function () {
     return view('admin/adminModifConcours');
 });
 
-Route::get('/adminVisuConcours', function () {
+Route::post('/adminVisuConcours', function () {
     return view('admin/adminVisuConcours');
 });
 
