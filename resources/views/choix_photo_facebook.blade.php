@@ -32,17 +32,6 @@ foreach ($albums as $album) {
 
     $i++;
     $listeAlbums .='<option value="'.$id_album.'">'.$title.'</option>';
-    $albumId = $album->getField("id");
-    $response = $fb->get("/$albumId?fields=photos", $_SESSION['facebook_access_token']);
-    $photos = $response->getDecodedBody()["photos"]["data"];
-
-    foreach ($photos as $photo) {
-        $photoId = $photo["id"];
-        $response = $fb->get("/$photoId?fields=picture", $_SESSION['facebook_access_token']);
-        $source = $response->getDecodedBody()["picture"];
-
-        $listePhotos .= '<img src='.$source.'>';
-    }
 }
 ?>
 <!DOCTYPE html>
