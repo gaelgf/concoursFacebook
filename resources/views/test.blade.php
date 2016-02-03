@@ -13,6 +13,8 @@
 
 	<body>
 
+    <h1>test canvas facebook</h1>
+
 		<script>
 		  window.fbAsyncInit = function() {
 			FB.init({
