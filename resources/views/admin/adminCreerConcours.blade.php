@@ -66,7 +66,8 @@
 
                     <div class="row">
                         <div class="col-lg-12">
-
+                            <label for="color-picker">Choix de la couleur</label>
+                            <input type="color" name="color-picker" id="color-picker">
                         </div>
                     </div>
 

@@ -61,9 +61,20 @@
             </div>
         </div>
 
+    <?php
+        $campagnes = DB::table('campagne')->select('nom_campagne')->get();
+        foreach($campagnes as $campagne) {
+        echo $campagne;
 
 
-    </div>
+        /*$campagnes = DB::table('campagnes')->get();
+        foreach($campagnes as $campagne) {
+            echo $campagnes->nom_campagne; */
+        }
+    ?>
+
+
+</div>
 
 
 </body>

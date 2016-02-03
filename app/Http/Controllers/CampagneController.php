@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use DB;
 use Session;
 use Illuminate\Support\Facades\Validator;
-use Illuminate\Support\Facades\Input;
+use Input;
 use Illuminate\Support\Facades\Redirect;
 
 use App\Http\Requests;
@@ -42,8 +42,10 @@ class CampagneController extends Controller
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store(Request $request)
 	{
+		$campagne = $request->all();
+
 		$rules = array(
             'nom_campagne' => 'required|string',
             'logo_entreprise' => 'required|url',
@@ -54,14 +56,16 @@ class CampagneController extends Controller
             'text_accueil' => 'required|string',
             'text_felicitations' => 'required|string'
         );
-        $validator = Validator::make(Input::all(), $rules);
+        $validator = Validator::make($campagne, $rules);
 
         if ($validator->fails()) {
+        	Session::flash('message', 'Erreur lors de la création de la campagne.');
             return Redirect::to('campagnes/create')
-                ->withErrors($validator);
+                ->withErrors($validator)
+                ->withInput();
         }
-        // store
-        $campagne = new Campagne;
+
+        /*$campagne = new Campagne;
         $campagne->nom_campagne = Input::get('nom_campagne');
         $campagne->logo_entreprise = Input::get('logo_entreprise');
         $campagne->date_debut = Input::get('date_debut');
@@ -72,9 +76,12 @@ class CampagneController extends Controller
         $campagne->text_felicitations = Input::get('text_felicitations');
         $campagne->save();
 
-        // redirect
         Session::flash('message', 'Campagne créée avec succès!');
         return Redirect::to('campagnes');
+
+        $campagne= $request->all();*/
+   		Campagne::create($campagne);
+   		return redirect('campagnes');
 	}
 
 	/**
@@ -86,7 +93,7 @@ class CampagneController extends Controller
 	public function show($id)
 	{
 		$campagne = Campagne::find($id);
-		$campagne = App\Campagne::find($id);
+		$campagne = Campagne::find($id);
 		return view('campagnes.show', ['campagne' => $campagne]);
 	}
 

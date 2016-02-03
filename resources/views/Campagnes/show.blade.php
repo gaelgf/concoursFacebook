@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="../js/jquery.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="../css/bootstrap.css">
+</head>
+<body>
+<html>
+
 <h1>Showing {{ $campagne->name }}</h1>
 
     <div class="jumbotron text-center">
@@ -9,3 +19,5 @@
     </div>
 
 </div>
+
+</html>
