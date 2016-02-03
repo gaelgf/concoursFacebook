@@ -4,6 +4,8 @@
     <div class="alert alert-success">
         {{ session('status') }}
     </div>
+@if (Session::has('message'))
+    <div class="alert alert-info">{{ Session::get('message') }}</div>
 @endif
 
 <table class="table table-striped table-bordered">
@@ -20,11 +22,11 @@
             <td>
                 <a class="btn btn-small btn-success" href="{{ URL::to('campagnes/' . $campagne->id) }}">Show</a>
                 <a class="btn btn-small btn-info" href="{{ URL::to('campagnes/' . $campagne->id . '/edit') }}">Edit</a>
-                <!--<form action="{{ URL::to('campagnes/' . $campagne->id) }}" method="DELETE">
+                <form action="{{ URL::to('campagnes/' . $campagne->id) }}" method="DELETE">
                     <button type="submit" class="btn btn-small pull-right">
                         Delete
                     </button>
-                </form>-->
+                </form>
             </td>
         </tr>
     @endforeach

@@ -11,3 +11,16 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }
+
+class WelcomeController extends Controller
+{
+    //
+}
+
+class ContactController extends Controller
+{
+    public function create()
+    {
+        return view('back.contact');
+    }
+}
