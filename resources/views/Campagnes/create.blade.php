@@ -35,37 +35,37 @@
                     <div class="form-group">
                         <label for="inputName" class="col-sm-2 control-label">Nom du concours</label>
                         <div class="col-sm-10">
-                            <input type="text" name ="nom_campagne" class="form-control" id="inputName" placeholder="Nom du concours" value="{{ Input::get('nom_campagne') }}">
+                            <input type="text" name ="nom_campagne" class="form-control" id="inputName" placeholder="Nom du concours">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="inputLogo" class="col-sm-2 control-label">Logo de la marque</label>
                         <div class="col-sm-10">
-                            <input type="text" name="logo_entreprise" class="form-control" id="inputLogo" placeholder="Logo de la marque" value="{{ Input::get('logo_entreprise') }}">
+                            <input type="text" name="logo_entreprise" class="form-control" id="inputLogo" placeholder="Logo de la marque">
                         </div>                    
                     </div>
 
                     <div class="form-group">
                         <label for="inputStartDate" class="col-sm-2 control-label">Date de début</label>
                         <div class="col-sm-10">
-                            <input type="text" name="date_debut" name="nom_campagne" class="form-control" id="inputStartDate" placeholder="Date de début" value="{{ Input::get('date_debut') }}">
+                            <input type="text" name="date_debut" name="nom_campagne" class="form-control" id="inputStartDate" placeholder="Date de début">
                         </div>                    
                     </div>
 
                     <div class="form-group">
                         <label for="inputEndDate" class="col-sm-2 control-label">Date de fin</label>
                         <div class="col-sm-10">
-                            <input type="text" name="date_fin" class="form-control" id="inputEndDate" placeholder="Date de fin" value="{{ Input::get('date_fin') }}">
+                            <input type="text" name="date_fin" class="form-control" id="inputEndDate" placeholder="Date de fin">
                         </div>                    
                     </div>
 
                     <div class="form-group">
                         <label for="inputColor" class="col-sm-2 control-label">Couleur</label>
                         <div class="col-sm-10">
-                            <select name="couleur" class="form-control" value="{{ Input::get('couleur') }}">
+                            <select name="couleur" class="form-control">
                               <option value="red">Rouge</option> 
-                              <option value="blue">Vert</option>
+                              <option value="blue" selected>Vert</option>
                               <option value="green">Bleu</option>
                             </select>
                         </div>
@@ -74,21 +74,21 @@
                     <div class="form-group">
                         <label for="inputIconUrl" class="col-sm-2 control-label">Url de l'icone</label>
                         <div class="col-sm-10">
-                            <input type="text" name="url_icone" class="form-control" id="inputIconUrl" placeholder="Url de l'icone" value="{{ Input::get('url_icone') }}">
+                            <input type="text" name="url_icone" class="form-control" id="inputIconUrl" placeholder="Url de l'icone">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="inputWelcomeText" class="col-sm-2 control-label">Texte d'accueil</label>
                         <div class="col-sm-10">
-                            <input type="text" name="text_accueil" class="form-control" id="inputWelcomeText" placeholder="Texte d'accueil" value="{{ Input::get('text_accueil') }}">
+                            <input type="text" name="text_accueil" class="form-control" id="inputWelcomeText" placeholder="Texte d'accueil">
                         </div>
                     </div>
 
                     <div class="form-group">
                         <label for="inputCongratulationText" class="col-sm-2 control-label">Texte de félicitations</label>
                         <div class="col-sm-10">
-                            <input type="text" name="text_felicitations" class="form-control" id="inputCongratulationText" placeholder="Texte de félicitations" value="{{ Input::get('text_felicitations') }}">
+                            <input type="text" name="text_felicitations" class="form-control" id="inputCongratulationText" placeholder="Texte de félicitations">
                         </div>
                     </div>
 
