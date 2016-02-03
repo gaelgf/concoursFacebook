@@ -260,35 +260,48 @@ body{
 							top:-5px;
 							transition:all 0.5s;
 						}
-			
-	/****************************************************************************************/
-	/*									CREATION CONCOURS									*/
-	/****************************************************************************************/
-	.creer_campagne{
-		width: 70%;
+
+/****************************************************************************************/
+/*									SELECTION PHOTO										*/
+/****************************************************************************************/
+.classement{
+
+}
+	.classement .container_podium{
+		max-width:600px;
+		height:400px;
+		background-repeat:no-repeat;
+		background-position: bottom;
+		background-size: 98% auto;
+		background-image:url("../img/classement/podium.png");
 		margin:auto;
+		border-right: 1px solid silver;
 	}
-		.creer_campagne .row{
-			margin-top:15px;
+		.classement .container_podium .personne{
+			text-align: center;
+			font-size:30px;
 		}
-			.creer_campagne .champ{
-				font-size:300%;
-				text-align: right;
+			.classement .container_podium .personne img{
+				border-radius: 360px;
+				width:100%;
 			}
-				.creer_campagne .champ:after{
-					content:" :";
-				}
-			.creer_campagne .valeur{
-				text-align: center;
+		.classement .container_podium .personne .name{
+			margin-bottom: 87px;
+		}
+	.classement .container_right{
+		text-align: center !important;
+	}
+		.classement .container_right .image_personne{
+			width:50%;
+			margin:20px auto 0;
+		}
+			.classement .container_right .image_personne img{
+				border-radius: 360px;
+				width:100%;
 			}
-				.creer_campagne .valeur input[type=text]{
-					width: 100%;
-					border: none;
-					padding:15px;
-					font-size:200%;
-				}
-				.creer_campagne .valeur input[type=file]{
-					width: 100%;
-					border: none;
-					font-size:200%;
-				}
+		.classement .container_right .boutons{
+			width:80%;
+			padding:5px;
+			font-size:30px;
+			margin:15px auto 0 !important;
+		}
