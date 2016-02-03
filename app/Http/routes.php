@@ -15,9 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function () {
+/*Route::get('/login', function () {
     return view('login');
-});
+});*/
 
 
 Route::get('/connexion', function () {
@@ -46,12 +46,11 @@ Route::get('/vote', function () {
 
 
 
-
 Route::get('/admin', function () {
     return view('admin');
 });
 
-Route::resource('campagne', 'CampagneController');
+Route::resource('campagnes', 'CampagneController');
 /*
 |--------------------------------------------------------------------------
 | Application Routes
