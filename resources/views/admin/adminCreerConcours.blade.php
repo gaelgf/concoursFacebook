@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/formcontact.css">
     <script src="js/jquery.min.js" type="text/javascript"></script>
 
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
+
     <title>SB Admin 2 - Bootstrap Admin Theme</title>
 
     <!-- Bootstrap Core CSS -->
@@ -44,8 +47,8 @@
 
                     <div class="row">
                         <div class="col-lg-12">
-                            {!! Form::label('nom_entreprise', 'Entrez le nom du concours : ') !!}
-                            {!! Form::text('nom_entreprise') !!}
+                            {!! Form::label('nom_campagne', 'Entrez le nom du concours : ') !!}
+                            {!! Form::text('nom_campagne') !!}
                         </div>
                     </div>
 
@@ -63,8 +66,16 @@
 
                     <div class="row">
                         <div class="col-lg-12">
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-lg-12">
                             {!! Form::label('Choisissez un logo à afficher') !!}
-                            {!! Form::file('logo', null) !!}
+                            {!! Form::file('logo_entreprise', null) !!}
                         </div>
                     </div>
 

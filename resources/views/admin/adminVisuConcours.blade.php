@@ -61,12 +61,15 @@
             </div>
         </div>
 
+    <?php
+        $campagnes = DB::table('campagnes')->get();
+        foreach($campagnes as $campagne) {
+            echo $campagnes->nom_campagne;
+        }
+    ?>
 
-        <h3>Affichage du concours </h3>
 
-
-
-    </div>
+</div>
 
 
 </body>
