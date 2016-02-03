@@ -32,34 +32,32 @@
         <div class="row" align="center" id="formcreate">
             <div class="col-lg-12">
 
-                {!! Form::open(
-                array(
-                    /*'route' => 'admin/adminCreerConcours', */
-                    'class' => 'form',
-                    'novalidate' => 'novalidate',
-                    'files' => true)) !!}
+                <form method="post" action="#">
 
                     <fieldset>
                         <legend> Visualisation de concours </legend>
 
+
                         <div class="row">
                             <div class="col-lg-12">
-                                {!! Form::label('visualisation_concours', 'Choisissez un concours à visualiser : ') !!}
-                                {{ Form::select('visualisation_concours', [
-                                       'concours1' => 'concours 1',
-                                       'concours2' => 'concours 2',
-                                       'concours3' => 'concours 2 ']
-                                    ) }}
+                                <label for="visu_concours">Choisissez un concours à visualiser : </label>
+                                <select name="visu_concours">
+                                    <option value="concours1">concours 1 </option>
+                                    <option value="concours2">concours 2</option><
+                                    <option value="concours3">concours 3</option>
+                                </select>
                             </div>
                         </div>
+
+
                     </fieldset>
 
 
                     <p>
-                        {!! Form::submit('visualiser') !!}
+                        <input type="submit" value="Afficher" name="afficher"/>
                     </p>
 
-                {!! Form::close() !!}
+                </form>
             </div>
         </div>
 

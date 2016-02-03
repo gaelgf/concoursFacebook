@@ -31,12 +31,7 @@
         <div class="col-lg-12">
 
 
-            {!! Form::open(
-                array(
-                    /*'route' => 'admin/adminCreerConcours', */
-                    'class' => 'form',
-                    'novalidate' => 'novalidate',
-                    'files' => true)) !!}
+            <form method="post" action="#">
 
                 <fieldset>
                     <legend> Modification de concours </legend>
@@ -44,12 +39,12 @@
 
                     <div class="row">
                         <div class="col-lg-12">
-                            {!! Form::label('modif_concours', 'Choisissez un concours à modifier : ') !!}
-                            {{ Form::select('modif_concours', [
-                                   'concours1' => 'concours 1',
-                                   'concours2' => 'concours 2',
-                                   'concours3' => 'concours 2 ']
-                                ) }}
+                            <label for="modif_concours">Choisissez un concours à modifier : </label>
+                                <select name="modif_concours">
+                                    <option value="concours1">concours 1 </option>
+                                    <option value="concours2">concours 2</option><
+                                    <option value="concours3">concours 3</option>
+                                </select>
                         </div>
                     </div>
 
@@ -58,10 +53,10 @@
 
 
                 <p>
-                    {!! Form::submit('modifier') !!}
+                    <input type="submit" value="Modifier" name="modifier"/>
                 </p>
 
-            {!! Form::close() !!}
+            </form>
         </div>
     </div>
 
