@@ -42,6 +42,8 @@ $helper = $fb->getRedirectLoginHelper();
 
             $liste ="";
 
+            $arrayAlbums = Array();
+
             foreach ($albums as $album) {
                 $photos = "";
 
@@ -51,139 +53,33 @@ $helper = $fb->getRedirectLoginHelper();
                 $id_album = $album->getField("id");
                 $can_publish = $album->getField("can_upload");
 
+                $arrayAlbums[] = $id_album;
+
                 if( $can_publish ){
                     $liste .='<option value="'.$id_album.'">'.$title.'</option>';
                 }
             }
+
            ?>
            <?php echo $liste; ?>
         </select>
         <img src="img/icones/arrow_select.png" class="arrow" alt="">
     </div>
     <div class="container_pictures">
-        <ul class="album album_1">
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-        </ul>
-        <ul class="album album_2">
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-        </ul>
-        <ul class="album album_3">
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-            <li>
-                <img src="img/photo_exemple.jpg"></li>
-            </li>
-        </ul>
+        <?php
+            foreach($arrayAlbums as $albumId){
+                $albumId = $album->getField("id");
+                $response = $fb->get("/$albumId?fields=photos", $_SESSION['facebook_access_token']);
+                $photos = $response->getDecodedBody()["photos"]["data"];
+
+                foreach ($photos as $photo) {
+                    $photoId = $photo["id"];
+                    $response = $fb->get("/$photoId?fields=picture", $_SESSION['facebook_access_token']);
+                    $source = $response->getDecodedBody()["picture"];
+                    echo "<img src='$source'>";
+                }
+            }
+        ?>
     </div>
 </div>
 </body>
