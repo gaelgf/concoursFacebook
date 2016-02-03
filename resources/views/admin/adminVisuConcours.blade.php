@@ -61,9 +61,15 @@
             </div>
         </div>
 
+    <?php
+        $campagnes = DB::table('campagnes')->get();
+        foreach($campagnes as $campagne) {
+            var_dump($campagne);
+        }
+    ?>
 
 
-    </div>
+</div>
 
 
 </body>
