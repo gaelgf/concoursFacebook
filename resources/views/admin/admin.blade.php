@@ -26,7 +26,7 @@
 <div id='cssmenu'>
     <ul>
         <li class='active'><a href='#'><span>Home</span></a></li>
-        <li><a href='adminCreerConcours'><span>Créer Concours</span></a></li>
+        <li><a href='/adminCreerConcours'><span>Créer Concours</span></a></li>
         <li><a href='adminVisuConcours'><span>Visualiser Concours</span></a></li>
         <li class='last'><a href='adminModifConcours'><span>Modifier Concours</span></a></li>
     </ul>
