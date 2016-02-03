@@ -48,7 +48,7 @@ Route::get('/vote', function () {
 
 
 //route test canvas
-Route::get('/test', function () {
+Route::post('/test', function () {
     return view('test');
 });
 
