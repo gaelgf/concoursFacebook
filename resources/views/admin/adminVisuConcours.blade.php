@@ -32,7 +32,7 @@
         <div class="row" align="center" id="formcreate">
             <div class="col-lg-12">
 
-                <form method="post" action="#">
+                <form method="post">
 
                     <fieldset>
                         <legend> Visualisation de concours </legend>

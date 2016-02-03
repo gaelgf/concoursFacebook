@@ -31,7 +31,7 @@
         <div class="col-lg-12">
 
 
-            <form method="post" action="#">
+            <form method="post">
 
                 <fieldset>
                     <legend> Modification de concours </legend>
