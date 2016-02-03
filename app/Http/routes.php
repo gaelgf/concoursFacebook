@@ -47,6 +47,12 @@ Route::get('/vote', function () {
 
 
 
+//route test canvas
+Route::get('/test', function () {
+    return view('test');
+});
+
+
 //Route admin
 Route::get('/admin', function () {
     return view('admin/admin');
