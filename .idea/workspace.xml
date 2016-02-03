@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12df67f9-58f3-4dfa-8b85-adb1ae29e437" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/templates/layout.blade.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php" afterPath="$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" />
     </list>
     <list id="5ec41d52-f175-40c6-9b2e-634018c119ab" name="New changelist" comment="" />
@@ -27,31 +29,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+            <state vertical-scroll-proportion="-11.730769">
+              <caret line="62" column="43" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="43" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="choix_photo_facebook.blade.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="choix_photo_facebook.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.692307">
-              <caret line="158" column="6" selection-start-line="158" selection-start-column="6" selection-end-line="160" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="layout.blade.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/templates/layout.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.038462">
-              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.06910569">
+              <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
               <folding />
             </state>
           </provider>
@@ -123,9 +115,9 @@
         <option value="$PROJECT_DIR$/resources/views/admin/adminVisuConcours.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/resources/views/templates/feacebook_connect.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/templates/facebook_connect.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/templates/facebook_connect.blade.php" />
       </list>
     </option>
   </component>
@@ -209,28 +201,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel_git_2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="laravel_git_2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -413,12 +383,6 @@
       <created>1452618172454</created>
       <option name="number" value="Default" />
       <updated>1452618172454</updated>
-    </task>
-    <task id="LOCAL-00049" summary="(8) Ajout d'une page de test de connexion a FB : redirection">
-      <created>1454429046212</created>
-      <option name="number" value="00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1454429046212</updated>
     </task>
     <task id="LOCAL-00050" summary="(8) Ajout d'une page de test de connexion a FB : redirection">
       <created>1454429383466</created>
@@ -708,7 +672,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454512144722</updated>
     </task>
-    <option name="localTasksCounter" value="98" />
+    <task id="LOCAL-00098" summary="Affichage images albums&#10;">
+      <created>1454512455867</created>
+      <option name="number" value="00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1454512455867</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1162,26 +1132,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/templates/layout.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.038462">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+        <state vertical-scroll-proportion="-11.730769">
+          <caret line="62" column="43" selection-start-line="62" selection-start-column="11" selection-end-line="62" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.692307">
-          <caret line="158" column="6" selection-start-line="158" selection-start-column="6" selection-end-line="160" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="26" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.06910569">
+          <caret line="2" column="16" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
           <folding />
         </state>
       </provider>
