@@ -62,9 +62,6 @@
         </div>
 
 
-        <h3>Affichage du concours </h3>
-
-
 
     </div>
 
