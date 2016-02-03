@@ -70,6 +70,9 @@ Route::get('/vote', function () {
 Route::post('/vote', function () {
     return view('vote');
 });
+Route::post('/classement', function () {
+    return view('classement');
+});
 
 
 //route test canvas
