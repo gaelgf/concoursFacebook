@@ -54,7 +54,7 @@ foreach ($albums as $album) {
 <div class="select_picture">
     <div class="container_select">
         <select class="album_list">
-           <?php echo $liste; ?>
+           <?php echo $listeAlbums; ?>
         </select>
         <img src="img/icones/arrow_select.png" class="arrow" alt="">
     </div>

@@ -40,17 +40,17 @@
       <file leaf-file-name="choix_photo_facebook.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7256098">
-              <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.7581301">
+              <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
               <folding>
-                <marker date="1454513205605" expanded="true" signature="942:1788" placeholder="..." />
-                <marker date="1454513205605" expanded="true" signature="949:1353" placeholder="..." />
-                <marker date="1454513205605" expanded="true" signature="1361:1780" placeholder="..." />
-                <marker date="1454513205605" expanded="true" signature="1370:1450" placeholder="..." />
-                <marker date="1454513205605" expanded="true" signature="1479:1772" placeholder="..." />
-                <marker date="1454513205605" expanded="true" signature="1514:1681" placeholder="..." />
-                <marker date="1454513205605" expanded="true" signature="1550:1601" placeholder="..." />
-                <marker date="1454513205605" expanded="true" signature="1718:1765" placeholder="..." />
+                <marker date="1454513302687" expanded="true" signature="942:1794" placeholder="..." />
+                <marker date="1454513302687" expanded="true" signature="949:1353" placeholder="..." />
+                <marker date="1454513302687" expanded="true" signature="1361:1786" placeholder="..." />
+                <marker date="1454513302687" expanded="true" signature="1370:1450" placeholder="..." />
+                <marker date="1454513302687" expanded="true" signature="1479:1778" placeholder="..." />
+                <marker date="1454513302687" expanded="true" signature="1514:1687" placeholder="..." />
+                <marker date="1454513302687" expanded="true" signature="1550:1607" placeholder="..." />
+                <marker date="1454513302687" expanded="true" signature="1724:1771" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -210,6 +210,22 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ZendProjetGroupe6" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="154" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="154" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="155" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="829" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="155" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="153" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="155" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="829" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -368,12 +384,6 @@
       <created>1452618172454</created>
       <option name="number" value="Default" />
       <updated>1452618172454</updated>
-    </task>
-    <task id="LOCAL-00052" summary="(8) Ajout d'une page de test de connexion a FB : redirection">
-      <created>1454429734926</created>
-      <option name="number" value="00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1454429734927</updated>
     </task>
     <task id="LOCAL-00053" summary="(8) Ajout d'une page de test de connexion a FB : redirection">
       <created>1454429807194</created>
@@ -663,12 +673,18 @@
       <option name="project" value="LOCAL" />
       <updated>1454513125650</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="Affichage images albums&#10;">
+      <created>1454513222511</created>
+      <option name="number" value="00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1454513222511</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25340393" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -676,7 +692,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21276596" sideWeight="0.494705" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22198732" sideWeight="0.505295" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10638298" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10638298" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -808,14 +824,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="174" column="7" selection-start-line="174" selection-start-column="7" selection-end-line="174" selection-end-column="7" />
           <folding>
-            <marker date="1454513205605" expanded="true" signature="942:1788" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="949:1353" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="1361:1780" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="1370:1450" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="1479:1772" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="1514:1681" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="1550:1601" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="1718:1765" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="942:1794" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="949:1353" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="1361:1786" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="1370:1450" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="1479:1778" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="1514:1687" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="1550:1607" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="1724:1771" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -833,14 +849,14 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1454513205605" expanded="true" signature="942:1788" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="949:1353" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="1361:1780" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="1370:1450" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="1479:1772" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="1514:1681" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="1550:1601" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="1718:1765" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="942:1794" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="949:1353" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="1361:1786" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="1370:1450" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="1479:1778" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="1514:1687" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="1550:1607" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="1724:1771" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1145,17 +1161,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7256098">
-          <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.7581301">
+          <caret line="56" column="34" selection-start-line="56" selection-start-column="34" selection-end-line="56" selection-end-column="34" />
           <folding>
-            <marker date="1454513205605" expanded="true" signature="942:1788" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="949:1353" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="1361:1780" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="1370:1450" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="1479:1772" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="1514:1681" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="1550:1601" placeholder="..." />
-            <marker date="1454513205605" expanded="true" signature="1718:1765" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="942:1794" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="949:1353" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="1361:1786" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="1370:1450" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="1479:1778" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="1514:1687" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="1550:1607" placeholder="..." />
+            <marker date="1454513302687" expanded="true" signature="1724:1771" placeholder="..." />
           </folding>
         </state>
       </provider>
