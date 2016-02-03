@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="css/formcontact.css">
     <script src="js/jquery.min.js" type="text/javascript"></script>
 
+    <script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
+    <script>tinymce.init({ selector:'textarea' });</script>
+
     <title>SB Admin 2 - Bootstrap Admin Theme</title>
 
     <!-- Bootstrap Core CSS -->
@@ -60,6 +63,14 @@
                                 ) }}
                         </div>
                     </div>
+
+                    <div class="row">
+                        <div class="col-lg-12">
+
+                        </div>
+                    </div>
+
+
 
                     <div class="row">
                         <div class="col-lg-12">
