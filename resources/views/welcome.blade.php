@@ -56,7 +56,7 @@ $loginUrl = $helper->getLoginUrl('https://fierce-refuge-2356.herokuapp.com/valid
             </ul>
         </div>
         <br/>
-        <a  class="boutons bouton_connexion" href=" <?php echo $loginUrl; ?>">Log in with Facebook!</a>
+        <a  class="boutons bouton_connexion" href=" <?php echo $loginUrl; ?>">Je participe !</a>
     </div>
 </div>
 </body>
