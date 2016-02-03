@@ -93,7 +93,6 @@ class CampagneController extends Controller
 	public function show($id)
 	{
 		$campagne = Campagne::find($id);
-		$campagne = Campagne::find($id);
 		return view('campagnes.show', ['campagne' => $campagne]);
 	}
 
