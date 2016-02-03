@@ -12,7 +12,7 @@ $fb = new Facebook\Facebook([
 
 $helper = $fb->getRedirectLoginHelper();
 $permissions = ['public_profile', 'email','user_photos','publish_actions']; // optional
-$loginUrl = $helper->getLoginUrl('https://fierce-refuge-2356.herokuapp.com/validation_connexion', $permissions);
+$loginUrl = $helper->getLoginUrl('https://apps.facebook.com/picturechallenge/validation_connexion', $permissions);
 
 ?>
 <!DOCTYPE html>
