@@ -61,6 +61,9 @@ Route::post('/admin', function () {
 Route::post('/adminCreerConcours', function () {
     return view('admin/adminCreerConcours');
 });
+Route::get('/adminCreerConcours', function () {
+    return view('admin/adminCreerConcours');
+});
 
 Route::post('/adminModifConcours', function () {
     return view('admin/adminModifConcours');
