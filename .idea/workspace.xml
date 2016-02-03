@@ -41,7 +41,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.6544715">
-              <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+              <caret line="67" column="36" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -380,12 +380,6 @@
       <option name="number" value="Default" />
       <updated>1452618172454</updated>
     </task>
-    <task id="LOCAL-00042" summary="(8) Ajout d'une page de test de connexion a FB : redirection">
-      <created>1454427262146</created>
-      <option name="number" value="00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1454427262146</updated>
-    </task>
     <task id="LOCAL-00043" summary="(8) Ajout d'une page de test de connexion a FB : redirection">
       <created>1454427312859</created>
       <option name="number" value="00043" />
@@ -674,7 +668,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454509972972</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="modif page create">
+      <created>1454510509556</created>
+      <option name="number" value="00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1454510509556</updated>
+    </task>
+    <option name="localTasksCounter" value="92" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1146,7 +1146,7 @@
     <entry file="file://$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6544715">
-          <caret line="42" column="23" selection-start-line="42" selection-start-column="23" selection-end-line="42" selection-end-column="23" />
+          <caret line="67" column="36" selection-start-line="67" selection-start-column="36" selection-end-line="67" selection-end-column="36" />
           <folding />
         </state>
       </provider>
