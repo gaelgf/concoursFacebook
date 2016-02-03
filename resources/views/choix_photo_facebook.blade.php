@@ -32,7 +32,7 @@ $helper = $fb->getRedirectLoginHelper();
 </header>
 <div class="select_picture">
     <div class="container_select">
-
+    <?php
         $response = $fb->get('/me?fields=albums', $_SESSION['facebook_access_token']);
 
         $graphNode = $response->getGraphNode();
@@ -55,6 +55,7 @@ $helper = $fb->getRedirectLoginHelper();
         echo "<img src='$source'>";
         }
         }
+        ?>
     </div>
 </div>
 </body>
