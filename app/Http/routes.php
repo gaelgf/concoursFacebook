@@ -54,7 +54,7 @@ Route::post('/test', function () {
 
 
 //Route admin
-Route::get('/admin', function () {
+Route::post('/admin', function () {
     return view('admin/admin');
 });
 
