@@ -1,4 +1,4 @@
-@extends("templates/layout.blade.php");
+@extends("templates.layout");
 
 @section("content")
 <div class="select_picture">
