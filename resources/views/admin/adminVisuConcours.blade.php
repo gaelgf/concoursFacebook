@@ -64,7 +64,7 @@
     <?php
         $campagnes = DB::table('campagnes')->get();
         foreach($campagnes as $campagne) {
-            var_dump($campagne);
+            echo $campagnes->nom_campagnes;
         }
     ?>
 
