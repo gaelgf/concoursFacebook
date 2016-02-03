@@ -2,6 +2,8 @@
 
 session_start();
 
+if( !isset($_SESSION['facebook_access_token'])){
+
 require_once "fb_sdk/src/Facebook/autoload.php";
 
 $fb = new Facebook\Facebook([
@@ -54,17 +56,14 @@ $loginUrl = $helper->getLoginUrl('https://fierce-refuge-2356.herokuapp.com/valid
             </ul>
         </div>
         <br/>
-        <?php
-
-        if( !isset($_SESSION['facebook_access_token'])){
-            echo '<a  class="boutons bouton_connexion" href="' . $loginUrl . '">Log in with Facebook!</a>';
-        }
-        else{
-            echo "Vous etes connecte<br/>";
-        }
-
-        ?>
+        <a  class="boutons bouton_connexion" href=" <?php echo $loginUrl; ?>">Log in with Facebook!</a>
     </div>
 </div>
 </body>
 </html>
+<?php
+}
+else{
+    header('https://fierce-refuge-2356.herokuapp.com/choix_type_photo');
+}
+?>
