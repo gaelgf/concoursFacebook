@@ -32,30 +32,158 @@ $helper = $fb->getRedirectLoginHelper();
 </header>
 <div class="select_picture">
     <div class="container_select">
-    <?php
-        $response = $fb->get('/me?fields=albums', $_SESSION['facebook_access_token']);
+        <select class="album_list">
+        <?php
+            $response = $fb->get('/me?fields=albums{can_upload,name,id}', $_SESSION['facebook_access_token']);
 
-        $graphNode = $response->getGraphNode();
-        $albums = $graphNode->getField("albums");
-        $i=0;
-        foreach ($albums as $album) {
-        $photos = "";
+            $graphNode = $response->getGraphNode();
+            $albums = $graphNode->getField("albums");
+            $i=0;
+
+            $liste ="";
+
+            foreach ($albums as $album) {
+                $photos = "";
 
 
-        $i++;
-        echo "<h2>Album $i</h2>";
-        $albumId = $album->getField("id");
-        $response = $fb->get("/$albumId?fields=photos", $_SESSION['facebook_access_token']);
-        $photos = $response->getDecodedBody()["photos"]["data"];
+                $i++;
+                $title = $album->getField("name");
+                $id_album = $album->getField("id");
+                $can_publish = $album->getField("can_upload");
 
-        foreach ($photos as $photo) {
-        $photoId = $photo["id"];
-        $response = $fb->get("/$photoId?fields=picture", $_SESSION['facebook_access_token']);
-        $source = $response->getDecodedBody()["picture"];
-        echo "<img src='$source'>";
-        }
-        }
-        ?>
+                if( $can_publish ){
+                    $liste .='<option value="'.$id_album.'">'.$title.'</option>';
+                }
+            }
+           ?>
+           <?php echo $liste; ?>
+        </select>
+        <img src="img/icones/arrow_select.png" class="arrow" alt="">
+    </div>
+    <div class="container_pictures">
+        <ul class="album album_1">
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+        </ul>
+        <ul class="album album_2">
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+        </ul>
+        <ul class="album album_3">
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+            <li>
+                <img src="img/photo_exemple.jpg"></li>
+            </li>
+        </ul>
     </div>
 </div>
 </body>

@@ -40,8 +40,8 @@
       <file leaf-file-name="choix_photo_facebook.blade.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.79268295">
-              <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.034552846">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="186" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -380,12 +380,6 @@
       <option name="number" value="Default" />
       <updated>1452618172454</updated>
     </task>
-    <task id="LOCAL-00046" summary="(8) Ajout d'une page de test de connexion a FB : redirection">
-      <created>1454428246022</created>
-      <option name="number" value="00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1454428246022</updated>
-    </task>
     <task id="LOCAL-00047" summary="(8) Ajout d'une page de test de connexion a FB : redirection">
       <created>1454428329025</created>
       <option name="number" value="00047" />
@@ -674,7 +668,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454511409606</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="Affichage images albums&#10;">
+      <created>1454511528860</created>
+      <option name="number" value="00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1454511528860</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1146,8 +1146,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.79268295">
-          <caret line="57" column="10" selection-start-line="57" selection-start-column="10" selection-end-line="57" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.034552846">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="186" selection-end-column="10" />
           <folding />
         </state>
       </provider>
