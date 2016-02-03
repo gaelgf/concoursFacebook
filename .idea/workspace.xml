@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="12df67f9-58f3-4dfa-8b85-adb1ae29e437" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/connexion.blade.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/views/test.blade.php" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/templates/feacebook_connect.blade.php" afterPath="$PROJECT_DIR$/resources/views/templates/facebook_connect.blade.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/resources/views/templates/facebook_connect.blade.php" afterPath="$PROJECT_DIR$/resources/views/templates/base.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php" afterPath="$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/choix_telechargement_photo.blade.php" afterPath="$PROJECT_DIR$/resources/views/choix_telechargement_photo.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/choix_type_photo.blade.php" afterPath="$PROJECT_DIR$/resources/views/choix_type_photo.blade.php" />
@@ -46,11 +43,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="welcome.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.12208258">
-              <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+            <state vertical-scroll-proportion="-22.884615">
+              <caret line="35" column="40" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/templates/base.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.5384617">
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="choix_photo_facebook.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.5260323">
+              <caret line="158" column="6" selection-start-line="158" selection-start-column="6" selection-end-line="159" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -91,13 +108,13 @@
         <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Controller.php" />
         <option value="$PROJECT_DIR$/resources/views/templates/feacebook_connect.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/templates/facebook_connect.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/vote.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/classement.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/choix_telechargement_photo.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/choix_type_photo.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
       </list>
     </option>
   </component>
@@ -511,12 +528,6 @@
       <option name="number" value="Default" />
       <updated>1452618172454</updated>
     </task>
-    <task id="LOCAL-00056" summary="ajout dossier admin">
-      <created>1454430670170</created>
-      <option name="number" value="00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1454430670171</updated>
-    </task>
     <task id="LOCAL-00057" summary="ajout dossier admin">
       <created>1454433595383</created>
       <option name="number" value="00057" />
@@ -805,7 +816,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454515707741</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="Ajout du template">
+      <created>1454520057810</created>
+      <option name="number" value="00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1454520057810</updated>
+    </task>
+    <option name="localTasksCounter" value="106" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -890,7 +907,8 @@
     <MESSAGE value="modif de visualisation admin" />
     <MESSAGE value="modif page create" />
     <MESSAGE value="Affichage images albums&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Affichage images albums&#10;" />
+    <MESSAGE value="Ajout du template" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout du template" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1212,14 +1230,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8168761">
-          <caret line="159" column="11" selection-start-line="159" selection-start-column="11" selection-end-line="159" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/vote.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8168761">
@@ -1243,14 +1253,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8168761">
           <caret line="40" column="11" selection-start-line="40" selection-start-column="11" selection-end-line="40" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/templates/facebook_connect.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7253142">
-          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="35" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1279,10 +1281,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/templates/base.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5384617">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12208258">
-          <caret line="4" column="34" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="34" />
+        <state vertical-scroll-proportion="-22.884615">
+          <caret line="35" column="40" selection-start-line="35" selection-start-column="39" selection-end-line="35" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/choix_photo_facebook.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5260323">
+          <caret line="158" column="6" selection-start-line="158" selection-start-column="6" selection-end-line="159" selection-end-column="11" />
           <folding />
         </state>
       </provider>

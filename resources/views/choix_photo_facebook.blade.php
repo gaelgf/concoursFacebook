@@ -1,4 +1,4 @@
-@extends('templates.facebook_connect')
+@extends('templates.base.php')
 
 @section('content')
 <div class="select_picture">

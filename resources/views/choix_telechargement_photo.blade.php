@@ -1,5 +1,5 @@
 <?php
-@extends('templates.facebook_connect')
+@extends('templates.base.php')
 
 @section('content')
     <form enctype='multipart/form-data' method="post" action="upload.php">
