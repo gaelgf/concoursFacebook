@@ -4,10 +4,13 @@ class model{
 
     private $pdo;
     private $table;
+    private $dsn = 'mysql:dbname=projetfacebook;host=127.0.0.1';
+    private $user = 'root';
+    private $password = '';
 
     public function __construct()
     {
-        $this->pdo = new pdo();
+        $this->pdo = new pdo($this->dsn, $this->user, $this->password);
         $this->table = get_called_class();
 
 

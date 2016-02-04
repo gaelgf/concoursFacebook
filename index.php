@@ -27,6 +27,7 @@ $root = rooting::getRooting();
 $name_controller = $root["c"]."Controller";
 $path_controller = "controllers/".$name_controller.".class.php";
 
+
 if( file_exists($path_controller) ){
     include($path_controller);
     $c = new $name_controller;

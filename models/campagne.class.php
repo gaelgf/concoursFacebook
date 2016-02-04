@@ -9,7 +9,7 @@ class campagne extends model{
 
     public function __construct()
     {
-        parent::_construct();
+        parent::__construct();
 
     }
 

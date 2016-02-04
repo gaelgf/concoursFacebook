@@ -3,7 +3,7 @@
 class rooting{
 
     public static function getRooting(){
-        $uri = str_replace("/facebook/mvc/","",$_SERVER["REQUEST_URI"]);
+        $uri = str_replace("/facebook/","",$_SERVER["REQUEST_URI"]);
 
         $uri = explode("?",$uri);
         $array_uri = explode("/", trim($uri[0],"/") );
