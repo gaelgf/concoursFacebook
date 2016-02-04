@@ -1,8 +1,7 @@
 <?php
 
-include "baseController.class.php" ;
 
-class indexController extends baseController{
+class indexController{
     public function indexAction( $args )
     {
 
@@ -17,9 +16,9 @@ class indexController extends baseController{
 
         if (!isset($_SESSION['facebook_access_token'])) {
 
-            $helper = parent::conectionFacebook();
+            $helper = configClass::conectionFacebook();
             $permissions = ['public_profile', 'email','user_photos','publish_actions']; // optional
-            $loginUrl = $helper->getLoginUrl('https://fierce-refuge-2356.herokuapp.com/validation_connexion', $permissions);
+            $loginUrl = $helper->getLoginUrl( configClass::getPath().'validation_connexion', $permissions);
 
             $view->setView("indexIndex");
 
