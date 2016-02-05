@@ -24,9 +24,8 @@ spl_autoload_register("includeModel");
 
 $root = rooting::getRooting();
 
-$name_controller = $root["c"]."Controller";
-$path_controller = "controllers/".$name_controller.".class.php";
-
+$path_controller = "controllers/".$root["c"]."Controller.class.php";
+$name_controller = str_replace("admin/", "", $root["c"]) ."Controller";
 
 if( file_exists($path_controller) ){
     include($path_controller);
