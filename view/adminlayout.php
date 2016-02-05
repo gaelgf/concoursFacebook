@@ -36,7 +36,7 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href="index.html">Dashboard</a>
+                            <a href=<?php echo BASE_URL . "admin"; ?>>Dashboard</a>
                         </li>
                         <li>
                             <a href=<?php echo BASE_URL . "admin/campagnes/show"; ?> >Campagnes<span class="fa arrow"></span></a>

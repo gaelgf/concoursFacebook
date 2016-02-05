@@ -7,11 +7,12 @@ class rooting{
 
         $uri = explode("?",$uri);
         $array_uri = explode("/", trim($uri[0],"/") );
+
         $controllerPath = empty($array_uri[0])? "index" : $array_uri[0];
         $actionPath = empty($array_uri[1])? "index" : $array_uri[1];
         if($array_uri[0] === 'admin') {
             unset($array_uri[0]);
-            $controllerPath = empty($array_uri[1])? "index" : $array_uri[1];
+            $controllerPath = "admin/" . (empty($array_uri[1])? "index" : $array_uri[1]);
             $actionPath = empty($array_uri[2])? "index" : $array_uri[2];
         }
  
