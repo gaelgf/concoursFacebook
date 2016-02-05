@@ -1,6 +1,3 @@
-
-
-
 <div class="select_picture">
     <div class="container_select">
         <div class="container_pictures">

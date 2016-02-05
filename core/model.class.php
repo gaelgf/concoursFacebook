@@ -4,16 +4,50 @@ class model{
 
     private $pdo;
     private $table;
-    private $dsn = 'mysql:dbname=projetfacebook;host=127.0.0.1';
-    private $user = 'root';
-    private $password = '';
 
-    public function __construct()
+    public function __construct($table = '')
     {
-        $this->pdo = new pdo($this->dsn, $this->user, $this->password);
-        $this->table = get_called_class();
 
+        if($table !== '') {
+            $this->table = $table;
+        } else {
+            $this->table = get_called_class();
+        }
 
+        try {
+            $this->pdo = new PDO('pgsql:dbname='.DATABASE.';host='.HOST, USERNAME, PASSWORD);
+        } catch (PDOException $e) {
+            var_dump($e->getMessage());
+        }
+        $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_WARNING);
+
+    }
+
+    public static function getById($modelId){
+
+        $table = get_called_class();
+        $model = new self($table);
+
+        $request = $model->pdo->query(
+            "SELECT * FROM " . $model->table . " WHERE id = " . $modelId
+        );
+
+        $response = $request->fetch();
+
+        return $response;
+    }
+
+    public static function get(){
+
+        $table = get_called_class();
+        $model = new self($table);
+
+        $request = $model->pdo->query(
+            "SELECT * FROM " . $model->table
+        );
+
+        $response = $request->fetchAll();
+        return $response;
     }
 
     public function save(){
@@ -28,7 +62,7 @@ class model{
         unset($data["table"]);
 
         if( $id ){
-
+            //TO DO: UPDATE
         }
         else{
             foreach($data as $key => $value){

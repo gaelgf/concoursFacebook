@@ -1,26 +1,11 @@
 <?php
-
-
-
-
-require_once "assets/fb_sdk/src/Facebook/autoload.php";
-
-class configClass{
-
-    public static function conectionFacebook(){
-        $fb = new Facebook\Facebook([
-            'app_id' => '1545660598783922',
-            'app_secret' => 'ca702576b5815fbccba65343c8003198',
-            'default_graph_version' => 'v2.5',
-        ]);
-
-        $helper = $fb->getRedirectLoginHelper();
-
-        return $helper;
-    }
-
-
-    public static function getPath(){
-        return "/facebook/";
-    }
-}
+define("BASE_URL","http://localhost/facebook/");
+define("IMG_DIRECTORY_URL", BASE_URL . "assets/img/");
+define("JS_DIRECTORY_URL", BASE_URL . "assets/js/");
+define("CSS_DIRECTORY_URL", BASE_URL . "assets/css/");
+define("DATA_BASE_URL", "postgres://tauvgqlesbneeb:DnzA-_DbOYgyatP6UAppmXXzq6@ec2-54-83-55-214.compute-1.amazonaws.com:5432/dcsd5vvlobm9dj");
+$url = parse_url(DATA_BASE_URL);
+define("HOST", $url["host"]);
+define("USERNAME", $url["user"]);
+define("PASSWORD", $url["pass"]);
+define("DATABASE", ltrim($url["path"],'/'));
