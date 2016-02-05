@@ -1,3 +1,11 @@
+<?php
+	if(isset($successMessages)) {
+		foreach ($successMessages as $successMessage) {
+			echo "<div class=\"alert alert-success\" role=\"alert\">" . $successMessage . "</div>";
+		}
+	}
+?>
+
 <div class="table-responsive">
 	<table class="table">
 		<thead>
@@ -30,9 +38,9 @@
 					<td><?php echo $campagne->getTextAccueil(); ?></td>
 					<td><?php echo $campagne->getTextFelicitations(); ?></td>
 					<td>
-						<a class="btn btn-primary" href="<?php BASE_URL . 'admin/' . $campagne->getId(); ?>" role="button">Show</a>
-						<a class="btn btn-primary" href="#" role="button">Edit</a>
-						<a class="btn btn-primary" href="#" role="button">Remove</a>
+						<a class="btn btn-sm btn-primary" href="<?php BASE_URL . 'admin/' . $campagne->getId(); ?>" role="button"><i class="fa fa-eye"></i> Show</a>
+						<a class="btn btn-sm btn-primary" href="#" role="button"><i class="fa fa-pencil-square-o"></i> 	Edit</a>
+						<a class="btn btn-sm btn-primary" href="#" role="button"><i class="fa fa-trash"></i> 	Remove</a>
 					</td>
 				</tr>
 			<?php

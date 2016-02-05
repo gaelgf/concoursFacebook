@@ -72,12 +72,11 @@ class model{
             $columns = implode(",",array_keys($data));
             $values = implode(",",$sql_column_insert);
 
-
             $request = $this->pdo->prepare(
                 "INSERT INTO ".$this->table."(".$columns.") VALUES (".$values.")"
             );
 
-            $request->execute($data);
+            return $request->execute($data);
         }
     }
 }

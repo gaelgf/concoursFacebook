@@ -1,21 +1,47 @@
+@font-face {
+	font-family: "c&l";
+	src: url("../fonts/Champagne_Limousines.ttf");
+}
+
 body{
 	margin-top:0%;
 	margin-bottom:0%;
 	margin-left:0%;
 	margin-right:0%;
 	font-family: "c&l";
+	font-size: 14px;
 }
 
-
- @font-face {
-	font-family: "c&l";
-	src: url("../fonts/Champagne_Limousines.ttf");
+td{
+	vertical-align: middle !important;
 }
 
-header{
-	background-image: url("../img/background.jpg");
-}
+	/****************************************************************************************/
+	/*										NAVBAR HEADER									*/
+	/****************************************************************************************/
+	.navbar-header{
+		
+	}
+		.navbar-header .navbar-brand > img {
+			display: inline-block;
+		}
 
-.navbar-brand > img {
-	display: inline-block;
-}
+	/****************************************************************************************/
+	/*										CREATE FORM										*/
+	/****************************************************************************************/
+	.createForm {
+		margin-top: 70px;
+	}
+		.createForm .btnSubmit {
+
+		}
+
+		@media (min-width: 768px) {
+			.createForm .form-horizontal .control-label {
+			    text-align: left;
+			}
+		}
+
+		.createForm .btnSubmit {
+			margin-top: 30px;
+		}

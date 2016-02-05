@@ -19,7 +19,7 @@ class campagne extends model{
     protected $description_lot;
     protected $image_lot;*/
 
-    public function __construct($id,
+    public function __construct($id = NULL,
                                 $logo_entreprise,
                                 $nom_campagne,
                                 $date_debut,
@@ -55,8 +55,41 @@ class campagne extends model{
         return $campagnes;
     }
 
-    private static function campagneFromArray($campagneArray) {
-        $campagne = new self($campagneArray["id"],
+    public static function checkCampagneArray( $campagneArray ) {
+        $errors = [];
+        if(!array_key_exists("logo_entreprise", $campagneArray) || !isset($campagneArray["logo_entreprise"])) {
+            $errors["logo_entreprise"] = "Erreur : Le logo de l'entreprise doit être renseigné.";
+        }
+        if(!array_key_exists("nom_campagne", $campagneArray) || !isset($campagneArray["nom_campagne"])) {
+            $errors["nom_campagne"] = "Erreur : Le nom de la campagne doit être renseigné.";
+        }
+        if(!array_key_exists("date_debut", $campagneArray) || !isset($campagneArray["date_debut"])) {
+            $errors["date_debut"] = "Erreur : La date de début de la campagne doit être renseigné.";
+        }
+        if(!array_key_exists("date_fin", $campagneArray) || !isset($campagneArray["date_fin"])) {
+            $errors["date_fin"] = "Erreur : La date de fin de la campagne doit être renseigné.";
+        }
+        if(!array_key_exists("couleur", $campagneArray) || !isset($campagneArray["couleur"])) {
+            $errors["couleur"] = "Erreur : La couleur de la campagne doit être renseigné.";
+        }
+        if(!array_key_exists("url_icone", $campagneArray) || !isset($campagneArray["url_icone"])) {
+            $errors["url_icone"] = "Erreur : L'url de l'icone de la campagne doit être renseigné.";
+        }
+        if(!array_key_exists("text_accueil", $campagneArray) || !isset($campagneArray["text_accueil"])) {
+            $errors["text_accueil"] = "Erreur : Le texte d'accueil de la campagne doit être renseigné.";
+        }
+        if(!array_key_exists("text_felicitations", $campagneArray) || !isset($campagneArray["text_felicitations"])) {
+            $errors["text_felicitations"] = "Erreur : Le texte de félicitations de la campagne doit être renseigné.";
+        }
+
+        if(sizeof($errors) > 0) {
+            return $errors;
+        }
+        return [];
+    }
+
+    public static function campagneFromArray($campagneArray) {
+        $campagne = new self((isset($campagneArray["id"]) ? $campagneArray["id"] : NULL),
                              $campagneArray["logo_entreprise"],
                              $campagneArray["nom_campagne"],
                              $campagneArray["date_debut"],

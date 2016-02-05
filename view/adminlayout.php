@@ -9,6 +9,12 @@
     <link rel="stylesheet" type="text/css" href=<?php echo CSS_DIRECTORY_URL . 'font-awesome.min.css'; ?> >
     <link rel="stylesheet" type="text/css" href=<?php echo CSS_DIRECTORY_URL . 'timeline.css'; ?> >
     <link rel="stylesheet" type="text/css" href=<?php echo CSS_DIRECTORY_URL . 'styleAdmin.css'; ?> >
+    <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'jquery.min.js'; ?> ></script>
+    <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'bootstrap.min.js'; ?> ></script>
+    <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'metisMenu.min.js'; ?> ></script>
+    <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'raphael-min.js'; ?> ></script>
+    <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'sb-admin-2.js'; ?> ></script>
+    <script src="//cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script>
 </head>
 
 <body>
@@ -36,16 +42,16 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href=<?php echo BASE_URL . "admin"; ?>>Dashboard</a>
+                            <a href=<?php echo BASE_URL . "admin/"; ?>>Dashboard</a>
                         </li>
                         <li>
-                            <a href=<?php echo BASE_URL . "admin/campagnes/show"; ?> >Campagnes<span class="fa arrow"></span></a>
+                            <a href="#">Campagnes<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href=<?php echo BASE_URL . "admin/campagnes/show"; ?> >Show</a>
+                                    <a href=<?php echo BASE_URL . "admin/campagnes/showall"; ?> >Show</a>
                                 </li>
                                 <li>
-                                    <a href=<?php echo BASE_URL . "admin/campagnes/edit"; ?> >Add new</a>
+                                    <a href=<?php echo BASE_URL . "admin/campagnes/create"; ?> >Add new</a>
                                 </li>
                             </ul>
                         </li>
@@ -61,12 +67,6 @@
         </div>
 
     </div>
-
-	<script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'jquery.min.js'; ?> ></script>
-    <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'bootstrap.min.js'; ?> ></script>
-    <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'metisMenu.min.js'; ?> ></script>
-    <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'raphael-min.js'; ?> ></script>
-    <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'sb-admin-2.js'; ?> ></script>
 
 </body>
 </html>
