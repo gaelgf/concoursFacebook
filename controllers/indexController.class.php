@@ -45,9 +45,8 @@ class indexController{
 
 
         if (isset($accessToken)) {
-            // Logged in!
             $_SESSION['facebook_access_token'] = (string) $accessToken;
-            //header("Location: ".BASE_URL."choice");
+            header("Location: ".BASE_URL."choice/");
         }
         else{
             // redirection vers accueil

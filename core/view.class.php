@@ -16,7 +16,6 @@ class view{
             die("Layout inexistant");
         }
 
-
         $view_path = "view/".$view.".php";
         if( file_exists($view_path) ){
             $this->view = $view_path;

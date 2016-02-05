@@ -9,7 +9,24 @@ class choiceController{
         if (!isset($_SESSION['facebook_access_token'])) {
             header("Location: ".BASE_URL);
         } else {
-            $view->setView("Index");
+            $view->setView("indexChoice");
+            $view->assign("facebook_choice_url", BASE_URL.'choice/facebook');
+            $view->assign("download_choice_url", BASE_URL.'choice/download');
         }
+    }
+
+
+
+
+    public function downloadAction(){
+        $view = new view();
+        $view->setView("downloadChoice");
+    }
+
+    public function facebookAction(){
+        $view = new view();
+        $view->setView("facebookChoice");
+        $view->assign("var_fb", facebook::getVarFb());
+        $view->assign("base_url", BASE_URL);
     }
 }
