@@ -55,6 +55,9 @@
                                 <li>
                                     <a href=<?php echo BASE_URL . "admin/campagnes/create"; ?> >Add new</a>
                                 </li>
+                                <li>
+                                    <a href=<?php echo BASE_URL . "admin/campagnes/edit"; ?> >Edit</a>
+                                </li>
                             </ul>
                         </li>
                     </ul>
