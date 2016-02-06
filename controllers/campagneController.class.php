@@ -1,7 +1,7 @@
 <?php
 
 
-class campagneController{
+class campagnesController{
     public function indexAction( $args )
     {
         return self::showAction($args);
@@ -20,6 +20,15 @@ class campagneController{
     {
         $view = new view();
         $view->setView("editCampagne", "adminlayout");
+
+        $campagnes = campagne::load();
+        $view->assign("campagnes", $campagnes);
+    }
+
+    public function showallAction( $args )
+    {
+        $view = new view();
+        $view->setView("showAllCampagne", "adminlayout");
 
         $campagnes = campagne::load();
         $view->assign("campagnes", $campagnes);

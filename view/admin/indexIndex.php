@@ -1,4 +1,5 @@
-<h1>Ici c'est la dashborad frère</h1>
+<h1>Bienvenue sur l'administration de vos campagnes photos facebook</h1>
+
 
 <h2>Canvas Facebook</h2>
 <a href="https://apps.facebook.com/picturechallenge">Bob et le canvas magique</a>
