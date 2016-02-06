@@ -5,8 +5,8 @@
     <title>Titre</title>
     <link rel="stylesheet" type="text/css" href=<?php echo CSS_DIRECTORY_URL . 'bootstrap.min.css'; ?> >
     <link rel="stylesheet" type="text/css" href=<?php echo CSS_DIRECTORY_URL . 'style.css'; ?> >
-    <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'jquery.min.js'; ?> ></script>
-    <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'bootstrap.min.js'; ?> ></script>
+    <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'lib/jquery.min.js'; ?> ></script>
+    <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'lib/bootstrap.min.js'; ?> ></script>
     <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'selection_album.js'; ?> ></script>
 </head>
 
@@ -18,5 +18,6 @@
 
 <?php include $this->view; ?>
 
+    <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'vote.js'; ?> ></script>
 </body>
 </html>

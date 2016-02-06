@@ -11,31 +11,31 @@
             <div class="title">Critere 1</div>
             <div class="note">
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li class="critere_heart critere_1" data-critere="1" data-number="1"></li>
+                    <li class="critere_heart critere_1" data-critere="1" data-number="2"></li>
+                    <li class="critere_heart critere_1" data-critere="1" data-number="3"></li>
+                    <li class="critere_heart critere_1" data-critere="1" data-number="4"></li>
+                    <li class="critere_heart critere_1" data-critere="1" data-number="5"></li>
                 </ul>
             </div>
             <div class="title">Critere 2</div>
             <div class="note">
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li class="critere_heart critere_2" data-critere="2" data-number="1"></li>
+                    <li class="critere_heart critere_2" data-critere="2" data-number="2"></li>
+                    <li class="critere_heart critere_2" data-critere="2" data-number="3"></li>
+                    <li class="critere_heart critere_2" data-critere="2" data-number="4"></li>
+                    <li class="critere_heart critere_2" data-critere="2" data-number="5"></li>
                 </ul>
             </div>
             <div class="title">Critere 3</div>
             <div class="note">
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li class="critere_heart critere_3" data-critere="3" data-number="1"></li>
+                    <li class="critere_heart critere_3" data-critere="3" data-number="2"></li>
+                    <li class="critere_heart critere_3" data-critere="3" data-number="3"></li>
+                    <li class="critere_heart critere_3" data-critere="3" data-number="4"></li>
+                    <li class="critere_heart critere_3" data-critere="3" data-number="5"></li>
                 </ul>
             </div>
         </div>

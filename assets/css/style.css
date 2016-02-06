@@ -160,8 +160,9 @@ body{
 						background-image: url("../img/campagnes/1/coeur_off.png");
 						background-size: 100% auto;
 						margin-left: 15px;
+						cursor: pointer;
 					}
-						.vote .criteres .note ul li{
+						.vote .criteres .note ul li.active{
 							background-image: url("../img/campagnes/1/coeur_on.png");
 						}
 
