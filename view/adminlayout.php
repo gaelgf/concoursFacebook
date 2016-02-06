@@ -47,16 +47,16 @@
                             <a href=<?php echo BASE_URL . "admin/"; ?>>Dashboard</a>
                         </li>
                         <li>
-                            <a href="#">Campagnes<span class="fa arrow"></span></a>
+                            <a href="#">Concours<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href=<?php echo BASE_URL . "admin/campagnes/showall"; ?> >Show</a>
+                                    <a href=<?php echo BASE_URL . "admin/campagnes/showall"; ?> >Voir la liste</a>
                                 </li>
                                 <li>
-                                    <a href=<?php echo BASE_URL . "admin/campagnes/create"; ?> >Add new</a>
+                                    <a href=<?php echo BASE_URL . "admin/campagnes/create"; ?> >Ajouter</a>
                                 </li>
                                 <li>
-                                    <a href=<?php echo BASE_URL . "admin/campagnes/edit"; ?> >Edit</a>
+                                    <a href=<?php echo BASE_URL . "admin/campagnes/edit"; ?> >Editer</a>
                                 </li>
                             </ul>
                         </li>

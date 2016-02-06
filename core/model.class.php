@@ -2,8 +2,8 @@
 
 class model{
 
-    private $pdo;
-    private $table;
+    protected $pdo;
+    protected $table;
 
     public function __construct($table = '')
     {
@@ -24,17 +24,23 @@ class model{
     }
 
     public static function getById($modelId){
-
+        $errors = [];
         $table = get_called_class();
         $model = new self($table);
 
-        $request = $model->pdo->query(
+        if (!$request = $model->pdo->query(
             "SELECT * FROM " . $model->table . " WHERE id = " . $modelId
-        );
+        )) {
+            $errors["errors"][] = "Erreur lors de la récupération de l'objet " . $model->table;
+        } else {
+             if(!$response = $request->fetch()) {
+                $errors["errors"][] = "Erreur lors de la récupération de l'objet " . $model->table; 
+            } else {
+                return $response;
+            }
+        }
 
-        $response = $request->fetch();
-
-        return $response;
+        return $errors; 
     }
 
     public static function get(){

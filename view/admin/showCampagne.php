@@ -1,3 +1,5 @@
+<h1>Concours <?php echo $campagne->getNomCampagne(); ?></h1>
+
 <div class="table-responsive">
 	<table class="table">
 		<thead>
@@ -27,8 +29,8 @@
 					<td><?php echo $campagne->getTextAccueil(); ?></td>
 					<td><?php echo $campagne->getTextFelicitations(); ?></td>
 					<td>
-						<a class="btn btn-primary" href="#" role="button">Edit</a>
-						<a class="btn btn-primary" href="#" role="button">Remove</a>
+						<a class="btn btn-primary" href="#" role="button">Editer</a>
+						<a class="btn btn-primary" href="#" role="button">Supprimer</a>
 					</td>
 				</tr>
 		</tbody>

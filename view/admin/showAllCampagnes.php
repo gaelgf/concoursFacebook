@@ -1,9 +1,18 @@
+<h1>Vos concours</h1>
+
 <?php
 	if(isset($successMessages)) {
 		foreach ($successMessages as $successMessage) {
 			echo "<div class=\"alert alert-success\" role=\"alert\">" . $successMessage . "</div>";
 		}
 	}
+?>
+<?php
+    if(isset($errorsMessages)) {
+        foreach ($errorsMessages as $errorsMessage) {
+            echo "<div class=\"alert alert-danger\" role=\"alert\"><i class=\"fa fa-times\"></i>  " . $errorsMessage . "</div>";
+        }
+    }
 ?>
 
 <div class="table-responsive">
@@ -38,9 +47,9 @@
 					<td><?php echo $campagne->getTextAccueil(); ?></td>
 					<td><?php echo $campagne->getTextFelicitations(); ?></td>
 					<td>
-						<a class="btn btn-sm btn-primary" href="<?php BASE_URL . 'admin/' . $campagne->getId(); ?>" role="button"><i class="fa fa-eye"></i> Show</a>
-						<a class="btn btn-sm btn-primary" href="#" role="button"><i class="fa fa-pencil-square-o"></i> 	Edit</a>
-						<a class="btn btn-sm btn-primary" href="#" role="button"><i class="fa fa-trash"></i> 	Remove</a>
+						<a class="btn btn-sm btn-primary" href=<?php echo BASE_URL . 'admin/campagnes/show/' . $campagne->getNomCampagne(); ?> role="button"><i class="fa fa-eye"></i> Voir</a>
+						<a class="btn btn-sm btn-primary" href="#" role="button"><i class="fa fa-pencil-square-o"></i> 	Editer</a>
+						<a class="btn btn-sm btn-primary" href="#" role="button"><i class="fa fa-trash"></i> 	Supprimer</a>
 					</td>
 				</tr>
 			<?php

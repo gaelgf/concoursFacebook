@@ -8,22 +8,40 @@ class campagnesController{
 
     public function showallaction( $args )
     {
+        if(isset($args['errors'])) {
+            $errors = explode( ', ', $args['errors']);
+        }
         $view = new view();
         $view->setView("admin/showAllCampagnes", "adminlayout");
 
         $campagnes = campagne::load();
         $view->assign("campagnes", $campagnes);
+        if(isset($errors)) {
+            $view->assign("errorsMessages", $errors);
+        }
     }
 
     public function showaction( $args ) {
-        var_dump($args);
-        if(ctype_digit($args[2])) {
-            $view = new view();
-            $view->setView("admin/showCampagne", "adminlayout");
+        if(ctype_digit($args[2])) {//Si le paramère est un entier (id de la campagne)
 
-            $campagne = campagne::loadById($args[2]);
-            var_dump($campagne);
-            $view->assign("campagne", $campagne);
+            $campagne = campagne::loadById(intval($args[2]));
+            if ( !is_array( $campagne ) ) {
+                $view = new view();
+                $view->setView("admin/showCampagne", "adminlayout");
+                $view->assign("campagne", $campagne);
+            } else {
+                header('Location: ' . BASE_URL . 'admin/campagnes/showAll?errors=' . implode($campagne) );
+            }
+        } else {
+            $campagne = campagne::loadByName($args[2]);
+            if ( !is_array( $campagne ) ) {
+                $view = new view();
+                $view->setView("admin/showCampagne", "adminlayout");
+                $view->assign("campagne", $campagne);
+            } else {
+                header('Location: ' . BASE_URL . 'admin/campagnes/showAll?errors=' . implode($campagne) );
+            }
+
         }
     }
 

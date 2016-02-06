@@ -43,10 +43,36 @@ class campagne extends model{
 
     public static function loadById($campagneId)
     {
-        var_dump($campagneId);
+        $errors = [];
         $campagneArray = parent::getById($campagneId);
-        $campagne = self::campagneFromArray($campagneArray);
-        return $campagne;
+        if(!isset($campagneArray["errors"])) {
+            $campagne = self::campagneFromArray($campagneArray);
+            return $campagne;
+        }
+        $errors = $campagneArray["errors"];
+        return $errors;
+    }
+
+    public static function loadByName($campagneName)
+    {
+        $errors = [];
+        $table = get_called_class();
+        $model = new parent($table);
+
+        if (!$request = $model->pdo->query(
+            "SELECT * FROM " . $model->table . " WHERE nom_campagne = '" . $campagneName . "'"
+        )) {
+           $errors[] = "Erreur lors de la récupération de l'objet " . $table;
+        }
+
+        if($campagneArray = $request->fetch()) {
+            $campagne = self::campagneFromArray($campagneArray);
+            return $campagne;
+        } else {
+            $errors[] = "Erreur lors de la récupération de l'objet " . $table;
+        }
+
+        return $errors;        
     }
 
     public static function load()
