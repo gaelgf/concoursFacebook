@@ -1,6 +1,6 @@
 <?php
 if(getenv("BASE_URL")) {
-	define("BASE_URL","BASE_URL");
+	define("BASE_URL", getenv("BASE_URL"));
 } else {
 	define("BASE_URL","http://localhost/facebook/");
 }
