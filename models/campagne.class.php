@@ -43,6 +43,7 @@ class campagne extends model{
 
     public static function loadById($campagneId)
     {
+        var_dump($campagneId);
         $campagneArray = parent::getById($campagneId);
         $campagne = self::campagneFromArray($campagneArray);
         return $campagne;

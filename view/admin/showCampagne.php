@@ -16,9 +16,6 @@
 			</tr>
 		</thead>
 		<tbody>
-			<?php 
-				foreach ($campagnes as $campagne) {
-			?>
 				<tr>
 					<td><?php echo $campagne->getId(); ?></td>
 					<td><?php echo $campagne->getLogoentreprise(); ?></td>
@@ -30,14 +27,10 @@
 					<td><?php echo $campagne->getTextAccueil(); ?></td>
 					<td><?php echo $campagne->getTextFelicitations(); ?></td>
 					<td>
-						<a class="btn btn-primary" href="<?php BASE_URL . 'admin/' . $campagne->getId(); ?>" role="button">Show</a>
 						<a class="btn btn-primary" href="#" role="button">Edit</a>
 						<a class="btn btn-primary" href="#" role="button">Remove</a>
 					</td>
 				</tr>
-			<?php
-				}
-			?>
 		</tbody>
 	</table>
 </div>

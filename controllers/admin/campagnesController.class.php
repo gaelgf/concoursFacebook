@@ -1,6 +1,6 @@
 <?php
 
-class campagneController{
+class campagnesController{
     public function indexAction( $args )
     {
         return self::showAction($args);
@@ -13,6 +13,18 @@ class campagneController{
 
         $campagnes = campagne::load();
         $view->assign("campagnes", $campagnes);
+    }
+
+    public function showaction( $args ) {
+        var_dump($args);
+        if(ctype_digit($args[2])) {
+            $view = new view();
+            $view->setView("admin/showCampagne", "adminlayout");
+
+            $campagne = campagne::loadById($args[2]);
+            var_dump($campagne);
+            $view->assign("campagne", $campagne);
+        }
     }
 
     public function createAction( $args ) {
