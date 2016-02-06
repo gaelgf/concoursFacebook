@@ -1,5 +1,5 @@
 <?php
-require_once "assets/fb_sdk/src/Facebook/autoload.php";
+require_once BASE_URL . "assets/fb_sdk/src/Facebook/autoload.php";
 
 class facebook{
 
