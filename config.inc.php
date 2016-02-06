@@ -1,5 +1,8 @@
 <?php
 define("BASE_URL","http://localhost/facebook/");
+if(getenv("BASE_URL")) {
+	define("BASE_URL","BASE_URL");
+}
 define("IMG_DIRECTORY_URL", BASE_URL . "assets/img/");
 define("JS_DIRECTORY_URL", BASE_URL . "assets/js/");
 define("CSS_DIRECTORY_URL", BASE_URL . "assets/css/");
