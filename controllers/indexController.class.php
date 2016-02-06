@@ -10,7 +10,12 @@ class indexController{
 
             $helper = facebook::conectionFacebook();
             $permissions = ['public_profile', 'email','user_photos','publish_actions']; // optional
-            $loginUrl = $helper->getLoginUrl( BASE_URL.'index/validation', $permissions);
+
+            if(BASE_URL === '/') {
+                $loginUrl = $helper->getLoginUrl( 'https://fierce-refuge-2356.herokuapp.com/index/validation', $permissions);
+            } else {
+                $loginUrl = $helper->getLoginUrl( BASE_URL.'index/validation', $permissions);
+            }
 
             $view->setView("indexIndex");
 
