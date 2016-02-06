@@ -9,11 +9,13 @@
     <link rel="stylesheet" type="text/css" href=<?php echo CSS_DIRECTORY_URL . 'font-awesome.min.css'; ?> >
     <link rel="stylesheet" type="text/css" href=<?php echo CSS_DIRECTORY_URL . 'timeline.css'; ?> >
     <link rel="stylesheet" type="text/css" href=<?php echo CSS_DIRECTORY_URL . 'styleAdmin.css'; ?> >
+    <link rel="stylesheet" type="text/css" href=<?php echo CSS_DIRECTORY_URL . 'loadingBar.css'; ?> >
     <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'jquery.min.js'; ?> ></script>
     <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'bootstrap.min.js'; ?> ></script>
     <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'metisMenu.min.js'; ?> ></script>
     <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'raphael-min.js'; ?> ></script>
     <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'sb-admin-2.js'; ?> ></script>
+    <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'loadingBar.js'; ?> ></script>
     <script src="//cdn.ckeditor.com/4.5.7/standard/ckeditor.js"></script>
 </head>
 
