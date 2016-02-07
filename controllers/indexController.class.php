@@ -24,7 +24,7 @@ class indexController{
             $view->assign("login_url", $loginUrl);
 
         } else {
-            //header("Location: ".BASE_URL."choice");
+            header("Location: ".BASE_URL."choice");
         }
     }
 

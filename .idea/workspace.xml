@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee0217f2-4d30-4a3f-834c-774b01da4dc5" name="Default" comment="Page de téléchargement de photo vers album (non fonctionnel)">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/campagnes/1/coeur_white.png" />
+    <list default="true" id="ee0217f2-4d30-4a3f-834c-774b01da4dc5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/choiceController.class.php" afterPath="$PROJECT_DIR$/controllers/choiceController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/indexController.class.php" afterPath="$PROJECT_DIR$/controllers/indexController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/downloadChoice.php" afterPath="$PROJECT_DIR$/view/downloadChoice.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/indexIndex.php" afterPath="$PROJECT_DIR$/view/indexIndex.php" />
     </list>
     <ignored path="mvc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -54,8 +50,8 @@
       <file leaf-file-name="indexController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/indexController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24070796">
-              <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+            <state vertical-scroll-proportion="0.7823009">
+              <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -458,7 +454,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454872530217</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Telechargement de photo sur facebook">
+      <created>1454883146873</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1454883146873</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -508,7 +510,8 @@
     <MESSAGE value="Ajout bouton vote sur la apge d'accueil" />
     <MESSAGE value="Listage album, listages photos en cours" />
     <MESSAGE value="Page de téléchargement de photo vers album (non fonctionnel)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Page de téléchargement de photo vers album (non fonctionnel)" />
+    <MESSAGE value="Telechargement de photo sur facebook" />
+    <option name="LAST_COMMIT_MESSAGE" value="Telechargement de photo sur facebook" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -883,8 +886,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/indexController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24070796">
-          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.7823009">
+          <caret line="26" column="12" selection-start-line="26" selection-start-column="12" selection-end-line="26" selection-end-column="12" />
           <folding />
         </state>
       </provider>
