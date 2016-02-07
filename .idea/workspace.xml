@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee0217f2-4d30-4a3f-834c-774b01da4dc5" name="Default" comment="Ajout bouton vote sur la apge d'accueil">
+    <list default="true" id="ee0217f2-4d30-4a3f-834c-774b01da4dc5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/choiceController.class.php" afterPath="$PROJECT_DIR$/controllers/choiceController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/facebookChoice.php" afterPath="$PROJECT_DIR$/view/facebookChoice.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/downloadChoice.php" afterPath="$PROJECT_DIR$/view/downloadChoice.php" />
     </list>
     <ignored path="mvc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,8 +49,18 @@
       <file leaf-file-name="facebookChoice.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/facebookChoice.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.038462">
-              <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+            <state vertical-scroll-proportion="-11.115385">
+              <caret line="17" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="downloadChoice.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/downloadChoice.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.115385">
+              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -59,8 +69,8 @@
       <file leaf-file-name="choiceController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/choiceController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8097015">
-              <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.22201492">
+              <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
               <folding />
             </state>
           </provider>
@@ -92,7 +102,6 @@
         <option value="$PROJECT_DIR$/controllers/campagnesController.class.php" />
         <option value="$PROJECT_DIR$/phpinfo.php" />
         <option value="$PROJECT_DIR$/core/view.class.php" />
-        <option value="$PROJECT_DIR$/view/downloadChoice.php" />
         <option value="$PROJECT_DIR$/core/facebook.class.php" />
         <option value="$PROJECT_DIR$/controllers/voteController.php" />
         <option value="$PROJECT_DIR$/index.php" />
@@ -108,6 +117,7 @@
         <option value="$PROJECT_DIR$/models/campagne.class.php" />
         <option value="$PROJECT_DIR$/controllers/campagneController.class.php" />
         <option value="$PROJECT_DIR$/view/facebookChoice.php" />
+        <option value="$PROJECT_DIR$/view/downloadChoice.php" />
         <option value="$PROJECT_DIR$/controllers/choiceController.class.php" />
       </list>
     </option>
@@ -471,7 +481,13 @@
       <option name="project" value="LOCAL" />
       <updated>1454847862091</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Listage album, listages photos en cours">
+      <created>1454869488654</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1454869488654</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -519,7 +535,8 @@
     <MESSAGE value="Création controleur et vue &quot;vote&quot;" />
     <MESSAGE value="Mise en place du JS des votes" />
     <MESSAGE value="Ajout bouton vote sur la apge d'accueil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout bouton vote sur la apge d'accueil" />
+    <MESSAGE value="Listage album, listages photos en cours" />
+    <option name="LAST_COMMIT_MESSAGE" value="Listage album, listages photos en cours" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -726,14 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/downloadChoice.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-23.538462">
-          <caret line="36" column="7" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/facebook.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.9230769">
@@ -886,16 +895,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/facebookChoice.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.038462">
-          <caret line="23" column="11" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="17" column="20" selection-start-line="0" selection-start-column="0" selection-end-line="25" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/downloadChoice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/choiceController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8097015">
-          <caret line="71" column="14" selection-start-line="71" selection-start-column="14" selection-end-line="71" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.22201492">
+          <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
           <folding />
         </state>
       </provider>
