@@ -23,6 +23,9 @@ class choiceController{
     }
 
 
+    /*********************************************************************/
+    /*                           DOWNLOAD CHOICE                         */
+    /*********************************************************************/
 
 
     public function downloadAction(){
@@ -30,16 +33,52 @@ class choiceController{
 
         $fb = facebook::getVarFb();
 
-        $donneesAlbum = $this->userAlbums( $fb );
+        $arrAlbum = $this->userAlbums( $fb );
 
 
         $view->setView("downloadChoice");
         $view->assign("base_url", BASE_URL);
-        $view->assign("user_albums", $donneesAlbum[0]);
+        $view->assign("user_albums", $arrAlbum);
     }
 
 
+    public function uploadAction(){
+        if( isset($_SESSION['facebook_access_token'])){
+            if( isset($_POST["id_album"]) && !empty($_POST["id_album"]) ){
 
+
+                $fb = facebook::getVarFb();
+
+                $img = $_FILES["image"];
+                $id_album = $_POST["id_album"];
+
+                $data = [
+                    'message' => "Toi aussi participe au concours photo !",
+                    'source' => $fb->fileToUpload($img["tmp_name"])
+                ];
+
+
+                try{
+                    $response = $fb->post("/".$id_album."/photos",$data,$_SESSION['facebook_access_token']);
+                    header("Location: ".BASE_URL."/vote");
+                }
+                catch(FacebookSDKException $e){
+                    header("Location: ".BASE_URL."choice/download/erreur");
+                }
+            }
+            else{
+                header("Location: ".BASE_URL."choice/download");
+            }
+        }
+        else{
+            header("Location: ".BASE_URL."choice/download");
+        }
+    }
+
+
+    /*********************************************************************/
+    /*                           FACEBOOK CHOICE                         */
+    /*********************************************************************/
 
 
     public function facebookAction(){
@@ -47,14 +86,16 @@ class choiceController{
 
         $fb = facebook::getVarFb();
 
-        $donneesAlbum = $this->userAlbums( $fb , true );
+        $arrAlbum = $this->userAlbums( $fb );
+        $arrPhotosByAlbum = $this->photosAlbum( $fb , $arrAlbum );
 
 
         $view->setView("facebookChoice");
         $view->assign("base_url", BASE_URL);
-        $view->assign("user_albums", $donneesAlbum[0]);
-        $view->assign("photos_album", $donneesAlbum[1]);
+        $view->assign("user_albums", $arrAlbum);
+        $view->assign("photos_album", $arrPhotosByAlbum);
     }
+
 
 
 
@@ -81,7 +122,7 @@ class choiceController{
 
 
 
-    public function userAlbums( $fb , $photosNeeded = false ){
+    public function userAlbums( $fb){
 
 
         $arrAlbums = [];
@@ -95,37 +136,36 @@ class choiceController{
         foreach ($albums as $album) {
             $albumId = $album->getField("id");
             $arrAlbums [$albumId]["name"] = $album->getField("name");
-
-            if( $photosNeeded ){
-                $arrPhotos = $this->photosAlbum( $fb , $albumId );
-            }
         }
 
-        return [$arrAlbums,$arrPhotos];
+        return $arrAlbums;
     }
 
 
-    public function photosAlbum( $fb , $albumId ){
-
+    public function photosAlbum( $fb , $albums ){
 
         $arrPhotos = [];
 
-        $response = $fb->get("/$albumId?fields=photos", $_SESSION['facebook_access_token']);
+        foreach ($albums as $album) {
 
-        $photos = $response->getDecodedBody()["photos"]["data"];
+            $albumId = $album["id"];
 
-        foreach ($photos as $photo) {
-            $photoId = $photo["id"];
-            $response = $fb->get("/$photoId?fields=picture", $_SESSION['facebook_access_token']);
+            $response = $fb->get("/".$albumId."?fields=photos", $_SESSION['facebook_access_token']);
 
-            $urlPhoto = $response->getDecodedBody()["picture"];
-            $idPhoto = $response->getDecodedBody()["id"];
+            $photos = $response->getDecodedBody()["photos"]["data"];
 
-            $photo = ["url" => $urlPhoto, "id" => $idPhoto];
+            foreach ($photos as $photo) {
 
-            $arrPhotos[$albumId][] = $photo;
+                $response = $fb->get("/$albumId?fields=picture", $_SESSION['facebook_access_token']);
+
+                $urlPhoto = $response->getDecodedBody()["picture"];
+                $idPhoto = $response->getDecodedBody()["id"];
+
+                $photo = ["url" => $urlPhoto, "id" => $idPhoto];
+
+                $arrPhotos[$album["id"]][]  = $photo;
+            }
         }
-
 
         return ;
     }

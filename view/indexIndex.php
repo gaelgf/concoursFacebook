@@ -20,6 +20,6 @@
             </ul>
         </div>
         <br/>
-        <a  class="boutons bouton_connexion" href="<?php echo $login_url; ?>">Log in with Facebook!</a>
+        <a  class="boutons bouton_connexion" href="<?php echo $login_url; ?>">Je participe !</a>
     </div>
 </div>

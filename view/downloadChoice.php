@@ -1,11 +1,11 @@
 
-<form enctype='multipart/form-data' method="post" action="upload.php">
+<form enctype='multipart/form-data' method="post" action="<?php echo $base_url; ?>choice/upload">
     <div class="select_picture">
         <div class="container_select">
             <div class="container_select">
-                <select class="album_list">
-                    <?php foreach( $user_albums as $album): ?>
-                        <option><?php echo $album["name"] ?></option>
+                <select name="id_album" class="album_list">
+                    <?php foreach( $user_albums as $idAlbum => $album): ?>
+                        <option value="<?php echo $idAlbum; ?>"><?php echo $album["name"] ?></option>
                     <?php endforeach; ?>
                 </select>
                 <img src="img/icones/arrow_select.png" class="arrow" alt="">

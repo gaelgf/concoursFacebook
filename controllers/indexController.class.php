@@ -6,6 +6,8 @@ class indexController{
     {
         $view = new view();
 
+        //print_r(campagne::loadById(1));
+
         if (!isset($_SESSION['facebook_access_token'])) {
 
             $helper = facebook::conectionFacebook();
@@ -22,7 +24,7 @@ class indexController{
             $view->assign("login_url", $loginUrl);
 
         } else {
-            header("Location: ".BASE_URL."choice");
+            //header("Location: ".BASE_URL."choice");
         }
     }
 
