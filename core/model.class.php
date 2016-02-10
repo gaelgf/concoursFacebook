@@ -68,7 +68,21 @@ class model{
         unset($data["table"]);
 
         if( $id ){
-            //TO DO: UPDATE
+            foreach($data as $key => $value){
+                $sql_column_update[] = ":".$key;
+            }
+
+            $columns = implode(",",array_keys($data));
+            $values = implode(",",$sql_column_update);
+
+            echo "INSERT INTO ".$this->table."(".$columns.") VALUES (".$values.")";
+            exit();
+
+            $request = $this->pdo->prepare(
+                "INSERT INTO ".$this->table."(".$columns.") VALUES (".$values.")"
+            );
+
+            return $request->execute($data);
         }
         else{
             foreach($data as $key => $value){
@@ -84,5 +98,21 @@ class model{
 
             return $request->execute($data);
         }
+    }
+
+    public function delete() {
+        $errors = [];
+        $data = get_object_vars($this);
+
+        $id = $data['id'];
+        var_dump($this->table);
+
+        if(!$request = $this->pdo->query(
+            "DELETE FROM ".$this->table." WHERE id = ".$id
+        )) {
+            $errors["errors"][] = "Erreur lors de la suppression de l'objet " . $model->table;
+        };
+
+        return $errors;
     }
 }

@@ -49,7 +49,7 @@
 					<td>
 						<a class="btn btn-sm btn-primary" href=<?php echo BASE_URL . 'admin/campagnes/show/' . $campagne->getNomCampagne(); ?> role="button"><i class="fa fa-eye"></i> Voir</a>
 						<a class="btn btn-sm btn-primary" href="#" role="button"><i class="fa fa-pencil-square-o"></i> 	Editer</a>
-						<a class="btn btn-sm btn-primary" href="#" role="button"><i class="fa fa-trash"></i> 	Supprimer</a>
+						<a class="btn btn-sm btn-primary" href=<?php echo BASE_URL . 'admin/campagnes/delete/' . $campagne->getNomCampagne(); ?>><i class="fa fa-trash"></i> 	Supprimer</a>
 					</td>
 				</tr>
 			<?php

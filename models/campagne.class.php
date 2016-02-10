@@ -12,12 +12,10 @@ class campagne extends model{
     protected $url_icone;          
     protected $text_accueil;      
     protected $text_felicitations;
-
-    /* TO DO : ajouter ces attributs dans la table campagnes sur heroku */
-    /*protected $iActive;
+    protected $isActive;
     protected $nom_lot;   
     protected $description_lot;
-    protected $image_lot;*/
+    protected $image_lot;
 
     public function __construct($id = NULL,
                                 $logo_entreprise,
@@ -27,7 +25,11 @@ class campagne extends model{
                                 $couleur,
                                 $url_icone,
                                 $text_accueil,
-                                $text_felicitations)
+                                $text_felicitations,
+                                $isActive,
+                                $nom_lot,
+                                $description_lot,
+                                $image_lot)
     {
         parent::__construct();
         $this->id = $id;
@@ -39,6 +41,10 @@ class campagne extends model{
         $this->url_icone = $url_icone;
         $this->text_accueil = $text_accueil;
         $this->text_felicitations = $text_felicitations;
+        $this->isActive = $isActive;
+        $this->nom_lot = $nom_lot;
+        $this->description_lot = $description_lot;
+        $this->image_lot = $image_lot;
     }
 
     public static function loadById($campagneId)
@@ -108,6 +114,15 @@ class campagne extends model{
         if(!array_key_exists("text_felicitations", $campagneArray) || !isset($campagneArray["text_felicitations"])) {
             $errors["text_felicitations"] = "Erreur : Le texte de félicitations de la campagne doit être renseigné.";
         }
+        if(!array_key_exists("nom_lot", $campagneArray) || !isset($campagneArray["nom_lot"])) {
+            $errors["nom_lot"] = "Erreur : Le nom du lot de la campagne doit être renseigné.";
+        }
+        if(!array_key_exists("description_lot", $campagneArray) || !isset($campagneArray["description_lot"])) {
+            $errors["description_lot"] = "Erreur : La description du lot de la campagne doit être renseignée.";
+        }
+        if(!array_key_exists("image_lot", $campagneArray) || !isset($campagneArray["image_lot"])) {
+            $errors["image_lot"] = "Erreur : L'image du lot de la campagne doit être renseignée.";
+        }
 
         if(sizeof($errors) > 0) {
             return $errors;
@@ -117,14 +132,18 @@ class campagne extends model{
 
     public static function campagneFromArray($campagneArray) {
         $campagne = new self((isset($campagneArray["id"]) ? $campagneArray["id"] : NULL),
-                             $campagneArray["logo_entreprise"],
-                             $campagneArray["nom_campagne"],
-                             $campagneArray["date_debut"],
-                             $campagneArray["date_fin"],
-                             $campagneArray["couleur"],
-                             $campagneArray['url_icone'],
-                             $campagneArray['text_accueil'],
-                             $campagneArray['text_felicitations']);
+                                    $campagneArray["logo_entreprise"],
+                                    $campagneArray["nom_campagne"],
+                                    $campagneArray["date_debut"],
+                                    $campagneArray["date_fin"],
+                                    $campagneArray["couleur"],
+                                    $campagneArray['url_icone'],
+                                    $campagneArray['text_accueil'],
+                                    $campagneArray['text_felicitations'],
+                                    $campagneArray['isActive'],
+                                    $campagneArray['nom_lot'],
+                                    $campagneArray['description_lot'],
+                                    $campagneArray['image_lot']);
         return $campagne;
     }
 
@@ -206,6 +225,38 @@ class campagne extends model{
     }
     public function setTextFelicitations( $text_felicitations ){
         $this->text_felicitations = $text_felicitations;
+    }
+
+    /* isActive */
+    public function getIsActive(){
+        return $this->iActive;
+    }
+    public function setIsActive( $isActive ){
+        $this->isActive = $isActive;
+    }
+
+    /* nom_lot */
+    public function getNomLot(){
+        return $this->nom_lot;
+    }
+    public function setNomLot( $nom_lot ){
+        $this->nom_lot = $nom_lot;
+    }
+
+    /* description_lot */
+    public function getDescriptionLot(){
+        return $this->description_lot;
+    }
+    public function setDescriptionLot( $description_lot ){
+        $this->description_lot = $description_lot;
+    }
+
+    /* image_lot */
+    public function getImageLot(){
+        return $this->image_lot;
+    }
+    public function setImageLot( $image_lot ){
+        $this->image_lot = $image_lot;
     }
 
 }

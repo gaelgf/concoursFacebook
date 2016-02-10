@@ -50,6 +50,47 @@ class campagnesController{
         $view->setView("admin/createCampagne", "adminlayout");
     }
 
+    public function updateAction( $args ) {
+        $view = new view();
+        $view->setView("admin/editCampagne", "adminlayout");
+    }
+
+    public function deleteAction( $args ) {
+        $errors = [];
+        if(ctype_digit($args[2])) {//Si le paramère est un entier (id de la campagne)
+
+            $campagne = campagne::loadById(intval($args[2]));
+            if ( is_array( $campagne ) ) {
+                header('Location: ' . BASE_URL . 'admin/campagnes/showAll?errors=' . implode($campagne) );
+            } else {
+                if( $errors = $campagne->delete() !== []) {
+                    header('Location: ' . BASE_URL . 'admin/campagnes/showAll?errors=' . implode($errors) );
+                } else {
+                    $view = new View();
+                    $view->setView("admin/showAllCampagnes", "adminlayout");
+                    $campagnes = campagne::load();
+                    $view->assign("campagnes", $campagnes);
+                    $view->assign("successMessages", ["La campagne " . $args[2] . " a bien été supprimée"]);
+                }
+            }
+        } else {
+            $campagne = campagne::loadByName($args[2]);
+            if ( is_array( $campagne ) ) {
+                header('Location: ' . BASE_URL . 'admin/campagnes/showAll?errors=' . implode($campagne) );
+            } else {
+                if( $errors = $campagne->delete() !== []) {
+                    header('Location: ' . BASE_URL . 'admin/campagnes/showAll?errors=' . implode($errors) );
+                } else {
+                    $view = new View();
+                    $view->setView("admin/showAllCampagnes", "adminlayout");
+                    $campagnes = campagne::load();
+                    $view->assign("campagnes", $campagnes);
+                    $view->assign("successMessages", ["La campagne " . $args[2] . " a bien été supprimée"]);
+                }
+            }
+        }
+    }
+
     public function saveAction ( $args ) {
         $errorsMessages = [];
 
