@@ -1,6 +1,12 @@
 <h1>Créer un nouveau concours</h1>
 
 <?php
+    if(isset($successMessages)) {
+        foreach ($successMessages as $successMessage) {
+            echo "<div class=\"alert alert-success\" role=\"alert\">" . $successMessage . "</div>";
+        }
+    }
+    
     if(isset($errorsMessages)) {
         foreach ($errorsMessages as $errorsMessage) {
             echo "<div class=\"alert alert-danger\" role=\"alert\"><i class=\"fa fa-times\"></i>  " . $errorsMessage . "</div>";
@@ -79,6 +85,42 @@
                 </div>
             </div>
 
+            <div class="form-group">
+                <label for="inputNomLot" class="col-sm-4 control-label">Nom du lot</label>
+                <div class="col-sm-8">
+                    <input type="text" name ="nom_lot" class="form-control" id="inputNomLot" placeholder="Nom du lot" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputImageLot" class="col-sm-4 control-label">Image du lot</label>
+                <div class="col-sm-8">
+                    <input type="url" name="image_lot" class="form-control" id="inputImageLot" placeholder="Url de le l'image du lot" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputDescriptionLot" class="col-sm-4 control-label">Description du lot</label>
+                <div class="col-sm-8">
+                    <textarea name="description_lot" class="form-control"
+                           id="inputDescriptionLot" required>
+                    </textarea>
+                    <script>
+                        CKEDITOR.replace( 'inputDescriptionLot' );
+                    </script>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputIsActive" class="col-sm-4 control-label">Activer la campagne</label>
+                <div class="col-sm-8">
+                    <div class="checkbox">
+                      <label>
+                        <input type="checkbox" id="inputIsActive" name="is_active" required>
+                      </label>
+                    </div>
+                </div>
+            </div>
 
             <div class="form-group btnSubmit">
                 <button type="submit" class="btn btn-primary pull-right">

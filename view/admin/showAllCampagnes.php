@@ -6,8 +6,7 @@
 			echo "<div class=\"alert alert-success\" role=\"alert\">" . $successMessage . "</div>";
 		}
 	}
-?>
-<?php
+	
     if(isset($errorsMessages)) {
         foreach ($errorsMessages as $errorsMessage) {
             echo "<div class=\"alert alert-danger\" role=\"alert\"><i class=\"fa fa-times\"></i>  " . $errorsMessage . "</div>";
@@ -28,6 +27,10 @@
 				<th>url_icone</th>
 				<th>text_accueil</th>
 				<th>text_felicitations</th>
+				<th>is_active</th>
+				<th>nom_lot</th>
+				<th>description_lot</th>
+				<th>image_lot</th>
 
 				<th>Actions</th>
 			</tr>
@@ -46,9 +49,13 @@
 					<td><?php echo $campagne->getUrlIcone(); ?></td>
 					<td><?php echo $campagne->getTextAccueil(); ?></td>
 					<td><?php echo $campagne->getTextFelicitations(); ?></td>
+					<td><?php echo $campagne->getIsActive(); ?></td>
+					<td><?php echo $campagne->getNomLot(); ?></td>
+					<td><?php echo $campagne->getDescriptionLot(); ?></td>
+					<td><?php echo $campagne->getImageLot(); ?></td>
 					<td>
 						<a class="btn btn-sm btn-primary" href=<?php echo BASE_URL . 'admin/campagnes/show/' . $campagne->getNomCampagne(); ?> role="button"><i class="fa fa-eye"></i> Voir</a>
-						<a class="btn btn-sm btn-primary" href="#" role="button"><i class="fa fa-pencil-square-o"></i> 	Editer</a>
+						<a class="btn btn-sm btn-primary" href=<?php echo BASE_URL . 'admin/campagnes/edit/' . $campagne->getNomCampagne(); ?> role="button"><i class="fa fa-pencil-square-o"></i> 	Editer</a>
 						<a class="btn btn-sm btn-primary" href=<?php echo BASE_URL . 'admin/campagnes/delete/' . $campagne->getNomCampagne(); ?>><i class="fa fa-trash"></i> 	Supprimer</a>
 					</td>
 				</tr>

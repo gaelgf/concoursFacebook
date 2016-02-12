@@ -50,13 +50,10 @@
                             <a href="#">Concours<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href=<?php echo BASE_URL . "admin/campagnes/showall"; ?> >Voir la liste</a>
+                                    <a href=<?php echo BASE_URL . "admin/campagnes/showall"; ?> ><i class="fa fa-eye"></i> Voir la liste</a>
                                 </li>
                                 <li>
-                                    <a href=<?php echo BASE_URL . "admin/campagnes/create"; ?> >Ajouter</a>
-                                </li>
-                                <li>
-                                    <a href=<?php echo BASE_URL . "admin/campagnes/edit"; ?> >Editer</a>
+                                    <a href=<?php echo BASE_URL . "admin/campagnes/create"; ?> ><i class="fa fa-plus-circle"></i> Créer un nouveau</a>
                                 </li>
                             </ul>
                         </li>

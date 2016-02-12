@@ -70,6 +70,7 @@ class model{
         if( $id ){
             foreach($data as $key => $value){
                 $sql_column_update[] = ":".$key;
+                $value[$key] = trim(preg_replace('/\s+/', ' ', nl2br(htmlentities($value[$key]), false)));
             }
 
             $columns = implode(",",array_keys($data));
@@ -87,6 +88,13 @@ class model{
         else{
             foreach($data as $key => $value){
                 $sql_column_insert[] = ":".$key;
+                $data[$key] = trim(preg_replace('/\s+/', ' ', nl2br(htmlentities($value), false)));
+                if($data[$key] === 'on') {
+                    $data[$key] = true;
+                }
+                if($data[$key] === 'off') {
+                    $data[$key] = false;
+                }
             }
 
             $columns = implode(",",array_keys($data));

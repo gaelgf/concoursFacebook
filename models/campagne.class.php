@@ -12,7 +12,7 @@ class campagne extends model{
     protected $url_icone;          
     protected $text_accueil;      
     protected $text_felicitations;
-    protected $isActive;
+    protected $is_active;
     protected $nom_lot;   
     protected $description_lot;
     protected $image_lot;
@@ -26,7 +26,7 @@ class campagne extends model{
                                 $url_icone,
                                 $text_accueil,
                                 $text_felicitations,
-                                $isActive,
+                                $is_active,
                                 $nom_lot,
                                 $description_lot,
                                 $image_lot)
@@ -41,7 +41,7 @@ class campagne extends model{
         $this->url_icone = $url_icone;
         $this->text_accueil = $text_accueil;
         $this->text_felicitations = $text_felicitations;
-        $this->isActive = $isActive;
+        $this->is_active = $is_active;
         $this->nom_lot = $nom_lot;
         $this->description_lot = $description_lot;
         $this->image_lot = $image_lot;
@@ -140,7 +140,7 @@ class campagne extends model{
                                     $campagneArray['url_icone'],
                                     $campagneArray['text_accueil'],
                                     $campagneArray['text_felicitations'],
-                                    $campagneArray['isActive'],
+                                    $campagneArray['is_active'],
                                     $campagneArray['nom_lot'],
                                     $campagneArray['description_lot'],
                                     $campagneArray['image_lot']);
@@ -227,12 +227,12 @@ class campagne extends model{
         $this->text_felicitations = $text_felicitations;
     }
 
-    /* isActive */
+    /* is_active */
     public function getIsActive(){
-        return $this->iActive;
+        return $this->is_active;
     }
-    public function setIsActive( $isActive ){
-        $this->isActive = $isActive;
+    public function setIsActive( $is_active ){
+        $this->is_active = $is_active;
     }
 
     /* nom_lot */

@@ -50,9 +50,83 @@ class campagnesController{
         $view->setView("admin/createCampagne", "adminlayout");
     }
 
+    public function saveAction ( $args ) {
+        $errorsMessages = [];
+
+        if( campagne::checkCampagneArray(array_slice($args, 2)) !== [] ) {
+            $errorsMessages = campagne::checkCampagneArray(array_slice($args, 2));
+        } else {
+            $campagne = campagne::campagneFromArray($args);
+            if(!$campagne->save()) {
+                $errorsMessages[] = "Erreur lors de l'engistrement de la campagne.";
+            }
+        }
+
+        $view = new View();
+        if(sizeof($errorsMessages) > 0) {
+            $view->setView("admin/createCampagne", "adminlayout");
+            $view->assign("errorsMessages", $errorsMessages);
+        } else {
+            $view->setView("admin/showAllCampagnes", "adminlayout");
+            $campagnes = campagne::load();
+            $view->assign("campagnes", $campagnes);
+            $view->assign("successMessages", ["Votre campagne a bien été enreistrée"]);
+        }
+    }
+
+    public function editAction( $args )
+    {
+        if(isset($args['errors'])) {
+            $errors = explode( ', ', $args['errors']);
+        }
+        if(isset($args['success'])) {
+            $success = explode( ', ', $args['success']);
+        }
+
+        if(ctype_digit($args[2])) {//Si le paramère est un entier (id de la campagne)
+
+            $campagne = campagne::loadById(intval($args[2]));
+            if ( !is_array( $campagne ) ) {
+                $view = new view();
+                $view->setView("admin/editCampagne", "adminlayout");
+                $view->assign("campagne", $campagne);
+                $view->assign("errorsMessages", $errors);
+                $view->assign("errorsMessages", $errors);
+            } else {
+                header('Location: ' . BASE_URL . 'admin/campagnes/showAll?errors=' . implode($campagne) );
+            }
+        } else {
+            $campagne = campagne::loadByName($args[2]);
+            if ( !is_array( $campagne ) ) {
+                $view = new view();
+                $view->setView("admin/editCampagne", "adminlayout");
+                $view->assign("campagne", $campagne);
+                $view->assign("errorsMessages", $errors);
+            } else {
+                header('Location: ' . BASE_URL . 'admin/campagnes/showAll?errors=' . implode($campagne) );
+            }
+
+        }
+    }
+
     public function updateAction( $args ) {
-        $view = new view();
-        $view->setView("admin/editCampagne", "adminlayout");
+        $errorsMessages = [];
+
+        if( campagne::checkCampagneArray(array_slice($args, 2)) !== [] ) {
+            $errorsMessages = campagne::checkCampagneArray(array_slice($args, 2));
+        } else {
+            $campagne = campagne::campagneFromArray($args);
+            if(!$campagne->save()) {
+                $errorsMessages[] = "Erreur lors de l'engistrement de la campagne.";
+            }
+        }
+
+        $view = new View();
+        if(sizeof($errorsMessages) > 0) {
+            header('Location: ' . BASE_URL . 'admin/campagnes/edit/' . $campagne->getNomCampagne() . '?errors=' . implode($campagne) );
+        } else {
+            header('Location: ' . BASE_URL . 'admin/campagnes/show/' . $campagne->getNomCampagne() . '?succes=' . "La campagne a bien été mise à jour" );
+        }
     }
 
     public function deleteAction( $args ) {
@@ -89,38 +163,5 @@ class campagnesController{
                 }
             }
         }
-    }
-
-    public function saveAction ( $args ) {
-        $errorsMessages = [];
-
-        if( campagne::checkCampagneArray(array_slice($args, 2)) !== [] ) {
-            $errorsMessages = campagne::checkCampagneArray(array_slice($args, 2));
-        } else {
-            $campagne = campagne::campagneFromArray($args);
-            if(!$campagne->save()) {
-                $errorsMessages[] = "Erreur lors de l'engistrement de la campagne.";
-            }
-        }
-
-        $view = new View();
-        if(sizeof($errorsMessages) > 0) {
-            $view->setView("admin/createCampagne", "adminlayout");
-            $view->assign("errorsMessages", $errorsMessages);
-        } else {
-            $view->setView("admin/showAllCampagnes", "adminlayout");
-            $campagnes = campagne::load();
-            $view->assign("campagnes", $campagnes);
-            $view->assign("successMessages", ["Votre campagne a bien été enreistrée"]);
-        }
-    }
-
-    public function editAction( $args )
-    {
-        $view = new view();
-        $view->setView("admin/editCampagne", "adminlayout");
-
-        $campagnes = campagne::load();
-        $view->assign("campagnes", $campagnes);
     }
 }
