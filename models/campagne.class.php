@@ -47,6 +47,30 @@ class campagne extends model{
         $this->image_lot = $image_lot;
     }
 
+    public static function loadCurrent()
+    {
+        $errors = [];
+        $table = get_called_class();
+        $model = new parent($table);
+
+        $currentDate = date("Y-m-d");
+
+        if (!$request = $model->pdo->query(
+            "SELECT * FROM " . $model->table . " WHERE date_debut <= '" . $currentDate . "' AND date_fin >= '" . $currentDate . "'"
+        )) {
+           $errors[] = "Erreur lors de la récupération de l'objet " . $table;
+        }
+
+        if($campagneArray = $request->fetch()) {
+            $campagne = self::campagneFromArray($campagneArray);
+            return $campagne;
+        } else {
+            $errors[] = "Erreur lors de la récupération de l'objet " . $table;
+        }
+
+        return $errors;        
+    }
+
     public static function loadById($campagneId)
     {
         $errors = [];

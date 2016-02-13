@@ -6,6 +6,21 @@ class campagnesController{
         return self::showAction($args);
     }
 
+    public function showCurrentAction( $args ) {
+        if(isset($args['errors'])) {
+            $errors = explode( ', ', $args['errors']);
+        }
+
+        $currentCampagne = campagne::loadCurrent();
+
+        $view = new view();
+        $view->setView("admin/showCampagne", "adminlayout");
+        $view->assign("campagne", $currentCampagne);
+        if(isset($errors)) {
+            $view->assign("errorsMessages", $errors);
+        }
+    }
+
     public function showallaction( $args )
     {
         if(isset($args['errors'])) {

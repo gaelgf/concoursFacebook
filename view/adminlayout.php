@@ -50,6 +50,9 @@
                             <a href="#">Concours<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
+                                    <a href=<?php echo BASE_URL . "admin/campagnes/showCurrent"; ?> ><i class="fa fa-eye"></i> Voir le concours en cours</a>
+                                </li>
+                                <li>
                                     <a href=<?php echo BASE_URL . "admin/campagnes/showall"; ?> ><i class="fa fa-eye"></i> Voir la liste</a>
                                 </li>
                                 <li>
