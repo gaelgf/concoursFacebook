@@ -68,19 +68,28 @@ class model{
         unset($data["table"]);
 
         if( $id ){
+            $stringRequest = "UPDATE ".$this->table." SET ";
             foreach($data as $key => $value){
-                $sql_column_update[] = ":".$key;
-                $value[$key] = trim(preg_replace('/\s+/', ' ', nl2br(htmlentities($value[$key]), false)));
+                $data[$key] = trim(preg_replace('/\s+/', ' ', nl2br(htmlentities($value), false)));
+                if($value === 'on') {
+                    $data[$key] = true;
+                }
+                if($value === 'off') {
+                    $data[$key] = false;
+                }
+
+                if($key !== 'id') {
+                    if( next( $data ) ) {
+                        $stringRequest .= $key . " = :" . $key . ", ";
+                    } else {
+                        $stringRequest .= $key . " = :" . $key . " ";
+                    }
+                }
             }
-
-            $columns = implode(",",array_keys($data));
-            $values = implode(",",$sql_column_update);
-
-            echo "INSERT INTO ".$this->table."(".$columns.") VALUES (".$values.")";
-            exit();
+            $stringRequest .= "WHERE id = :id";
 
             $request = $this->pdo->prepare(
-                "INSERT INTO ".$this->table."(".$columns.") VALUES (".$values.")"
+                $stringRequest
             );
 
             return $request->execute($data);

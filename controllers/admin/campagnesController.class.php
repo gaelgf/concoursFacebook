@@ -22,6 +22,14 @@ class campagnesController{
     }
 
     public function showaction( $args ) {
+
+        if(isset($args['errors'])) {
+            $errors = explode( ', ', $args['errors']);
+        }
+        if(isset($args['success'])) {
+            $success = explode( ', ', $args['success']);
+        }
+
         if(ctype_digit($args[2])) {//Si le paramère est un entier (id de la campagne)
 
             $campagne = campagne::loadById(intval($args[2]));
@@ -29,6 +37,12 @@ class campagnesController{
                 $view = new view();
                 $view->setView("admin/showCampagne", "adminlayout");
                 $view->assign("campagne", $campagne);
+                if(isset($errors)) {
+                    $view->assign("errorsMessages", $errors);
+                }
+                if(isset($success)) {
+                    $view->assign("successMessages", $success);
+                }
             } else {
                 header('Location: ' . BASE_URL . 'admin/campagnes/showAll?errors=' . implode($campagne) );
             }
@@ -38,6 +52,12 @@ class campagnesController{
                 $view = new view();
                 $view->setView("admin/showCampagne", "adminlayout");
                 $view->assign("campagne", $campagne);
+                if(isset($errors)) {
+                    $view->assign("errorsMessages", $errors);
+                }
+                if(isset($success)) {
+                    $view->assign("successMessages", $success);
+                }
             } else {
                 header('Location: ' . BASE_URL . 'admin/campagnes/showAll?errors=' . implode($campagne) );
             }
@@ -90,8 +110,12 @@ class campagnesController{
                 $view = new view();
                 $view->setView("admin/editCampagne", "adminlayout");
                 $view->assign("campagne", $campagne);
-                $view->assign("errorsMessages", $errors);
-                $view->assign("errorsMessages", $errors);
+                if(isset($errors)) {
+                    $view->assign("errorsMessages", $errors);
+                }
+                if(isset($success)) {
+                    $view->assign("successMessages", $success);
+                }
             } else {
                 header('Location: ' . BASE_URL . 'admin/campagnes/showAll?errors=' . implode($campagne) );
             }
@@ -101,7 +125,12 @@ class campagnesController{
                 $view = new view();
                 $view->setView("admin/editCampagne", "adminlayout");
                 $view->assign("campagne", $campagne);
-                $view->assign("errorsMessages", $errors);
+                if(isset($errors)) {
+                    $view->assign("errorsMessages", $errors);
+                }
+                if(isset($success)) {
+                    $view->assign("successMessages", $success);
+                }
             } else {
                 header('Location: ' . BASE_URL . 'admin/campagnes/showAll?errors=' . implode($campagne) );
             }
@@ -121,11 +150,10 @@ class campagnesController{
             }
         }
 
-        $view = new View();
         if(sizeof($errorsMessages) > 0) {
-            header('Location: ' . BASE_URL . 'admin/campagnes/edit/' . $campagne->getNomCampagne() . '?errors=' . implode($campagne) );
+            header('Location: ' . BASE_URL . 'admin/campagnes/edit/' . $campagne->getNomCampagne() . '?errors=' . implode($errorsMessages) );
         } else {
-            header('Location: ' . BASE_URL . 'admin/campagnes/show/' . $campagne->getNomCampagne() . '?succes=' . "La campagne a bien été mise à jour" );
+            header('Location: ' . BASE_URL . 'admin/campagnes/show/' . $campagne->getNomCampagne() . '?success=' . "La campagne a bien été mise à jour" );
         }
     }
 
