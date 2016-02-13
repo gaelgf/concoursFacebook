@@ -40,19 +40,19 @@
 				foreach ($campagnes as $campagne) {
 			?>
 				<tr>
-					<td><?php echo $campagne->getId(); ?></td>
-					<td><?php echo $campagne->getLogoentreprise(); ?></td>
-					<td><?php echo $campagne->getNomCampagne(); ?></td>
-					<td><?php echo $campagne->getDateDebut(); ?></td>
-					<td><?php echo $campagne->getDateFin(); ?></td>
-					<td><?php echo $campagne->getCouleur(); ?></td>
-					<td><?php echo $campagne->getUrlIcone(); ?></td>
-					<td><?php echo $campagne->getTextAccueil(); ?></td>
-					<td><?php echo $campagne->getTextFelicitations(); ?></td>
-					<td><?php echo $campagne->getIsActive(); ?></td>
-					<td><?php echo $campagne->getNomLot(); ?></td>
-					<td><?php echo $campagne->getDescriptionLot(); ?></td>
-					<td><?php echo $campagne->getImageLot(); ?></td>
+					<td><?php echo html_entity_decode($campagne->getId()); ?></td>
+					<td><?php echo html_entity_decode($campagne->getLogoentreprise()); ?></td>
+					<td><?php echo html_entity_decode($campagne->getNomCampagne()); ?></td>
+					<td><?php echo html_entity_decode($campagne->getDateDebut()); ?></td>
+					<td><?php echo html_entity_decode($campagne->getDateFin()); ?></td>
+					<td><?php echo html_entity_decode($campagne->getCouleur()); ?></td>
+					<td><?php echo html_entity_decode($campagne->getUrlIcone()); ?></td>
+					<td><?php echo html_entity_decode($campagne->getTextAccueil()); ?></td>
+					<td><?php echo html_entity_decode($campagne->getTextFelicitations()); ?></td>
+					<td><?php echo html_entity_decode($campagne->getIsActive()); ?></td>
+					<td><?php echo html_entity_decode($campagne->getNomLot()); ?></td>
+					<td><?php echo html_entity_decode($campagne->getDescriptionLot()); ?></td>
+					<td><?php echo html_entity_decode($campagne->getImageLot()); ?></td>
 					<td>
 						<a class="btn btn-sm btn-primary" href=<?php echo BASE_URL . 'admin/campagnes/show/' . $campagne->getNomCampagne(); ?> role="button"><i class="fa fa-eye"></i> Voir</a>
 						<a class="btn btn-sm btn-primary" href=<?php echo BASE_URL . 'admin/campagnes/edit/' . $campagne->getNomCampagne(); ?> role="button"><i class="fa fa-pencil-square-o"></i> 	Editer</a>
