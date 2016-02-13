@@ -3,7 +3,7 @@
 <?php
 	if(isset($successMessages)) {
 		foreach ($successMessages as $successMessage) {
-			echo "<div class=\"alert alert-success\" role=\"alert\">" . $successMessage . "</div>";
+			echo "<div class=\"alert alert-success\" role=\"alert\"><i class=\"fa fa-check\"></i> " . $successMessage . "</div>";
 		}
 	}
 	
