@@ -2,7 +2,7 @@
 if(getenv("BASE_URL")) {
 	define("BASE_URL", getenv("BASE_URL"));
 } else {
-	define("BASE_URL","http://localhost/facebook_mvc/");
+	define("BASE_URL","http://localhost/facebook/");
 }
 define("IMG_DIRECTORY_URL", BASE_URL . "assets/img/");
 define("JS_DIRECTORY_URL", BASE_URL . "assets/js/");

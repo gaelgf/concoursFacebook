@@ -10,19 +10,21 @@ class choiceController{
     public function indexAction( $args )
     {
 
-        // Verification des valeurs de la campagne en cours
-        $arrayCampagne = self::getCampagneArrayAttributes();
 
         $view = new view();
 
         if (!isset($_SESSION['facebook_access_token'])) {
             header("Location: ".BASE_URL);
         } else {
+            // Verification des valeurs de la campagne en cours
+            $arrayCampagne = self::getCampagneArrayAttributes();
+
             $view->setView("indexChoice");
             $view->assign("base_url", BASE_URL);
             $view->assign("facebook_choice_url", BASE_URL.'choice/facebook');
             $view->assign("download_choice_url", BASE_URL.'choice/download');
             $view->assign("vote_url", BASE_URL.'vote');
+            $view->assign("array_campagne", $arrayCampagne);
         }
     }
 
@@ -102,6 +104,7 @@ class choiceController{
         $view->assign("base_url", BASE_URL);
         $view->assign("user_albums", $arrAlbum);
         $view->assign("photos_album", $arrPhotosByAlbum);
+        $view->assign("array_campagne", $arrayCampagne);
     }
 
 

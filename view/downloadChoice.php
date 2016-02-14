@@ -16,3 +16,10 @@
     <input type="file" name="image">
     <input class="boutons" type="submit"/>
 </form>
+<script>
+    $(".main_logo").attr("src","<?php echo $array_campagne["url_icone"]; ?>");
+    $(".header").css("border-bottom","3px solid <?php echo $array_campagne["couleur"]; ?>");
+    $(".header").css("border-top","1px solid <?php echo $array_campagne["couleur"]; ?>");
+    $(".header").css("color","<?php echo $array_campagne["couleur"]; ?>");
+    $(".boutons").css("background-color","<?php echo $array_campagne["couleur"]; ?>");
+</script>

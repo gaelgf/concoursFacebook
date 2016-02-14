@@ -5,16 +5,17 @@ class voteController{
     public function indexAction( $args )
     {
 
-        // Verification des valeurs de la campagne en cours
-        $arrayCampagne = self::getCampagneArrayAttributes();
 
         $view = new view();
 
         if (!isset($_SESSION['facebook_access_token'])) {
             header("Location: ".BASE_URL);
         } else {
+            // Verification des valeurs de la campagne en cours
+            $arrayCampagne = self::getCampagneArrayAttributes();
             $view->setView("indexVote");
             $view->assign("base_url", BASE_URL);
+            $view->assign("array_campagne", $arrayCampagne);
         }
     }
 
