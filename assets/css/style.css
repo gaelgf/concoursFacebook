@@ -262,6 +262,17 @@ body{
 				left:-60px;
 				top:-5px;
 			}
+		.select_picture .valid_choix_facebook{
+			text-align: center;
+		}
+			.select_picture .valid_choix_facebook .boutons{
+				border:none;
+				font-size:150%;
+				padding-left:30px;
+				background-image: url('../img/icones/check_validate.png');
+				background-repeat:no-repeat;
+				background-position: 5px center;
+			}
 		.select_picture .container_pictures{
 			margin-top:30px;
 			overflow: hidden;
@@ -346,4 +357,32 @@ body{
 			padding:5px;
 			font-size:30px;
 			margin:15px auto 0 !important;
+		}
+
+
+/****************************************************************************************/
+/*									RECAP PARTICIPATION									*/
+/****************************************************************************************/
+.recapitulatif_participation{
+
+}
+	.recapitulatif_participation .container_img{
+		text-align: center;
+	}
+		.recapitulatif_participation .container_img img{
+			width:80%;
+			border:8px solid white;
+			border-bottom:25px solid white;
+			box-shadow: 0 0 10px rgba(0,0,0,0.2);
+		}
+	.recapitulatif_participation .texte{
+		text-align: center;
+	}
+		.recapitulatif_participation .texte .boutons{
+			border:none;
+			font-size: 150%;
+			padding:10px 20px;
+		}
+		.recapitulatif_participation .texte .date{
+			font-size:30px;
 		}

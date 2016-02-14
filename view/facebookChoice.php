@@ -14,10 +14,14 @@
     </div>
     <div class="container_pictures">
         <?php if($array_photos != "null"): ?>
+            <form class="valid_choix_facebook" onsubmit="return isPhotoChoisie();" action="<?php echo $base_url; ?>participant/recap" method="POST">
+                <input type="hidden" class="url_photo" name="url_photo">
+                <input type="submit" class="boutons" value="Valider">
+            </form>
             <ul class="album">
             <?php foreach( $array_photos as $photo): ?>
                 <li>
-                    <img src="<?php echo $photo["url"]; ?>"></li>
+                    <img class="photo_choix_fb" src="<?php echo $photo["url"]; ?>"></li>
                 </li>
             <?php endforeach; ?>
             </ul>
