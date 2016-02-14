@@ -1,7 +1,7 @@
 <?php
 
 
-class campagne extends model
+class participant extends model
 {
 
     protected $id;
@@ -20,7 +20,7 @@ class campagne extends model
                                 $date_naissance,
                                 $validation)
     {
-        parent::__construct();
+        parent::__construct("campagne");
         $this->id = $id;
         $this->id_campagne = $id_campagne;
         $this->id_facebook = $id_facebook;
