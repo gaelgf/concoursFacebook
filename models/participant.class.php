@@ -29,6 +29,10 @@ class participant extends model{
 
     }
 
+    public static function isParticipatingToCampagne($campagneId) {
+
+    }
+
      public static function loadParticipantsBycampagneId($campagneId) {
         $errors = [];
         $table = get_called_class();
