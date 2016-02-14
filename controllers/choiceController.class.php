@@ -91,40 +91,37 @@ class choiceController{
     /*********************************************************************/
 
 
-    public function facebookAction(){
+    public function facebookAction( $args ){
         $view = new view();
 
+
+
+        $fb = facebook::getVarFb();
+        $arrAlbum = $this->userAlbums( $fb );
+
+        if( isset($args["a"]) ){
+            if(array_key_exists($args["a"],$arrAlbum)){
+                $array_photos = $this->photosAlbum($fb,$args["a"]);
+                $view->assign("array_photos",$array_photos);
+                $view->assign("id_album",$args["a"]);
+            }
+            else{
+                header("Location: ". BASE_URL."choice/facebook");
+            }
+        }
+        else{
+            $view->assign("array_photos", "null");
+        }
 
         // Verification des valeurs de la campagne en cours
         $arrayCampagne = self::getCampagneArrayAttributes();
 
-        $fb = facebook::getVarFb();
-
-        $arrAlbum = $this->userAlbums( $fb );
-        //$arrPhotosByAlbum = $this->photosAlbum( $fb , $arrAlbum );
 
 
         $view->setView("facebookChoice");
         $view->assign("base_url", BASE_URL);
         $view->assign("user_albums", $arrAlbum);
-        //$view->assign("photos_album", $arrPhotosByAlbum);
         $view->assign("array_campagne", $arrayCampagne);
-    }
-
-
-
-    public function photosalbumAction($args){
-
-        $view = new view();
-
-        $fb = facebook::getVarFb();
-
-        $id_album = "857998544307100";
-        $arrPhotosByAlbum = $this->photosAlbum( $fb , $id_album );
-
-
-        $view->setView("photosalbumChoice","emptylayout");
-        $view->assign("photos_album", $arrPhotosByAlbum);
     }
 
 
@@ -177,17 +174,17 @@ class choiceController{
 
         $arrayPhotos = [];
 
-        $response = $fb->get("/".$idAlbum."?fields=photos", $_SESSION['facebook_access_token']);
-        $photos = $response->getDecodedBody()["photos"]["data"];
+        $response = $fb->get("/".$idAlbum."/photos", $_SESSION['facebook_access_token']);
+        $photos = $response->getDecodedBody()['data'];
 
         foreach ($photos as $photo) {
 
-            $response = $fb->get("/$idAlbum?fields=picture", $_SESSION['facebook_access_token']);
+            $response = $fb->get("/".$photo["id"]."/picture", $_SESSION['facebook_access_token']);
 
-            $urlPhoto = $response->getDecodedBody()["picture"];
-            $idPhoto = $response->getDecodedBody()["id"];
+            $urlPhoto = $response->getHeaders()["Location"];
+            $idPhoto = $photo["id"];
 
-            $arrayPhotos[] = [$urlPhoto,$idPhoto];
+            $arrayPhotos[] = ["url" => $urlPhoto, "id" => $idPhoto];
         }
 
         return $arrayPhotos;

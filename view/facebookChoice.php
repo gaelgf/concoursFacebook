@@ -6,15 +6,26 @@
         <select class="album_list">
             <option class="list_option" value="-1">Liste des albums...</option>
             <?php foreach( $user_albums as $idAlbum => $album): ?>
-                <option class="list_option" value="<?php echo $idAlbum; ?>"><?php echo $album["name"] ?></option>
+                <?php $selected = ( $id_album == $idAlbum ? 'selected="selected"' : "" ); ?>
+                <option class="list_option" <?php echo $selected; ?> value="<?php echo $idAlbum; ?>"><?php echo $album["name"] ?></option>
             <?php endforeach; ?>
         </select>
         <img src="<?php echo $base_url; ?>assets/img/icones/arrow_select.png" class="arrow" alt="">
     </div>
     <div class="container_pictures">
-        <div class="message_album">
-            Selectionner un album pour afficher ses photos
-        </div>
+        <?php if($array_photos != "null"): ?>
+            <ul class="album">
+            <?php foreach( $array_photos as $photo): ?>
+                <li>
+                    <img src="<?php echo $photo["url"]; ?>"></li>
+                </li>
+            <?php endforeach; ?>
+            </ul>
+        <?php else: ?>
+            <div class="message_album">
+                Selectionner un album pour afficher ses photos
+            </div>
+        <?php endif; ?>
     </div>
 </div>
 <script>
@@ -33,15 +44,5 @@
 
 <!--
 
-        <?php foreach( $user_albums as $album): ?>
-        <ul class="album album_1">
-            <?php foreach( $photos_album as $photo): ?>
-                <?php print_r($photo); ?>
-                <?php break; ?>
-                <li>
-                    <img src="<?php echo $photo["url"]; ?>"></li>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-        <?php endforeach; ?>
+
    -->
