@@ -196,13 +196,17 @@ class choiceController{
             $_SESSION["campagne_date_debut"] = $campagne->getDateDebut();
             $_SESSION["campagne_date_fin"] = $campagne->getDateFin();
             $_SESSION["campagne_couleur"] = $campagne->getCouleur();
-            $_SESSION["campagne_url_icone"] = $campagne->getUrlIcone();
             $_SESSION["campagne_text_accueil"] = $campagne->getTextAccueil();
             $_SESSION["campagne_text_felicitations"] = $campagne->getTextFelicitations();
             $_SESSION["campagne_is_active"] = $campagne->getIsActive();
             $_SESSION["campagne_nom_lot"] = $campagne->getNomLot();
             $_SESSION["campagne_description_lot"] = $campagne->getDescriptionLot();
             $_SESSION["campagne_image_lot"] = $campagne->getImageLot();
+            $_SESSION["campagne_photo_accueil_one"] = $campagne->getPhotoAccueilOne();
+            $_SESSION["campagne_photo_accueil_two"] = $campagne->getPhotoAccueilTwo();
+            $_SESSION["campagne_photo_accueil_three"] = $campagne->getPhotoAccueilThree();
+            $_SESSION["campagne_icone_coeur"] = $campagne->getIconeCoeur();
+            $_SESSION["campagne_icone_principale"] = $campagne->getIconePrincipale();
             $_SESSION["campagne_in_session"] = "OK";
         }
 
@@ -212,13 +216,17 @@ class choiceController{
         $campagneArray["date_debut"] = $_SESSION["campagne_date_debut"];
         $campagneArray["date_fin"] = $_SESSION["campagne_date_fin"];
         $campagneArray["couleur"] = $_SESSION["campagne_couleur"];
-        $campagneArray['url_icone'] = $_SESSION["campagne_url_icone"];
         $campagneArray['text_accueil'] = $_SESSION["campagne_text_accueil"];
         $campagneArray['text_felicitations'] = $_SESSION["campagne_text_felicitations"];
         $campagneArray['is_active'] = $_SESSION["campagne_is_active"];
         $campagneArray['nom_lot'] = $_SESSION["campagne_nom_lot"];
         $campagneArray['description_lot'] = $_SESSION["campagne_description_lot"];
         $campagneArray['image_lot'] = $_SESSION["campagne_image_lot"];
+        $campagneArray['photo_accueil_one'] = $_SESSION["campagne_photo_accueil_one"];
+        $campagneArray['photo_accueil_two'] = $_SESSION["campagne_photo_accueil_two"];
+        $campagneArray['photo_accueil_three'] = $_SESSION["campagne_photo_accueil_three"];
+        $campagneArray['icone_coeur'] = $_SESSION["campagne_icone_coeur"];
+        $campagneArray['icone_principale'] = $_SESSION["campagne_icone_principale"];
 
         return $campagneArray;
     }

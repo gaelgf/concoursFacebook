@@ -15,9 +15,9 @@ class campagne extends model{
     protected $nom_lot;   
     protected $description_lot;
     protected $image_lot;
-    protected $image_accueil_one;
-    protected $image_accueil_two;
-    protected $image_accueil_three;
+    protected $photo_accueil_one;
+    protected $photo_accueil_two;
+    protected $photo_accueil_three;
     protected $icone_coeur;
     protected $icone_principale;
 
@@ -33,7 +33,6 @@ class campagne extends model{
                                 $nom_lot,
                                 $description_lot,
                                 $image_lot,
-                                $description_lot,
                                 $image_accueil_one,
                                 $image_accueil_two,
                                 $image_accueil_three,
@@ -305,33 +304,33 @@ class campagne extends model{
     }
 
     /* image_accueil_one */
-    public function getPhotoAcccueilOne(){
+    public function getPhotoAccueilOne(){
         return $this->photo_accueil_one;
     }
-    public function setPhotoAcccueilOne( $image_accueil_one ){
+    public function setPhotoAccueilOne( $image_accueil_one ){
         $this->image_accueil_one = $image_accueil_one;
     }
     /* image_accueil_two */
-    public function getPhotoAcccueilTwo(){
+    public function getPhotoAccueilTwo(){
         return $this->photo_accueil_two;
     }
-    public function setPhotoAcccueilTwo( $image_accueil_two ){
+    public function setPhotoAccueilTwo( $image_accueil_two ){
         $this->image_accueil_two = $image_accueil_two;
     }
     /* image_accueil_three */
-    public function getPhotoAcccueilThree(){
+    public function getPhotoAccueilThree(){
         return $this->image_accueil_three;
     }
-    public function setPhotoAcccueilThree( $image_accueil_three ){
+    public function setPhotoAccueilThree( $image_accueil_three ){
         $this->image_accueil_three = $image_accueil_three;
     }
 
     /* image_coeur */
-    public function getImageCoeur(){
-        return $this->image_coeur;
+    public function getIconeCoeur(){
+        return $this->icone_coeur;
     }
-    public function setImageCoeur( $image_coeur ){
-        $this->image_coeur = $image_coeur;
+    public function setIconeCoeur( $icone_coeur ){
+        $this->icone_coeur = $icone_coeur;
     }
 
 

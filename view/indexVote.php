@@ -56,4 +56,5 @@
     $(".header").css("border-top","1px solid <?php echo $array_campagne["couleur"]; ?>");
     $(".header").css("color","<?php echo $array_campagne["couleur"]; ?>");
     $(".boutons").css("background-color","<?php echo $array_campagne["couleur"]; ?>");
+    $(".averange").css("color","<?php echo $array_campagne["couleur"]; ?>");
 </script>
