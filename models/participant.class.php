@@ -29,14 +29,37 @@ class participant extends model{
 
     }
 
-    public static function loadById($campagneId)
+     public static function loadParticipantsBycampagneId($campagneId) {
+        $errors = [];
+        $table = get_called_class();
+        $model = new parent($table);
+
+        if (!$request = $model->pdo->query(
+            "SELECT * FROM participants WHERE id_campagne = '" . $campagneId . "'"
+        )) {
+           $errors[] = "Erreur lors de la récupération de l'objet " . $table;
+        }
+
+        if ($participantArray = $request->fetch()) {
+            $participant = self::participantFromArray($participantArray);
+            return $participant;
+        } else {
+            $errors[] = "Erreur lors de la récupération de l'objet " . $table;
+        }
+
+        return $errors; 
+    }
+
+    public static function loadById($participantId)
     {
         $errors = [];
-        $participantArray = parent::getById($campagneId);
+        $participantArray = parent::getById($participantId);
         if(!isset($participantArray["errors"])) {
-            $campagne = self::campagneFromArray($participantArray);
-            return $campagne;
+            $participant = self::participantFromArray($participantArray);
+            return $participant;
         }
+        $errors = $participantArray["errors"];
+        return $errors;
     }
 
     public static function loadByName($participantName)
