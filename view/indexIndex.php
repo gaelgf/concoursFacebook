@@ -23,3 +23,8 @@
         <a  class="boutons bouton_connexion" href="<?php echo $login_url; ?>">Je participe !</a>
     </div>
 </div>
+
+
+<script>
+    $(".main_logo").attr("src","<?php $array_campagne["url_icone"]; ?>");
+</script>

@@ -12,7 +12,7 @@
 
 <body>
 <header>
-    <img src=<?php echo IMG_DIRECTORY_URL . 'campagnes/1/logo.png'; ?> alt="">
+    <img  class="main_logo" src=<?php echo IMG_DIRECTORY_URL . 'campagnes/1/logo.png'; ?> alt="">
     - Concours photos
 </header>
 

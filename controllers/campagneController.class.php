@@ -1,7 +1,7 @@
 <?php
 
 
-class campagnesController{
+class campagneController{
     public function indexAction( $args )
     {
         return self::showAction($args);
