@@ -8,14 +8,18 @@ class campagne extends model{
     protected $nom_campagne;
     protected $date_debut;      
     protected $date_fin;     
-    protected $couleur;      
-    protected $url_icone;          
+    protected $couleur;
     protected $text_accueil;      
     protected $text_felicitations;
     protected $is_active;
     protected $nom_lot;   
     protected $description_lot;
     protected $image_lot;
+    protected $photo_accueil_one;
+    protected $photo_accueil_two;
+    protected $photo_accueil_three;
+    protected $icone_coeur;
+    protected $icone_principale;
 
     public function __construct($id = NULL,
                                 $logo_entreprise,
@@ -23,13 +27,17 @@ class campagne extends model{
                                 $date_debut,
                                 $date_fin,
                                 $couleur,
-                                $url_icone,
                                 $text_accueil,
                                 $text_felicitations,
                                 $is_active,
                                 $nom_lot,
                                 $description_lot,
-                                $image_lot)
+                                $image_lot,
+                                $image_accueil_one,
+                                $image_accueil_two,
+                                $image_accueil_three,
+                                $icone_coeur,
+                                $icone_principale)
     {
         parent::__construct();
         $this->id = $id;
@@ -38,13 +46,17 @@ class campagne extends model{
         $this->date_debut = $date_debut;
         $this->date_fin = $date_fin;
         $this->couleur = $couleur;
-        $this->url_icone = $url_icone;
         $this->text_accueil = $text_accueil;
         $this->text_felicitations = $text_felicitations;
         $this->is_active = $is_active;
         $this->nom_lot = $nom_lot;
         $this->description_lot = $description_lot;
         $this->image_lot = $image_lot;
+        $this->image_accueil_one = $image_accueil_one;
+        $this->image_accueil_two = $image_accueil_two;
+        $this->image_accueil_three = $image_accueil_three;
+        $this->icone_coeur = $icone_coeur;
+        $this->icone_principale = $icone_principale;
     }
 
     public static function loadCurrent()
@@ -129,9 +141,6 @@ class campagne extends model{
         if(!array_key_exists("couleur", $campagneArray) || !isset($campagneArray["couleur"])) {
             $errors["couleur"] = "Erreur : La couleur de la campagne doit être renseigné.";
         }
-        if(!array_key_exists("url_icone", $campagneArray) || !isset($campagneArray["url_icone"])) {
-            $errors["url_icone"] = "Erreur : L'url de l'icone de la campagne doit être renseigné.";
-        }
         if(!array_key_exists("text_accueil", $campagneArray) || !isset($campagneArray["text_accueil"])) {
             $errors["text_accueil"] = "Erreur : Le texte d'accueil de la campagne doit être renseigné.";
         }
@@ -147,6 +156,21 @@ class campagne extends model{
         if(!array_key_exists("image_lot", $campagneArray) || !isset($campagneArray["image_lot"])) {
             $errors["image_lot"] = "Erreur : L'image du lot de la campagne doit être renseignée.";
         }
+        if(!array_key_exists("photo_accueil_one", $campagneArray) || !isset($campagneArray["photo_accueil_one"])) {
+            $errors["photo_accueil_one"] = "Erreur : Choisissez une premiere photo pour l'accueil.";
+        }
+        if(!array_key_exists("photo_accueil_two", $campagneArray) || !isset($campagneArray["photo_accueil_two"])) {
+            $errors["photo_accueil_two"] = "Erreur : Choisissez une seconde photo pour l'accueil.";
+        }
+        if(!array_key_exists("photo_accueil_three", $campagneArray) || !isset($campagneArray["photo_accueil_three"])) {
+            $errors["photo_accueil_three"] = "Erreur : Choisissez une troisieme photo pour l'accueil.";
+        }
+        if(!array_key_exists("icone_coeur", $campagneArray) || !isset($campagneArray["icone_coeur"])) {
+            $errors["icone_coeur"] = "Erreur : Choisissez une icone pour les votes.";
+        }
+        if(!array_key_exists("icone_principale", $campagneArray) || !isset($campagneArray["icone_principale"])) {
+            $errors["icone_principale"] = "Erreur : Choisissez une icone principale.";
+        }
 
         if(sizeof($errors) > 0) {
             return $errors;
@@ -161,13 +185,17 @@ class campagne extends model{
                                     $campagneArray["date_debut"],
                                     $campagneArray["date_fin"],
                                     $campagneArray["couleur"],
-                                    $campagneArray['url_icone'],
                                     $campagneArray['text_accueil'],
                                     $campagneArray['text_felicitations'],
                                     $campagneArray['is_active'],
                                     $campagneArray['nom_lot'],
                                     $campagneArray['description_lot'],
-                                    $campagneArray['image_lot']);
+                                    $campagneArray['image_lot'],
+                                    $campagneArray['photo_accueil_one'],
+                                    $campagneArray['photo_accueil_two'],
+                                    $campagneArray['photo_accueil_three'],
+                                    $campagneArray['icone_coeur'],
+                                    $campagneArray['icone_principale']);
         return $campagne;
     }
 
@@ -227,14 +255,6 @@ class campagne extends model{
         $this->couleur = $couleur;
     }
 
-    /* url_icone */
-    public function getUrlIcone(){
-        return $this->url_icone;
-    }
-    public function setUrlIcone( $url_icone ){
-        $this->url_icone = $url_icone;
-    }
-
     /* text_accueil */
     public function getTextAccueil(){
         return $this->text_accueil;
@@ -283,4 +303,42 @@ class campagne extends model{
         $this->image_lot = $image_lot;
     }
 
+    /* image_accueil_one */
+    public function getPhotoAccueilOne(){
+        return $this->photo_accueil_one;
+    }
+    public function setPhotoAccueilOne( $image_accueil_one ){
+        $this->image_accueil_one = $image_accueil_one;
+    }
+    /* image_accueil_two */
+    public function getPhotoAccueilTwo(){
+        return $this->photo_accueil_two;
+    }
+    public function setPhotoAccueilTwo( $image_accueil_two ){
+        $this->image_accueil_two = $image_accueil_two;
+    }
+    /* image_accueil_three */
+    public function getPhotoAccueilThree(){
+        return $this->image_accueil_three;
+    }
+    public function setPhotoAccueilThree( $image_accueil_three ){
+        $this->image_accueil_three = $image_accueil_three;
+    }
+
+    /* image_coeur */
+    public function getIconeCoeur(){
+        return $this->icone_coeur;
+    }
+    public function setIconeCoeur( $icone_coeur ){
+        $this->icone_coeur = $icone_coeur;
+    }
+
+
+    /* icone_principale */
+    public function getIconePrincipale(){
+        return $this->icone_principale;
+    }
+    public function setIconePrincipale( $icone_principale ){
+        $this->icone_principale = $icone_principale;
+    }
 }

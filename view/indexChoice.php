@@ -1,10 +1,10 @@
 <div class="accueil">
     <div class="title container">
-        <div class="col-xs-5" style="text-align:right">
+        <div class="col-xs-5 text_accueil" style="text-align:right">
             Montres nous ton <br/>meilleur souvenir Coca-Cola !
         </div>
         <div class="col-xs-2 icone">
-            <img src="<?php echo $base_url; ?>assets/img/campagnes/1/icone.png" alt="">
+            <img class="icone_principale" src="<?php echo $base_url; ?>assets/img/campagnes/1/icone.png" alt="">
         </div>
         <div class="col-xs-5" style="text-align:left">
             PARTICIPER?<br/> Rien de plus simple
@@ -29,3 +29,14 @@
         </a>
     </div>
 </div>
+<script>
+    $(".main_logo").attr("src","<?php echo $array_campagne["logo_entreprise"]; ?>");
+    $(".icone_principale").attr("src","<?php echo $array_campagne["icone_principale"]; ?>");
+    $(".header").css("border-bottom","3px solid <?php echo $array_campagne["couleur"]; ?>");
+    $(".header").css("border-top","1px solid <?php echo $array_campagne["couleur"]; ?>");
+    $(".header").css("color","<?php echo $array_campagne["couleur"]; ?>");
+    $(".boutons").css("background-color","<?php echo $array_campagne["couleur"]; ?>");
+    $(".boutons").css("background-color","<?php echo $array_campagne["couleur"]; ?>");
+    $(".nom_campagne").text("<?php echo $array_campagne["nom_campagne"]; ?>");
+    $(".text_accueil").text("<?php echo $array_campagne["text_accueil"]; ?>");
+</script>

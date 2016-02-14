@@ -36,36 +36,33 @@ class participant extends model{
         if(!isset($participantArray["errors"])) {
             $campagne = self::campagneFromArray($participantArray);
             return $campagne;
-        }
-        $errors = $participantArray["errors"];
-        return $errors;
     }
 
-    /*public static function loadByName($campagneName)
+    public static function loadByName($participantName)
     {
         $errors = [];
         $table = get_called_class();
         $model = new parent($table);
 
         if (!$request = $model->pdo->query(
-            "SELECT * FROM " . $model->table . " WHERE nom_campagne = '" . $campagneName . "'"
+            "SELECT * FROM " . $model->table . " WHERE nom = '" . $participantName . "'"
         )) {
            $errors[] = "Erreur lors de la récupération de l'objet " . $table;
         }
 
-        if($participantArray = $request->fetch()) {
-            $campagne = self::campagneFromArray($participantArray);
-            return $campagne;
+        if ($participantArray = $request->fetch()) {
+            $participant = self::participantFromArray($participantArray);
+            return $participant;
         } else {
             $errors[] = "Erreur lors de la récupération de l'objet " . $table;
         }
 
         return $errors;        
-    }*/
+    }
 
     public static function load()
     {
-        $participantssArrays = parent::get();
+        $participantsArrays = parent::get();
         $participants = self::participantsFromParticipantsArrays($participantsArrays);
         return $participants;
     }
@@ -80,7 +77,7 @@ class participant extends model{
             $errors["id_facebook"] = "Erreur : L'id facebook du participant doit être renseigné.";
         }
         if(!array_key_exists("nom", $participantArray) || !isset($participantArray["nom"])) {
-            $errors["nom"] = "Erreur : Le nom de début du particpant doit être renseigné.";
+            $errors["nom"] = "Erreur : Le nom du particpant doit être renseigné.";
         }
         if(!array_key_exists("prenom", $participantArray) || !isset($participantArray["prenom"])) {
             $errors["prenom"] = "Erreur : Le prénom de début du particpant doit être renseigné.";
@@ -109,28 +106,91 @@ class participant extends model{
         return $participant;
     }
 
-    private static function participantsFromParticipantsArrays($participantsArrays) {
+
+    private static function participantsFromParticipantsArrays($participantsArrays)
+    {
         $participants = [];
         foreach ($participantsArrays as $participantArray) {
-            $participants[] = self::campagneFromArray($participantArray);
+            $participants[] = self::participantFromArray($participantsArrays);
         }
         return $participants;
     }
 
-    /* id */
-    public function getId(){
+    /* Id */
+    public function getId()
+    {
         return $this->id;
     }
-    public function setId( $id ){
+
+    public function setId($id)
+    {
         $this->id = $id;
     }
 
-    /* logo_entreprise */
-    public function getLogoEntreprise(){
-        return $this->logo_entreprise;
-    }
-    public function setLogoEntreprise( $logo_entreprise ){
-        $this->logo_entreprise = $logo_entreprise;
+    /* id_campagne */
+    public function getIdCampagne()
+    {
+        return $this->id_campagne;
     }
 
+    public function setIdCampagne($id_campagne)
+    {
+        $this->id_campagne = $id_campagne;
+    }
+
+    /* id_facebook */
+    public function getIdFacebook()
+    {
+        return $this->id_facebook;
+    }
+
+    public function setIdFacebook($id_facebook)
+    {
+        $this->id_facebook = $id_facebook;
+    }
+
+    /* nom */
+    public function getNom()
+    {
+        return $this->nom;
+    }
+
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
+
+    /* prenom */
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    public function setPrenom($prenom)
+    {
+        $this->prenom = $prenom;
+    }
+
+
+    /* date_naissance */
+    public function getDateNaissance()
+    {
+        return $this->date_naissance;
+    }
+
+    public function setDateNaissance($date_naissance)
+    {
+        $this->date_naissance = $date_naissance;
+    }
+
+    /* validation */
+    public function getValidation()
+    {
+        return $this->validation;
+    }
+
+    public function setValidation($validation)
+    {
+        $this->validation = $validation;
+    }
 }
