@@ -191,7 +191,7 @@ body{
 			padding-top:30px;
 		}
 			.vote .averange .white{
-				width: 90%;
+				width: 50%;
 				margin:auto;
 				background-color: white;
 				padding-top:15px;
@@ -207,9 +207,19 @@ body{
 					position: relative;
 					top:-45px;
 				}
-				.vote .averange .white .heart{
+				.vote .averange .white img{
 					height:25px;
 				}
+		.vote .next_vote_container{
+			margin-top:30px;
+		}
+			.vote .next_vote_container .boutons{
+				width:50%;
+				font-size: 30px;
+				padding:0 15px;
+				margin:auto;
+				border:none;
+			}
 			
 	/****************************************************************************************/
 	/*									SELECTION PHOTO										*/
