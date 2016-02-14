@@ -29,8 +29,11 @@ class participant extends model{
 
     }
 
-    public static function isParticipatingToCampagne($campagneId) {
-
+    public function isParticipatingToCampagne($campagneId) {
+        if($this->id_campagne === $campagneId) {
+            return true;
+        }
+        return false;
     }
 
      public static function loadParticipantsBycampagneId($campagneId) {
