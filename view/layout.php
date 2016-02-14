@@ -11,10 +11,10 @@
 </head>
 
 <body>
-<header>
+<div class="header">
     <img  class="main_logo" src=<?php echo IMG_DIRECTORY_URL . 'campagnes/1/logo.png'; ?> alt="">
     - Concours photos
-</header>
+</div>
 
 <?php include $this->view; ?>
 

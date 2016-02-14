@@ -36,7 +36,7 @@ body{
 	/****************************************************************************************/
 	/*										HEADER											*/
 	/****************************************************************************************/
-	header{
+	.header{
 		border-top: 1px solid #d6484a;
 		border-bottom: 3px solid #d6484a;
 		margin-top:15px;
@@ -47,7 +47,7 @@ body{
 		text-align: center;
 		margin-bottom:30px;
 	}
-		header img{
+		.header img{
 			height:45px; 
 		}
 
