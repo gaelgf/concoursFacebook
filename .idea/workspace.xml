@@ -117,8 +117,8 @@
       <file leaf-file-name="participant.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/participant.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5421903">
-              <caret line="54" column="23" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.6947935">
+              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
               <folding>
                 <marker date="1455475144815" expanded="true" signature="1071:1188" placeholder="SELECT * FRO..${$model-&gt;table}..." />
                 <marker date="1455475144815" expanded="true" signature="2182:2256" placeholder="SELECT * FRO..${$model-&gt;table}..." />
@@ -525,7 +525,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455475235174</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Model participant">
+      <created>1455475284060</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1455475284060</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1015,8 +1021,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/models/participant.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5421903">
-          <caret line="54" column="23" selection-start-line="54" selection-start-column="23" selection-end-line="54" selection-end-column="23" />
+        <state vertical-scroll-proportion="0.6947935">
+          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="59" selection-end-column="21" />
           <folding>
             <marker date="1455475144815" expanded="true" signature="1071:1188" placeholder="SELECT * FRO..${$model-&gt;table}..." />
             <marker date="1455475144815" expanded="true" signature="2182:2256" placeholder="SELECT * FRO..${$model-&gt;table}..." />
