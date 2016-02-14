@@ -42,9 +42,13 @@ class choiceController{
         $arrAlbum = $this->userAlbums( $fb );
 
 
+        // Verification des valeurs de la campagne en cours
+        $arrayCampagne = self::getCampagneArrayAttributes();
+
         $view->setView("downloadChoice");
         $view->assign("base_url", BASE_URL);
         $view->assign("user_albums", $arrAlbum);
+        $view->assign("array_campagne", $arrayCampagne);
     }
 
 

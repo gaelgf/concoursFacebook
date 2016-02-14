@@ -4,7 +4,11 @@
     <list default="true" id="ee0217f2-4d30-4a3f-834c-774b01da4dc5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/choiceController.class.php" afterPath="$PROJECT_DIR$/controllers/choiceController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/downloadChoice.php" afterPath="$PROJECT_DIR$/view/downloadChoice.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/facebookChoice.php" afterPath="$PROJECT_DIR$/view/facebookChoice.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/indexChoice.php" afterPath="$PROJECT_DIR$/view/indexChoice.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/indexVote.php" afterPath="$PROJECT_DIR$/view/indexVote.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/layout.php" afterPath="$PROJECT_DIR$/view/layout.php" />
     </list>
     <ignored path="mvc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,16 +30,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="campagneController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/campagneController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693">
-              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="indexIndex.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/indexIndex.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -56,21 +50,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="facebookChoice.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="facebookChoice.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/facebookChoice.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8111111">
-              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+            <state vertical-scroll-proportion="-12.076923">
+              <caret line="34" column="78" selection-start-line="34" selection-start-column="78" selection-end-line="34" selection-end-column="78" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indexVote.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/view/indexVote.php">
+      <file leaf-file-name="downloadChoice.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/downloadChoice.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-12.076923">
-              <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
+              <caret line="25" column="90" selection-start-line="25" selection-start-column="90" selection-end-line="26" selection-end-column="78" />
               <folding />
             </state>
           </provider>
@@ -79,8 +73,18 @@
       <file leaf-file-name="indexController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/indexController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-29.73077">
-              <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
+            <state vertical-scroll-proportion="-11.115385">
+              <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="114" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/layout.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.153846">
+              <caret line="15" column="31" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -89,8 +93,18 @@
       <file leaf-file-name="indexChoice.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/indexChoice.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.576923">
-              <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+            <state vertical-scroll-proportion="-6.8461537">
+              <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="40" selection-end-column="78" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indexVote.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/indexVote.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.0577778">
+              <caret line="58" column="46" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -99,8 +113,8 @@
       <file leaf-file-name="choiceController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/choiceController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.769231">
-              <caret line="106" column="56" selection-start-line="106" selection-start-column="56" selection-end-line="106" selection-end-column="56" />
+            <state vertical-scroll-proportion="-1.6153846">
+              <caret line="219" column="36" selection-start-line="219" selection-start-column="24" selection-end-line="219" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -150,20 +164,20 @@
         <option value="$PROJECT_DIR$/view/statsVote.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/controllers/campagneController.class.php" />
-        <option value="$PROJECT_DIR$/view/layout.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/core/rooting.class.php" />
-        <option value="$PROJECT_DIR$/view/downloadChoice.php" />
         <option value="$PROJECT_DIR$/config.inc.php" />
-        <option value="$PROJECT_DIR$/view/indexVote.php" />
         <option value="$PROJECT_DIR$/models/campagne.class.php" />
         <option value="$PROJECT_DIR$/controllers/voteController.class.php" />
         <option value="$PROJECT_DIR$/controllers/indexController.class.php" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/view/indexIndex.php" />
-        <option value="$PROJECT_DIR$/view/indexChoice.php" />
         <option value="$PROJECT_DIR$/controllers/choiceController.class.php" />
+        <option value="$PROJECT_DIR$/view/layout.php" />
+        <option value="$PROJECT_DIR$/view/downloadChoice.php" />
         <option value="$PROJECT_DIR$/view/facebookChoice.php" />
+        <option value="$PROJECT_DIR$/view/indexChoice.php" />
+        <option value="$PROJECT_DIR$/view/indexVote.php" />
       </list>
     </option>
   </component>
@@ -457,7 +471,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455462972694</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Modification style page facebookChoice + IndexChoice">
+      <created>1455463151754</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1455463151754</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -516,7 +536,8 @@
     <MESSAGE value="Affichage du logo de la campagne et de la couleur choice" />
     <MESSAGE value="Modification classe campagne" />
     <MESSAGE value="Modification classe campagne + récuperations valeurs + affichage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modification classe campagne + récuperations valeurs + affichage" />
+    <MESSAGE value="Modification style page facebookChoice + IndexChoice" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification style page facebookChoice + IndexChoice" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -773,14 +794,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/layout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="4" selection-start-line="13" selection-start-column="4" selection-end-line="13" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/core/facebook.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.65384614">
@@ -829,26 +842,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/downloadChoice.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.346153">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15111111">
           <caret line="4" column="48" selection-start-line="4" selection-start-column="48" selection-end-line="4" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/indexVote.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.076923">
-          <caret line="58" column="29" selection-start-line="58" selection-start-column="29" selection-end-line="58" selection-end-column="29" />
           <folding />
         </state>
       </provider>
@@ -888,14 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/indexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-29.73077">
-          <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/indexIndex.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.153846">
@@ -904,26 +893,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/indexChoice.php">
+    <entry file="file://$PROJECT_DIR$/controllers/indexController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.576923">
-          <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+        <state vertical-scroll-proportion="-11.115385">
+          <caret line="69" column="4" selection-start-line="69" selection-start-column="4" selection-end-line="114" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/choiceController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.769231">
-          <caret line="106" column="56" selection-start-line="106" selection-start-column="56" selection-end-line="106" selection-end-column="56" />
+        <state vertical-scroll-proportion="-1.6153846">
+          <caret line="219" column="36" selection-start-line="219" selection-start-column="24" selection-end-line="219" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/layout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.153846">
+          <caret line="15" column="31" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/downloadChoice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.076923">
+          <caret line="25" column="90" selection-start-line="25" selection-start-column="90" selection-end-line="26" selection-end-column="78" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/facebookChoice.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8111111">
-          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+        <state vertical-scroll-proportion="-12.076923">
+          <caret line="34" column="78" selection-start-line="34" selection-start-column="78" selection-end-line="34" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/indexChoice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.8461537">
+          <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="40" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/indexVote.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0577778">
+          <caret line="58" column="46" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
           <folding />
         </state>
       </provider>

@@ -5,7 +5,7 @@
             <div class="container_select">
                 <select name="id_album" class="album_list">
                     <?php foreach( $user_albums as $idAlbum => $album): ?>
-                        <option value="<?php echo $idAlbum; ?>"><?php echo $album["name"] ?></option>
+                        <option class="list_option" value="<?php echo $idAlbum; ?>"><?php echo $album["name"] ?></option>
                     <?php endforeach; ?>
                 </select>
                 <img src="img/icones/arrow_select.png" class="arrow" alt="">
@@ -17,9 +17,12 @@
     <input class="boutons" type="submit"/>
 </form>
 <script>
-    $(".main_logo").attr("src","<?php echo $array_campagne["url_icone"]; ?>");
+    $(".main_logo").attr("src","<?php echo $array_campagne["logo_entreprise"]; ?>");
     $(".header").css("border-bottom","3px solid <?php echo $array_campagne["couleur"]; ?>");
     $(".header").css("border-top","1px solid <?php echo $array_campagne["couleur"]; ?>");
     $(".header").css("color","<?php echo $array_campagne["couleur"]; ?>");
     $(".boutons").css("background-color","<?php echo $array_campagne["couleur"]; ?>");
+    $(".album_list").css("background-color","<?php echo $array_campagne["couleur"]; ?>");
+    $(".list_option").css("background-color","<?php echo $array_campagne["couleur"]; ?>");
+    $(".nom_campagne").text("<?php echo $array_campagne["nom_campagne"]; ?>");
 </script>

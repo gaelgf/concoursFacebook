@@ -32,4 +32,5 @@
     $(".boutons").css("background-color","<?php echo $array_campagne["couleur"]; ?>");
     $(".album_list").css("background-color","<?php echo $array_campagne["couleur"]; ?>");
     $(".list_option").css("background-color","<?php echo $array_campagne["couleur"]; ?>");
+    $(".nom_campagne").text("<?php echo $array_campagne["nom_campagne"]; ?>");
 </script>
