@@ -3,15 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ee0217f2-4d30-4a3f-834c-774b01da4dc5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/choiceController.class.php" afterPath="$PROJECT_DIR$/controllers/choiceController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/indexController.class.php" afterPath="$PROJECT_DIR$/controllers/indexController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/voteController.class.php" afterPath="$PROJECT_DIR$/controllers/voteController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/campagne.class.php" afterPath="$PROJECT_DIR$/models/campagne.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/facebookChoice.php" afterPath="$PROJECT_DIR$/view/facebookChoice.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/indexChoice.php" afterPath="$PROJECT_DIR$/view/indexChoice.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/indexIndex.php" afterPath="$PROJECT_DIR$/view/indexIndex.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/indexVote.php" afterPath="$PROJECT_DIR$/view/indexVote.php" />
     </list>
     <ignored path="mvc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -63,11 +56,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="facebookChoice.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="facebookChoice.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/view/facebookChoice.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.423077">
-              <caret line="27" column="73" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.8111111">
+              <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -93,10 +86,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indexChoice.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="indexChoice.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/indexChoice.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.26444444">
+            <state vertical-scroll-proportion="-4.576923">
               <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
               <folding />
             </state>
@@ -107,7 +100,7 @@
         <entry file="file://$PROJECT_DIR$/controllers/choiceController.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-10.769231">
-              <caret line="217" column="26" selection-start-line="217" selection-start-column="26" selection-end-line="217" selection-end-column="26" />
+              <caret line="106" column="56" selection-start-line="106" selection-start-column="56" selection-end-line="106" selection-end-column="56" />
               <folding />
             </state>
           </provider>
@@ -164,13 +157,13 @@
         <option value="$PROJECT_DIR$/config.inc.php" />
         <option value="$PROJECT_DIR$/view/indexVote.php" />
         <option value="$PROJECT_DIR$/models/campagne.class.php" />
-        <option value="$PROJECT_DIR$/view/facebookChoice.php" />
         <option value="$PROJECT_DIR$/controllers/voteController.class.php" />
         <option value="$PROJECT_DIR$/controllers/indexController.class.php" />
-        <option value="$PROJECT_DIR$/controllers/choiceController.class.php" />
         <option value="$PROJECT_DIR$/assets/css/style.css" />
         <option value="$PROJECT_DIR$/view/indexIndex.php" />
         <option value="$PROJECT_DIR$/view/indexChoice.php" />
+        <option value="$PROJECT_DIR$/controllers/choiceController.class.php" />
+        <option value="$PROJECT_DIR$/view/facebookChoice.php" />
       </list>
     </option>
   </component>
@@ -458,7 +451,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455460698079</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Modification classe campagne + récuperations valeurs + affichage">
+      <created>1455462972694</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1455462972694</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -516,7 +515,8 @@
     <MESSAGE value="Affichage du logo de la campagne et de la couleur" />
     <MESSAGE value="Affichage du logo de la campagne et de la couleur choice" />
     <MESSAGE value="Modification classe campagne" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modification classe campagne" />
+    <MESSAGE value="Modification classe campagne + récuperations valeurs + affichage" />
+    <option name="LAST_COMMIT_MESSAGE" value="Modification classe campagne + récuperations valeurs + affichage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -861,22 +861,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/choiceController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.769231">
-          <caret line="217" column="26" selection-start-line="217" selection-start-column="26" selection-end-line="217" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/facebookChoice.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.423077">
-          <caret line="27" column="73" selection-start-line="27" selection-start-column="73" selection-end-line="27" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/campagneController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.807693">
@@ -922,8 +906,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/view/indexChoice.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26444444">
+        <state vertical-scroll-proportion="-4.576923">
           <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/choiceController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.769231">
+          <caret line="106" column="56" selection-start-line="106" selection-start-column="56" selection-end-line="106" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/facebookChoice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8111111">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
           <folding />
         </state>
       </provider>

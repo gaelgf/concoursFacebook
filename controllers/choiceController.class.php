@@ -156,7 +156,7 @@ class choiceController{
     public function photosAlbum( $fb , $albums ){
 
         $arrPhotos = [];
-
+        /*
         foreach ($albums as $album) {
 
             $albumId = $album["id"];
@@ -177,6 +177,7 @@ class choiceController{
                 $arrPhotos[$album["id"]][]  = $photo;
             }
         }
+        */
 
         return ;
     }

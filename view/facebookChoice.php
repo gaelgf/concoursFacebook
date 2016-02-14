@@ -3,7 +3,7 @@
     <div class="container_select">
         <select class="album_list">
             <?php foreach( $user_albums as $album): ?>
-                <option><?php echo $album["name"] ?></option>
+                <option class="list_option"><?php echo $album["name"] ?></option>
             <?php endforeach; ?>
         </select>
         <img src="img/icones/arrow_select.png" class="arrow" alt="">
@@ -30,4 +30,6 @@
     $(".header").css("border-top","1px solid <?php echo $array_campagne["couleur"]; ?>");
     $(".header").css("color","<?php echo $array_campagne["couleur"]; ?>");
     $(".boutons").css("background-color","<?php echo $array_campagne["couleur"]; ?>");
+    $(".album_list").css("background-color","<?php echo $array_campagne["couleur"]; ?>");
+    $(".list_option").css("background-color","<?php echo $array_campagne["couleur"]; ?>");
 </script>
