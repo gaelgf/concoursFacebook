@@ -10,7 +10,7 @@
                 </select>
                 <img src="img/icones/arrow_select.png" class="arrow" alt="">
             </div>
-            <img src="img/icones/arrow_select.png" class="arrow" alt="">
+            <img src="<?php echo $base_url; ?>assets/img/icones/arrow_select.png" class="arrow" alt="">
         </div>
     </div>
     <input type="file" name="image">

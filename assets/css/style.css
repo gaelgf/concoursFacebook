@@ -266,6 +266,17 @@ body{
 			margin-top:30px;
 			overflow: hidden;
 		}
+			.select_picture .container_pictures .message_album{
+				text-align: center;
+				font-size:200%;
+				width: 50%;
+				padding:25px;
+				margin:100px auto 0;
+				background-color:rgba(255,255,255,0.8);
+			}
+				.select_picture .container_pictures .message_album.hidde{
+					display:none;
+				}
 			.select_picture .container_pictures ul{
 				width: 90%;
 				margin:auto;

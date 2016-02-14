@@ -101,14 +101,30 @@ class choiceController{
         $fb = facebook::getVarFb();
 
         $arrAlbum = $this->userAlbums( $fb );
-        $arrPhotosByAlbum = $this->photosAlbum( $fb , $arrAlbum );
+        //$arrPhotosByAlbum = $this->photosAlbum( $fb , $arrAlbum );
 
 
         $view->setView("facebookChoice");
         $view->assign("base_url", BASE_URL);
         $view->assign("user_albums", $arrAlbum);
-        $view->assign("photos_album", $arrPhotosByAlbum);
+        //$view->assign("photos_album", $arrPhotosByAlbum);
         $view->assign("array_campagne", $arrayCampagne);
+    }
+
+
+
+    public function photosalbumAction($args){
+
+        $view = new view();
+
+        $fb = facebook::getVarFb();
+
+        $id_album = "857998544307100";
+        $arrPhotosByAlbum = $this->photosAlbum( $fb , $id_album );
+
+
+        $view->setView("photosalbumChoice","emptylayout");
+        $view->assign("photos_album", $arrPhotosByAlbum);
     }
 
 
@@ -157,33 +173,24 @@ class choiceController{
     }
 
 
-    public function photosAlbum( $fb , $albums ){
+    public function photosAlbum( $fb , $idAlbum ){
 
-        $arrPhotos = [];
-        /*
-        foreach ($albums as $album) {
+        $arrayPhotos = [];
 
-            $albumId = $album["id"];
+        $response = $fb->get("/".$idAlbum."?fields=photos", $_SESSION['facebook_access_token']);
+        $photos = $response->getDecodedBody()["photos"]["data"];
 
-            $response = $fb->get("/".$albumId."?fields=photos", $_SESSION['facebook_access_token']);
+        foreach ($photos as $photo) {
 
-            $photos = $response->getDecodedBody()["photos"]["data"];
+            $response = $fb->get("/$idAlbum?fields=picture", $_SESSION['facebook_access_token']);
 
-            foreach ($photos as $photo) {
+            $urlPhoto = $response->getDecodedBody()["picture"];
+            $idPhoto = $response->getDecodedBody()["id"];
 
-                $response = $fb->get("/$albumId?fields=picture", $_SESSION['facebook_access_token']);
-
-                $urlPhoto = $response->getDecodedBody()["picture"];
-                $idPhoto = $response->getDecodedBody()["id"];
-
-                $photo = ["url" => $urlPhoto, "id" => $idPhoto];
-
-                $arrPhotos[$album["id"]][]  = $photo;
-            }
+            $arrayPhotos[] = [$urlPhoto,$idPhoto];
         }
-        */
 
-        return ;
+        return $arrayPhotos;
     }
 
 
