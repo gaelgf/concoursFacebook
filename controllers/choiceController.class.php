@@ -70,7 +70,10 @@ class choiceController{
 
                 try{
                     $response = $fb->post("/".$id_album."/photos",$data,$_SESSION['facebook_access_token']);
-                    header("Location: ".BASE_URL."/vote");
+                    $url_photo = $this->lastPhotoAlbum($fb,$id_album);
+
+
+                    header("Location: ".BASE_URL."participant/recap");
                 }
                 catch(FacebookSDKException $e){
                     header("Location: ".BASE_URL."choice/download/erreur");
@@ -188,6 +191,30 @@ class choiceController{
         }
 
         return $arrayPhotos;
+    }
+
+
+    public function lastPhotoAlbum( $fb , $idAlbum ){
+
+        $urlPhoto = "";
+
+        $response = $fb->get("/".$idAlbum."/photos", $_SESSION['facebook_access_token']);
+        $photos = $response->getDecodedBody()['data'];
+
+        print_r(count($photos));
+
+        $nb = 1;
+
+        foreach ($photos as $photo) {
+            if($nb<count($photos)){
+                $response = $fb->get("/".$photo["id"]."/picture", $_SESSION['facebook_access_token']);
+
+                $urlPhoto = $response->getHeaders()["Location"];
+            }
+            $nb++;
+        }
+
+        return $urlPhoto;
     }
 
 

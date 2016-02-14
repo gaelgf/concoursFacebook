@@ -313,7 +313,21 @@ body{
 							top:-5px;
 							transition:all 0.5s;
 						}
-
+		.form_upload{
+			text-align: center;
+			background-color: white;
+			padding:20px;
+			width:60%;
+			margin:auto;
+		}
+			.form_upload input[type=file]{
+				margin:0 auto 20px;
+			}
+			.form_upload .boutons{
+				font-size:30px;
+				border: none;
+				padding:10px 30px;
+			}
 /****************************************************************************************/
 /*									SELECTION PHOTO										*/
 /****************************************************************************************/
