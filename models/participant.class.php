@@ -36,6 +36,7 @@ class participant extends model{
         if(!isset($participantArray["errors"])) {
             $campagne = self::campagneFromArray($participantArray);
             return $campagne;
+        }
     }
 
     public static function loadByName($participantName)
