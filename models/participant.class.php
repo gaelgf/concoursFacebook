@@ -142,7 +142,7 @@ class participant extends model{
     {
         $participants = [];
         foreach ($participantsArrays as $participantArray) {
-            $participants[] = self::participantFromArray($participantsArrays);
+            $participants[] = self::participantFromArray($participantArrays);
         }
         return $participants;
     }
