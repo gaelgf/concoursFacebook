@@ -7,19 +7,22 @@ class vote extends model{
 	protected $id_critere;
 	protected $date;
 	protected $valeur;
+    protected $id_participant;
 
     public function __construct($id = NULL,
 								$id_photo,
 								$id_critere,
 								$date,
-								$valeur)
+								$valeur,
+                                $id_participant)
     {
         parent::__construct();
         $this->id = $id;
         $this->id_photo = $id_photo;
         $this->id_critere = $id_critere;
         $this->date = $date;
-        $this->valeur = $valeur;
+        $this->valeur = $valeur
+        $this->id_participant = $id_participant;
     }
 
     public static function loadById($voteId)
@@ -56,6 +59,9 @@ class vote extends model{
         if(!array_key_exists("valeur", $voteArray) || !isset($voteArray["valeur"])) {
             $errors["valeur"] = "Erreur : La valeur doit être renseignée.";
         }
+        if(!array_key_exists("id_participant", $voteArray) || !isset($voteArray["id_participant"])) {
+            $errors["id_participant"] = "Erreur : L'id du participant doit être renseignée.";
+        }
 
         if(sizeof($errors) > 0) {
             return $errors;
@@ -68,7 +74,8 @@ class vote extends model{
                                     $voteArray["id_photo"],
                                     $voteArray["id_critere"],
                                     $voteArray["date"],
-                                    $voteArray["valeur"]);
+                                    $voteArray["valeur"],
+                                    $voteArray["id_participant"]);
         return $participant;
     }
 
@@ -135,6 +142,17 @@ class vote extends model{
     public function setValeur($valeur)
     {
         $this->valeur = $valeur;
+    }
+
+    /* id_participant */
+    public function getIdParticipant()
+    {
+        return $this->id_participant;
+    }
+
+    public function setIdParticipant($id_participant)
+    {
+        $this->id_participant = $id_participant;
     }
 
 }
