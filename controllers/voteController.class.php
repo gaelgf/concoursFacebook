@@ -16,10 +16,32 @@ class voteController{
             $view->setView("indexVote");
             $view->assign("base_url", BASE_URL);
             $view->assign("array_campagne", $arrayCampagne);
+
+            $currentParticipantId = 1;
+            $photosNotVotedYet = self::getPhotosNotVotedYetByParticipantId($currentParticipantId);
+            var_dump($photosNotVotedYet);
         }
     }
 
-
+    public function getPhotosNotVotedYetByParticipantId($participantId) {
+        $IdsPhotosAlreadyVotedByCurrentParticipant = vote::loadIdsPhotosFromVotesWhereParticipantIdVoted($participantId);
+        $AllPhotos = photo::load();
+        
+        $photosNotVotedYet = [];
+        foreach ($AllPhotos as $photo) {
+            $isAlreadyVoted = false;
+            foreach ($IdsPhotosAlreadyVotedByCurrentParticipant as $IdPhotoAlreadyVoted) {
+                if($IdPhotoAlreadyVoted === $photo->getId()) {
+                    $isAlreadyVoted = true;
+                    break;
+                }
+            }
+            if($isAlreadyVoted === false) {
+                $photosNotVotedYet []= $photo;
+            }
+        }
+        return $photosNotVotedYet;
+    }
 
 
 

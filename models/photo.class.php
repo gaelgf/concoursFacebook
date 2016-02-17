@@ -59,15 +59,14 @@ class photo extends model{
 
     public static function photoFromArray($photoArray) {
         $vote = new self((isset($photoArray["id"]) ? $photoArray["id"] : NULL),
-                                    $photoArray["id_photo"],
-                                    $photoArray["id_critere"],
-                                    $photoArray["date"],
-                                    $photoArray["valeur"]);
+                                    $photoArray["id_participant"],
+                                    $photoArray["id_photo_facebook"],
+                                    $photoArray["id_album_facebook"]);
         return $vote;
     }
 
 
-    private static function votesFromVotesArrays($photosArrays)
+    private static function photosFromPhotosArrays($photosArrays)
     {
         $photos = [];
         foreach ($photosArrays as $photoArray) {

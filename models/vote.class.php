@@ -21,7 +21,7 @@ class vote extends model{
         $this->id_photo = $id_photo;
         $this->id_critere = $id_critere;
         $this->date = $date;
-        $this->valeur = $valeur
+        $this->valeur = $valeur;
         $this->id_participant = $id_participant;
     }
 
@@ -35,6 +35,31 @@ class vote extends model{
         }
         $errors = $voteArray["errors"];
         return $errors;
+    }
+
+    public static function loadIdsPhotosFromVotesWhereParticipantIdVoted($participantId)
+    {
+        $errors = [];
+        $table = get_called_class();
+        $model = new parent($table);
+
+        if (!$request = $model->pdo->query(
+            "SELECT DISTINCT id_photo FROM " . $model->table . " WHERE id_participant = " . $participantId
+        )) {
+           $errors[] = "Erreur lors de la récupération des votes du participant";
+        }
+
+        if($photosIdsArray = $request->fetchAll()) {
+            $photosIds = [];
+            for ($i=0; $i < count($photosIdsArray); $i++) { 
+               $photosIds[] = $photosIdsArray[$i]["id_photo"];
+            }
+            return $photosIds;
+        } else {
+            $errors[] = "Erreur lors de la récupération des votes du participant";
+        }
+
+        return $errors;        
     }
 
     public static function load()
