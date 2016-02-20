@@ -1,4 +1,3 @@
-
 <div class="vote">
     <div class="row">
         <div class="col-xs-5">
@@ -6,7 +5,7 @@
                 <img class="icone_principale" src="<?php echo $base_url; ?>assets/img/campagnes/1/icone.png" alt="">
             </div>
             <div class="col-xs-8 photo">
-                <img src="<?php echo $array_photo->getUrlPhoto(); ?>" alt="">
+                <img src="<?php echo $photo->getUrlPhoto(); ?>" alt="">
             </div>
             <!--
             <div class="averange">
@@ -18,38 +17,23 @@
             </div>
             -->
         </div>
-        <form class="col-xs-6 col-xs-offset-1" action="<?php echo $base_url; ?>vote" method="POST">
+        <form class="col-xs-6 col-xs-offset-1" action="<?php echo $base_url; ?>vote/voteparticipant" method="POST">
+            <input type="hidden" name="id_photo" value="<?php echo $photo->getId(); ?>">
+            <input type="hidden" name="id_participant" value="<?php echo $participant; ?>">
             <div class="col-xs-11 col-xs-offset-1 criteres">
-                <div class="title">Critere 1</div>
+                <?php foreach($criteres as $critere): ?>
+                <div class="title"><?php echo $critere->getNomCritere(); ?></div>
                 <div class="note">
+                    <input type="hidden" class="input_critere_<?php echo $critere->getId(); ?>" name="critere_<?php echo $critere->getId(); ?>" value="1">
                     <ul>
-                        <li class="critere_heart critere_1 active" data-critere="1" data-number="1"></li>
-                        <li class="critere_heart critere_1" data-critere="1" data-number="2"></li>
-                        <li class="critere_heart critere_1" data-critere="1" data-number="3"></li>
-                        <li class="critere_heart critere_1" data-critere="1" data-number="4"></li>
-                        <li class="critere_heart critere_1" data-critere="1" data-number="5"></li>
+                        <li class="critere_heart critere_<?php echo $critere->getId(); ?> active" data-critere="<?php echo $critere->getId(); ?>" data-number="1"></li>
+                        <li class="critere_heart critere_<?php echo $critere->getId(); ?>" data-critere="<?php echo $critere->getId(); ?>" data-number="2"></li>
+                        <li class="critere_heart critere_<?php echo $critere->getId(); ?>" data-critere="<?php echo $critere->getId(); ?>" data-number="3"></li>
+                        <li class="critere_heart critere_<?php echo $critere->getId(); ?>" data-critere="<?php echo $critere->getId(); ?>" data-number="4"></li>
+                        <li class="critere_heart critere_<?php echo $critere->getId(); ?>" data-critere="<?php echo $critere->getId(); ?>" data-number="5"></li>
                     </ul>
                 </div>
-                <div class="title">Critere 2</div>
-                <div class="note">
-                    <ul>
-                        <li class="critere_heart critere_2" data-critere="2" data-number="1"></li>
-                        <li class="critere_heart critere_2" data-critere="2" data-number="2"></li>
-                        <li class="critere_heart critere_2" data-critere="2" data-number="3"></li>
-                        <li class="critere_heart critere_2" data-critere="2" data-number="4"></li>
-                        <li class="critere_heart critere_2" data-critere="2" data-number="5"></li>
-                    </ul>
-                </div>
-                <div class="title">Critere 3</div>
-                <div class="note">
-                    <ul>
-                        <li class="critere_heart critere_3" data-critere="3" data-number="1"></li>
-                        <li class="critere_heart critere_3" data-critere="3" data-number="2"></li>
-                        <li class="critere_heart critere_3" data-critere="3" data-number="3"></li>
-                        <li class="critere_heart critere_3" data-critere="3" data-number="4"></li>
-                        <li class="critere_heart critere_3" data-critere="3" data-number="5"></li>
-                    </ul>
-                </div>
+                <?php endforeach; ?>
             </div>
             <div class="col-xs-12 next_vote_container">
                 <input type="submit" class="boutons" value="Valider" />

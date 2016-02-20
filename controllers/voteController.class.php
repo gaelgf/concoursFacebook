@@ -4,25 +4,109 @@
 class voteController{
     public function indexAction( $args )
     {
-
-
         $view = new view();
 
         if (!isset($_SESSION['facebook_access_token'])) {
             header("Location: ".BASE_URL);
         } else {
-            // Verification des valeurs de la campagne en cours
-            $arrayCampagne = self::getCampagneArrayAttributes();
-            $view->setView("indexVote");
-            $view->assign("base_url", BASE_URL);
-            $view->assign("array_campagne", $arrayCampagne);
-
             $currentParticipantId = 1;
             $photosNotVotedYet = self::getPhotosNotVotedYetByParticipantId($currentParticipantId);
-            $idPhotoAffichee = rand(0,count($photosNotVotedYet)-1);
-            $view->assign("array_photo", $photosNotVotedYet[$idPhotoAffichee]);
+
+            if(count($photosNotVotedYet) == 0){
+                header("Location: ".BASE_URL."vote/classement");
+            }
+            else{
+                $view->setView("indexVote");
+
+                // Verification des valeurs de la campagne en cours
+                $arrayCampagne = self::getCampagneArrayAttributes();
+                $arrayCritere = critere::load();
+                $idPhotoAffichee = rand(0,count($photosNotVotedYet)-1);
+                $view->assign("photo", $photosNotVotedYet[$idPhotoAffichee]);
+                $view->assign("base_url", BASE_URL);
+                $view->assign("array_campagne", $arrayCampagne);
+                $view->assign("criteres", $arrayCritere);
+                $view->assign("participant", $currentParticipantId);
+            }
         }
     }
+
+    public function voteparticipantAction(){
+
+        $criteres = critere::load();
+
+        if ( $this->verifyPostVote($criteres) ) {
+
+            foreach($criteres as $critere){
+                $id_critere = $critere->getId();
+                $vote = new vote(NULL,$_POST['id_photo'],$id_critere,date("Y-m-d"),$_POST["critere_".$id_critere],1);
+                var_dump(date("Y-m-d"));
+                $vote->save();
+            }
+
+            header("Location: ".BASE_URL."vote");
+        } else {
+            header("Location: ".BASE_URL."vote");
+        }
+    }
+
+    public function classementAction( $args ){
+        $view = new view();
+        $view->setView("classementVote");
+    }
+
+
+
+
+
+
+    public function verifyPostVote($criteres){
+
+        $res = true;
+
+        if( !$this->verifyPostCriteres($criteres)){
+            $res = false;
+        }
+        if( !isset($_POST['id_photo']) || empty($_POST['id_photo'])){
+            $res = false;
+        }
+        if( !isset($_POST['id_participant']) || empty($_POST['id_participant'])){
+            $res = false;
+        }
+
+
+        return $res;
+    }
+
+
+
+
+
+
+
+
+
+    public function verifyPostCriteres( $arrayCritere ){
+        $res = true;
+        foreach($arrayCritere as $critere){
+            $id = $critere->getId();
+            if( !isset($_POST['critere_'.$id]) || empty($_POST['critere_'.$id]) ){
+                $res = false;
+            }
+        }
+
+        return $res;
+    }
+
+
+
+
+
+
+
+
+
+
 
     public function getPhotosNotVotedYetByParticipantId($participantId) {
         $IdsPhotosAlreadyVotedByCurrentParticipant = vote::loadIdsPhotosFromVotesWhereParticipantIdVoted($participantId);
