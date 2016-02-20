@@ -36,6 +36,7 @@ class photoController
         $view = new view();
         $view->setView("validationPhoto");
         $view->assign("array_campagne", $arrayCampagne);
+        $view->assign("base_url", BASE_URL);
     }
 
 

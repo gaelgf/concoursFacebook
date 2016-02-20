@@ -407,3 +407,53 @@ body{
 		.recapitulatif_participation .texte .date{
 			font-size:30px;
 		}
+/****************************************************************************************/
+/*							VALIDATION PARTICIPATION									*/
+/****************************************************************************************/
+.validation_photo{
+	text-align: center;
+}
+	.validation_photo .left{
+
+	}
+		.validation_photo .left .remerciement{
+			font-size:25px;
+		}
+			.validation_photo .left .remerciement .nom_concours{
+				font-size:40px;
+			}
+		.validation_photo .left .date_fin{
+			padding-top:20px;
+			border-top:1px solid silver;
+			width:70%;
+			margin: auto;
+			font-size: 25px;
+		}
+			.validation_photo .left .date_fin span{
+				font-size:150%;
+			}
+		.validation_photo .left .redirect{
+			padding-top: 20px;
+		}
+			.validation_photo .left .redirect .boutons{
+				width: 80%;
+				margin:auto;
+				display: block;
+				padding:15px 0;
+				font-size:25px;
+			}
+	.validation_photo .right{
+
+	}
+		.validation_photo .right .titre_a_gagner{
+			font-size: 50px;
+			text-transform: uppercase;
+		}
+		.validation_photo .right .img_lot{
+		}
+			.validation_photo .right .img_lot img{
+				width: 50%;
+				border:8px solid white;
+				border-bottom:25px solid white;
+				box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			}
