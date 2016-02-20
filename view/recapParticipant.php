@@ -5,10 +5,10 @@
 
 
 
-<form class="container recapitulatif_participation">
+<form class="container recapitulatif_participation" action="<?php echo $base_url;  ?>photo/add" method="POST">
 
     <div class="col-xs-6 container_img">
-        <img src="<?php echo $url_photo; ?>" alt="">
+        <img src="<?php echo $posts["url_photo"]; ?>" alt="">
     </div>
     <div class="col-xs-6 texte">
         Le concours prendra fin le
@@ -17,6 +17,11 @@
             <?php echo intval($date_fin[2])." ".$arr_mois[intval($date_fin[1])]." ".$date_fin[0] ?>
         </span>
         <br/>
+        <input type="hidden" value="<?php echo $posts["url_photo"]; ?>" name="url_photo">
+        <input type="hidden" value="<?php echo $posts["id_album_facebook"]; ?>" name="id_album_facebook">
+        <input type="hidden" value="<?php echo $posts["id_photo_facebook"]; ?>" name="id_photo_facebook">
+        <input type="hidden" value="<?php echo $posts["id_participant"]; ?>" name="id_participant">
+        <input type="hidden" value="<?php echo $posts["id_campagne"]; ?>" name="id_campagne">
         <input type="submit" class="boutons" value="Je valide ma participation" />
     </div>
 </form>

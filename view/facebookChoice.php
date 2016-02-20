@@ -16,12 +16,16 @@
         <?php if($array_photos != "null"): ?>
             <form class="valid_choix_facebook" onsubmit="return isPhotoChoisie();" action="<?php echo $base_url; ?>participant/recap" method="POST">
                 <input type="hidden" class="url_photo" name="url_photo">
+                <input type="hidden" class="id_album_facebook" name="id_album_facebook" value="<?php echo $id_album; ?>">
+                <input type="hidden" class="id_photo_facebook" name="id_photo_facebook">
+                <input type="hidden" class="id_participant" name="id_participant" value="1">
+                <input type="hidden" class="id_campagne" name="id_campagne" value="<?php echo $id_campagne; ?>">
                 <input type="submit" class="boutons" value="Valider">
             </form>
             <ul class="album">
             <?php foreach( $array_photos as $photo): ?>
                 <li>
-                    <img class="photo_choix_fb" src="<?php echo $photo["url"]; ?>"></li>
+                    <img class="photo_choix_fb" data-id="<?php echo $photo["id"]; ?>" src="<?php echo $photo["url"]; ?>"></li>
                 </li>
             <?php endforeach; ?>
             </ul>

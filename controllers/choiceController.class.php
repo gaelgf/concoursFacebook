@@ -124,6 +124,7 @@ class choiceController{
         $view->setView("facebookChoice");
         $view->assign("base_url", BASE_URL);
         $view->assign("user_albums", $arrAlbum);
+        $view->assign("id_campagne", $arrayCampagne["id"]);
         $view->assign("array_campagne", $arrayCampagne);
     }
 

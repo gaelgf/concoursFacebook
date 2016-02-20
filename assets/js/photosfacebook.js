@@ -12,7 +12,14 @@ var photo_choisie = false;
 $(".photo_choix_fb").click( function(){
     photo_choisie = true;
     $(".url_photo").val($(this).attr("src"));
+    $(".id_photo_facebook").val($(this).data("id"));
+    deselection_photos();
+    $(this).addClass("active");
 });
+
+function deselection_photos(){
+    $(".photo_choix_fb").removeClass("active");
+}
 
 
 function isPhotoChoisie(){
