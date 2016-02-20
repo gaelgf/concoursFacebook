@@ -45,9 +45,9 @@ class campagnesController{
             $success = explode( ', ', $args['success']);
         }
 
-        if(ctype_digit($args[2])) {//Si le paramère est un entier (id de la campagne)
+        if(ctype_digit(urldecode($args[2]))) {//Si le paramère est un entier (id de la campagne)
 
-            $campagne = campagne::loadById(intval($args[2]));
+            $campagne = campagne::loadById(intval(urldecode($args[2])));
             if ( !is_array( $campagne ) ) {
                 $view = new view();
                 $view->setView("admin/showCampagne", "adminlayout");
@@ -62,7 +62,7 @@ class campagnesController{
                 header('Location: ' . BASE_URL . 'admin/campagnes/showAll?errors=' . implode($campagne) );
             }
         } else {
-            $campagne = campagne::loadByName($args[2]);
+            $campagne = campagne::loadByName(urldecode($args[2]));
             if ( !is_array( $campagne ) ) {
                 $view = new view();
                 $view->setView("admin/showCampagne", "adminlayout");
@@ -118,9 +118,9 @@ class campagnesController{
             $success = explode( ', ', $args['success']);
         }
 
-        if(ctype_digit($args[2])) {//Si le paramère est un entier (id de la campagne)
+        if(ctype_digit(urldecode($args[2]))) {//Si le paramère est un entier (id de la campagne)
 
-            $campagne = campagne::loadById(intval($args[2]));
+            $campagne = campagne::loadById(intval(urldecode($args[2])));
             if ( !is_array( $campagne ) ) {
                 $view = new view();
                 $view->setView("admin/editCampagne", "adminlayout");
@@ -135,7 +135,7 @@ class campagnesController{
                 header('Location: ' . BASE_URL . 'admin/campagnes/showAll?errors=' . implode($campagne) );
             }
         } else {
-            $campagne = campagne::loadByName($args[2]);
+            $campagne = campagne::loadByName(urldecode($args[2]));
             if ( !is_array( $campagne ) ) {
                 $view = new view();
                 $view->setView("admin/editCampagne", "adminlayout");
@@ -174,9 +174,9 @@ class campagnesController{
 
     public function deleteAction( $args ) {
         $errors = [];
-        if(ctype_digit($args[2])) {//Si le paramère est un entier (id de la campagne)
+        if(ctype_digit(urldecode($args[2]))) {//Si le paramère est un entier (id de la campagne)
 
-            $campagne = campagne::loadById(intval($args[2]));
+            $campagne = campagne::loadById(intval(urldecode($args[2])));
             if ( is_array( $campagne ) ) {
                 header('Location: ' . BASE_URL . 'admin/campagnes/showAll?errors=' . implode($campagne) );
             } else {
@@ -187,11 +187,11 @@ class campagnesController{
                     $view->setView("admin/showAllCampagnes", "adminlayout");
                     $campagnes = campagne::load();
                     $view->assign("campagnes", $campagnes);
-                    $view->assign("successMessages", ["La campagne " . $args[2] . " a bien été supprimée"]);
+                    $view->assign("successMessages", ["La campagne " . urldecode($args[2]) . " a bien été supprimée"]);
                 }
             }
         } else {
-            $campagne = campagne::loadByName($args[2]);
+            $campagne = campagne::loadByName(urldecode($args[2]));
             if ( is_array( $campagne ) ) {
                 header('Location: ' . BASE_URL . 'admin/campagnes/showAll?errors=' . implode($campagne) );
             } else {
@@ -202,7 +202,7 @@ class campagnesController{
                     $view->setView("admin/showAllCampagnes", "adminlayout");
                     $campagnes = campagne::load();
                     $view->assign("campagnes", $campagnes);
-                    $view->assign("successMessages", ["La campagne " . $args[2] . " a bien été supprimée"]);
+                    $view->assign("successMessages", ["La campagne " . urldecode($args[2]) . " a bien été supprimée"]);
                 }
             }
         }

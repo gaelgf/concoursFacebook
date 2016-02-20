@@ -62,14 +62,6 @@
             </div>
 
             <div class="form-group">
-                <label for="inputIconUrl" class="col-sm-4 control-label">Url de l'icone</label>
-                <div class="col-sm-8">
-                    <input type="url" name="url_icone" class="form-control" id="inputIconUrl"
-                    value=<?php echo '"'.$campagne->getUrlIcone().'"' ?> placeholder="Url de l'icone" required>
-                </div>
-            </div>
-
-            <div class="form-group">
                 <label for="text_accueil" class="col-sm-4 control-label">Texte d'accueil</label>
                 <div class="col-sm-8">
                     <textarea name="text_accueil" class="form-control"
@@ -102,7 +94,7 @@
             </div>
 
             <div class="form-group">
-                <label for="inputImageLot" class="col-sm-4 control-label">Image du lot</label>
+                <label for="inputImageLot" class="col-sm-4 control-label">Url de l'image du lot</label>
                 <div class="col-sm-8">
                     <input type="url" name="image_lot" class="form-control" id="inputImageLot"
                     	   value=<?php echo '"'.$campagne->getImageLot().'"' ?> placeholder="Url de le l'image du lot" required>
@@ -119,6 +111,41 @@
                         CKEDITOR.replace( 'description_lot' );
                     </script>
                 </div>
+            </div>
+
+            <div class="form-group">
+                <label for="inputPhotoAccueilOne" class="col-sm-4 control-label">Url de la photo d'accueil n°1</label>
+                <div class="col-sm-8">
+                    <input type="url" name="photo_accueil_one" class="form-control" id="inputPhotoAccueilOne"
+                    value=<?php echo '"'.$campagne->getPhotoAccueilOne().'"' ?> placeholder="Url de la photo d'accueil n°1" required>
+                </div>                    
+            </div>
+
+            <div class="form-group">
+                <label for="inputPhotoAccueilTwo" class="col-sm-4 control-label">Url de la photo d'accueil n°2</label>
+                <div class="col-sm-8">
+                    <input type="url" name="photo_accueil_two" class="form-control" id="inputPhotoAccueilTwo"
+                    value=<?php echo '"'.$campagne->getPhotoAccueilTwo().'"' ?> placeholder="Url de la photo d'accueil n°2" required>
+                </div>                    
+            </div>
+
+            <div class="form-group">
+                <label for="inputPhotoAccueilThree" class="col-sm-4 control-label">Url de la photo d'accueil n°3</label>
+                <div class="col-sm-8">
+                    <input type="url" name="photo_accueil_three" class="form-control" id="inputPhotoAccueilThree"
+                    value=<?php echo '"'.$campagne->getPhotoAccueilThree().'"' ?> placeholder="Url de la photo d'accueil n°3" required>
+                </div>                    
+            </div>
+
+            <input type="hidden" name="icone_coeur"
+                    value=<?php echo '"'.$campagne->getIconeCoeur().'"' ?> required>
+
+            <div class="form-group">
+                <label for="inputIconePrincipale" class="col-sm-4 control-label">Url de l'icone principal</label>
+                <div class="col-sm-8">
+                    <input type="url" name="icone_principale" class="form-control" id="inputIconePrincipale"
+                    value=<?php echo '"'.$campagne->getIconePrincipale().'"' ?> placeholder="Url de l'icone principal" required>
+                </div>                    
             </div>
 
             <div class="form-group">

@@ -24,13 +24,16 @@
 				<th>date_debut</th>
 				<th>date_fin</th>
 				<th>couleur</th>
-				<th>url_icone</th>
 				<th>text_accueil</th>
 				<th>text_felicitations</th>
 				<th>is_active</th>
 				<th>nom_lot</th>
 				<th>description_lot</th>
 				<th>image_lot</th>
+				<th>photo_accueil_one</th>
+				<th>photo_accueil_two</th>
+				<th>photo_accueil_three</th>
+				<th>icone_principale</th>
 
 				<th>Actions</th>
 			</tr>
@@ -43,16 +46,19 @@
 					<td><?php echo html_entity_decode($campagne->getDateDebut()); ?></td>
 					<td><?php echo html_entity_decode($campagne->getDateFin()); ?></td>
 					<td><?php echo html_entity_decode($campagne->getCouleur()); ?></td>
-					<td><?php echo html_entity_decode($campagne->getUrlIcone()); ?></td>
 					<td><?php echo html_entity_decode($campagne->getTextAccueil()); ?></td>
 					<td><?php echo html_entity_decode($campagne->getTextFelicitations()); ?></td>
 					<td><?php echo html_entity_decode($campagne->getIsActive()); ?></td>
 					<td><?php echo html_entity_decode($campagne->getNomLot()); ?></td>
 					<td><?php echo html_entity_decode($campagne->getDescriptionLot()); ?></td>
 					<td><?php echo html_entity_decode($campagne->getImageLot()); ?></td>
+					<td><?php echo html_entity_decode($campagne->getPhotoAccueilOne()); ?></td>
+					<td><?php echo html_entity_decode($campagne->getPhotoAccueilTwo()); ?></td>
+					<td><?php echo html_entity_decode($campagne->getPhotoAccueilThree()); ?></td>
+					<td><?php echo html_entity_decode($campagne->getIconePrincipale()); ?></td>
 					<td>
-						<a class="btn btn-sm btn-primary" href=<?php echo BASE_URL . 'admin/campagnes/edit/' . $campagne->getNomCampagne(); ?> role="button"><i class="fa fa-pencil-square-o"></i> Editer</a>
-						<a class="btn btn-sm btn-primary" href=<?php echo BASE_URL . 'admin/campagnes/delete/' . $campagne->getNomCampagne(); ?>><i class="fa fa-trash"></i> Supprimer</a>
+						<a class="btn btn-sm btn-primary" href=<?php echo BASE_URL . 'admin/campagnes/edit/' . urlencode ($campagne->getNomCampagne()); ?> role="button"><i class="fa fa-pencil-square-o"></i> Editer</a>
+						<a class="btn btn-sm btn-primary" href=<?php echo BASE_URL . 'admin/campagnes/delete/' . urlencode ($campagne->getNomCampagne()); ?>><i class="fa fa-trash"></i> Supprimer</a>
 					</td>
 				</tr>
 		</tbody>
