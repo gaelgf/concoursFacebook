@@ -36,7 +36,20 @@ class participant extends model{
         return false;
     }
 
-     public static function loadParticipantsBycampagneId($campagneId) {
+    public static function isAlreadyParticipating( $idFacebook , $idCampagne ){
+        $participants = self::load();
+        $res = false;
+
+        foreach($participants as $participant){
+            if($participant->getIdFacebook() == $idFacebook && $participant->getIdCampagne() == $idCampagne){
+                $res = true;
+            }
+        }
+        return $res;
+    }
+
+
+    public static function loadParticipantsByCampagneId($campagneId) {
         $errors = [];
         $table = get_called_class();
         $model = new parent($table);
@@ -44,7 +57,7 @@ class participant extends model{
         if (!$request = $model->pdo->query(
             "SELECT * FROM participants WHERE id_campagne = '" . $campagneId . "'"
         )) {
-           $errors[] = "Erreur lors de la récupération de l'objet " . $table;
+            $errors[] = "Erreur lors de la récupération de l'objet " . $table;
         }
 
         if ($participantArray = $request->fetch()) {
@@ -54,7 +67,7 @@ class participant extends model{
             $errors[] = "Erreur lors de la récupération de l'objet " . $table;
         }
 
-        return $errors; 
+        return $errors;
     }
 
     public static function loadById($participantId)
@@ -69,27 +82,6 @@ class participant extends model{
         return $errors;
     }
 
-    public static function loadByName($participantName)
-    {
-        $errors = [];
-        $table = get_called_class();
-        $model = new parent($table);
-
-        if (!$request = $model->pdo->query(
-            "SELECT * FROM " . $model->table . " WHERE nom = '" . $participantName . "'"
-        )) {
-           $errors[] = "Erreur lors de la récupération de l'objet " . $table;
-        }
-
-        if ($participantArray = $request->fetch()) {
-            $participant = self::participantFromArray($participantArray);
-            return $participant;
-        } else {
-            $errors[] = "Erreur lors de la récupération de l'objet " . $table;
-        }
-
-        return $errors;        
-    }
 
     public static function load()
     {
@@ -127,6 +119,7 @@ class participant extends model{
     }
 
     public static function participantFromArray($participantArray) {
+        var_dump($participantArray);
         $participant = new self((isset($participantArray["id"]) ? $participantArray["id"] : NULL),
                                     $participantArray["id_campagne"],
                                     $participantArray["id_facebook"],
@@ -142,7 +135,7 @@ class participant extends model{
     {
         $participants = [];
         foreach ($participantsArrays as $participantArray) {
-            $participants[] = self::participantFromArray($participantArrays);
+            $participants[] = self::participantFromArray($participantArray);
         }
         return $participants;
     }

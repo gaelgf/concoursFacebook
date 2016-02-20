@@ -40,7 +40,6 @@ class voteController{
             foreach($criteres as $critere){
                 $id_critere = $critere->getId();
                 $vote = new vote(NULL,$_POST['id_photo'],$id_critere,date("Y-m-d"),$_POST["critere_".$id_critere],1);
-                var_dump(date("Y-m-d"));
                 $vote->save();
             }
 

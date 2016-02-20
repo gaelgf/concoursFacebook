@@ -4,6 +4,8 @@
     <list default="true" id="ee0217f2-4d30-4a3f-834c-774b01da4dc5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/indexController.class.php" afterPath="$PROJECT_DIR$/controllers/indexController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/voteController.class.php" afterPath="$PROJECT_DIR$/controllers/voteController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/participant.class.php" afterPath="$PROJECT_DIR$/models/participant.class.php" />
     </list>
     <ignored path="mvc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,8 +47,8 @@
       <file leaf-file-name="indexController.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/controllers/indexController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54937166">
-              <caret line="78" column="14" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
+            <state vertical-scroll-proportion="0.3967684">
+              <caret line="73" column="65" selection-start-line="73" selection-start-column="65" selection-end-line="73" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -55,11 +57,10 @@
       <file leaf-file-name="participant.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/participant.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.807693">
-              <caret line="18" column="43" selection-start-line="12" selection-start-column="32" selection-end-line="18" selection-end-column="43" />
+            <state vertical-scroll-proportion="-12.672728">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
-                <marker date="1455963916603" expanded="true" signature="1071:1139" placeholder="SELECT * FRO..participants..." />
-                <marker date="1455963916603" expanded="true" signature="2144:2218" placeholder="SELECT * FRO..${$model-&gt;table}..." />
+                <marker date="1455979923265" expanded="true" signature="1451:1519" placeholder="SELECT * FRO..participants..." />
               </folding>
             </state>
           </provider>
@@ -68,8 +69,8 @@
       <file leaf-file-name="voteController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/voteController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.769231">
-              <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
+            <state vertical-scroll-proportion="-9.153846">
+              <caret line="41" column="82" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -174,7 +175,6 @@
         <option value="$PROJECT_DIR$/view/photosalbumChoice.php" />
         <option value="$PROJECT_DIR$/core/view.class.php" />
         <option value="$PROJECT_DIR$/core/model.class.php" />
-        <option value="$PROJECT_DIR$/models/participant.class.php" />
         <option value="$PROJECT_DIR$/view/recapParticipant.php" />
         <option value="$PROJECT_DIR$/assets/js/photosfacebook.js" />
         <option value="$PROJECT_DIR$/controllers/choiceController.class.php" />
@@ -186,6 +186,7 @@
         <option value="$PROJECT_DIR$/view/classementVote.php" />
         <option value="$PROJECT_DIR$/assets/js/vote.js" />
         <option value="$PROJECT_DIR$/view/indexVote.php" />
+        <option value="$PROJECT_DIR$/models/participant.class.php" />
         <option value="$PROJECT_DIR$/controllers/voteController.class.php" />
         <option value="$PROJECT_DIR$/controllers/indexController.class.php" />
       </list>
@@ -685,7 +686,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455976045844</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Ajout d'un nouveau participant (save() )">
+      <created>1455978831030</created>
+      <option name="number" value="00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1455978831030</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TodoView">
@@ -733,7 +740,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Mise en place du JS des votes" />
     <MESSAGE value="Ajout bouton vote sur la apge d'accueil" />
     <MESSAGE value="Listage album, listages photos en cours" />
     <MESSAGE value="Page de téléchargement de photo vers album (non fonctionnel)" />
@@ -758,7 +764,8 @@
     <MESSAGE value="Page des choix" />
     <MESSAGE value="Affichage photos non votées" />
     <MESSAGE value="Mise en place du vote" />
-    <option name="LAST_COMMIT_MESSAGE" value="Mise en place du vote" />
+    <MESSAGE value="Ajout d'un nouveau participant (save() )" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout d'un nouveau participant (save() )" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1136,29 +1143,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/participant.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.807693">
-          <caret line="18" column="43" selection-start-line="12" selection-start-column="32" selection-end-line="18" selection-end-column="43" />
-          <folding>
-            <marker date="1455963916603" expanded="true" signature="1071:1139" placeholder="SELECT * FRO..participants..." />
-            <marker date="1455963916603" expanded="true" signature="2144:2218" placeholder="SELECT * FRO..${$model-&gt;table}..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/choiceController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.9230769">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="39" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/voteController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.769231">
-          <caret line="18" column="43" selection-start-line="18" selection-start-column="43" selection-end-line="18" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -1171,10 +1159,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/voteController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-9.153846">
+          <caret line="41" column="82" selection-start-line="41" selection-start-column="69" selection-end-line="41" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/participant.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.672728">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <marker date="1455979923265" expanded="true" signature="1451:1519" placeholder="SELECT * FRO..participants..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/indexController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54937166">
-          <caret line="78" column="14" selection-start-line="78" selection-start-column="14" selection-end-line="78" selection-end-column="14" />
+        <state vertical-scroll-proportion="0.3967684">
+          <caret line="73" column="65" selection-start-line="73" selection-start-column="65" selection-end-line="73" selection-end-column="65" />
           <folding />
         </state>
       </provider>
