@@ -33,9 +33,9 @@ class campagne extends model{
                                 $nom_lot,
                                 $description_lot,
                                 $image_lot,
-                                $image_accueil_one,
-                                $image_accueil_two,
-                                $image_accueil_three,
+                                $photo_accueil_one,
+                                $photo_accueil_two,
+                                $photo_accueil_three,
                                 $icone_coeur,
                                 $icone_principale)
     {
@@ -52,9 +52,9 @@ class campagne extends model{
         $this->nom_lot = $nom_lot;
         $this->description_lot = $description_lot;
         $this->image_lot = $image_lot;
-        $this->image_accueil_one = $image_accueil_one;
-        $this->image_accueil_two = $image_accueil_two;
-        $this->image_accueil_three = $image_accueil_three;
+        $this->photo_accueil_one = $photo_accueil_one;
+        $this->photo_accueil_two = $photo_accueil_two;
+        $this->photo_accueil_three = $photo_accueil_three;
         $this->icone_coeur = $icone_coeur;
         $this->icone_principale = $icone_principale;
     }
@@ -303,26 +303,26 @@ class campagne extends model{
         $this->image_lot = $image_lot;
     }
 
-    /* image_accueil_one */
+    /* photo_accueil_one */
     public function getPhotoAccueilOne(){
         return $this->photo_accueil_one;
     }
-    public function setPhotoAccueilOne( $image_accueil_one ){
-        $this->image_accueil_one = $image_accueil_one;
+    public function setPhotoAccueilOne( $photo_accueil_one ){
+        $this->photo_accueil_one = $photo_accueil_one;
     }
-    /* image_accueil_two */
+    /* photo_accueil_two */
     public function getPhotoAccueilTwo(){
         return $this->photo_accueil_two;
     }
-    public function setPhotoAccueilTwo( $image_accueil_two ){
-        $this->image_accueil_two = $image_accueil_two;
+    public function setPhotoAccueilTwo( $photo_accueil_two ){
+        $this->photo_accueil_two = $photo_accueil_two;
     }
-    /* image_accueil_three */
+    /* photo_accueil_three */
     public function getPhotoAccueilThree(){
-        return $this->image_accueil_three;
+        return $this->photo_accueil_three;
     }
-    public function setPhotoAccueilThree( $image_accueil_three ){
-        $this->image_accueil_three = $image_accueil_three;
+    public function setPhotoAccueilThree( $photo_accueil_three ){
+        $this->photo_accueil_three = $photo_accueil_three;
     }
 
     /* image_coeur */

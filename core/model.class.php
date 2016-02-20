@@ -122,7 +122,6 @@ class model{
         $data = get_object_vars($this);
 
         $id = $data['id'];
-        var_dump($this->table);
 
         if(!$request = $this->pdo->query(
             "DELETE FROM ".$this->table." WHERE id = ".$id
