@@ -34,6 +34,28 @@ class photo extends model{
         return $errors;
     }
 
+    public static function loadByCampagneId($campagneId)
+    {
+        $errors = [];
+        $table = get_called_class();
+        $model = new parent($table);
+
+        if (!$request = $model->pdo->query(
+            "SELECT * FROM " . $model->table . " WHERE id_campagne = " . $campagneId
+        )) {
+           $errors[] = "Erreur lors de la récupération des photos de la campagne";
+        }
+
+        if($photosArrays = $request->fetchAll()) {
+            $photos = self::photosFromPhotosArrays($photosArrays);
+            return $photos;
+        } else {
+            $errors[] = "Erreur lors de la récupération des photos de la campagne";
+        }
+
+        return $errors;     
+    }
+
     public static function load()
     {
         $photosArrays = parent::get();

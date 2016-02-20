@@ -110,7 +110,13 @@ class voteController{
 
     public function getPhotosNotVotedYetByParticipantId($participantId) {
         $IdsPhotosAlreadyVotedByCurrentParticipant = vote::loadIdsPhotosFromVotesWhereParticipantIdVoted($participantId);
-        $AllPhotos = photo::load();
+        if( isset($_SESSION["campagne_in_session"]) && $_SESSION["campagne_in_session"] == "OK" && isset($_SESSION["campagne_id"]) ){
+            $campagneId = $_SESSION["campagne_id"];
+        } else {
+            $campagne = campagne::loadCurrent();
+            $campagneId = $campagne->getId();
+        }
+        $AllPhotos = photo::loadByCampagneId($campagneId);
         
         $photosNotVotedYet = [];
         foreach ($AllPhotos as $photo) {
