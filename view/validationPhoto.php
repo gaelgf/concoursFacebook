@@ -1,0 +1,1 @@
+Validation de la participation
