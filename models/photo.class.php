@@ -6,17 +6,20 @@ class photo extends model{
 	protected $id_participant;
 	protected $id_photo_facebook;
 	protected $id_album_facebook;
+    protected $url_photo;
 
     public function __construct($id = NULL,
 								$id_participant,
 								$id_photo_facebook,
-								$id_album_facebook)
+								$id_album_facebook,
+                                $url_photo)
     {
         parent::__construct();
         $this->id = $id;
         $this->id_participant = $id_participant;
         $this->id_photo_facebook = $id_photo_facebook;
         $this->id_album_facebook = $id_album_facebook;
+        $this->url_photo = $url_photo;
     }
 
     public static function loadById($photoId)
@@ -50,6 +53,9 @@ class photo extends model{
         if(!array_key_exists("id_album_facebook", $photoArray) || !isset($photoArray["id_album_facebook"])) {
             $errors["id_album_facebook"] = "Erreur : L'id de l'album facebook doit être renseigné.";
         }
+        if(!array_key_exists("url_photo", $photoArray) || !isset($photoArray["url_photo"])) {
+            $errors["url_photo"] = "Erreur : L'URL de la photo facebook doit être renseigné.";
+        }
 
         if(sizeof($errors) > 0) {
             return $errors;
@@ -61,7 +67,8 @@ class photo extends model{
         $vote = new self((isset($photoArray["id"]) ? $photoArray["id"] : NULL),
                                     $photoArray["id_participant"],
                                     $photoArray["id_photo_facebook"],
-                                    $photoArray["id_album_facebook"]);
+                                    $photoArray["id_album_facebook"],
+                                    $photoArray["url_photo"]);
         return $vote;
     }
 
@@ -117,6 +124,18 @@ class photo extends model{
     public function setAlbumFacebook($id_album_facebook)
     {
         $this->id_album_facebook = $id_album_facebook;
+    }
+
+
+    /* url_photo */
+    public function getUrlPhoto()
+    {
+        return $this->url_photo;
+    }
+
+    public function setUrlPhoto($url_photo)
+    {
+        $this->url_photo = $url_photo;
     }
 
 }

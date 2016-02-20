@@ -6,8 +6,9 @@
                 <img class="icone_principale" src="<?php echo $base_url; ?>assets/img/campagnes/1/icone.png" alt="">
             </div>
             <div class="col-xs-8 photo">
-                <img src="<?php echo $base_url; ?>assets/img/campagnes/1/photos/1.jpg" alt="">
+                <img src="<?php echo $array_photo->getUrlPhoto(); ?>" alt="">
             </div>
+            <!--
             <div class="averange">
                 <img src="<?php echo $base_url; ?>assets/img/icones/fleche_ave.png" class="fleche" alt="">
                 <div class="white note_moyenne">
@@ -15,6 +16,7 @@
                     3 / 5
                 </div>
             </div>
+            -->
         </div>
         <form class="col-xs-6 col-xs-offset-1" action="<?php echo $base_url; ?>vote" method="POST">
             <div class="col-xs-11 col-xs-offset-1 criteres">

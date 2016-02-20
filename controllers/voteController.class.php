@@ -19,7 +19,8 @@ class voteController{
 
             $currentParticipantId = 1;
             $photosNotVotedYet = self::getPhotosNotVotedYetByParticipantId($currentParticipantId);
-            var_dump($photosNotVotedYet);
+            $idPhotoAffichee = rand(0,count($photosNotVotedYet)-1);
+            $view->assign("array_photo", $photosNotVotedYet[$idPhotoAffichee]);
         }
     }
 
