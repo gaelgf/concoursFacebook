@@ -7,12 +7,14 @@ class photo extends model{
 	protected $id_photo_facebook;
 	protected $id_album_facebook;
     protected $url_photo;
+    protected $id_campagne;
 
     public function __construct($id = NULL,
 								$id_participant,
 								$id_photo_facebook,
 								$id_album_facebook,
-                                $url_photo)
+                                $url_photo,
+                                $id_campagne)
     {
         parent::__construct();
         $this->id = $id;
@@ -20,6 +22,7 @@ class photo extends model{
         $this->id_photo_facebook = $id_photo_facebook;
         $this->id_album_facebook = $id_album_facebook;
         $this->url_photo = $url_photo;
+        $this->id_campagne = $id_campagne;
     }
 
     public static function loadById($photoId)
@@ -78,6 +81,9 @@ class photo extends model{
         if(!array_key_exists("url_photo", $photoArray) || !isset($photoArray["url_photo"])) {
             $errors["url_photo"] = "Erreur : L'URL de la photo facebook doit être renseigné.";
         }
+        if(!array_key_exists("id_campagne", $photoArray) || !isset($photoArray["id_campagne"])) {
+            $errors["id_campagne"] = "Erreur : La campagne doit être renseigné.";
+        }
 
         if(sizeof($errors) > 0) {
             return $errors;
@@ -90,7 +96,8 @@ class photo extends model{
                                     $photoArray["id_participant"],
                                     $photoArray["id_photo_facebook"],
                                     $photoArray["id_album_facebook"],
-                                    $photoArray["url_photo"]);
+                                    $photoArray["url_photo"],
+                                    $photoArray["id_campagne"]);
         return $vote;
     }
 
@@ -160,4 +167,15 @@ class photo extends model{
         $this->url_photo = $url_photo;
     }
 
+
+    /* id_campagne */
+    public function getIdCampagne()
+    {
+        return $this->id_campagne;
+    }
+
+    public function setIdCampagne($id_campagne)
+    {
+        $this->id_campagne = $id_campagne;
+    }
 }

@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee0217f2-4d30-4a3f-834c-774b01da4dc5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/controllers/photoController.class.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/view/validationPhoto.php" />
+    <list default="true" id="ee0217f2-4d30-4a3f-834c-774b01da4dc5" name="Default" comment="Controller d'ajout de la photo">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/js/photosfacebook.js" afterPath="$PROJECT_DIR$/assets/js/photosfacebook.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/choiceController.class.php" afterPath="$PROJECT_DIR$/controllers/choiceController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/participantController.class.php" afterPath="$PROJECT_DIR$/controllers/participantController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/photoController.class.php" afterPath="$PROJECT_DIR$/controllers/photoController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/photo.class.php" afterPath="$PROJECT_DIR$/models/photo.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/facebookChoice.php" afterPath="$PROJECT_DIR$/view/facebookChoice.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/recapParticipant.php" afterPath="$PROJECT_DIR$/view/recapParticipant.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/validationPhoto.php" afterPath="$PROJECT_DIR$/view/validationPhoto.php" />
     </list>
     <ignored path="mvc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,32 +40,34 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="participantController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/participantController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="photo.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/photo.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.153846">
-              <caret line="14" column="42" selection-start-line="10" selection-start-column="32" selection-end-line="14" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="photoController.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="photoController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/photoController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48833033">
-              <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+            <state vertical-scroll-proportion="-7.5384617">
+              <caret line="106" column="45" selection-start-line="106" selection-start-column="45" selection-end-line="106" selection-end-column="45" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="indexController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/indexController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.076923">
+              <caret line="139" column="5" selection-start-line="93" selection-start-column="0" selection-end-line="139" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="facebookChoice.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/view/facebookChoice.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-4.269231">
+              <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="47" selection-end-column="9" />
+              <folding>
+                <marker date="1455984215141" expanded="true" signature="1624:1656" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -66,30 +75,45 @@
       <file leaf-file-name="validationPhoto.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/validationPhoto.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+            <state vertical-scroll-proportion="-10.461538">
+              <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="voteController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/voteController.class.php">
+      <file leaf-file-name="campagne.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/campagne.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.230769">
-              <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="53" selection-end-column="41" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="participant.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/participant.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-39.254547">
-              <caret line="127" column="46" selection-start-line="127" selection-start-column="46" selection-end-line="127" selection-end-column="46" />
+            <state vertical-scroll-proportion="8.7350235">
+              <caret line="232" column="0" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
               <folding>
-                <marker date="1455980522099" expanded="true" signature="1451:1519" placeholder="SELECT * FRO..participants..." />
+                <marker date="1455462004465" expanded="true" signature="2408:2525" placeholder="SELECT * FRO..${$model-&gt;table}..." />
+                <marker date="1455462004465" expanded="true" signature="3491:3571" placeholder="SELECT * FRO..${$model-&gt;table}..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="vote.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/vote.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.384615">
+              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+              <folding>
+                <marker date="1455963916615" expanded="true" signature="1164:1239" placeholder="SELECT DISTI..${$model-&gt;table}..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="photo.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/photo.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.5">
+              <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+              <folding>
+                <marker date="1455984649843" expanded="true" signature="1273:1329" placeholder="SELECT * FRO..${$model-&gt;table}..." />
               </folding>
             </state>
           </provider>
@@ -134,20 +158,20 @@
         <option value="$PROJECT_DIR$/view/photosalbumChoice.php" />
         <option value="$PROJECT_DIR$/core/view.class.php" />
         <option value="$PROJECT_DIR$/core/model.class.php" />
-        <option value="$PROJECT_DIR$/view/recapParticipant.php" />
-        <option value="$PROJECT_DIR$/assets/js/photosfacebook.js" />
-        <option value="$PROJECT_DIR$/controllers/choiceController.class.php" />
-        <option value="$PROJECT_DIR$/view/facebookChoice.php" />
         <option value="$PROJECT_DIR$/view/downloadChoice.php" />
-        <option value="$PROJECT_DIR$/assets/css/style.css" />
-        <option value="$PROJECT_DIR$/controllers/participantController.class.php" />
-        <option value="$PROJECT_DIR$/models/photo.class.php" />
         <option value="$PROJECT_DIR$/view/classementVote.php" />
         <option value="$PROJECT_DIR$/assets/js/vote.js" />
         <option value="$PROJECT_DIR$/view/indexVote.php" />
         <option value="$PROJECT_DIR$/controllers/voteController.class.php" />
         <option value="$PROJECT_DIR$/controllers/indexController.class.php" />
         <option value="$PROJECT_DIR$/models/participant.class.php" />
+        <option value="$PROJECT_DIR$/assets/js/photosfacebook.js" />
+        <option value="$PROJECT_DIR$/assets/css/style.css" />
+        <option value="$PROJECT_DIR$/controllers/participantController.class.php" />
+        <option value="$PROJECT_DIR$/view/recapParticipant.php" />
+        <option value="$PROJECT_DIR$/view/facebookChoice.php" />
+        <option value="$PROJECT_DIR$/controllers/choiceController.class.php" />
+        <option value="$PROJECT_DIR$/models/photo.class.php" />
         <option value="$PROJECT_DIR$/view/validationPhoto.php" />
         <option value="$PROJECT_DIR$/controllers/photoController.class.php" />
       </list>
@@ -283,9 +307,8 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/controllers/participantController.class.php</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/controllers/voteController.class.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/models/participant.class.php</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/models/photo.class.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -293,9 +316,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/models/critere.class.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/models/photo.class.php</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/models/vote.class.php</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -665,7 +685,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455980579569</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Controller d'ajout de la photo">
+      <created>1455981557478</created>
+      <option name="number" value="00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1455981557478</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TodoView">
@@ -686,7 +712,7 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20130932" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20130932" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -713,7 +739,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Page de téléchargement de photo vers album (non fonctionnel)" />
     <MESSAGE value="Telechargement de photo sur facebook" />
     <MESSAGE value="CORRECTION : Telechargement de photo sur facebook" />
     <MESSAGE value="TEST CAMPAGNE SUR SERVEUR" />
@@ -738,7 +763,8 @@
     <MESSAGE value="Ajout d'un nouveau participant (save() )" />
     <MESSAGE value="AJout participant, test si le participant est déja inscrit au concours" />
     <MESSAGE value="Fix : var_dump inutil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix : var_dump inutil" />
+    <MESSAGE value="Controller d'ajout de la photo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Controller d'ajout de la photo" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -915,6 +941,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39555556">
           <caret line="31" column="8" selection-start-line="31" selection-start-column="8" selection-end-line="40" selection-end-column="78" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -936,17 +963,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="29" selection-start-line="0" selection-start-column="29" selection-end-line="0" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/campagne.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-151.6923">
-          <caret line="232" column="0" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
-          <folding>
-            <marker date="1455462004465" expanded="true" signature="2408:2525" placeholder="SELECT * FRO..${$model-&gt;table}..." />
-            <marker date="1455462004465" expanded="true" signature="3491:3571" placeholder="SELECT * FRO..${$model-&gt;table}..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1006,33 +1022,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/recapParticipant.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04775281">
-          <caret line="7" column="51" selection-start-line="7" selection-start-column="51" selection-end-line="7" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/view/downloadChoice.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="27" selection-start-line="15" selection-start-column="16" selection-end-line="15" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="321" column="9" selection-start-line="321" selection-start-column="9" selection-end-line="321" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/view/facebookChoice.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5384617">
-          <caret line="16" column="146" selection-start-line="16" selection-start-column="142" selection-end-line="16" selection-end-column="146" />
           <folding />
         </state>
       </provider>
@@ -1069,40 +1062,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/js/photosfacebook.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/choiceController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.9230769">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="39" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/indexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.615385">
-          <caret line="84" column="37" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/vote.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3967684">
-          <caret line="16" column="47" selection-start-line="11" selection-start-column="32" selection-end-line="16" selection-end-column="47" />
-          <folding>
-            <marker date="1455963916615" expanded="true" signature="1164:1239" placeholder="SELECT DISTI..${$model-&gt;table}..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/models/participant.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-39.254547">
@@ -1113,43 +1072,118 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/participantController.class.php">
+    <entry file="file://$PROJECT_DIR$/assets/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.3121693">
+          <caret line="308" column="44" selection-start-line="308" selection-start-column="44" selection-end-line="308" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/photo.class.php">
+    <entry file="file://$PROJECT_DIR$/assets/js/photosfacebook.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.153846">
-          <caret line="14" column="42" selection-start-line="10" selection-start-column="32" selection-end-line="14" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.59130436">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/voteController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.230769">
-          <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="53" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.7327189">
+          <caret line="57" column="0" selection-start-line="51" selection-start-column="46" selection-end-line="53" selection-end-column="41" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/choiceController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55069125">
+          <caret line="122" column="0" selection-start-line="122" selection-start-column="0" selection-end-line="122" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/recapParticipant.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7050691">
+          <caret line="24" column="82" selection-start-line="24" selection-start-column="82" selection-end-line="24" selection-end-column="82" />
+          <folding>
+            <marker date="1455984086846" expanded="true" signature="1273:1281" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/participantController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6267281">
+          <caret line="22" column="12" selection-start-line="22" selection-start-column="12" selection-end-line="22" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/vote.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.384615">
+          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+          <folding>
+            <marker date="1455963916615" expanded="true" signature="1164:1239" placeholder="SELECT DISTI..${$model-&gt;table}..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/photo.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
+          <folding>
+            <marker date="1455984649843" expanded="true" signature="1273:1329" placeholder="SELECT * FRO..${$model-&gt;table}..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/view/validationPhoto.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="22" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+        <state vertical-scroll-proportion="-10.461538">
+          <caret line="16" column="9" selection-start-line="16" selection-start-column="9" selection-end-line="16" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/facebookChoice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.269231">
+          <caret line="37" column="6" selection-start-line="37" selection-start-column="6" selection-end-line="47" selection-end-column="9" />
+          <folding>
+            <marker date="1455984215141" expanded="true" signature="1624:1656" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/indexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.076923">
+          <caret line="139" column="5" selection-start-line="93" selection-start-column="0" selection-end-line="139" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/photoController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48833033">
-          <caret line="22" column="51" selection-start-line="22" selection-start-column="51" selection-end-line="22" selection-end-column="51" />
+        <state vertical-scroll-proportion="-7.5384617">
+          <caret line="106" column="45" selection-start-line="106" selection-start-column="45" selection-end-line="106" selection-end-column="45" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/campagne.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.7350235">
+          <caret line="232" column="0" selection-start-line="232" selection-start-column="0" selection-end-line="232" selection-end-column="0" />
+          <folding>
+            <marker date="1455462004465" expanded="true" signature="2408:2525" placeholder="SELECT * FRO..${$model-&gt;table}..." />
+            <marker date="1455462004465" expanded="true" signature="3491:3571" placeholder="SELECT * FRO..${$model-&gt;table}..." />
+          </folding>
         </state>
       </provider>
     </entry>

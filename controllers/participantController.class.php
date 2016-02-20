@@ -19,8 +19,13 @@ class participantController
         $view->setView("recapParticipant");
 
 
-        if( isset($_POST["url_photo"]) && !empty($_POST["url_photo"]) ){
-            $photo_url = $_POST["url_photo"];
+        if( isset($_POST["url_photo"]) && !empty($_POST["url_photo"])
+            && isset($_POST["id_participant"]) && !empty($_POST["id_participant"])
+            && isset($_POST["id_photo_facebook"]) && !empty($_POST["id_photo_facebook"])
+            && isset($_POST["id_album_facebook"]) && !empty($_POST["id_album_facebook"])
+            && isset($_POST["id_campagne"]) && !empty($_POST["id_campagne"])
+        ){
+            $posts = $_POST;
         }
         else{
             header("Location: ".BASE_URL."choice");
@@ -31,7 +36,8 @@ class participantController
         $arrayCampagne = self::getCampagneArrayAttributes();
 
 
-        $view->assign("url_photo", $photo_url);
+        $view->assign("posts", $posts);
+        $view->assign("base_url", BASE_URL);
         $view->assign("array_campagne", $arrayCampagne);
     }
 

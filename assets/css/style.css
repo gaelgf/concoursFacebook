@@ -311,8 +311,15 @@ body{
 						.select_picture .container_pictures ul li img:hover{
 							position: relative;
 							top:-5px;
+							box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
 							transition:all 0.5s;
 						}
+					.select_picture .container_pictures ul li img.active{
+						position: relative;
+						top:-5px;
+						box-shadow: 0px 5px 10px rgba(0,0,0,0.8);
+						transition:all 0.5s;
+					}
 		.form_upload{
 			text-align: center;
 			background-color: white;
