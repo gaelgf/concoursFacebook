@@ -9,24 +9,32 @@ class voteController{
         if (!isset($_SESSION['facebook_access_token'])) {
             header("Location: ".BASE_URL);
         } else {
-            $currentParticipantId = 1;
-            $photosNotVotedYet = self::getPhotosNotVotedYetByParticipantId($currentParticipantId);
 
-            if(count($photosNotVotedYet) == 0){
-                header("Location: ".BASE_URL."vote/classement");
+            // Recuperation de la valeur du participant
+            if( !isset($_SESSION["id_participant"]) || empty($_SESSION["id_participant"])){
+                header("Location: ".BASE_URL);
             }
             else{
-                $view->setView("indexVote");
+                $idParticipant = $_SESSION["id_participant"];
 
-                // Verification des valeurs de la campagne en cours
-                $arrayCampagne = self::getCampagneArrayAttributes();
-                $arrayCritere = critere::load();
-                $idPhotoAffichee = rand(0,count($photosNotVotedYet)-1);
-                $view->assign("photo", $photosNotVotedYet[$idPhotoAffichee]);
-                $view->assign("base_url", BASE_URL);
-                $view->assign("array_campagne", $arrayCampagne);
-                $view->assign("criteres", $arrayCritere);
-                $view->assign("participant", $currentParticipantId);
+                $photosNotVotedYet = self::getPhotosNotVotedYetByParticipantId($idParticipant);
+
+                if(count($photosNotVotedYet) == 0){
+                    header("Location: ".BASE_URL."vote/classement");
+                }
+                else{
+                    $view->setView("indexVote");
+
+                    // Verification des valeurs de la campagne en cours
+                    $arrayCampagne = self::getCampagneArrayAttributes();
+                    $arrayCritere = critere::load();
+                    $idPhotoAffichee = rand(0,count($photosNotVotedYet)-1);
+                    $view->assign("photo", $photosNotVotedYet[$idPhotoAffichee]);
+                    $view->assign("base_url", BASE_URL);
+                    $view->assign("array_campagne", $arrayCampagne);
+                    $view->assign("criteres", $arrayCritere);
+                    $view->assign("participant", $idParticipant);
+                }
             }
         }
     }
@@ -39,7 +47,7 @@ class voteController{
 
             foreach($criteres as $critere){
                 $id_critere = $critere->getId();
-                $vote = new vote(NULL,$_POST['id_photo'],$id_critere,date("Y-m-d"),$_POST["critere_".$id_critere],1);
+                $vote = new vote(NULL,$_POST['id_photo'],$id_critere,date("Y-m-d"),$_POST["critere_".$id_critere],$_POST['id_participant']);
                 $vote->save();
             }
 
@@ -52,6 +60,7 @@ class voteController{
     public function classementAction( $args ){
         $view = new view();
         $view->setView("classementVote");
+
     }
 
 

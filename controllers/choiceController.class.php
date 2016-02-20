@@ -15,16 +15,24 @@ class choiceController{
 
         if (!isset($_SESSION['facebook_access_token'])) {
             header("Location: ".BASE_URL);
-        } else {
+        }
+        else {
             // Verification des valeurs de la campagne en cours
             $arrayCampagne = self::getCampagneArrayAttributes();
 
-            $view->setView("indexChoice");
-            $view->assign("base_url", BASE_URL);
-            $view->assign("facebook_choice_url", BASE_URL.'choice/facebook');
-            $view->assign("download_choice_url", BASE_URL.'choice/download');
-            $view->assign("vote_url", BASE_URL.'vote');
-            $view->assign("array_campagne", $arrayCampagne);
+            // Si le participant a déja ajouté une photo au jeu en cours
+            if( isset($_SESSION["id_participant"]) && photo::alreadyAddPhoto($_SESSION["id_participant"],$arrayCampagne["id"]) ){
+                header("Location: ".BASE_URL."vote");
+            }
+            else{
+                $view->setView("indexChoice");
+                $view->assign("base_url", BASE_URL);
+                $view->assign("facebook_choice_url", BASE_URL.'choice/facebook');
+                $view->assign("download_choice_url", BASE_URL.'choice/download');
+                $view->assign("vote_url", BASE_URL.'vote');
+                $view->assign("array_campagne", $arrayCampagne);
+            }
+
         }
     }
 
@@ -35,20 +43,26 @@ class choiceController{
 
 
     public function downloadAction(){
-        $view = new view();
-
-        $fb = facebook::getVarFb();
-
-        $arrAlbum = $this->userAlbums( $fb );
-
 
         // Verification des valeurs de la campagne en cours
         $arrayCampagne = self::getCampagneArrayAttributes();
 
-        $view->setView("downloadChoice");
-        $view->assign("base_url", BASE_URL);
-        $view->assign("user_albums", $arrAlbum);
-        $view->assign("array_campagne", $arrayCampagne);
+        // Si le participant a déja ajouté une photo au jeu en cours
+        if( isset($_SESSION["id_participant"]) && photo::alreadyAddPhoto($_SESSION["id_participant"],$arrayCampagne["id"]) ){
+            header("Location: ".BASE_URL."vote");
+        }
+        else {
+            $view = new view();
+
+            $fb = facebook::getVarFb();
+
+            $arrAlbum = $this->userAlbums($fb);
+
+            $view->setView("downloadChoice");
+            $view->assign("base_url", BASE_URL);
+            $view->assign("user_albums", $arrAlbum);
+            $view->assign("array_campagne", $arrayCampagne);
+        }
     }
 
 
@@ -95,37 +109,45 @@ class choiceController{
 
 
     public function facebookAction( $args ){
-        $view = new view();
-
-
-
-        $fb = facebook::getVarFb();
-        $arrAlbum = $this->userAlbums( $fb );
-
-        if( isset($args["a"]) ){
-            if(array_key_exists($args["a"],$arrAlbum)){
-                $array_photos = $this->photosAlbum($fb,$args["a"]);
-                $view->assign("array_photos",$array_photos);
-                $view->assign("id_album",$args["a"]);
-            }
-            else{
-                header("Location: ". BASE_URL."choice/facebook");
-            }
-        }
-        else{
-            $view->assign("array_photos", "null");
-        }
 
         // Verification des valeurs de la campagne en cours
         $arrayCampagne = self::getCampagneArrayAttributes();
 
+        // Si le participant a déja ajouté une photo au jeu en cours
+        if( isset($_SESSION["id_participant"]) && photo::alreadyAddPhoto($_SESSION["id_participant"],$arrayCampagne["id"]) ){
+            header("Location: ".BASE_URL."vote");
+        }
+        else {
+            $view = new view();
 
 
-        $view->setView("facebookChoice");
-        $view->assign("base_url", BASE_URL);
-        $view->assign("user_albums", $arrAlbum);
-        $view->assign("id_campagne", $arrayCampagne["id"]);
-        $view->assign("array_campagne", $arrayCampagne);
+            $fb = facebook::getVarFb();
+            $arrAlbum = $this->userAlbums($fb);
+
+            if (isset($args["a"])) {
+                if (array_key_exists($args["a"], $arrAlbum)) {
+                    $array_photos = $this->photosAlbum($fb, $args["a"]);
+                    $view->assign("array_photos", $array_photos);
+                    $view->assign("id_album", $args["a"]);
+                } else {
+                    header("Location: " . BASE_URL . "choice/facebook");
+                }
+            } else {
+                $view->assign("array_photos", "null");
+            }
+
+            $id_participant = participant::getIdParticipant();
+            if ($id_participant == false) {
+                header("Location: " . BASE_URL);
+            }
+
+            $view->setView("facebookChoice");
+            $view->assign("base_url", BASE_URL);
+            $view->assign("user_albums", $arrAlbum);
+            $view->assign("id_campagne", $arrayCampagne["id"]);
+            $view->assign("array_campagne", $arrayCampagne);
+            $view->assign("id_participant", $id_participant);
+        }
     }
 
 

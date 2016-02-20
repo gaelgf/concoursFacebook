@@ -129,6 +129,49 @@ class participant extends model{
         return $participant;
     }
 
+    public static function getIdParticipantByIdFacebook($idFacebook){
+        $errors = [];
+        $table = get_called_class();
+        $model = new parent($table);
+
+        if (!$request = $model->pdo->query(
+            "SELECT * FROM participant WHERE id_facebook = '" . $idFacebook . "'"
+        )) {
+            $errors[] = "Erreur lors de la récupération de l'objet " . $table;
+        }
+
+        if ($participantArray = $request->fetch()) {
+            $participant = self::participantFromArray($participantArray);
+            return $participant;
+        } else {
+            $errors[] = "Erreur lors de la récupération de l'objet " . $table;
+        }
+
+        return $errors;
+    }
+
+
+    public static function getIdFacebookParticipantByIdParticipant($idParticipant){
+        $errors = [];
+        $table = get_called_class();
+        $model = new parent($table);
+
+        if (!$request = $model->pdo->query(
+            "SELECT * FROM participant WHERE id = '" . $idParticipant . "'"
+        )) {
+            $errors[] = "Erreur lors de la récupération de l'objet " . $table;
+        }
+
+        if ($participantArray = $request->fetch()) {
+            $participant = self::participantFromArray($participantArray);
+            return $participant;
+        } else {
+            $errors[] = "Erreur lors de la récupération de l'objet " . $table;
+        }
+
+        return $errors;
+    }
+
 
     private static function participantsFromParticipantsArrays($participantsArrays)
     {
@@ -138,6 +181,18 @@ class participant extends model{
         }
         return $participants;
     }
+
+
+    public static function getIdParticipant(){
+        if( isset($_SESSION["id_participant"]) && !empty($_SESSION["id_participant"]) ){
+            return $_SESSION["id_participant"];
+        }
+        else{
+            return false;
+        }
+    }
+
+
 
     /* Id */
     public function getId()

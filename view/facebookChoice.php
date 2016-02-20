@@ -18,7 +18,7 @@
                 <input type="hidden" class="url_photo" name="url_photo">
                 <input type="hidden" class="id_album_facebook" name="id_album_facebook" value="<?php echo $id_album; ?>">
                 <input type="hidden" class="id_photo_facebook" name="id_photo_facebook">
-                <input type="hidden" class="id_participant" name="id_participant" value="1">
+                <input type="hidden" class="id_participant" name="id_participant" value="<?php echo $id_participant; ?>">
                 <input type="hidden" class="id_campagne" name="id_campagne" value="<?php echo $id_campagne; ?>">
                 <input type="submit" class="boutons" value="Valider">
             </form>

@@ -111,6 +111,25 @@ class photo extends model{
         return $photos;
     }
 
+
+    public static function alreadyAddPhoto($idParticipant,$idCampagne){
+        $table = get_called_class();
+        $model = new parent($table);
+
+        $request = $model->pdo->query(
+            "SELECT * FROM photo WHERE id_participant = '" . $idParticipant . "' AND id_campagne = '".$idCampagne."'"
+        );
+
+        if ($photoArray = $request->fetch()) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+
+
+
     /* Id */
     public function getId()
     {

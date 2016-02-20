@@ -84,6 +84,8 @@ class indexController{
                     "true");
                 $participant->save();
             }
+
+            $_SESSION["id_participant"] = participant::getIdParticipantByIdFacebook($idFacebook)->getId();
             header("Location: ".BASE_URL."choice/");
         }
         else{
