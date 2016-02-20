@@ -27,6 +27,18 @@ class participantController
         ){
             $posts = $_POST;
         }
+        if( isset($_SESSION["url_photo"]) && !empty($_SESSION["url_photo"])
+            && isset($_SESSION["id_participant"]) && !empty($_SESSION["id_participant"])
+            && isset($_SESSION["id_photo_facebook"]) && !empty($_SESSION["id_photo_facebook"])
+            && isset($_SESSION["id_album_facebook"]) && !empty($_SESSION["id_album_facebook"])
+            && isset($_SESSION["id_campagne"]) && !empty($_SESSION["id_campagne"])
+        ){
+            $posts = $_SESSION;
+            unset($_SESSION["url_photo"]) ;
+            unset($_SESSION["id_photo_facebook" ]);
+            unset($_SESSION["id_album_facebook" ]);
+            unset($_SESSION["id_campagne"]);
+        }
         else{
             header("Location: ".BASE_URL."choice");
         }

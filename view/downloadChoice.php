@@ -13,6 +13,8 @@
             <img src="<?php echo $base_url; ?>assets/img/icones/arrow_select.png" class="arrow" alt="">
         </div>
     </div>
+    <input type="hidden" class="id_participant" name="id_participant" value="<?php echo $id_participant; ?>">
+    <input type="hidden" class="id_campagne" name="id_campagne" value="<?php echo $id_campagne; ?>">
     <div class="form_upload">
         <input type="file" name="image">
         <input class="boutons" type="submit"/>

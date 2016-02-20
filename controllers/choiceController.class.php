@@ -52,16 +52,26 @@ class choiceController{
             header("Location: ".BASE_URL."vote");
         }
         else {
-            $view = new view();
 
-            $fb = facebook::getVarFb();
+            $id_participant = participant::getIdParticipant();
+            if ($id_participant == false) {
+                header("Location: " . BASE_URL);
+            }
+            else{
+                $view = new view();
 
-            $arrAlbum = $this->userAlbums($fb);
+                $fb = facebook::getVarFb();
 
-            $view->setView("downloadChoice");
-            $view->assign("base_url", BASE_URL);
-            $view->assign("user_albums", $arrAlbum);
-            $view->assign("array_campagne", $arrayCampagne);
+                $arrAlbum = $this->userAlbums($fb);
+
+                $view->setView("downloadChoice");
+                $view->assign("base_url", BASE_URL);
+                $view->assign("user_albums", $arrAlbum);
+                $view->assign("array_campagne", $arrayCampagne);
+                $view->assign("id_campagne", $arrayCampagne["id"]);
+                $view->assign("array_campagne", $arrayCampagne);
+                $view->assign("id_participant", $id_participant);
+            }
         }
     }
 
@@ -83,11 +93,14 @@ class choiceController{
 
 
                 try{
-                    $response = $fb->post("/".$id_album."/photos",$data,$_SESSION['facebook_access_token']);
-                    $url_photo = $this->lastPhotoAlbum($fb,$id_album);
+                    $fb->post("/".$id_album."/photos",$data,$_SESSION['facebook_access_token']);
 
+                    $_SESSION["id_participant"] = $_POST["id_participant"];
+                    $_SESSION["id_photo_facebook" ]= "9999";
+                    $_SESSION["id_album_facebook" ]= $id_album;
+                    $_SESSION["id_campagne"] = $_POST["id_campagne"];
 
-                    header("Location: ".BASE_URL."participant/recap");
+                    header("Location: ".BASE_URL."choice/lastpicture");
                 }
                 catch(FacebookSDKException $e){
                     header("Location: ".BASE_URL."choice/download/erreur");
@@ -101,6 +114,21 @@ class choiceController{
             header("Location: ".BASE_URL."choice/download");
         }
     }
+
+    public function lastpictureAction(){
+
+        if(isset($_SESSION["id_album_facebook" ]) && !empty($_SESSION["id_album_facebook" ])){
+            $id_album = $_SESSION["id_album_facebook" ];
+            $fb = facebook::getVarFb();
+            $_SESSION["url_photo"] = $this->lastPhotoAlbum($fb,$id_album) ;
+            header("Location: ".BASE_URL."participant/recap");
+        }
+        else{
+            header("Location: ".BASE_URL."choice");
+        }
+    }
+
+
 
 
     /*********************************************************************/
@@ -223,8 +251,6 @@ class choiceController{
 
         $response = $fb->get("/".$idAlbum."/photos", $_SESSION['facebook_access_token']);
         $photos = $response->getDecodedBody()['data'];
-
-        print_r(count($photos));
 
         $nb = 1;
 
