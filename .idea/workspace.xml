@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ee0217f2-4d30-4a3f-834c-774b01da4dc5" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/indexController.class.php" afterPath="$PROJECT_DIR$/controllers/indexController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/voteController.class.php" afterPath="$PROJECT_DIR$/controllers/voteController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/participant.class.php" afterPath="$PROJECT_DIR$/models/participant.class.php" />
     </list>
     <ignored path="mvc.iws" />
@@ -44,23 +42,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="indexController.class.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="indexController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/indexController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3967684">
-              <caret line="73" column="65" selection-start-line="73" selection-start-column="65" selection-end-line="73" selection-end-column="65" />
+            <state vertical-scroll-proportion="-19.615385">
+              <caret line="84" column="37" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="participant.class.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="participant.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/models/participant.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.672728">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.30113637">
+              <caret line="120" column="68" selection-start-line="120" selection-start-column="68" selection-end-line="120" selection-end-column="68" />
               <folding>
-                <marker date="1455979923265" expanded="true" signature="1451:1519" placeholder="SELECT * FRO..participants..." />
+                <marker date="1455980522099" expanded="true" signature="1451:1519" placeholder="SELECT * FRO..participants..." />
               </folding>
             </state>
           </provider>
@@ -186,9 +184,9 @@
         <option value="$PROJECT_DIR$/view/classementVote.php" />
         <option value="$PROJECT_DIR$/assets/js/vote.js" />
         <option value="$PROJECT_DIR$/view/indexVote.php" />
-        <option value="$PROJECT_DIR$/models/participant.class.php" />
         <option value="$PROJECT_DIR$/controllers/voteController.class.php" />
         <option value="$PROJECT_DIR$/controllers/indexController.class.php" />
+        <option value="$PROJECT_DIR$/models/participant.class.php" />
       </list>
     </option>
   </component>
@@ -692,7 +690,13 @@
       <option name="project" value="LOCAL" />
       <updated>1455978831030</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="AJout participant, test si le participant est déja inscrit au concours">
+      <created>1455980402415</created>
+      <option name="number" value="00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1455980402415</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TodoView">
@@ -740,7 +744,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ajout bouton vote sur la apge d'accueil" />
     <MESSAGE value="Listage album, listages photos en cours" />
     <MESSAGE value="Page de téléchargement de photo vers album (non fonctionnel)" />
     <MESSAGE value="Telechargement de photo sur facebook" />
@@ -765,7 +768,8 @@
     <MESSAGE value="Affichage photos non votées" />
     <MESSAGE value="Mise en place du vote" />
     <MESSAGE value="Ajout d'un nouveau participant (save() )" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout d'un nouveau participant (save() )" />
+    <MESSAGE value="AJout participant, test si le participant est déja inscrit au concours" />
+    <option name="LAST_COMMIT_MESSAGE" value="AJout participant, test si le participant est déja inscrit au concours" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1167,21 +1171,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/participant.class.php">
+    <entry file="file://$PROJECT_DIR$/controllers/indexController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.672728">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <marker date="1455979923265" expanded="true" signature="1451:1519" placeholder="SELECT * FRO..participants..." />
-          </folding>
+        <state vertical-scroll-proportion="-19.615385">
+          <caret line="84" column="37" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/indexController.class.php">
+    <entry file="file://$PROJECT_DIR$/models/participant.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3967684">
-          <caret line="73" column="65" selection-start-line="73" selection-start-column="65" selection-end-line="73" selection-end-column="65" />
-          <folding />
+        <state vertical-scroll-proportion="0.30113637">
+          <caret line="120" column="68" selection-start-line="120" selection-start-column="68" selection-end-line="120" selection-end-column="68" />
+          <folding>
+            <marker date="1455980522099" expanded="true" signature="1451:1519" placeholder="SELECT * FRO..participants..." />
+          </folding>
         </state>
       </provider>
     </entry>

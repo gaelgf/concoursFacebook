@@ -119,7 +119,6 @@ class participant extends model{
     }
 
     public static function participantFromArray($participantArray) {
-        var_dump($participantArray);
         $participant = new self((isset($participantArray["id"]) ? $participantArray["id"] : NULL),
                                     $participantArray["id_campagne"],
                                     $participantArray["id_facebook"],
