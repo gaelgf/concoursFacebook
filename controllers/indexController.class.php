@@ -58,11 +58,30 @@ class indexController{
 
         if (isset($accessToken)) {
             $_SESSION['facebook_access_token'] = (string) $accessToken;
-            header("Location: ".BASE_URL."choice/");
+
+
+            // Campagne en cours
+            $arrayCampagne = self::getCampagneArrayAttributes();
+
+            // Recuperation des données facebook
+            $fb = facebook::getVarFb();
+            $response = $fb->get('/me', $_SESSION['facebook_access_token']);
+
+            // Inscription dans base de données du participant
+            $participant = new participant(
+                NULL,
+                $arrayCampagne["id"],
+                $response->getDecodedBody()["id"],
+                explode(" ",$response->getDecodedBody()["name"])[1],
+                explode(" ",$response->getDecodedBody()["name"])[0],
+                "1990-04-15",
+                "true");
+            //$participant->save();
+
+            //header("Location: ".BASE_URL."choice/");
         }
         else{
-            // redirection vers accueil
-            //header("Location: ".BASE_URL);
+            header("Location: ".BASE_URL);
         }
     }
 
