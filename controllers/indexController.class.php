@@ -67,18 +67,24 @@ class indexController{
             $fb = facebook::getVarFb();
             $response = $fb->get('/me', $_SESSION['facebook_access_token']);
 
-            // Inscription dans base de données du participant
-            $participant = new participant(
-                NULL,
-                $arrayCampagne["id"],
-                $response->getDecodedBody()["id"],
-                explode(" ",$response->getDecodedBody()["name"])[1],
-                explode(" ",$response->getDecodedBody()["name"])[0],
-                "1990-04-15",
-                "true");
-            //$participant->save();
 
-            //header("Location: ".BASE_URL."choice/");
+            $idFacebook = $response->getDecodedBody()["id"];
+            $idCampagne = $arrayCampagne["id"];
+
+            // Si la personne participe deja au concours en cours
+            if( !participant::isAlreadyParticipating( $idFacebook , $idCampagne )){
+                // Inscription dans base de données du participant
+                $participant = new participant(
+                    NULL,
+                    $idCampagne,
+                    $idFacebook,
+                    explode(" ",$response->getDecodedBody()["name"])[1],
+                    explode(" ",$response->getDecodedBody()["name"])[0],
+                    date("Y-m-d"),
+                    "true");
+                $participant->save();
+            }
+            header("Location: ".BASE_URL."choice/");
         }
         else{
             header("Location: ".BASE_URL);
