@@ -59,17 +59,42 @@ class voteController{
 
     public function classementAction( $args ){
 
-        $view = new view();
-        $view->setView("classementVote");
+        if(!isset($_SESSION["id_participant"])&&empty($_SESSION["id_participant"])){
+            header("Location: ".BASE_URL);
+        }
+        else{
+            $view = new view();
+            $view->setView("classementVote");
 
-        $arrayCampagne = self::getCampagneArrayAttributes();
-        $photo = photo::loadByParticipantId($_SESSION["id_participant"])[0];
-        $votes = vote::loadByParticipantId($_SESSION["id_participant"]);
+            $arrayCampagne = self::getCampagneArrayAttributes();
+            $allVotes = vote::load();
+            $allPhotos = photo::load();
 
-        var_dump($votes);
+            $photosCampagne = $this->getPhotosCurrentCampagne($allPhotos , $arrayCampagne["id"]);
+            $votesCampagnes = $this->getVotesCampagne($allVotes , $photosCampagne);
 
-        $view->assign("photo", $photo);
-        $view->assign("array_campagne", $arrayCampagne);
+
+            $statsParticipants = $this->getStatsParticipants($photosCampagne,$votesCampagnes);
+            //
+            // Recuperation des votes du participant
+            //
+
+            die();
+            $photo = photo::loadByParticipantId($_SESSION["id_participant"])[0];
+            $votes = vote::loadByParticipantId($_SESSION["id_participant"]);
+
+            $moyennes = self::getMoyennes($votes);
+            $moyenneGenerale = self::getMoyenneGenerale($votes);
+
+            $criteres = critere::load();
+
+            $view->assign("photo", $photo);
+            $view->assign("array_campagne", $arrayCampagne);
+            $view->assign("moyennes", $moyennes);
+            $view->assign("moyenne", $moyenneGenerale);
+            $view->assign("criteres", $criteres);
+
+        }
     }
 
 
@@ -96,13 +121,6 @@ class voteController{
     }
 
 
-
-
-
-
-
-
-
     public function verifyPostCriteres( $arrayCritere ){
         $res = true;
         foreach($arrayCritere as $critere){
@@ -114,15 +132,6 @@ class voteController{
 
         return $res;
     }
-
-
-
-
-
-
-
-
-
 
 
     public function getPhotosNotVotedYetByParticipantId($participantId) {
@@ -152,6 +161,89 @@ class voteController{
     }
 
 
+    public static function getMoyennes($votes){
+        $arrayVotes = [];
+        foreach($votes as $vote){
+            $arrayVotes[$vote['id_critere']][] = $vote['valeur'];
+        }
+        $arrayCritesMoyennes = [];
+        foreach($arrayVotes as $key => $criteres){
+            $nb = 0;
+            $sum  =0;
+            foreach($criteres as $vote){
+                $nb++;
+                $sum += $vote;
+            }
+            $arrayCritesMoyennes[$key] = $sum/$nb;
+        }
+
+        return $arrayCritesMoyennes;
+    }
+
+
+    public static function getMoyenneGenerale($votes){
+        $nb = 0;
+        $sum = 0;
+        foreach($votes as $vote){
+            $nb++;
+            $sum += $vote["valeur"];
+        }
+
+        return $sum / $nb;
+    }
+
+    public function getStatsParticipants($photosCampagne,$votesCampagnes){
+        $res = [];
+        die();
+        foreach( $photosCampagne as $photo ){
+            $idPhoto = $photo->getId();
+
+            $nb = 0;
+            $sum = 0;
+            foreach($votesCampagnes as $vote) {
+                if ($vote->getIdPhoto() == $idPhoto) {
+                    $sum += $vote->getValeur();
+                    $nb++;
+                }
+            }
+
+            $res[$idPhoto] = [
+                "id_participant" => $photo->getIdParticipant(),
+                "url_photo" => $photo->getUrlPhoto(),
+                "moyenne" => $sum/$nb
+            ];
+        }
+        die();
+
+        var_dump($res);
+    }
+
+    // Méthode renvoyant toutes les photos de la campagne
+    public function getPhotosCurrentCampagne( $allPhotos , $idCampagne ){
+        $res = [];
+
+        foreach($allPhotos as $photo){
+            if($photo->getIdCampagne() == $idCampagne){
+                $res[] = $photo;
+            }
+        }
+
+        return $res;
+    }
+
+    public function getVotesCampagne( $allVotes , $allPhotos){
+        $arrIdPhotos = [];
+        foreach($allPhotos as $photo){ $arrIdPhotos[] = $photo->getId(); }
+
+        $res = [];
+        foreach($allVotes as $vote){
+            if(in_array($vote->getIdPhoto(),$arrIdPhotos) ){
+                $res[] = $vote;
+            }
+        }
+
+        return $res;
+    }
 
     public function getCampagneArrayAttributes(){
 

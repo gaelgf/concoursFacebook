@@ -114,7 +114,7 @@ class vote extends model{
                                     $voteArray["date"],
                                     $voteArray["valeur"],
                                     $voteArray["id_participant"]);
-        return $participant;
+        return $vote;
     }
 
 
