@@ -37,6 +37,23 @@ class photo extends model{
         return $errors;
     }
 
+
+    public static function loadByParticipantId($idParticipant)
+    {
+
+        $errors = [];
+        $table = get_called_class();
+        $model = new parent($table);
+
+        if (!$request = $model->pdo->query(
+            "SELECT * FROM " . $model->table . " WHERE id_participant = " . $idParticipant
+        )) {
+            return false;
+        }
+
+        return $request->fetchAll();
+    }
+
     public static function loadByCampagneId($campagneId)
     {
         $errors = [];

@@ -51,7 +51,7 @@ class vote extends model{
 
         if($photosIdsArray = $request->fetchAll()) {
             $photosIds = [];
-            for ($i=0; $i < count($photosIdsArray); $i++) { 
+            for ($i=0; $i < count($photosIdsArray); $i++) {
                $photosIds[] = $photosIdsArray[$i]["id_photo"];
             }
             return $photosIds;
@@ -59,7 +59,7 @@ class vote extends model{
             $errors[] = "Erreur lors de la récupération des votes du participant";
         }
 
-        return $errors;        
+        return $errors;
     }
 
     public static function loadVotesByPhotoId($photoId) {
@@ -120,6 +120,19 @@ class vote extends model{
         $votesArrays = parent::get();
         $votes = self::votesFromVotesArrays($votesArrays);
         return $votes;
+    }
+
+
+    public static function loadByParticipantId( $idParticipant ){
+
+        $table = get_called_class();
+        $model = new parent($table);
+
+        $request = $model->pdo->query(
+            "SELECT * FROM " . $model->table . " WHERE id_participant = " . $idParticipant
+        );
+
+        return $request->fetchAll();
     }
 
     public static function checkVoteArray( $voteArray ) {
