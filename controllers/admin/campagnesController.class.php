@@ -49,9 +49,11 @@ class campagnesController{
 
             $campagne = campagne::loadById(intval(urldecode($args[2])));
             if ( !is_array( $campagne ) ) {
+                $participants = participant::loadParticipantsByCampagneId($campagne->getId());
                 $view = new view();
                 $view->setView("admin/showCampagne", "adminlayout");
                 $view->assign("campagne", $campagne);
+                $view->assign("participants", $participants);
                 if(isset($errors)) {
                     $view->assign("errorsMessages", $errors);
                 }
@@ -64,9 +66,11 @@ class campagnesController{
         } else {
             $campagne = campagne::loadByName(urldecode($args[2]));
             if ( !is_array( $campagne ) ) {
+                $participants = participant::loadParticipantsByCampagneId($campagne->getId());
                 $view = new view();
                 $view->setView("admin/showCampagne", "adminlayout");
                 $view->assign("campagne", $campagne);
+                $view->assign("participants", $participants);
                 if(isset($errors)) {
                     $view->assign("errorsMessages", $errors);
                 }

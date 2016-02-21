@@ -179,6 +179,9 @@ class campagne extends model{
     }
 
     public static function campagneFromArray($campagneArray) {
+        if(!isset($campagneArray["is_active"])) {
+            $campagneArray["is_active"] = 'off';
+        }
         $campagne = new self((isset($campagneArray["id"]) ? $campagneArray["id"] : NULL),
                                     $campagneArray["logo_entreprise"],
                                     $campagneArray["nom_campagne"],

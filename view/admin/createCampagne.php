@@ -144,7 +144,7 @@
                 <div class="col-sm-8">
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" id="inputIsActive" name="is_active" required>
+                        <input type="checkbox" id="inputIsActive" name="is_active">
                       </label>
                     </div>
                 </div>

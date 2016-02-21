@@ -153,7 +153,7 @@
                 <div class="col-sm-8">
                     <div class="checkbox">
                       <label>
-                        <input type="checkbox" id="is_active" name="is_active" required>
+                        <input type="checkbox" id="is_active" name="is_active">
                       </label>
                     </div>
                 </div>
@@ -174,15 +174,16 @@
 	$( document ).ready(function() {
 
 	    var campagne = {
-			text_accueil: <?php echo '"' . $campagne->getTextAccueil() . '"'; ?>,
-			text_felicitations: <?php echo '"' . $campagne->getTextFelicitations() . '"'; ?>,
-			description_lot: <?php echo '"' . $campagne->getDescriptionLot() . '"'; ?>,
+			text_accueil: <?php echo "'" . html_entity_decode($campagne->getTextAccueil()) . "'"; ?>,
+			text_felicitations: <?php echo '"' . html_entity_decode($campagne->getTextFelicitations()) . '"'; ?>,
+			description_lot: <?php echo '"' . html_entity_decode($campagne->getDescriptionLot()) . '"'; ?>,
 			is_active: <?php echo '"'.$campagne->getIsActive().'"' ?>
 	    };
 	    for (var attr in campagne) {
 	        if (campagne.hasOwnProperty(attr)) {
 	        	if(attr !== 'is_active') {
-	        		$('#'+attr).html(unescape(campagne[attr])).val();
+	        		$('#'+attr)
+                        .html( campagne[attr] ).val();
 	        	} else {
 	        		$('#'+attr).prop('checked', campagne.is_active);
 	        	}

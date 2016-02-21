@@ -55,14 +55,14 @@ class participant extends model{
         $model = new parent($table);
 
         if (!$request = $model->pdo->query(
-            "SELECT * FROM participants WHERE id_campagne = '" . $campagneId . "'"
+            "SELECT * FROM participant WHERE id_campagne = '" . $campagneId . "'"
         )) {
             $errors[] = "Erreur lors de la récupération de l'objet " . $table;
         }
 
-        if ($participantArray = $request->fetch()) {
-            $participant = self::participantFromArray($participantArray);
-            return $participant;
+        if ($participantArray = $request->fetchAll()) {
+            $participants = self::participantsFromParticipantsArrays($participantArray);
+            return $participants;
         } else {
             $errors[] = "Erreur lors de la récupération de l'objet " . $table;
         }
