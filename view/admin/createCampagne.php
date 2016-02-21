@@ -1,4 +1,4 @@
-<h1>Créer un nouveau concours</h1>
+<h1><i class="fa fa-plus-circle"></i> Créer un nouveau concours</h1>
 
 <?php
     if(isset($successMessages)) {

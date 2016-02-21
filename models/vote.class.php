@@ -62,6 +62,59 @@ class vote extends model{
         return $errors;        
     }
 
+    public static function loadVotesByPhotoId($photoId) {
+        $errors = [];
+        $table = get_called_class();
+        $model = new parent($table);
+
+        if (!$request = $model->pdo->query(
+            "SELECT * FROM " . $model->table . " WHERE id_photo = '" . $photoId . "'"
+        )) {
+            $errors[] = "Erreur lors de la récupération des votes pour la photo " . $photoId;
+        }
+
+        if ($VotesArrays = $request->fetchAll()) {
+            $votes = self::votesFromVotesArrays($VotesArrays);
+            return $votes;
+        } else {
+            $errors[] = "Erreur lors de la récupération des votes pour la photo " . $photoId;
+        }
+
+        return $errors;
+    }
+
+    public static function loadByPhotoIds($photosIds)
+    {
+
+        $errors = [];
+        $table = get_called_class();
+        $model = new parent($table);
+
+        $stringRequest = "SELECT * FROM " . $table . " WHERE ";
+        foreach ($photosIds as $key => $photoId) {
+            if($key !== count($photosIds)-1) {
+                $stringRequest .= "id_photo = '" . $photoId . "' OR ";
+            } else {
+                $stringRequest .= "id_photo = '" . $photoId . "'";
+            }
+        }
+
+        if (!$request = $model->pdo->query(
+            $stringRequest
+        )) {
+            $errors[] = "Erreur lors de la récupération de l'objet " . $table;
+        }
+
+        if ($votesArrays = $request->fetchAll()) {
+            $votes = self::votesFromVotesArrays($votesArrays);
+            return $votes;
+        } else {
+            $errors[] = "Erreur lors de la récupération de l'objet " . $table;
+        }
+
+        return $errors;
+    }
+
     public static function load()
     {
         $votesArrays = parent::get();
@@ -101,7 +154,7 @@ class vote extends model{
                                     $voteArray["date"],
                                     $voteArray["valeur"],
                                     $voteArray["id_participant"]);
-        return $participant;
+        return $vote;
     }
 
 

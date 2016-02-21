@@ -12,8 +12,21 @@ body{
 	font-size: 14px;
 }
 
-td{
+td {
+	white-space: nowrap;
+	max-width: 500px;
+	overflow: auto;
 	vertical-align: middle !important;
+}
+
+h1{
+	text-align:center;
+	font-size: 40px;
+	margin-top: 0px;
+}
+
+#page-wrapper{
+	padding: 40px 30px;
 }
 
 	/****************************************************************************************/
@@ -50,8 +63,25 @@ td{
 	/*										SHOW CAMPAGNE									*/
 	/****************************************************************************************/
 	#showCampagne{
-		margin-top: 70px;
+		margin-top: 30px;
 	}
+
+		#showCampagne #showCampagneTabs{
+			font-size: 20px;
+		}
+
+			#showCampagne #showCampagneTabs a:hover{
+				cursor: pointer;
+			}
+
+		#showCampagne .tab-content {
+			margin-top: 50px;
+		}
+
+			#showCampagne .tab-content .tab-pane > .row{
+				margin-bottom: 30px;
+			}
+
 		#showCampagne > .row{
 			margin-bottom: 20px;
 		}

@@ -174,9 +174,9 @@
 	$( document ).ready(function() {
 
 	    var campagne = {
-			text_accueil: <?php echo "'" . html_entity_decode($campagne->getTextAccueil()) . "'"; ?>,
-			text_felicitations: <?php echo '"' . html_entity_decode($campagne->getTextFelicitations()) . '"'; ?>,
-			description_lot: <?php echo '"' . html_entity_decode($campagne->getDescriptionLot()) . '"'; ?>,
+			text_accueil: <?php echo "'" . preg_replace('/\s+/', ' ', html_entity_decode($campagne->getTextAccueil())) . "'"; ?>,
+			text_felicitations: <?php echo '"' . preg_replace('/\s+/', ' ', html_entity_decode($campagne->getTextFelicitations())) . '"'; ?>,
+			description_lot: <?php echo '"' . preg_replace('/\s+/', ' ', html_entity_decode($campagne->getDescriptionLot())) . '"'; ?>,
 			is_active: <?php echo '"'.$campagne->getIsActive().'"' ?>
 	    };
 	    for (var attr in campagne) {

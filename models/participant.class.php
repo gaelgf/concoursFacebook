@@ -82,6 +82,38 @@ class participant extends model{
         return $errors;
     }
 
+    public static function loadByIds($participantsIds)
+    {
+
+        $errors = [];
+        $table = get_called_class();
+        $model = new parent($table);
+
+        $stringRequest = "SELECT * FROM participant WHERE ";
+        foreach ($participantsIds as $key => $participantId) {
+            if($key !== count($participantsIds)-1) {
+                $stringRequest .= "id = '" . $participantId . "' OR ";
+            } else {
+                $stringRequest .= "id = '" . $participantId . "'";
+            }
+        }
+
+        if (!$request = $model->pdo->query(
+            $stringRequest
+        )) {
+            $errors[] = "Erreur lors de la récupération de l'objet " . $table;
+        }
+
+        if ($participantsArrays = $request->fetchAll()) {
+            $participants = self::participantsFromParticipantsArrays($participantsArrays);
+            return $participants;
+        } else {
+            $errors[] = "Erreur lors de la récupération de l'objet " . $table;
+        }
+
+        return $errors;
+    }
+
 
     public static function load()
     {

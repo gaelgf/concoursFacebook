@@ -15,7 +15,9 @@ class model{
         }
 
         try {
-            $this->pdo = new PDO('pgsql:dbname='.DATABASE.';host='.HOST, USERNAME, PASSWORD);
+            $this->pdo = new PDO('pgsql:dbname='.DATABASE.';host='.HOST, USERNAME, PASSWORD, array(
+                                    PDO::ATTR_PERSISTENT => true
+                                ));
         } catch (PDOException $e) {
             var_dump($e->getMessage());
         }

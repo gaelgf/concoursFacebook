@@ -18,9 +18,11 @@
 	<table class="table">
 		<thead>
 			<tr>
+				<th>Actions</th>
+
 				<th>id</th>
-				<th>logo_entreprise</th>
 				<th>nom_campagne</th>
+				<th>logo_entreprise</th>
 				<th>date_debut</th>
 				<th>date_fin</th>
 				<th>couleur</th>
@@ -34,8 +36,6 @@
 				<th>photo_accueil_two</th>
 				<th>photo_accueil_three</th>
 				<th>icone_principale</th>
-
-				<th>Actions</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -43,9 +43,14 @@
 				foreach ($campagnes as $campagne) {
 			?>
 				<tr>
+					<td>
+						<a class="btn btn-sm btn-primary" style="display:block; margin-bottom:5px" href=<?php echo BASE_URL . 'admin/campagnes/show/' . urlencode ($campagne->getNomCampagne()); ?> role="button"><i class="fa fa-eye"></i> Voir</a>
+						<a class="btn btn-sm btn-primary" style="display:block; margin-bottom:5px" href=<?php echo BASE_URL . 'admin/campagnes/edit/' . urlencode ($campagne->getNomCampagne()); ?> role="button"><i class="fa fa-pencil-square-o"></i> 	Editer</a>
+						<a class="btn btn-sm btn-danger" style="display:block; margin-bottom:5px" href=<?php echo BASE_URL . 'admin/campagnes/delete/' . urlencode ($campagne->getNomCampagne()); ?>><i class="fa fa-trash"></i> 	Supprimer</a>
+					</td>
 					<td><?php echo html_entity_decode($campagne->getId()); ?></td>
-					<td><?php echo html_entity_decode($campagne->getLogoentreprise()); ?></td>
 					<td><?php echo html_entity_decode($campagne->getNomCampagne()); ?></td>
+					<td><?php echo html_entity_decode($campagne->getLogoentreprise()); ?></td>
 					<td><?php echo html_entity_decode($campagne->getDateDebut()); ?></td>
 					<td><?php echo html_entity_decode($campagne->getDateFin()); ?></td>
 					<td><?php echo html_entity_decode($campagne->getCouleur()); ?></td>
@@ -59,11 +64,6 @@
 					<td><?php echo html_entity_decode($campagne->getPhotoAccueilTwo()); ?></td>
 					<td><?php echo html_entity_decode($campagne->getPhotoAccueilThree()); ?></td>
 					<td><?php echo html_entity_decode($campagne->getIconePrincipale()); ?></td>
-					<td>
-						<a class="btn btn-sm btn-primary" href=<?php echo BASE_URL . 'admin/campagnes/show/' . urlencode ($campagne->getNomCampagne()); ?> role="button"><i class="fa fa-eye"></i> Voir</a>
-						<a class="btn btn-sm btn-primary" href=<?php echo BASE_URL . 'admin/campagnes/edit/' . urlencode ($campagne->getNomCampagne()); ?> role="button"><i class="fa fa-pencil-square-o"></i> 	Editer</a>
-						<a class="btn btn-sm btn-primary" href=<?php echo BASE_URL . 'admin/campagnes/delete/' . urlencode ($campagne->getNomCampagne()); ?>><i class="fa fa-trash"></i> 	Supprimer</a>
-					</td>
 				</tr>
 			<?php
 				}

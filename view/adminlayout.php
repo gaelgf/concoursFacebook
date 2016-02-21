@@ -44,16 +44,30 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href=<?php echo BASE_URL . "admin/"; ?>>Dashboard</a>
+                            <a href=<?php echo BASE_URL . "admin/index/index"; ?>><i class="fa fa-home"></i> Accueil</a>
                         </li>
                         <li>
-                            <a href="#">Concours<span class="fa arrow"></span></a>
+                            <a href=<?php echo  BASE_URL . 'admin/campagnes/' ?> ><i class="fa fa-trophy"></i> Concours<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href=<?php echo BASE_URL . "admin/campagnes/showCurrent"; ?> ><i class="fa fa-eye"></i> Voir le concours en cours</a>
                                 </li>
                                 <li>
-                                    <a href=<?php echo BASE_URL . "admin/campagnes/showall"; ?> ><i class="fa fa-eye"></i> Voir la liste</a>
+                                    <a href=<?php echo BASE_URL . "admin/campagnes/show/"; ?> ><i class="fa fa-th-list"></i> Voir la liste<span class="fa arrow"></span></a>
+                                    <ul class="nav nav-third-level">
+                                        <?php
+                                            $concoursForMenu = campagne::load();
+                                            foreach ($concoursForMenu as $concours) {
+                                        ?>
+                                            <li>
+                                                <a href=<?php echo  BASE_URL . 'admin/campagnes/show/' . urlencode($concours->getNomCampagne()); ?> >
+                                                    <i class="fa fa-eye"></i> <?php echo $concours->getNomCampagne();?>
+                                                </a>
+                                            </li>
+                                        <?php
+                                            } 
+                                        ?>
+                                    </ul>
                                 </li>
                                 <li>
                                     <a href=<?php echo BASE_URL . "admin/campagnes/create"; ?> ><i class="fa fa-plus-circle"></i> Créer un nouveau</a>
