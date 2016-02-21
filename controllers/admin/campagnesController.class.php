@@ -71,7 +71,7 @@ class campagnesController{
                 $inscrits = participant::loadParticipantsByCampagneId($campagne->getId());
                 $photos = photo::loadByCampagneId($campagne->getId());
                 
-                $participantsIds = [];                
+                $participantsIds = [];         
                 foreach ($photos as $key => $photo) {
                     $participantsIds []= $photo->getIdParticipant();
                     $photosByParticipants[$key] = $photo;
@@ -87,41 +87,53 @@ class campagnesController{
                 }
 
                 $votes = vote::loadByPhotoIds($photosIds);
-                $votesByPhotos = [];
-                foreach ($votes as $vote) {
+                foreach ($votes as $key => $vote) {
                     $votesByPhotos[$vote->getIdPhoto()][] = $vote;
+                }
+
+                $test = [];
+                foreach($photos as $key => $photo) {
+                    $finded = false; 
+                    foreach ($votesByPhotos as $keyVote => $vote) {
+                        if($photo->getId() === $keyVote) {
+                            $test[$key] = $vote;
+                            $finded = true;
+                            break;
+                        }
+                    }
+                    if($finded === false) {
+                        $test[$key] = [];
+                    }
                 }
 
                 $notes = [];
                 $criteres = critere::load();
-                foreach ($votesByPhotos as $key => $votesByPhoto) {
+                foreach ($test as $key => $votesByPhoto) {
                     $notes[$key] = [];
                     foreach ($criteres as $critere) {
                         $notes[$key][$critere->getNomCritere()] = 0;
                     }
                 }
 
-                foreach ($votesByPhotos as $key => $votesByPhoto) {
+                foreach ($test as $key => $votesByPhoto) {
                     if(count($votesByPhoto) === 0) {
                         foreach ($criteres as $critere) {
                             $notes[$key][$critere->getNomCritere()] = 'aucun vote';
                         }
                     } else {
-                        foreach ($votesByPhoto as $vote) {
+                        foreach ($votesByPhoto as $keyVote => $vote) {
                             foreach ($criteres as $critere) {
                                 if($critere->getId() === $vote->getIdCritere()) {
                                     $notes[$key][$critere->getNomCritere()] += $vote->getValeur();
                                 }
                             }
                         }
-                        var_dump($notes);
                         foreach ($criteres as $critere) {
-                            $notes[$key][$critere->getNomCritere()] /= count($votesByPhoto);
-                            $notes[$key][$critere->getNomCritere()] = round($notes[$key][$critere->getNomCritere()]);
+                            $notes[$key][$critere->getNomCritere()] /= count($votesByPhoto) / 3;
+                            $notes[$key][$critere->getNomCritere()] = $notes[$key][$critere->getNomCritere()];
                         }
                     }                    
                 }
-                var_dump($notes);
 
                 $view = new view();
                 $view->setView("admin/showCampagne", "adminlayout");

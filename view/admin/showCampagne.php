@@ -175,9 +175,8 @@
 		  	</div>
 
 			<?php
-				$i=0;
-				foreach ($inscrits as $inscrit) {
-					if($i%3===0) {
+				foreach ($inscrits as $key => $inscrit) {
+					if($key%3===0) {
 						echo '<div class="row">';
 					}
 							echo '<div class="col-sm-4">';
@@ -186,10 +185,9 @@
 								echo '<h5><strong>Date de naissance :</strong> ' . $inscrit->getDateNaissance() . '</h5>';
 								echo '<h5><strong>Validation :</strong> ' . $inscrit->getValidation() . '</h5>';
 							echo '</div>';
-					if($i%3===2 || next($inscrits) === false) {
+					if($key%3===2 || $key === count($inscrits) - 1) {
 						echo '</div>';
 					}
-					$i++;
 				}
 			?>
 
@@ -205,28 +203,22 @@
 		  	</div>
 
 			<?php
-				$i=0;
 				foreach ($participants as $key => $participant) {
-					if(strpos($key, 'photo') === false) {
-						if($i%3===0) {
-							echo '<div class="row">';
-						}
-								echo '<div class="col-sm-4" style="text-align:center">';
-									echo '<img height="300px" width="300px" src="' . $photosByParticipants[$key]->getUrlPhoto() . '" class="img-circle">';
-									/*foreach ($notesByPhotos as $keyNotesByPhoto => $notesByPhoto) {
-										foreach ($notesByPhoto as $keyNote => $note) {
-											echo '<h1><strong>' . $keyNote . ' :</strong> ' . $note . '</h1>';
-										}
-									}*/
-									echo '<h3><strong>Nom :</strong> ' . $participant->getNom() . '</h3>';
-									echo '<h4><strong>Prenom :</strong> ' . $participant->getPrenom() . '</h4>';
-									echo '<h5><strong>Date de naissance :</strong> ' . $participant->getDateNaissance() . '</h5>';
-									echo '<h5><strong>Validation :</strong> ' . $participant->getValidation() . '</h5>';
-								echo '</div>';
-						if($i%3===2 || next($participants) === false) {
+					if($key%3===0) {
+						echo '<div class="row">';
+					}
+							echo '<div class="col-sm-4" style="text-align:center">';
+								echo '<img height="300px" width="300px" src="' . $photosByParticipants[$key]->getUrlPhoto() . '" class="img-circle">';
+								foreach ($notesByParticipants[$key] as $keyNote => $note) {
+									echo '<h1><strong>' . $keyNote . ' :</strong> ' . $note . '</h1>';
+								}
+								echo '<h3><strong>Nom :</strong> ' . $participant->getNom() . '</h3>';
+								echo '<h4><strong>Prenom :</strong> ' . $participant->getPrenom() . '</h4>';
+								echo '<h5><strong>Date de naissance :</strong> ' . $participant->getDateNaissance() . '</h5>';
+								echo '<h5><strong>Validation :</strong> ' . $participant->getValidation() . '</h5>';
 							echo '</div>';
-						}
-						$i++;
+					if($key%3===2 || $key === count($participants) - 1) {
+						echo '</div>';
 					}
 				}
 			?>
@@ -313,23 +305,29 @@
 			<th>Prenom</th>
 			<th>Date de naissance</th>
 			<th>Validation</th>
+			<?php foreach ($notesByParticipants[0] as $keyNote => $note) { ?>
+				<th><?php echo $keyNote; ?></th>
+			<?php } ?>
 		</tr>
 	</thead>
 	<tbody>
-				<?php
-					foreach ($participants as $key => $participant) {
-						if(strpos($key, 'photo') === false) {
-				?>
-							<tr>
-								<td><?php echo $participant->getNom(); ?></td>
-								<td><?php echo $participant->getPrenom(); ?></td>
-								<td><?php echo $participant->getDateNaissance(); ?></td>
-								<td><?php echo $participant->getValidation(); ?></td>
-							</tr>
-				<?php
-						}
-					}
-				?>
+
+		<?php
+			foreach ($participants as $key => $participant)
+			{
+		?>
+			<tr>
+				<td><?php echo $participant->getNom(); ?></td>
+				<td><?php echo $participant->getPrenom(); ?></td>
+				<td><?php echo $participant->getDateNaissance(); ?></td>
+				<td><?php echo $participant->getValidation(); ?></td>
+				<?php foreach ($notesByParticipants[$key] as $keyNote => $note) { ?>
+					<td><?php echo $note; ?></td>
+				<?php } ?>
+			</tr>
+		<?php
+			}
+		?>
 	</tbody>
 </table>
 
