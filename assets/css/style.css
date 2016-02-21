@@ -457,3 +457,26 @@ body{
 				border-bottom:25px solid white;
 				box-shadow: 0 0 10px rgba(0,0,0,0.2);
 			}
+
+
+/****************************************************************************************/
+/*							VALIDATION PARTICIPATION									*/
+/****************************************************************************************/
+.classement{
+
+}
+	.classement .left{
+
+	}
+	.classement .right{
+
+	}
+		.classement .right .photo{
+			text-align: center;
+		}
+			.classement .right .photo img{
+				width: 30%;
+				border:8px solid white;
+				border-bottom:25px solid white;
+				box-shadow: 0 0 10px rgba(0,0,0,0.2);
+			}

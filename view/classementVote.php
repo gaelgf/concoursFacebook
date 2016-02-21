@@ -1,5 +1,13 @@
+<div class="classement">
+    <div class="col-xs-6 left">
+    </div>
+    <div class="col-xs-6 right">
+        <div class="photo">
+            <img src="<?php echo $photo["url_photo"]; ?>" alt="">
+        </div>
+    </div>
+</div>
 
-Classement
 <script>
     $(".main_logo").attr("src","<?php echo $array_campagne["logo_entreprise"]; ?>");
     $(".icone_principale").attr("src","<?php echo $array_campagne["icone_principale"]; ?>");

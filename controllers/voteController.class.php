@@ -58,9 +58,18 @@ class voteController{
     }
 
     public function classementAction( $args ){
+
         $view = new view();
         $view->setView("classementVote");
 
+        $arrayCampagne = self::getCampagneArrayAttributes();
+        $photo = photo::loadByParticipantId($_SESSION["id_participant"])[0];
+        $votes = vote::loadByParticipantId($_SESSION["id_participant"]);
+
+        var_dump($votes);
+
+        $view->assign("photo", $photo);
+        $view->assign("array_campagne", $arrayCampagne);
     }
 
 
