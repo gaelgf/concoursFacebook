@@ -69,31 +69,32 @@ class voteController{
             $arrayCampagne = self::getCampagneArrayAttributes();
             $allVotes = vote::load();
             $allPhotos = photo::load();
-
-            $photosCampagne = $this->getPhotosCurrentCampagne($allPhotos , $arrayCampagne["id"]);
-            $votesCampagnes = $this->getVotesCampagne($allVotes , $photosCampagne);
-
-
-            $statsParticipants = $this->getStatsParticipants($photosCampagne,$votesCampagnes);
-            //
-            // Recuperation des votes du participant
-            //
-
-            die();
-            $photo = photo::loadByParticipantId($_SESSION["id_participant"])[0];
-            $votes = vote::loadByParticipantId($_SESSION["id_participant"]);
-
-            $moyennes = self::getMoyennes($votes);
-            $moyenneGenerale = self::getMoyenneGenerale($votes);
-
             $criteres = critere::load();
 
-            $view->assign("photo", $photo);
+            /******************************************************************************************/
+            /*                        STATISTIQUES DE TOUS LES PARTICIPANT                            */
+            /******************************************************************************************/
+            $photosCampagne = $this->getPhotosCurrentCampagne($allPhotos , $arrayCampagne["id"]);
+            $votesCampagnes = $this->getVotesCampagne($allVotes , $photosCampagne);
+            $statsParticipants = $this->getStatsParticipants($photosCampagne,$votesCampagnes);
+
+
+            /******************************************************************************************/
+            /*                      STATISTIQUES  DU PARTICIPANT COURRANT                             */
+            /******************************************************************************************/
+            $photoParticipantCampagne = $this->getPhotoParticipant($allPhotos ,$arrayCampagne["id"], $_SESSION["id_participant"]);
+            $votesParticipantCampagne = $this->getVotesPhotosParticipant($allVotes,$photoParticipantCampagne->getId());
+
+            $moyennes = $this->getMoyennes($votesParticipantCampagne);
+            $moyenneGenerale = $this->getMoyenneGenerale($votesParticipantCampagne);
+
+
+            $view->assign("photo", $photoParticipantCampagne->getUrlPhoto());
             $view->assign("array_campagne", $arrayCampagne);
             $view->assign("moyennes", $moyennes);
             $view->assign("moyenne", $moyenneGenerale);
             $view->assign("criteres", $criteres);
-
+            $view->assign("statsparticipants", $statsParticipants);
         }
     }
 
@@ -161,10 +162,10 @@ class voteController{
     }
 
 
-    public static function getMoyennes($votes){
+    public function getMoyennes($votes){
         $arrayVotes = [];
         foreach($votes as $vote){
-            $arrayVotes[$vote['id_critere']][] = $vote['valeur'];
+            $arrayVotes[$vote->getIdCritere()][] = $vote->getValeur();
         }
         $arrayCritesMoyennes = [];
         foreach($arrayVotes as $key => $criteres){
@@ -181,12 +182,12 @@ class voteController{
     }
 
 
-    public static function getMoyenneGenerale($votes){
+    public function getMoyenneGenerale($votes){
         $nb = 0;
         $sum = 0;
         foreach($votes as $vote){
             $nb++;
-            $sum += $vote["valeur"];
+            $sum += $vote->getValeur();
         }
 
         return $sum / $nb;
@@ -194,7 +195,6 @@ class voteController{
 
     public function getStatsParticipants($photosCampagne,$votesCampagnes){
         $res = [];
-        die();
         foreach( $photosCampagne as $photo ){
             $idPhoto = $photo->getId();
 
@@ -213,9 +213,8 @@ class voteController{
                 "moyenne" => $sum/$nb
             ];
         }
-        die();
 
-        var_dump($res);
+        return $res;
     }
 
     // Méthode renvoyant toutes les photos de la campagne
@@ -242,6 +241,28 @@ class voteController{
             }
         }
 
+        return $res;
+    }
+
+    //Méthode retournant la photo du participant placé en parametre
+    public function getPhotoParticipant( $allPhotos , $idCampagne , $idParticipant){
+        foreach($allPhotos as $photo){
+            if( $photo->getIdParticipant() == $idParticipant && $photo->getIdCampagne() == $idCampagne){
+                return $photo;
+            }
+        }
+        return false;
+    }
+
+    //Méthode retournant tous les votes correspondant a l'id de la photo
+    public function getVotesPhotosParticipant( $allVotes , $idPhoto ){
+        $res = [];
+
+        foreach($allVotes as $vote){
+            if($vote->getIdPhoto() == $idPhoto ){
+                $res[] = $vote;
+            }
+        }
         return $res;
     }
 
