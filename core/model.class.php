@@ -70,12 +70,12 @@ class model{
         if( $id ){
             $stringRequest = "UPDATE ".$this->table." SET ";
             foreach($data as $key => $value){
-                $data[$key] = trim(preg_replace('/\s+/', ' ', nl2br(htmlentities($value), false)));
+                $data[$key] = trim(htmlentities($value));
                 if($value === 'on') {
-                    $data[$key] = true;
+                    $data[$key] = 1;
                 }
                 if($value === 'off') {
-                    $data[$key] = false;
+                    $data[$key] = 0;
                 }
 
                 if($key !== 'id') {
@@ -97,12 +97,12 @@ class model{
         else{
             foreach($data as $key => $value){
                 $sql_column_insert[] = ":".$key;
-                $data[$key] = trim(preg_replace('/\s+/', ' ', nl2br(htmlentities($value), false)));
+                $data[$key] = trim(htmlentities($value));
                 if($data[$key] === 'on') {
-                    $data[$key] = true;
+                    $data[$key] = 1;
                 }
                 if($data[$key] === 'off') {
-                    $data[$key] = false;
+                    $data[$key] = 0;
                 }
             }
 
