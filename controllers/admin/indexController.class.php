@@ -28,8 +28,7 @@ class indexController{
             $idFacebook = $response->getDecodedBody()["id"];
 
             if(admin::isAdmin($idFacebook)) {
-            	echo "window.top.location = '".BASE_URL."admin/campagnes/index';";
-            	//header("Location: ".BASE_URL."admin/campagnes/index");
+            	header("Location: ".BASE_URL."admin/campagnes/index");
             } else {
             	$view->setView("admin/indexIndex", "loginLayout");
         		$view->assign("notAdmin", 'Vous devez être un administrateur pour accéder à cette partie du site');
