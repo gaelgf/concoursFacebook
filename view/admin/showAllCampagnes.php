@@ -1,5 +1,4 @@
 <h1>Vos concours</h1>
-
 <?php
 	if(isset($successMessages)) {
 		foreach ($successMessages as $successMessage) {
