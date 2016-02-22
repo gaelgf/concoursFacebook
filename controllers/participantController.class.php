@@ -18,16 +18,15 @@ class participantController
         $view = new view();
         $view->setView("recapParticipant");
 
-
         if( isset($_POST["url_photo"]) && !empty($_POST["url_photo"])
-            && isset($_POST["id_participant"]) && !empty($_POST["id_participant"])
+            && isset($_SESSION["id_participant"]) && !empty($_SESSION["id_participant"])
             && isset($_POST["id_photo_facebook"]) && !empty($_POST["id_photo_facebook"])
             && isset($_POST["id_album_facebook"]) && !empty($_POST["id_album_facebook"])
             && isset($_POST["id_campagne"]) && !empty($_POST["id_campagne"])
         ){
             $posts = $_POST;
         }
-        if( isset($_SESSION["url_photo"]) && !empty($_SESSION["url_photo"])
+        else if( isset($_SESSION["url_photo"]) && !empty($_SESSION["url_photo"])
             && isset($_SESSION["id_participant"]) && !empty($_SESSION["id_participant"])
             && isset($_SESSION["id_photo_facebook"]) && !empty($_SESSION["id_photo_facebook"])
             && isset($_SESSION["id_album_facebook"]) && !empty($_SESSION["id_album_facebook"])
@@ -78,6 +77,7 @@ class participantController
             $_SESSION["campagne_photo_accueil_three"] = $campagne->getPhotoAccueilThree();
             $_SESSION["campagne_icone_coeur"] = $campagne->getIconeCoeur();
             $_SESSION["campagne_icone_principale"] = $campagne->getIconePrincipale();
+            $_SESSION["cgu"] = $campagne->getCgu();
             $_SESSION["campagne_in_session"] = "OK";
         }
 
@@ -98,6 +98,7 @@ class participantController
         $campagneArray['photo_accueil_three'] = $_SESSION["campagne_photo_accueil_three"];
         $campagneArray['icone_coeur'] = $_SESSION["campagne_icone_coeur"];
         $campagneArray['icone_principale'] = $_SESSION["campagne_icone_principale"];
+        $campagneArray['cgu'] = $_SESSION["cgu"];
 
         return $campagneArray;
     }

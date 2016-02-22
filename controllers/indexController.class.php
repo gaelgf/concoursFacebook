@@ -68,8 +68,14 @@ class indexController{
             $response = $fb->get('/me', $_SESSION['facebook_access_token']);
 
 
+            $response = $fb->get('/me?fields=email', $_SESSION['facebook_access_token']);
+            $user = $response->getGraphUser();
+            $email = $user->getField("email");
+
             $idFacebook = $response->getDecodedBody()["id"];
             $idCampagne = $arrayCampagne["id"];
+
+
 
             // Si la personne participe deja au concours en cours
             if( !participant::isAlreadyParticipating( $idFacebook , $idCampagne )){
@@ -81,6 +87,7 @@ class indexController{
                     explode(" ",$response->getDecodedBody()["name"])[1],
                     explode(" ",$response->getDecodedBody()["name"])[0],
                     date("Y-m-d"),
+                    $email,
                     "true");
                 $participant->save();
             }
@@ -89,7 +96,7 @@ class indexController{
             header("Location: ".BASE_URL."choice/");
         }
         else{
-            header("Location: ".BASE_URL);
+            //header("Location: ".BASE_URL);
         }
     }
 
@@ -117,6 +124,7 @@ class indexController{
             $_SESSION["campagne_photo_accueil_three"] = $campagne->getPhotoAccueilThree();
             $_SESSION["campagne_icone_coeur"] = $campagne->getIconeCoeur();
             $_SESSION["campagne_icone_principale"] = $campagne->getIconePrincipale();
+            $_SESSION["cgu"] = $campagne->getCgu();
             $_SESSION["campagne_in_session"] = "OK";
         }
 
@@ -137,6 +145,7 @@ class indexController{
         $campagneArray['photo_accueil_three'] = $_SESSION["campagne_photo_accueil_three"];
         $campagneArray['icone_coeur'] = $_SESSION["campagne_icone_coeur"];
         $campagneArray['icone_principale'] = $_SESSION["campagne_icone_principale"];
+        $campagneArray['cgu'] = $_SESSION["cgu"];
 
         return $campagneArray;
     }

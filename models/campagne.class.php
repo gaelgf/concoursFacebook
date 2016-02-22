@@ -20,6 +20,7 @@ class campagne extends model{
     protected $photo_accueil_three;
     protected $icone_coeur;
     protected $icone_principale;
+    protected $cgu;
 
     public function __construct($id = NULL,
                                 $logo_entreprise,
@@ -37,7 +38,8 @@ class campagne extends model{
                                 $photo_accueil_two,
                                 $photo_accueil_three,
                                 $icone_coeur,
-                                $icone_principale)
+                                $icone_principale,
+                                $cgu)
     {
         parent::__construct();
         $this->id = $id;
@@ -57,6 +59,7 @@ class campagne extends model{
         $this->photo_accueil_three = $photo_accueil_three;
         $this->icone_coeur = $icone_coeur;
         $this->icone_principale = $icone_principale;
+        $this->cgu = $cgu;
     }
 
     public static function loadCurrent()
@@ -171,6 +174,9 @@ class campagne extends model{
         if(!array_key_exists("icone_principale", $campagneArray) || !isset($campagneArray["icone_principale"])) {
             $errors["icone_principale"] = "Erreur : Choisissez une icone principale.";
         }
+        if(!array_key_exists("cgu", $campagneArray) || !isset($campagneArray["cgu"])) {
+            $errors["cgu"] = "Erreur : CGU manquant";
+        }
 
         if(sizeof($errors) > 0) {
             return $errors;
@@ -198,7 +204,8 @@ class campagne extends model{
                                     $campagneArray['photo_accueil_two'],
                                     $campagneArray['photo_accueil_three'],
                                     $campagneArray['icone_coeur'],
-                                    $campagneArray['icone_principale']);
+                                    $campagneArray['icone_principale'],
+                                    $campagneArray['cgu']);
         return $campagne;
     }
 
@@ -343,5 +350,15 @@ class campagne extends model{
     }
     public function setIconePrincipale( $icone_principale ){
         $this->icone_principale = $icone_principale;
+    }
+
+
+
+    /* cgu */
+    public function getCgu(){
+        return $this->cgu;
+    }
+    public function setCgu( $gcu ){
+        $this->cgu = $gcu;
     }
 }
