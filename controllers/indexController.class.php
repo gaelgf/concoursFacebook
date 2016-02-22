@@ -12,7 +12,7 @@ class indexController{
         if (!isset($_SESSION['facebook_access_token'])) {
 
             $helper = facebook::conectionFacebook();
-            $permissions = ['public_profile', 'email','user_photos','publish_actions']; // optional
+            $permissions = ['public_profile','user_photos','publish_actions']; // optional
 
             if(BASE_URL === '/') {
                 $loginUrl = $helper->getLoginUrl( 'https://fierce-refuge-2356.herokuapp.com/index/validation', $permissions);
