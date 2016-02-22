@@ -290,6 +290,7 @@
 		<tr>
 			<th>Nom</th>
 			<th>Prenom</th>
+			<th>Email</th>
 			<th>Date de naissance</th>
 			<th>Validation</th>
 		</tr>
@@ -301,6 +302,7 @@
 					<tr>
 						<td><?php echo $inscrit->getNom(); ?></td>
 						<td><?php echo $inscrit->getPrenom(); ?></td>
+						<td><?php echo $inscrit->getEmail(); ?></td>
 						<td><?php echo $inscrit->getDateNaissance(); ?></td>
 						<td><?php echo $inscrit->getValidation(); ?></td>
 					</tr>
@@ -321,6 +323,7 @@
 			<tr>
 				<th>Nom</th>
 				<th>Prenom</th>
+				<th>Email</th>
 				<th>Date de naissance</th>
 				<th>Validation</th>
 				<?php foreach ($notesByParticipants[0] as $keyNote => $note) { ?>
@@ -337,6 +340,7 @@
 				<tr>
 					<td><?php echo $participant->getNom(); ?></td>
 					<td><?php echo $participant->getPrenom(); ?></td>
+					<td><?php echo $inscrit->getEmail(); ?></td>
 					<td><?php echo $participant->getDateNaissance(); ?></td>
 					<td><?php echo $participant->getValidation(); ?></td>
 					<?php foreach ($notesByParticipants[$key] as $keyNote => $note) { ?>
