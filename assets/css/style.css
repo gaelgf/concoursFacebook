@@ -457,6 +457,14 @@ body{
 				border-bottom:25px solid white;
 				box-shadow: 0 0 10px rgba(0,0,0,0.2);
 			}
+		.validation_photo .right .nom_lot{
+			font-size:200%;
+		}
+		.validation_photo .right .description_lot{
+			width:70%;
+			margin:10px auto 0;
+		}
+
 
 	.CGU{
 		width:70%;

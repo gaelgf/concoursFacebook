@@ -86,8 +86,16 @@ class choiceController{
                 $img = $_FILES["image"];
                 $id_album = $_POST["id_album"];
 
+                $message_partage = <<<HTML
+                    Toi aussi participe au concours photo get gagne des cadeaux :
+                    https://apps.facebook.com/picturechallenge
+                    
+                    Voici ma photo :
+HTML;
+
+
                 $data = [
-                    'message' => "Toi aussi participe au concours photo !",
+                    'message' => $message_partage,
                     'source' => $fb->fileToUpload($img["tmp_name"])
                 ];
 
