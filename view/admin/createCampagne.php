@@ -140,6 +140,18 @@
             </div>
 
             <div class="form-group">
+                <label for="cgu" class="col-sm-4 control-label">CGU</label>
+                <div class="col-sm-8">
+                    <textarea name="cgu" class="form-control"
+                           id="cgu" required>
+                    </textarea>
+                    <script>
+                        CKEDITOR.replace( 'cgu' );
+                    </script>
+                </div>
+            </div>
+
+            <div class="form-group">
                 <label for="inputIsActive" class="col-sm-4 control-label">Activer la campagne</label>
                 <div class="col-sm-8">
                     <div class="checkbox">

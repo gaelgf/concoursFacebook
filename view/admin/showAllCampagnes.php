@@ -35,6 +35,7 @@
 				<th>photo_accueil_two</th>
 				<th>photo_accueil_three</th>
 				<th>icone_principale</th>
+				<th>cgu</th>
 			</tr>
 		</thead>
 		<tbody>
@@ -63,6 +64,7 @@
 					<td><?php echo html_entity_decode($campagne->getPhotoAccueilTwo()); ?></td>
 					<td><?php echo html_entity_decode($campagne->getPhotoAccueilThree()); ?></td>
 					<td><?php echo html_entity_decode($campagne->getIconePrincipale()); ?></td>
+					<td><?php echo html_entity_decode($campagne->getCgu()); ?></td>
 				</tr>
 			<?php
 				}

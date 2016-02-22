@@ -336,7 +336,7 @@ class campagnesController{
         }
 
         if(sizeof($errorsMessages) > 0) {
-            header('Location: ' . BASE_URL . 'admin/campagnes/edit/' . urlencode($campagne->getNomCampagne()) . '?errors=' . implode($errorsMessages) );
+            header('Location: ' . BASE_URL . 'admin/campagnes/edit/' . urlencode($args['nom_campagne']) . '?errors=' . implode($errorsMessages) );
         } else {
             header('Location: ' . BASE_URL . 'admin/campagnes/show/' . urlencode($campagne->getNomCampagne()) . '?success=' . "La campagne a bien été mise à jour" );
         }
