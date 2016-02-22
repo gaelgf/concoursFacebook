@@ -458,9 +458,21 @@ body{
 				box-shadow: 0 0 10px rgba(0,0,0,0.2);
 			}
 
+	.CGU{
+		width:70%;
+		margin:30px auto 20px;
+		background-color:white;
+		padding:20px;
+	}
+		.CGU .title{
+			font-size:50px;
+			text-align: center;
+		}
+		.CGU .text{
+		}
 
 /****************************************************************************************/
-/*							VALIDATION PARTICIPATION									*/
+/*									 CLASSEMENT											*/
 /****************************************************************************************/
 .classement{
 

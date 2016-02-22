@@ -72,6 +72,7 @@ class photoController
     }
 
 
+
     public function getCampagneArrayAttributes(){
 
         $campagneArray = [];
@@ -95,6 +96,7 @@ class photoController
             $_SESSION["campagne_photo_accueil_three"] = $campagne->getPhotoAccueilThree();
             $_SESSION["campagne_icone_coeur"] = $campagne->getIconeCoeur();
             $_SESSION["campagne_icone_principale"] = $campagne->getIconePrincipale();
+            $_SESSION["cgu"] = $campagne->getCgu();
             $_SESSION["campagne_in_session"] = "OK";
         }
 
@@ -115,6 +117,7 @@ class photoController
         $campagneArray['photo_accueil_three'] = $_SESSION["campagne_photo_accueil_three"];
         $campagneArray['icone_coeur'] = $_SESSION["campagne_icone_coeur"];
         $campagneArray['icone_principale'] = $_SESSION["campagne_icone_principale"];
+        $campagneArray['cgu'] = $_SESSION["cgu"];
 
         return $campagneArray;
     }
