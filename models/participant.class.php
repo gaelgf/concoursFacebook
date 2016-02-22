@@ -8,6 +8,7 @@ class participant extends model{
 	protected $nom;
 	protected $prenom;
 	protected $date_naissance;
+    protected $email;
 	protected $validation;
 
     public function __construct($id = NULL,
@@ -16,6 +17,7 @@ class participant extends model{
 								$nom,
 								$prenom,
 								$date_naissance,
+                                $email,
 								$validation)
     {
         parent::__construct();
@@ -25,6 +27,7 @@ class participant extends model{
         $this->nom = $nom;
         $this->prenom = $prenom;
         $this->date_naissance = $date_naissance;
+        $this->email = $email;
         $this->validation = $validation;
 
     }
@@ -143,6 +146,9 @@ class participant extends model{
         if(!array_key_exists("validation", $participantArray) || !isset($participantArray["validation"])) {
             $errors["validation"] = "Erreur : La validation doit être renseignée.";
         }
+        if(!array_key_exists("email", $participantArray) || !isset($participantArray["email"])) {
+            $errors["email"] = "Erreur : L'email doit être renseignée.";
+        }
 
         if(sizeof($errors) > 0) {
             return $errors;
@@ -157,6 +163,7 @@ class participant extends model{
                                     $participantArray["nom"],
                                     $participantArray["prenom"],
                                     $participantArray["date_naissance"],
+                                    $participantArray["email"],
                                     $participantArray['validation']);
         return $participant;
     }
@@ -302,5 +309,17 @@ class participant extends model{
     public function setValidation($validation)
     {
         $this->validation = $validation;
+    }
+
+
+    /* email */
+    public function getEmail()
+    {
+        return $this->email;
+    }
+
+    public function setEmail($email)
+    {
+        $this->email = $email;
     }
 }

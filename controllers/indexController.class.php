@@ -68,8 +68,14 @@ class indexController{
             $response = $fb->get('/me', $_SESSION['facebook_access_token']);
 
 
+            $response = $fb->get('/me?fields=email', $_SESSION['facebook_access_token']);
+            $user = $response->getGraphUser();
+            $email = $user->getField("email");
+
             $idFacebook = $response->getDecodedBody()["id"];
             $idCampagne = $arrayCampagne["id"];
+
+
 
             // Si la personne participe deja au concours en cours
             if( !participant::isAlreadyParticipating( $idFacebook , $idCampagne )){
@@ -81,6 +87,7 @@ class indexController{
                     explode(" ",$response->getDecodedBody()["name"])[1],
                     explode(" ",$response->getDecodedBody()["name"])[0],
                     date("Y-m-d"),
+                    $email,
                     "true");
                 $participant->save();
             }
@@ -89,7 +96,7 @@ class indexController{
             header("Location: ".BASE_URL."choice/");
         }
         else{
-            header("Location: ".BASE_URL);
+            //header("Location: ".BASE_URL);
         }
     }
 
