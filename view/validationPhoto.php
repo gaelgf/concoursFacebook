@@ -33,6 +33,12 @@ $arr_mois = ["","janvier","fevrier","mars","avril","mai","juin","juillet","aout"
         <div class="img_lot">
             <img src="<?php echo $array_campagne["image_lot"]; ?>" alt="Lot jeu concours">
         </div>
+        <div class="nom_lot">
+            <?php echo $array_campagne["nom_lot"]; ?>
+        </div>
+        <div class="description_lot">
+            <?php echo html_entity_decode($array_campagne["description_lot"]); ?>
+        </div>
     </div>
 </div>
 

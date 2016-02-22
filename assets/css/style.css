@@ -31,6 +31,17 @@ body{
  	text-align: center;
 	background-color:#d6484a;
  }
+	.boutons:hover{
+		color:silver;
+		text-decoration: none;
+	}
+	a.boutons{
+		color:white;
+	}
+		a.boutons:hover{
+			color:silver;
+			text-decoration: none;
+		}
 
 
 	/****************************************************************************************/
@@ -132,8 +143,18 @@ body{
 	/****************************************************************************************/
 	/*										VOTE											*/
 	/****************************************************************************************/
+
 	.vote{
 	}
+		.vote .fixed_classement{
+			position: fixed;
+			top:50px;
+			left:15px;
+		}
+			.vote .fixed_classement .a{
+				border-bottom-left-radius: 0px;
+				border-top-left-radius: 0px;
+			}
 		.vote .icone{
 			text-align: right;
 			max-width: 100%;
@@ -457,6 +478,14 @@ body{
 				border-bottom:25px solid white;
 				box-shadow: 0 0 10px rgba(0,0,0,0.2);
 			}
+		.validation_photo .right .nom_lot{
+			font-size:200%;
+		}
+		.validation_photo .right .description_lot{
+			width:70%;
+			margin:10px auto 0;
+		}
+
 
 	.CGU{
 		width:70%;
@@ -508,7 +537,7 @@ body{
 					background-color:rgb(242,242,242);
 				}
 	.classement .right{
-
+		text-align: center;
 	}
 		.classement .right .photo{
 			text-align: center;
@@ -529,3 +558,7 @@ body{
 			.classement .right .photo .valeur_critere{
 				font-size:180%;
 			}
+		.classement .right .boutons{
+			padding:15px;
+			font-size:40px;
+		}

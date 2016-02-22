@@ -1,5 +1,3 @@
-
-
 <div class="classement">
     <div class="col-xs-6 left">
         <table>
@@ -23,6 +21,7 @@
         </table>
     </div>
     <div class="col-xs-6 right">
+        <?php if($photo !=""): ?>
         <div class="photo">
             <img src="<?php echo $photo ?>" alt="">
             <div class="label_moyenne">
@@ -40,6 +39,12 @@
                 </div>
             <?php endforeach; ?>
         </div>
+        <?php else: ?>
+            <a class="boutons" href="<?php echo $base_url; ?>choice">
+                Je participe !
+            </a>
+
+        <?php endif; ?>
     </div>
 </div>
 
