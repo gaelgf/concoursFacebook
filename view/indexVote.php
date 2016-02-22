@@ -40,6 +40,11 @@
             </div>
         </form>
     </div>
+    <div class="fixed_classement">
+        <a target="_blank" class="col-xs-12 boutons" href="<?php echo $base_url; ?>vote/classement">
+            Voir le classement
+        </a>
+    </div>
 </div>
 <script>
     $(".main_logo").attr("src","<?php echo $array_campagne["logo_entreprise"]; ?>");
