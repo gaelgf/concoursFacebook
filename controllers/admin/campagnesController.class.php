@@ -3,7 +3,8 @@
 class campagnesController{
     public function indexAction( $args )
     {
-        return self::showAction($args);
+        $view = new view();
+        $view->setView("admin/accueil", "adminlayout");
     }
 
     public function showCurrentAction( $args ) {
@@ -15,6 +16,9 @@ class campagnesController{
         $inscrits = participant::loadParticipantsByCampagneId($campagne->getId());
         if ( !is_array( $campagne ) ) {
             $inscrits = participant::loadParticipantsByCampagneId($campagne->getId());
+            if(isset($inscrits[0]) && $inscrits[0] === "Erreur lors de la récupération de l'objet participant") {
+                $inscrits = [];
+            }
             $photos = photo::loadByCampagneId($campagne->getId());
             
             $participantsIds = [];
@@ -150,6 +154,9 @@ class campagnesController{
             $campagne = campagne::loadByName(urldecode($args[2]));
             if ( !is_array( $campagne ) ) {
                 $inscrits = participant::loadParticipantsByCampagneId($campagne->getId());
+                if(isset($inscrits[0]) && $inscrits[0] === "Erreur lors de la récupération de l'objet participant") {
+                    $inscrits = [];
+                }
                 $photos = photo::loadByCampagneId($campagne->getId());
                 
                 $participantsIds = [];

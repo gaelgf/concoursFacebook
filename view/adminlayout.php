@@ -44,7 +44,7 @@
                 <div class="sidebar-nav navbar-collapse">
                     <ul class="nav" id="side-menu">
                         <li>
-                            <a href=<?php echo BASE_URL . "admin/index/index"; ?>><i class="fa fa-home"></i> Accueil</a>
+                            <a href=<?php echo BASE_URL . "admin/campagnes/index"; ?>><i class="fa fa-home"></i> Accueil</a>
                         </li>
                         <li>
                             <a href=<?php echo  BASE_URL . 'admin/campagnes/' ?> ><i class="fa fa-trophy"></i> Concours<span class="fa arrow"></span></a>

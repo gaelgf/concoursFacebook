@@ -163,6 +163,13 @@
 		        </ul>
 		    </div>
 
+		    <div class="row" style="margin-top:20px;">
+				<div class="col-sm-6 col-sm-offset-3">
+					<h1>CGU</h1>
+				    <span style="font-size:15px;"><?php echo html_entity_decode($campagne->getCgu()); ?></span>
+				</div>
+			</div>
+
 	  </div>
 	  <div class="tab-pane fade" id="inscrits">
 
@@ -182,6 +189,7 @@
 							echo '<div class="col-sm-4">';
 								echo '<h3><strong>Nom :</strong> ' . $inscrit->getNom() . '</h3>';
 								echo '<h4><strong>Prenom :</strong> ' . $inscrit->getPrenom() . '</h4>';
+								echo '<h4><strong>Email :</strong> ' . $inscrit->getEmail() . '</h4>';
 								echo '<h5><strong>Date de naissance :</strong> ' . $inscrit->getDateNaissance() . '</h5>';
 								echo '<h5><strong>Validation :</strong> ' . $inscrit->getValidation() . '</h5>';
 							echo '</div>';
@@ -214,6 +222,7 @@
 								}
 								echo '<h3><strong>Nom :</strong> ' . $participant->getNom() . '</h3>';
 								echo '<h4><strong>Prenom :</strong> ' . $participant->getPrenom() . '</h4>';
+								echo '<h4><strong>Email :</strong> ' . $inscrit->getEmail() . '</h4>';
 								echo '<h5><strong>Date de naissance :</strong> ' . $participant->getDateNaissance() . '</h5>';
 								echo '<h5><strong>Validation :</strong> ' . $participant->getValidation() . '</h5>';
 							echo '</div>';
