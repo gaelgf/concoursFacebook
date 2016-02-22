@@ -31,6 +31,17 @@ body{
  	text-align: center;
 	background-color:#d6484a;
  }
+	.boutons:hover{
+		color:silver;
+		text-decoration: none;
+	}
+	a.boutons{
+		color:white;
+	}
+		a.boutons:hover{
+			color:silver;
+			text-decoration: none;
+		}
 
 
 	/****************************************************************************************/
@@ -516,7 +527,7 @@ body{
 					background-color:rgb(242,242,242);
 				}
 	.classement .right{
-
+		text-align: center;
 	}
 		.classement .right .photo{
 			text-align: center;
@@ -537,3 +548,7 @@ body{
 			.classement .right .photo .valeur_critere{
 				font-size:180%;
 			}
+		.classement .right .boutons{
+			padding:15px;
+			font-size:40px;
+		}

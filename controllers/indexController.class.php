@@ -68,13 +68,14 @@ class indexController{
             $response = $fb->get('/me', $_SESSION['facebook_access_token']);
 
 
-            $response = $fb->get('/me?fields=email', $_SESSION['facebook_access_token']);
+            $response = $fb->get('/me?fields=email,first_name,last_name', $_SESSION['facebook_access_token']);
             $user = $response->getGraphUser();
             $email = $user->getField("email");
+            $first_name = $user->getField("first_name");
+            $last_name = $user->getField("last_name");
 
             $idFacebook = $response->getDecodedBody()["id"];
             $idCampagne = $arrayCampagne["id"];
-
 
 
             // Si la personne participe deja au concours en cours
@@ -84,8 +85,8 @@ class indexController{
                     NULL,
                     $idCampagne,
                     $idFacebook,
-                    explode(" ",$response->getDecodedBody()["name"])[1],
-                    explode(" ",$response->getDecodedBody()["name"])[0],
+                    $last_name,
+                    $first_name,
                     date("Y-m-d"),
                     $email,
                     "true");

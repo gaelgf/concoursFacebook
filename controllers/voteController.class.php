@@ -83,13 +83,24 @@ class voteController{
             /*                      STATISTIQUES  DU PARTICIPANT COURRANT                             */
             /******************************************************************************************/
             $photoParticipantCampagne = $this->getPhotoParticipant($allPhotos ,$arrayCampagne["id"], $_SESSION["id_participant"]);
-            $votesParticipantCampagne = $this->getVotesPhotosParticipant($allVotes,$photoParticipantCampagne->getId());
 
-            $moyennes = $this->getMoyennes($votesParticipantCampagne);
-            $moyenneGenerale = $this->getMoyenneGenerale($votesParticipantCampagne);
+           if($photoParticipantCampagne != false){
+               $votesParticipantCampagne = $this->getVotesPhotosParticipant($allVotes,$photoParticipantCampagne->getId());
+
+               $moyennes = $this->getMoyennes($votesParticipantCampagne);
+               $moyenneGenerale = $this->getMoyenneGenerale($votesParticipantCampagne);
+               $url_photo = $photoParticipantCampagne->getUrlPhoto();
+           }
+           else{
+               $moyennes = "";
+               $moyenneGenerale = "";
+               $url_photo = "";
+           }
 
 
-            $view->assign("photo", $photoParticipantCampagne->getUrlPhoto());
+
+            $view->assign("base_url", BASE_URL );
+            $view->assign("photo", $url_photo );
             $view->assign("array_campagne", $arrayCampagne);
             $view->assign("moyennes", $moyennes);
             $view->assign("moyenne", $moyenneGenerale);
