@@ -149,6 +149,18 @@
             </div>
 
             <div class="form-group">
+                <label for="cgu" class="col-sm-4 control-label">CGU</label>
+                <div class="col-sm-8">
+                    <textarea name="cgu" class="form-control"
+                           id="cgu" required>
+                    </textarea>
+                    <script>
+                        CKEDITOR.replace( 'cgu' );
+                    </script>
+                </div>
+            </div>
+
+            <div class="form-group">
                 <label for="is_active" class="col-sm-4 control-label">Activer la campagne</label>
                 <div class="col-sm-8">
                     <div class="checkbox">
@@ -177,6 +189,7 @@
 			text_accueil: <?php echo "'" . preg_replace('/\s+/', ' ', html_entity_decode($campagne->getTextAccueil())) . "'"; ?>,
 			text_felicitations: <?php echo '"' . preg_replace('/\s+/', ' ', html_entity_decode($campagne->getTextFelicitations())) . '"'; ?>,
 			description_lot: <?php echo '"' . preg_replace('/\s+/', ' ', html_entity_decode($campagne->getDescriptionLot())) . '"'; ?>,
+            cgu: <?php echo '"' . preg_replace('/\s+/', ' ', html_entity_decode($campagne->getCgu())) . '"'; ?>,
 			is_active: <?php echo '"'.$campagne->getIsActive().'"' ?>
 	    };
 	    for (var attr in campagne) {
