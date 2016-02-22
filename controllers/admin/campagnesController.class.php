@@ -86,7 +86,7 @@ class campagnesController{
                     }
                     foreach ($criteres as $critere) {
                         $notes[$key][$critere->getNomCritere()] /= count($votesByPhoto) / 3;
-                        $notes[$key][$critere->getNomCritere()] = $notes[$key][$critere->getNomCritere()];
+                        $notes[$key][$critere->getNomCritere()] = round($notes[$key][$critere->getNomCritere()]);
                     }
                 }                    
             }
@@ -225,7 +225,7 @@ class campagnesController{
                         }
                         foreach ($criteres as $critere) {
                             $notes[$key][$critere->getNomCritere()] /= count($votesByPhoto) / 3;
-                            $notes[$key][$critere->getNomCritere()] = $notes[$key][$critere->getNomCritere()];
+                            $notes[$key][$critere->getNomCritere()] = round($notes[$key][$critere->getNomCritere()]);
                         }
                     }                    
                 }
