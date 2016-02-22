@@ -14,7 +14,7 @@
             </ul>
         </div>
         <br/>
-        <a  class="boutons bouton_connexion" target="_top" href="<?php echo $login_url; ?>">Je participe !</a>
+        <a  class="boutons bouton_connexion" target="_parent" href="<?php echo $login_url; ?>">Je participe !</a>
     </div>
 </div>
 <?php
