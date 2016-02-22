@@ -97,7 +97,7 @@ class participant extends model{
                 $stringRequest .= "id = '" . $participantId . "'";
             }
         }
-
+        
         if (!$request = $model->pdo->query(
             $stringRequest
         )) {

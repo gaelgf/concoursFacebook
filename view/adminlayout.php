@@ -33,7 +33,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href=<?php echo BASE_URL . 'admin'; ?> >
-                    <img src=<?php echo IMG_DIRECTORY_URL . 'campagnes/1/logo.png'; ?> alt="" height="30px" width="60px"> Concours photo Admin
+                    Concours photo Admin
                 </a>
             </div>
             <!-- /.navbar-header -->

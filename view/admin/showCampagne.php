@@ -273,6 +273,9 @@
 	</tbody>
 </table>
 
+<?php
+	if(count($inscrits) !== 0) {
+?>
 <table style="display:none;" id="inscritsTable">
 	<thead>
 		<tr>
@@ -297,39 +300,49 @@
 				?>
 	</tbody>
 </table>
+<?php
+	}
+?>
 
-<table style="display:none;" id="participantsTable">
-	<thead>
-		<tr>
-			<th>Nom</th>
-			<th>Prenom</th>
-			<th>Date de naissance</th>
-			<th>Validation</th>
-			<?php foreach ($notesByParticipants[0] as $keyNote => $note) { ?>
-				<th><?php echo $keyNote; ?></th>
-			<?php } ?>
-		</tr>
-	</thead>
-	<tbody>
-
-		<?php
-			foreach ($participants as $key => $participant)
-			{
-		?>
+<?php
+	if(count($participants) !== 0 && count($notesByParticipants) !== 0) {
+?>
+	<table style="display:none;" id="participantsTable">
+		<thead>
 			<tr>
-				<td><?php echo $participant->getNom(); ?></td>
-				<td><?php echo $participant->getPrenom(); ?></td>
-				<td><?php echo $participant->getDateNaissance(); ?></td>
-				<td><?php echo $participant->getValidation(); ?></td>
-				<?php foreach ($notesByParticipants[$key] as $keyNote => $note) { ?>
-					<td><?php echo $note; ?></td>
+				<th>Nom</th>
+				<th>Prenom</th>
+				<th>Date de naissance</th>
+				<th>Validation</th>
+				<?php foreach ($notesByParticipants[0] as $keyNote => $note) { ?>
+					<th><?php echo $keyNote; ?></th>
 				<?php } ?>
 			</tr>
-		<?php
-			}
-		?>
-	</tbody>
-</table>
+		</thead>
+		<tbody>
+
+			<?php
+				foreach ($participants as $key => $participant)
+				{
+			?>
+				<tr>
+					<td><?php echo $participant->getNom(); ?></td>
+					<td><?php echo $participant->getPrenom(); ?></td>
+					<td><?php echo $participant->getDateNaissance(); ?></td>
+					<td><?php echo $participant->getValidation(); ?></td>
+					<?php foreach ($notesByParticipants[$key] as $keyNote => $note) { ?>
+						<td><?php echo $note; ?></td>
+					<?php } ?>
+				</tr>
+			<?php
+				}
+			?>
+		</tbody>
+	</table>
+
+<?php
+	}
+?>
 
 <script>
 $( document ).ready(function() {
@@ -386,30 +399,36 @@ $( document ).ready(function() {
 		document.getElementById("aInscritsCsv").click();
 	});
 
-	/*Download participants infos csv*/
-	$('#downloadParticipantsCSV').on( "click", function downloadParticipantsCSV() {
-		var participantsTable = $('#participantsTable').html();
-		var dataParticipants = participantsTable.replace(/<thead>/g,'')
-						.replace(/<\/thead>/g,'')
-						.replace(/<tbody>/g,'')
-						.replace(/<\/tbody>/g,'')
-						.replace(/<tr>/g,'')
-						.replace(/<\/tr>/g,'\r\n')
-						.replace(/<th>/g,'')
-						.replace(/<\/th>/g,';')
-						.replace(/<td>/g,'')
-						.replace(/<\/td>/g,';')
-						.replace(/\t/g,'')
-						.replace(/\n/g,'');
-		var linkParticipantsCSV = $(document.createElement('a'))
-						.attr({
-							id: 'aParticipantsCsv',
-							download: <?php echo "'" . html_entity_decode($campagne->getNomCampagne()) . " participants.csv'"; ?>,
-							href: 'data:application/csv,' + escape(dataParticipants)
-						});
-		$('#showCampagne').append(linkParticipantsCSV);
-		document.getElementById("aParticipantsCsv").click();
-	});
+    <?php
+		if(count($participants) !== 0 && count($notesByParticipants) !== 0) {
+	?>
+		/*Download participants infos csv*/
+		$('#downloadParticipantsCSV').on( "click", function downloadParticipantsCSV() {
+			var participantsTable = $('#participantsTable').html();
+			var dataParticipants = participantsTable.replace(/<thead>/g,'')
+							.replace(/<\/thead>/g,'')
+							.replace(/<tbody>/g,'')
+							.replace(/<\/tbody>/g,'')
+							.replace(/<tr>/g,'')
+							.replace(/<\/tr>/g,'\r\n')
+							.replace(/<th>/g,'')
+							.replace(/<\/th>/g,';')
+							.replace(/<td>/g,'')
+							.replace(/<\/td>/g,';')
+							.replace(/\t/g,'')
+							.replace(/\n/g,'');
+			var linkParticipantsCSV = $(document.createElement('a'))
+							.attr({
+								id: 'aParticipantsCsv',
+								download: <?php echo "'" . html_entity_decode($campagne->getNomCampagne()) . " participants.csv'"; ?>,
+								href: 'data:application/csv,' + escape(dataParticipants)
+							});
+			$('#showCampagne').append(linkParticipantsCSV);
+			document.getElementById("aParticipantsCsv").click();
+		});
+	<?php
+		}
+	?>
 
 });
 </script>

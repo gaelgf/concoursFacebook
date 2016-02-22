@@ -17,13 +17,16 @@ class campagnesController{
             $inscrits = participant::loadParticipantsByCampagneId($campagne->getId());
             $photos = photo::loadByCampagneId($campagne->getId());
             
-            $participantsIds = [];         
+            $participantsIds = [];
+            if($photos[0] === 'Erreur lors de la récupération des photos de la campagne') {
+                $photos = [];
+            } 
             foreach ($photos as $key => $photo) {
                 $participantsIds []= $photo->getIdParticipant();
                 $photosByParticipants[$key] = $photo;
             }
             $participants = [];
-            $participants = participant::loadByIds($participantsIds);
+            $participants = count($participantsIds) > 0 ? participant::loadByIds($participantsIds) : [];
 
             $photosIds = [];
             $photosByParticipants = [];
@@ -32,7 +35,10 @@ class campagnesController{
                 $photosByParticipants[$key] = $photo;
             }
 
-            $votes = vote::loadByPhotoIds($photosIds);
+            $votes = count($photosIds) > 0 ? vote::loadByPhotoIds($photosIds) : [];
+            if(isset($votes[0]) && $votes[0] === "Erreur lors de la récupération de l'objet vote") {
+                $votes = [];
+            }
             foreach ($votes as $key => $vote) {
                 $votesByPhotos[$vote->getIdPhoto()][] = $vote;
             }
@@ -146,13 +152,16 @@ class campagnesController{
                 $inscrits = participant::loadParticipantsByCampagneId($campagne->getId());
                 $photos = photo::loadByCampagneId($campagne->getId());
                 
-                $participantsIds = [];         
+                $participantsIds = [];
+                if($photos[0] === 'Erreur lors de la récupération des photos de la campagne') {
+                    $photos = [];
+                } 
                 foreach ($photos as $key => $photo) {
                     $participantsIds []= $photo->getIdParticipant();
                     $photosByParticipants[$key] = $photo;
                 }
                 $participants = [];
-                $participants = participant::loadByIds($participantsIds);
+                $participants = count($participantsIds) > 0 ? participant::loadByIds($participantsIds) : [];
 
                 $photosIds = [];
                 $photosByParticipants = [];
@@ -161,7 +170,11 @@ class campagnesController{
                     $photosByParticipants[$key] = $photo;
                 }
 
-                $votes = vote::loadByPhotoIds($photosIds);
+                $votes = count($photosIds) > 0 ? vote::loadByPhotoIds($photosIds) : [];
+                if(isset($votes[0]) && $votes[0] === "Erreur lors de la récupération de l'objet vote") {
+                    $votes = [];
+                }
+                $votesByPhotos = [];
                 foreach ($votes as $key => $vote) {
                     $votesByPhotos[$vote->getIdPhoto()][] = $vote;
                 }
