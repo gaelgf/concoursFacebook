@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ee0217f2-4d30-4a3f-834c-774b01da4dc5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/js/cgu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/img/icones/valid_cgu.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/css/style.css" afterPath="$PROJECT_DIR$/assets/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/indexController.class.php" afterPath="$PROJECT_DIR$/controllers/indexController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/layout.php" afterPath="$PROJECT_DIR$/view/layout.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/recapParticipant.php" afterPath="$PROJECT_DIR$/view/recapParticipant.php" />
     </list>
     <ignored path="mvc.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -391,12 +387,6 @@
       <option name="number" value="Default" />
       <updated>1454522640250</updated>
     </task>
-    <task id="LOCAL-00007" summary="Création controleur et vue &quot;vote&quot;">
-      <created>1454755643729</created>
-      <option name="number" value="00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1454755643729</updated>
-    </task>
     <task id="LOCAL-00008" summary="Mise en place du JS des votes">
       <created>1454756793110</created>
       <option name="number" value="00008" />
@@ -685,7 +675,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456242139761</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="CGU">
+      <created>1456244083668</created>
+      <option name="number" value="00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1456244083668</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TodoView">
@@ -699,9 +695,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30711043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30711043" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980973" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
@@ -733,7 +729,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Modification model participant et controller participant" />
     <MESSAGE value="Fermeture accolade" />
     <MESSAGE value="Finalisation page choix photo sur facebook" />
     <MESSAGE value="Page des choix" />
@@ -758,7 +753,8 @@
     <MESSAGE value="Bouton classement" />
     <MESSAGE value="Redirection sur facebook" />
     <MESSAGE value="Lot page accueil" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lot page accueil" />
+    <MESSAGE value="CGU" />
+    <option name="LAST_COMMIT_MESSAGE" value="CGU" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
