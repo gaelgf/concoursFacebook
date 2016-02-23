@@ -18,6 +18,7 @@
 
 <?php include $this->view; ?>
 
+    <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'cgu.js'; ?> ></script>
     <script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'vote.js'; ?> ></script>
 </body>
 </html>

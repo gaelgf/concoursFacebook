@@ -5,7 +5,7 @@
 
 
 
-<form class="container recapitulatif_participation" action="<?php echo $base_url;  ?>photo/add" method="POST">
+<form class="container recapitulatif_participation" onsubmit="return validation_cgu();" action="<?php echo $base_url;  ?>photo/add" method="POST">
     <div class="row">
         <div class="col-xs-6 container_img">
             <img src="<?php echo $posts["url_photo"]; ?>" alt="">
@@ -26,6 +26,9 @@
         </div>
     </div>
     <div class="row CGU">
+        <div class="validation_cgu">
+            Je valide les Contraintes Générales d'Utilisation !
+        </div>
         <div class="title">
             CGU
         </div>
@@ -45,7 +48,10 @@
 <script>
     $(".main_logo").attr("src","<?php echo $array_campagne["logo_entreprise"]; ?>");
     $(".header").css("border-bottom","3px solid <?php echo $array_campagne["couleur"]; ?>");
+    $(".validation_cgu").css("background-color","<?php echo $array_campagne["couleur"]; ?>");
     $(".header").css("border-top","1px solid <?php echo $array_campagne["couleur"]; ?>");
     $(".header").css("color","<?php echo $array_campagne["couleur"]; ?>");
     $(".boutons").css("background-color","<?php echo $array_campagne["couleur"]; ?>");
 </script>
+
+<script type="text/javascript" src=<?php echo JS_DIRECTORY_URL . 'cgu.js'; ?> ></script>

@@ -515,13 +515,34 @@ body{
 		width:70%;
 		margin:30px auto 20px;
 		background-color:white;
-		padding:20px;
 	}
+		.CGU .validation_cgu{
+			width:100%;
+			padding:10px 0;
+			text-align: center;
+			color:white;
+			font-weight: bold;
+			text-transform: uppercase;
+			cursor: pointer;
+			padding-top:40px;
+			background-image:url("../img/icones/valid_cgu.png");
+			background-repeat: no-repeat;
+			background-position: center -30px;
+			background-color:silver;
+			-moz-user-select: none;
+			-o-user-select: none;
+			-webkit-user-select: none;
+		}
+			.CGU .validation_cgu.active{
+				background-color:gray !important;
+				background-position: center 5px;
+			}
 		.CGU .title{
 			font-size:50px;
 			text-align: center;
 		}
 		.CGU .text{
+			padding:20px;
 		}
 
 /****************************************************************************************/
