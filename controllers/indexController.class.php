@@ -94,12 +94,10 @@ class indexController{
             }
 
             $_SESSION["id_participant"] = participant::getIdParticipantByIdFacebook($idFacebook)->getId();
-            header("Location: ".BASE_URL."choice/");
-            //header("Location: https://apps.facebook.com/picturechallengechoice/");
+            header("Location: https://apps.facebook.com/picturechallenge/choice/");
         }
         else{
-            header("Location: ".BASE_URL);
-            //header("Location: https://apps.facebook.com/picturechallengechoice/choice");
+            header("Location: https://apps.facebook.com/picturechallenge/");
         }
     }
 

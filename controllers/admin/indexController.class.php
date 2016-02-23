@@ -28,8 +28,7 @@ class indexController{
             $idFacebook = $response->getDecodedBody()["id"];
 
             if(admin::isAdmin($idFacebook)) {
-            	header("Location: ".BASE_URL."admin/campagnes/index");
-            } else {
+                header("Location: https://apps.facebook.com/picturechallenge/admin/campagnes/index");
             	$view->setView("admin/indexIndex", "loginLayout");
         		$view->assign("notAdmin", 'Vous devez être un administrateur pour accéder à cette partie du site');
             }
@@ -78,7 +77,7 @@ class indexController{
             $idFacebook = $response->getDecodedBody()["id"];
 
             if(admin::isAdmin($idFacebook)) {
-            	header("Location: ".BASE_URL."admin/campagnes/index");
+            	header("Location: https://apps.facebook.com/picturechallenge/admin/campagnes/index");
             } else {
             	$view = new view();
             	$view->setView("admin/indexIndex", "loginLayout");
@@ -86,7 +85,7 @@ class indexController{
             }
         }
         else{
-            header("Location: ".BASE_URL."admin/index");
+            header("Location: https://apps.facebook.com/picturechallenge/admin/index");
         }
     }
 
