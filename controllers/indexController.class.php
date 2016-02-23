@@ -14,7 +14,7 @@ class indexController{
             $helper = facebook::conectionFacebook();
             $permissions = ['public_profile', 'email','user_photos','publish_actions']; // optional
 
-            $loginUrl = $helper->getLoginUrl( 'https://apps.facebook.com/picturechallenge/index/validation/', $permissions);
+            $loginUrl = $helper->getLoginUrl( 'https://apps.facebook.com/picturechallenge/validation', $permissions);
 
             // Verification des valeurs de la campagne en cours
             $arrayCampagne = self::getCampagneArrayAttributes();
