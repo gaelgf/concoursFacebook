@@ -1,20 +1,20 @@
-<div class="select_picture">
-    <div class="container_select">
-        <div class="container_pictures">
-            <ul class="album">
-                <li>
-                    <img src="<?php echo $array_campagne["photo_accueil_one"]; ?>"></li>
-                </li>
-                <li>
-                    <img src="<?php echo $array_campagne["photo_accueil_two"]; ?>"></li>
-                </li>
-                <li>
-                    <img src="<?php echo $array_campagne["photo_accueil_three"]; ?>"></li>
-                </li>
-            </ul>
+<div class="accueil container">
+    <div class="row">
+        <div class="col-xs-9 lot">
+            <div class="nom_lot">
+                A gagner :<br><?php echo $array_campagne["nom_lot"]; ?>
+            </div>
+            <img class="photo_lot" src="<?php echo $array_campagne["image_lot"]; ?>" alt="">
+            <br/>
+            <a  class="boutons bouton_connexion" href="<?php echo $login_url; ?>">Je participe !</a>
         </div>
-        <br/>
-        <a  class="boutons bouton_connexion" href="<?php echo $login_url; ?>">Je participe !</a>
+        <div class="col-xs-3 container_pictures">
+            <img class="photo" src="<?php echo $array_campagne["photo_accueil_one"]; ?>">
+            <br/>
+            <img class="photo" src="<?php echo $array_campagne["photo_accueil_two"]; ?>">
+            <br/>
+            <img class="photo" src="<?php echo $array_campagne["photo_accueil_three"]; ?>">
+        </div>
     </div>
 </div>
 <?php
