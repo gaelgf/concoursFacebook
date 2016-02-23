@@ -29,7 +29,7 @@ class indexController{
             $view->assign("array_campagne", $arrayCampagne);
 
         } else {
-            header("Location: ".BASE_URL."choice");
+            header("Location: https://apps.facebook.com/picturechallenge/choice");
         }
     }
 
