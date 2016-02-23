@@ -97,7 +97,7 @@ class indexController{
             header("Location: https://apps.facebook.com/picturechallenge/choice/");
         }
         else{
-            //header("Location: ".BASE_URL);
+            header("Location: https://apps.facebook.com/picturechallenge/choice/");
         }
     }
 
