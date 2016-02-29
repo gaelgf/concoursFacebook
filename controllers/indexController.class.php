@@ -7,12 +7,10 @@ class indexController{
     {
         $view = new view();
 
-        //print_r(campagne::loadById(1));
-
         if (!isset($_SESSION['facebook_access_token'])) {
 
             $helper = facebook::conectionFacebook();
-            $permissions = ['public_profile', 'email','user_photos','publish_actions']; // optional
+            $permissions = ['public_profile', 'email','user_photos','publish_actions'];
 
             if(BASE_URL === '/') {
                 $loginUrl = $helper->getLoginUrl( 'https://fierce-refuge-2356.herokuapp.com/index/validation', $permissions);
@@ -29,7 +27,7 @@ class indexController{
             $view->assign("array_campagne", $arrayCampagne);
 
         } else {
-            header("Location: ".BASE_URL."choice");
+            header("Location: https://www.facebook.com/ESGI2016Groupe1-1078487132203182/app/128953167177144/choice");
         }
     }
 
@@ -94,12 +92,12 @@ class indexController{
             }
 
             $_SESSION["id_participant"] = participant::getIdParticipantByIdFacebook($idFacebook)->getId();
-            header("Location: ".BASE_URL."choice/");
-            //header("Location: https://apps.facebook.com/picturechallengechoice/");
+            //header("Location: ".BASE_URL."choice/");
+            header("Location: https://www.facebook.com/ESGI2016Groupe1-1078487132203182/app/128953167177144/");
         }
         else{
-            header("Location: ".BASE_URL);
-            //header("Location: https://apps.facebook.com/picturechallengechoice/choice");
+            //header("Location: ".BASE_URL);
+            header("Location: https://www.facebook.com/ESGI2016Groupe1-1078487132203182/app/128953167177144/choice");
         }
     }
 

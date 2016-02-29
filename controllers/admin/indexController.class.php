@@ -12,7 +12,7 @@ class indexController{
             $permissions = []; // optional
 
             if(BASE_URL === '/') {
-                $loginUrl = $helper->getLoginUrl( 'https://fierce-refuge-2356.herokuapp.com/admin/index/validation', $permissions);
+                $loginUrl = $helper->getLoginUrl( 'https://www.facebook.com/ESGI2016Groupe1-1078487132203182/app/128953167177144/admin/index/validation', $permissions);
             } else {
                 $loginUrl = $helper->getLoginUrl( BASE_URL.'admin/index/validation', $permissions);
             }
@@ -28,7 +28,7 @@ class indexController{
             $idFacebook = $response->getDecodedBody()["id"];
 
             if(admin::isAdmin($idFacebook)) {
-            	header("Location: ".BASE_URL."admin/campagnes/index");
+            	header("Location: https://www.facebook.com/ESGI2016Groupe1-1078487132203182/app/128953167177144/admin/campagnes/index");
             } else {
             	$view->setView("admin/indexIndex", "loginLayout");
         		$view->assign("notAdmin", 'Vous devez être un administrateur pour accéder à cette partie du site');
@@ -41,9 +41,9 @@ class indexController{
         $permissions = []; // optional
 
         if(BASE_URL === '/') {
-            $loginUrl = $helper->getLoginUrl( 'https://fierce-refuge-2356.herokuapp.com/admin/index/validation', $permissions);
+            $loginUrl = $helper->getLoginUrl( 'https://www.facebook.com/ESGI2016Groupe1-1078487132203182/app/128953167177144/admin/index/validation', $permissions);
         } else {
-            $loginUrl = $helper->getLoginUrl( BASE_URL.'admin/index/validation', $permissions);
+            $loginUrl = $helper->getLoginUrl( 'https://www.facebook.com/ESGI2016Groupe1-1078487132203182/app/128953167177144/admin/index/validation', $permissions);
         }
 
         $view->setView("admin/indexIndex", "loginLayout");
@@ -78,7 +78,7 @@ class indexController{
             $idFacebook = $response->getDecodedBody()["id"];
 
             if(admin::isAdmin($idFacebook)) {
-            	header("Location: ".BASE_URL."admin/campagnes/index");
+            	header("Location: https://www.facebook.com/ESGI2016Groupe1-1078487132203182/app/128953167177144/admin/campagnes/index");
             } else {
             	$view = new view();
             	$view->setView("admin/indexIndex", "loginLayout");
@@ -86,7 +86,7 @@ class indexController{
             }
         }
         else{
-            header("Location: ".BASE_URL."admin/index");
+            header("Location: https://www.facebook.com/ESGI2016Groupe1-1078487132203182/app/128953167177144/admin/index");
         }
     }
 
