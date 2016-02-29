@@ -12,7 +12,7 @@ class indexController{
             $permissions = []; // optional
 
             if(BASE_URL === '/') {
-                $loginUrl = $helper->getLoginUrl( 'https://fierce-refuge-2356.herokuapp.com/admin/index/validation', $permissions);
+                $loginUrl = $helper->getLoginUrl( 'https://www.facebook.com/ESGI2016Groupe1-1078487132203182/app/128953167177144/admin/index/validation', $permissions);
             } else {
                 $loginUrl = $helper->getLoginUrl( BASE_URL.'admin/index/validation', $permissions);
             }
@@ -40,7 +40,7 @@ class indexController{
     	$helper = facebook::conectionFacebook();
         $permissions = []; // optional
 
-        $loginUrl = $helper->getLoginUrl( 'https://fierce-refuge-2356.herokuapp.com/admin/index/validation', $permissions);
+        $loginUrl = $helper->getLoginUrl( 'https://www.facebook.com/ESGI2016Groupe1-1078487132203182/app/128953167177144/admin/index/validation', $permissions);
 
         $view->setView("admin/indexIndex", "loginLayout");
         $view->assign("notAdmin", 'Vous devez être un administrateur pour accéder à cette partie du site');
