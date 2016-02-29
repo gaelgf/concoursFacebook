@@ -27,7 +27,7 @@ class indexController{
             $view->assign("array_campagne", $arrayCampagne);
 
         } else {
-            header("Location: https://www.facebook.com/ESGI2016Groupe1-1078487132203182/app/128953167177144/choice");
+            header("Location: https://apps.facebook.com/picturechallenge/choice");
         }
     }
 
@@ -92,12 +92,10 @@ class indexController{
             }
 
             $_SESSION["id_participant"] = participant::getIdParticipantByIdFacebook($idFacebook)->getId();
-            //header("Location: ".BASE_URL."choice/");
-            header("Location: https://www.facebook.com/ESGI2016Groupe1-1078487132203182/app/128953167177144/");
+            header("Location: https://apps.facebook.com/picturechallenge/");
         }
         else{
-            //header("Location: ".BASE_URL);
-            header("Location: https://www.facebook.com/ESGI2016Groupe1-1078487132203182/app/128953167177144/choice");
+            header("Location: https://apps.facebook.com/picturechallenge/choice");
         }
     }
 
