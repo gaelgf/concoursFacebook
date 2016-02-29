@@ -27,7 +27,7 @@ class indexController{
             $view->assign("array_campagne", $arrayCampagne);
 
         } else {
-            header("Location: https://apps.facebook.com/picturechallenge/choice/");
+            header("Location: https://fierce-refuge-2356.herokuapp.com/choice/");
         }
     }
 
@@ -92,10 +92,10 @@ class indexController{
             }
 
             $_SESSION["id_participant"] = participant::getIdParticipantByIdFacebook($idFacebook)->getId();
-            header("Location: https://apps.facebook.com/picturechallenge/");
+            header("Location: https://fierce-refuge-2356.herokuapp.com/");
         }
         else{
-            header("Location: https://apps.facebook.com/picturechallenge/choice/");
+            header("Location: https://fierce-refuge-2356.herokuapp.com/choice/");
         }
     }
 
