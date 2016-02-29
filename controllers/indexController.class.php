@@ -27,7 +27,7 @@ class indexController{
             $view->assign("array_campagne", $arrayCampagne);
 
         } else {
-            header("Location: https://apps.facebook.com/picturechallenge/choice");
+            header("Location: https://apps.facebook.com/picturechallenge/choice/");
         }
     }
 
@@ -95,7 +95,7 @@ class indexController{
             header("Location: https://apps.facebook.com/picturechallenge/");
         }
         else{
-            header("Location: https://apps.facebook.com/picturechallenge/choice");
+            header("Location: https://apps.facebook.com/picturechallenge/choice/");
         }
     }
 
