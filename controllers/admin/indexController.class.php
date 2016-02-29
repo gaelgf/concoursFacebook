@@ -28,7 +28,7 @@ class indexController{
             $idFacebook = $response->getDecodedBody()["id"];
 
             if(admin::isAdmin($idFacebook)) {
-            	header("Location: https://apps.facebook.com/picturechallenge/admin/campagnes/index");
+            	header("Location: https://www.facebook.com/ESGI2016Groupe1-1078487132203182/app/128953167177144/admin/campagnes/index");
             } else {
             	$view->setView("admin/indexIndex", "loginLayout");
         		$view->assign("notAdmin", 'Vous devez être un administrateur pour accéder à cette partie du site');
@@ -74,7 +74,7 @@ class indexController{
             $idFacebook = $response->getDecodedBody()["id"];
 
             if(admin::isAdmin($idFacebook)) {
-            	header("Location: https://apps.facebook.com/picturechallenge/admin/campagnes/index");
+            	header("Location: https://www.facebook.com/ESGI2016Groupe1-1078487132203182/app/128953167177144/admin/campagnes/index");
             } else {
             	$view = new view();
             	$view->setView("admin/indexIndex", "loginLayout");
@@ -82,7 +82,7 @@ class indexController{
             }
         }
         else{
-            header("Location: https://apps.facebook.com/picturechallenge/admin/index");
+            header("Location: https://www.facebook.com/ESGI2016Groupe1-1078487132203182/app/128953167177144/admin/index");
         }
     }
 
