@@ -13,7 +13,7 @@ class indexController{
             $permissions = ['public_profile', 'email','user_photos','publish_actions'];
 
             if(BASE_URL === '/') {
-                $loginUrl = $helper->getLoginUrl( 'https://fierce-refuge-2356.herokuapp.com/index/validation', $permissions);
+                $loginUrl = $helper->getLoginUrl( 'https://apps.facebook.com/picturechallenge/index/validation', $permissions);
             } else {
                 $loginUrl = $helper->getLoginUrl( BASE_URL.'index/validation', $permissions);
             }
